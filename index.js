@@ -40,6 +40,7 @@ module.exports = {
 
     // Allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
 
     // Prefer const over let
     'prefer-const': [2, {
@@ -62,7 +63,6 @@ module.exports = {
     'no-var': 2,
 
     // Do not allow console.logs etc...
-    'no-console': 2,
     'space-before-function-paren': [2, {
       anonymous: 'always',
       named: 'never'
