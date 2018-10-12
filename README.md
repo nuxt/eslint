@@ -1,5 +1,7 @@
 # Nuxt ESLint Config
 
+[![Build Status](https://travis-ci.org/nuxt/eslint-config.svg?branch=master)](https://travis-ci.org/nuxt/eslint-config)
+
 [ESlint](https://eslint.org/) config used for Nuxt.js
 
 ## Usage
