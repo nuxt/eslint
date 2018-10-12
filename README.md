@@ -1,6 +1,8 @@
 # Nuxt ESLint Config
 
 [![Build Status](https://travis-ci.org/nuxt/eslint-config.svg?branch=master)](https://travis-ci.org/nuxt/eslint-config)
+[![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/eslint-config/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/eslint-config)
+[![npm](https://img.shields.io/npm/dt/@nuxtjs/eslint-config.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/eslint-config)
 
 [ESlint](https://eslint.org/) config used for Nuxt.js
 
