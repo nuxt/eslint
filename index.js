@@ -63,7 +63,7 @@ module.exports = {
 
     // Prefer destructuring over normal assignment
     'prefer-destructuring': [2, { 'object': true, 'array': false }],
-    
+
     'no-var': 2,
 
     // Do not allow console.logs etc...
