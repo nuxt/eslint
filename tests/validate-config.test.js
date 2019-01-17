@@ -1,7 +1,7 @@
 const eslint = require('eslint')
 
 test('load config in eslint to validate all rule syntax is correct', () => {
-  const CLIEngine = eslint.CLIEngine
+  const { CLIEngine } = eslint
 
   const cli = new CLIEngine({
     useEslintrc: false,
