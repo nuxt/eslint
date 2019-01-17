@@ -61,6 +61,9 @@ module.exports = {
     // Force dot notation when possible
     'dot-notation': 2,
 
+    // Prefer destructuring over normal assignment
+    'prefer-destructuring': [2, { 'object': true, 'array': false }],
+    
     'no-var': 2,
 
     // Do not allow console.logs etc...
