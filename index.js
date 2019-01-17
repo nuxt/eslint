@@ -62,7 +62,18 @@ module.exports = {
     'dot-notation': 2,
 
     // Prefer destructuring over normal assignment
-    'prefer-destructuring': [2, { 'object': true, 'array': false }],
+    'prefer-destructuring': [2, {
+      "VariableDeclarator": {
+        "array": true,
+        "object": true
+      },
+      "AssignmentExpression": {
+        "array": true,
+        "object": false
+      }
+    }, {
+      "enforceForRenamedProperties": true
+    }]
 
     'no-var': 2,
 
