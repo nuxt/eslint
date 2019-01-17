@@ -63,13 +63,13 @@ module.exports = {
 
     // Prefer destructuring over normal assignment
     'prefer-destructuring': [2, {
-      "VariableDeclarator": {
-        "array": true,
-        "object": true
+      'VariableDeclarator': {
+        'array': true,
+        'object': true
       },
-      "AssignmentExpression": {
-        "array": true,
-        "object": false
+      'AssignmentExpression': {
+        'array': true,
+        'object': false
       }
     }],
 
