@@ -71,8 +71,6 @@ module.exports = {
         "array": true,
         "object": false
       }
-    }, {
-      "enforceForRenamedProperties": false
     }]
 
     'no-var': 2,
