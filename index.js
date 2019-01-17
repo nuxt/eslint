@@ -72,7 +72,7 @@ module.exports = {
         "object": false
       }
     }, {
-      "enforceForRenamedProperties": true
+      "enforceForRenamedProperties": false
     }]
 
     'no-var': 2,
