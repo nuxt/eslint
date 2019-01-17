@@ -71,7 +71,7 @@ module.exports = {
         "array": true,
         "object": false
       }
-    }]
+    }],
 
     'no-var': 2,
 
