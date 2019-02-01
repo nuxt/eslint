@@ -64,10 +64,6 @@ module.exports = {
     'no-var': 2,
 
     // Do not allow console.logs etc...
-    'space-before-function-paren': [2, {
-      anonymous: 'always',
-      named: 'never'
-    }],
     'vue/no-parsing-error': [2, {
       'x-invalid-end-tag': false
     }],
