@@ -62,8 +62,7 @@ module.exports = {
     'dot-notation': 2,
 
     'no-var': 2,
-
-    // Do not allow console.logs etc...
+    
     'vue/no-parsing-error': [2, {
       'x-invalid-end-tag': false
     }],
