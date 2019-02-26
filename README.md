@@ -1,6 +1,6 @@
 # Nuxt ESLint Config
 
-[![Build Status](https://flat.badgen.net/travis/nuxt/eslint-config)](https://travis-ci.org/nuxt/eslint-config)
+[![Build Status](https://flat.badgen.net/circleci/nuxt/eslint-config)](https://circleci.com/gh/nuxt/eslint-config)
 [![npm (scoped with tag)](https://flat.badgen.net/npm/v/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 [![npm](https://flat.badgen.net/npm/dt/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 
