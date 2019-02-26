@@ -16,7 +16,7 @@ module.exports = {
   ],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.mjs'] }
+      node: {extensions: ['.js', '.mjs']}
     }
   },
   rules: {
@@ -33,7 +33,7 @@ module.exports = {
     'import/no-unresolved': 0,
 
     // Allow paren-less arrow functions only when there's no braces
-    'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
+    'arrow-parens': [2, 'as-needed', {requireForBlockBody: true}],
 
     // Allow async-await
     'generator-star-spacing': 0,
@@ -65,7 +65,7 @@ module.exports = {
 
     // No useless destructuring/importing/exporting renames
     'no-useless-rename': 2,
-    
+
     'vue/no-parsing-error': [2, {
       'x-invalid-end-tag': false
     }],
