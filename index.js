@@ -63,6 +63,9 @@ module.exports = {
 
     'no-var': 2,
     
+    // Force object shorthand where possible
+    'object-shorthand': 2
+    
     'vue/no-parsing-error': [2, {
       'x-invalid-end-tag': false
     }],
