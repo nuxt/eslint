@@ -62,6 +62,9 @@ module.exports = {
     'dot-notation': 2,
 
     'no-var': 2,
+
+    // No useless destructuring/importing/exporting renames
+    'no-useless-rename': 2,
     
     'vue/no-parsing-error': [2, {
       'x-invalid-end-tag': false
