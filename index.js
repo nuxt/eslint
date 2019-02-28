@@ -63,6 +63,9 @@ module.exports = {
 
     'no-var': 2,
 
+    // Force object shorthand where possible
+    'object-shorthand': 2,
+
     // No useless destructuring/importing/exporting renames
     'no-useless-rename': 2,
 
