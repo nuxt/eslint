@@ -75,74 +75,69 @@ module.exports = {
     // No useless destructuring/importing/exporting renames
     'no-useless-rename': 'error',
 
-
     /**********************/
     /*   Unicorn Rules    */
     /**********************/
 
     // Pass error message when throwing errors
-    "unicorn/error-message": "error",
+    'unicorn/error-message': 'error',
 
     // Uppercase regex escapes
-    "unicorn/escape-case": "error",
+    'unicorn/escape-case': 'error',
 
     // Use "new" for most builtins (not String, Number, ..., though)
-    "unicorn/new-for-builtins": "error",
+    'unicorn/new-for-builtins': 'error',
 
     // Array.isArray instead of instanceof
-    "unicorn/no-array-instanceof": "error",
+    'unicorn/no-array-instanceof': 'error',
 
     // for-of instead traditional for loop
-    "unicorn/no-for-loop": "error",
+    'unicorn/no-for-loop': 'error',
 
     // Prevent deprecated `new Buffer()`
-    "unicorn/no-new-buffer": "error",
+    'unicorn/no-new-buffer': 'error',
 
     // Keep regex literals safe!
-    "unicorn/no-unsafe-regex": "off",
+    'unicorn/no-unsafe-regex': 'off',
 
     // Use non-fraction numbers if possible, e.g. 1 instead of 1.0
-    "unicorn/no-zero-fractions": "error",
+    'unicorn/no-zero-fractions': 'error',
 
     // Lowercase number formatting for octal, hex, binary (0x12 instead of 0X12)
-    "unicorn/number-literal-case": "error",
+    'unicorn/number-literal-case': 'error',
 
     // ** instead of Math.pow()
-    "unicorn/prefer-exponentiation-operator": "error",
+    'unicorn/prefer-exponentiation-operator': 'error',
 
     // includes over indexOf when checking for existence
-    "unicorn/prefer-includes": "error",
+    'unicorn/prefer-includes': 'error',
 
     // append over appendChild
-    "unicorn/prefer-node-append": "error",
+    'unicorn/prefer-node-append': 'error',
 
     // remove over removeChild
-    "unicorn/prefer-node-remove": "error",
+    'unicorn/prefer-node-remove': 'error',
 
     // querySelector instead of getElementBy...
-    "unicorn/prefer-query-selector": "error",
+    'unicorn/prefer-query-selector': 'error',
 
     // Spread syntax instead of Array.from()
-    "unicorn/prefer-spread": "error",
+    'unicorn/prefer-spread': 'error',
 
     // String methods startsWith/endsWith instead of more complicated stuff
-    "unicorn/prefer-starts-ends-with": "error",
+    'unicorn/prefer-starts-ends-with': 'error',
 
     // textContent instead of innerText
-    "unicorn/prefer-text-content": "error",
+    'unicorn/prefer-text-content': 'error',
 
     // Enforce throwing type error when throwing error while checking typeof
-    "unicorn/prefer-type-error": "error",
-
-    // Prevent abbreviations (!)
-    "unicorn/prevent-abbreviations": "error",
+    'unicorn/prefer-type-error': 'error',
 
     // Favor regex shorthands (e.g. \d instead of [0-9])
-    "unicorn/regex-shorthand": "error",
+    'unicorn/regex-shorthand': 'error',
 
     // Use new when throwing error
-    "unicorn/throw-new-error": "error",
-
+    'unicorn/throw-new-error': 'error',
 
     /**********************/
     /*     Vue Rules      */

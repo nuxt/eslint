@@ -5,6 +5,6 @@ test('test basic properties of config', () => {
   expect(isObject(config.rules)).toBe(true)
 })
 
-function isObject (obj) {
-  return typeof obj === 'object' && obj !== null
+function isObject (object) {
+  return typeof object === 'object' && object !== null
 }
