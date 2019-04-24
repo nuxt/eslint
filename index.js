@@ -22,58 +22,58 @@ module.exports = {
   },
   rules: {
     // Enforce import order
-    'import/order': 2,
+    'import/order': 'error',
 
     // Imports should come first
-    'import/first': 2,
+    'import/first': 'error',
 
     // Other import rules
-    'import/no-mutable-exports': 2,
+    'import/no-mutable-exports': 'error',
 
     // Allow unresolved imports
-    'import/no-unresolved': 0,
+    'import/no-unresolved': 'off',
 
     // Allow paren-less arrow functions only when there's no braces
-    'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
+    'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
 
     // Allow async-await
-    'generator-star-spacing': 0,
+    'generator-star-spacing': 'off',
 
     // Allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 
     // Prefer const over let
-    'prefer-const': [2, {
+    'prefer-const': ['error', {
       'destructuring': 'any',
       'ignoreReadBeforeAssign': false
     }],
 
     // No single if in an "else" block
-    'no-lonely-if': 2,
+    'no-lonely-if': 'error',
 
     // Force curly braces for control flow,
     // including if blocks with a single statement
-    curly: [2, 'all'],
+    curly: ['error', 'all'],
 
     // No async function without await
-    'require-await': 2,
+    'require-await': 'error',
 
     // Force dot notation when possible
-    'dot-notation': 2,
+    'dot-notation': 'error',
 
-    'no-var': 2,
+    'no-var': 'error',
 
     // Force object shorthand where possible
-    'object-shorthand': 2,
+    'object-shorthand': 'error',
 
     // No useless destructuring/importing/exporting renames
-    'no-useless-rename': 2,
+    'no-useless-rename': 'error',
 
-    'vue/no-parsing-error': [2, {
+    'vue/no-parsing-error': ['error', {
       'x-invalid-end-tag': false
     }],
-    'vue/max-attributes-per-line': [2, {
+    'vue/max-attributes-per-line': ['error', {
       'singleline': 5
     }]
   }
