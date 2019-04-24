@@ -11,8 +11,9 @@ module.exports = {
     'plugin:vue/recommended'
   ],
   plugins: [
-    'vue',
-    'jest'
+    'jest',
+    'unicorn',
+    'vue'
   ],
   settings: {
     'import/resolver': {
