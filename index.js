@@ -100,9 +100,6 @@ module.exports = {
     // Keep regex literals safe!
     'unicorn/no-unsafe-regex': 'off',
 
-    // Use non-fraction numbers if possible, e.g. 1 instead of 1.0
-    'unicorn/no-zero-fractions': 'error',
-
     // Lowercase number formatting for octal, hex, binary (0x12 instead of 0X12)
     'unicorn/number-literal-case': 'error',
 
