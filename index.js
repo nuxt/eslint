@@ -121,9 +121,6 @@ module.exports = {
     // querySelector instead of getElementBy...
     'unicorn/prefer-query-selector': 'error',
 
-    // Spread syntax instead of Array.from()
-    'unicorn/prefer-spread': 'error',
-
     // String methods startsWith/endsWith instead of more complicated stuff
     'unicorn/prefer-starts-ends-with': 'error',
 
