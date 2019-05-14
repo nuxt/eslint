@@ -85,14 +85,8 @@ module.exports = {
     // Uppercase regex escapes
     'unicorn/escape-case': 'error',
 
-    // Use "new" for most builtins (not String, Number, ..., though)
-    'unicorn/new-for-builtins': 'error',
-
     // Array.isArray instead of instanceof
     'unicorn/no-array-instanceof': 'error',
-
-    // for-of instead traditional for loop
-    'unicorn/no-for-loop': 'error',
 
     // Prevent deprecated `new Buffer()`
     'unicorn/no-new-buffer': 'error',
@@ -108,15 +102,6 @@ module.exports = {
 
     // includes over indexOf when checking for existence
     'unicorn/prefer-includes': 'error',
-
-    // append over appendChild
-    'unicorn/prefer-node-append': 'error',
-
-    // remove over removeChild
-    'unicorn/prefer-node-remove': 'error',
-
-    // querySelector instead of getElementBy...
-    'unicorn/prefer-query-selector': 'error',
 
     // String methods startsWith/endsWith instead of more complicated stuff
     'unicorn/prefer-starts-ends-with': 'error',
