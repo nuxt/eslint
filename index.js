@@ -112,9 +112,6 @@ module.exports = {
     // Enforce throwing type error when throwing error while checking typeof
     'unicorn/prefer-type-error': 'error',
 
-    // Favor regex shorthands (e.g. \d instead of [0-9])
-    'unicorn/regex-shorthand': 'error',
-
     // Use new when throwing error
     'unicorn/throw-new-error': 'error',
 
