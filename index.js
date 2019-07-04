@@ -11,8 +11,9 @@ module.exports = {
     'plugin:vue/recommended'
   ],
   plugins: [
-    'vue',
-    'jest'
+    'jest',
+    'unicorn',
+    'vue'
   ],
   settings: {
     'import/resolver': {
@@ -20,59 +21,111 @@ module.exports = {
     }
   },
   rules: {
+
+    /**********************/
+    /* General Code Rules */
+    /**********************/
+
     // Enforce import order
-    'import/order': 2,
+    'import/order': 'error',
 
     // Imports should come first
-    'import/first': 2,
+    'import/first': 'error',
 
     // Other import rules
-    'import/no-mutable-exports': 2,
+    'import/no-mutable-exports': 'error',
 
     // Allow unresolved imports
-    'import/no-unresolved': 0,
+    'import/no-unresolved': 'off',
 
     // Allow paren-less arrow functions only when there's no braces
-    'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
+    'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
 
     // Allow async-await
-    'generator-star-spacing': 0,
+    'generator-star-spacing': 'off',
 
     // Allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 
     // Prefer const over let
-    'prefer-const': [2, {
+    'prefer-const': ['error', {
       'destructuring': 'any',
       'ignoreReadBeforeAssign': false
     }],
 
     // No single if in an "else" block
-    'no-lonely-if': 2,
+    'no-lonely-if': 'error',
 
     // Force curly braces for control flow,
     // including if blocks with a single statement
-    curly: [2, 'all'],
+    curly: ['error', 'all'],
 
     // No async function without await
-    'require-await': 2,
+    'require-await': 'error',
 
     // Force dot notation when possible
-    'dot-notation': 2,
+    'dot-notation': 'error',
 
-    'no-var': 2,
+    'no-var': 'error',
 
     // Force object shorthand where possible
-    'object-shorthand': 2,
+    'object-shorthand': 'error',
 
     // No useless destructuring/importing/exporting renames
-    'no-useless-rename': 2,
+    'no-useless-rename': 'error',
 
-    'vue/no-parsing-error': [2, {
+    /**********************/
+    /*   Unicorn Rules    */
+    /**********************/
+
+    // Pass error message when throwing errors
+    'unicorn/error-message': 'error',
+
+    // Uppercase regex escapes
+    'unicorn/escape-case': 'error',
+
+    // Array.isArray instead of instanceof
+    'unicorn/no-array-instanceof': 'error',
+
+    // Prevent deprecated `new Buffer()`
+    'unicorn/no-new-buffer': 'error',
+
+    // Keep regex literals safe!
+    'unicorn/no-unsafe-regex': 'off',
+
+    // Lowercase number formatting for octal, hex, binary (0x12 instead of 0X12)
+    'unicorn/number-literal-case': 'error',
+
+    // ** instead of Math.pow()
+    'unicorn/prefer-exponentiation-operator': 'error',
+
+    // includes over indexOf when checking for existence
+    'unicorn/prefer-includes': 'error',
+
+    // String methods startsWith/endsWith instead of more complicated stuff
+    'unicorn/prefer-starts-ends-with': 'error',
+
+    // textContent instead of innerText
+    'unicorn/prefer-text-content': 'error',
+
+    // Enforce throwing type error when throwing error while checking typeof
+    'unicorn/prefer-type-error': 'error',
+
+    // Use new when throwing error
+    'unicorn/throw-new-error': 'error',
+
+    /**********************/
+    /*     Vue Rules      */
+    /**********************/
+
+    // Disable template errors regarding invalid end tags
+    'vue/no-parsing-error': ['error', {
       'x-invalid-end-tag': false
     }],
-    'vue/max-attributes-per-line': [2, {
+
+    // Maximum 5 attributes per line instead of one
+    'vue/max-attributes-per-line': ['error', {
       'singleline': 5
     }]
   }

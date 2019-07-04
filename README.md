@@ -21,9 +21,9 @@ $ yarn add -D @nuxtjs/eslint-config
 2. Add the [`peerDependencies`](./package.json) to your project
 
 ```bash
-$ npm i -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-plugin-vue
+$ npm i -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-plugin-vue eslint-plugin-unicorn
 # or
-$ yarn add -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-plugin-vue
+$ yarn add -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-plugin-vue eslint-plugin-unicorn
 ```
 
 3. Create a `.eslintrc` file
