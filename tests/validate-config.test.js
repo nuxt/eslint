@@ -1,6 +1,6 @@
 const eslint = require('eslint')
 
-test('load config in eslint to validate all rule syntax is correct', () => {
+test.skip('load config in eslint to validate all rule syntax is correct', () => {
   const CLIEngine = eslint.CLIEngine
 
   const cli = new CLIEngine({
