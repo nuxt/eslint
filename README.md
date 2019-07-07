@@ -56,6 +56,11 @@ A full example `.eslintrc` for a project with babel support:
 }
 ```
 
+## Migration guide from v0.x.y to v1.x.y
+
+1. Install the new peer dependencies (`yarn add -D eslint-plugin-unicorn` *or* `npm i -D eslint-plugin-unicorn`)
+2. Fix issues brought up due to new rules or disable them if needed
+
 ## License
 
 Setup inspired by [eslint-config-standard](https://github.com/standard/eslint-config-standard)
