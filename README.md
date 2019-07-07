@@ -18,12 +18,12 @@ $ npm i -D @nuxtjs/eslint-config
 $ yarn add -D @nuxtjs/eslint-config
 ```
 
-2. Add the [`peerDependencies`](./package.json) to your project
+2. Install `eslint` if not already present locally or globally
 
 ```bash
-$ npm i -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-plugin-vue eslint-plugin-unicorn
+$ npm i -D eslint
 # or
-$ yarn add -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-plugin-vue eslint-plugin-unicorn
+$ yarn add -D eslint
 ```
 
 3. Create a `.eslintrc` file
@@ -58,7 +58,7 @@ A full example `.eslintrc` for a project with babel support:
 
 ## Migration guide from v0.x.y to v1.x.y
 
-1. Install the new peer dependencies (`yarn add -D eslint-plugin-unicorn` *or* `npm i -D eslint-plugin-unicorn`)
+1. ~~Install the new peer dependencies (`yarn add -D eslint-plugin-unicorn` *or* `npm i -D eslint-plugin-unicorn`)~~
 2. Fix issues brought up due to new rules or disable them if needed
 
 ## License
