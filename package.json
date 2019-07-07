@@ -30,7 +30,7 @@
     "eslint-plugin-node": ">=9.1.0",
     "eslint-plugin-promise": ">=4.2.1",
     "eslint-plugin-standard": ">=4.0.0",
-    "eslint-plugin-unicorn": ">=8.0.2",
+    "eslint-plugin-unicorn": ">=9.1.1",
     "eslint-plugin-vue": ">=5.2.3"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^8.0.2",
+    "eslint-plugin-unicorn": "^9.1.1",
     "eslint-plugin-vue": "^5.2.3",
     "jest": "^24.8.0",
     "standard-version": "^6.0.1"
