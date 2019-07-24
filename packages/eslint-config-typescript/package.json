@@ -1,0 +1,25 @@
+{
+  "name": "@nuxtjs/typescript-eslint-config",
+  "version": "0.0.0",
+  "description": "Nuxt.js eslint typescript config",
+  "contributors": [
+    "Kevin Marrec <kevin@marrec.io>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nuxt/eslint-config/packages/eslint-config-typescript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxt/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nuxt/eslint-config/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0"
+  }
+}

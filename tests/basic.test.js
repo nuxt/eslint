@@ -1,4 +1,4 @@
-const config = require('../')
+const config = require('../packages/eslint-config')
 
 test('test basic properties of config', () => {
   expect(isObject(config.env)).toBe(true)

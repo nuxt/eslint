@@ -5,7 +5,7 @@ test.skip('load config in eslint to validate all rule syntax is correct', () => 
 
   const cli = new CLIEngine({
     useEslintrc: false,
-    configFile: 'index.js'
+    configFile: '../packages/eslint-config/index.js'
   })
 
   const code = 'const foo = 1\nconst bar = function () {}\nbar(foo)\n'

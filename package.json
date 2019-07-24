@@ -1,43 +1,16 @@
 {
-  "name": "@nuxtjs/eslint-config",
-  "version": "1.0.1",
-  "description": "Nuxt.js eslint config",
-  "contributors": [
-    "Alexander Lichter <npm@lichter.io>"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/nuxt/eslint-config",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nuxt/eslint-config.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nuxt/eslint-config/issues"
-  },
   "scripts": {
-    "lint": "eslint . --config=index.js",
-    "test": "npm run lint && jest",
-    "release": "standard-version && git push --follow-tags && npm publish"
-  },
-  "files": [
-    "index.js"
-  ],
-  "peerDependencies": {
-    "eslint": ">=5.16.0"
-  },
-  "dependencies": {
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.10.0",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^9.1.1",
-    "eslint-plugin-vue": "^5.2.3"
+    "lint": "eslint . --config=packages/eslint-config/index.js",
+    "test": "yarn lint && jest",
+    "release": "lerna publish"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "jest": "^24.8.0",
-    "standard-version": "^6.0.1"
+    "eslint": "latest",
+    "jest": "latest",
+    "lerna": "latest"
   }
 }
