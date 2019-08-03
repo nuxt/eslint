@@ -26,7 +26,7 @@ $ npm i -D eslint
 $ yarn add -D eslint
 ```
 
-3. Create a `.eslintrc` file
+3. Create a `.eslintrc.js` file
 
 4. Extend our config (you can use just the scope name as ESLint will assume the `eslint-config` prefix):
 
@@ -40,7 +40,7 @@ $ yarn add -D eslint
 
 ## Full example
 
-A full example `.eslintrc` for a project with babel support:
+A full example `.eslintrc.js` for a project with babel support:
 > Dont forget to `npm i -D babel-eslint` or `yarn add -D babel-eslint`
 
 ```json
@@ -55,6 +55,24 @@ A full example `.eslintrc` for a project with babel support:
   ]
 }
 ```
+
+## TypeScript
+
+If you're using TypeScript, follow [Usage](#usage) section by replacing `@nuxtjs/eslint-config` by `@nuxtjs/eslint-config-typescript`
+
+And in your `.eslintrc.js` all you need is :
+
+```json
+{
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ]
+}
+```
+
+You can then edit/override same rules as you could with `@nuxtjs/eslint-config` but also TypeScript rules.
+You can find the list of supported TypeScript rules [here](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules).
+
 
 ## Migration guide from v0.x.y to v1.x.y
 
