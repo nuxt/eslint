@@ -30,10 +30,10 @@ $ yarn add -D eslint
 
 4. Extend our config (you can use just the scope name as ESLint will assume the `eslint-config` prefix):
 
-```json
-{
-  "extends": [
-    "@nuxtjs"
+```js
+module.exports = {
+  extends: [
+    '@nuxtjs'
   ]
 }
 ```
@@ -43,15 +43,15 @@ $ yarn add -D eslint
 A full example `.eslintrc.js` for a project with babel support:
 > Dont forget to `npm i -D babel-eslint` or `yarn add -D babel-eslint`
 
-```json
-{
-  "root": true,
-  "parserOptions": {
-    "parser": "babel-eslint",
-    "sourceType": "module"
+```js
+module.exports = {
+  root: true,
+  parserOptions: {
+    parser: 'babel-eslint',
+    sourceType: 'module'
   },
-  "extends": [
-    "@nuxtjs"
+  extends: [
+    '@nuxtjs'
   ]
 }
 ```
@@ -62,10 +62,10 @@ If you're using TypeScript, follow [Usage](#usage) section by replacing `@nuxtjs
 
 And in your `.eslintrc.js` all you need is :
 
-```json
-{
-  "extends": [
-    "@nuxtjs/eslint-config-typescript"
+```js
+module.exports = {
+  extends: [
+    '@nuxtjs/eslint-config-typescript'
   ]
 }
 ```
