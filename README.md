@@ -58,7 +58,7 @@ A full example `.eslintrc` for a project with babel support:
 
 ## TypeScript
 
-If you're using TypeScript, follow [Usage](#usage) section by replacing `@nuxtjs/eslint-config` by `@nuxtjs/eslint-config-typescript`
+If you're using TypeScript, follow [Usage](#usage) section by replacing `@nuxtjs/eslint-config` by `@nuxtjs/eslint-config-typescript`.
 
 And in your `.eslintrc` all you need is :
 
@@ -73,7 +73,7 @@ And in your `.eslintrc` all you need is :
 You can then edit/override same rules as you could with `@nuxtjs/eslint-config` but also TypeScript rules.
 You can find the list of supported TypeScript rules [here](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules).
 
-Also see [Nuxt TypeScript Support](https://typescript.nuxtjs.org/guide/lint.html)
+Also see [Nuxt TypeScript Support](https://typescript.nuxtjs.org/guide/lint.html).
 
 ## Migration guide from v0.x.y to v1.x.y
 
