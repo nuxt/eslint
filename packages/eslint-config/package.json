@@ -3,13 +3,7 @@
   "version": "1.0.1",
   "description": "Nuxt.js eslint config",
   "homepage": "https://github.com/nuxt/eslint-config/packages/eslint-config",
-  "bugs": {
-    "url": "https://github.com/nuxt/eslint-config/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nuxt/eslint-config.git"
-  },
+  "repository": "nuxt/eslint-config",
   "license": "MIT",
   "contributors": [
     "Alexander Lichter <npm@lichter.io>"
@@ -29,5 +23,8 @@
   },
   "peerDependencies": {
     "eslint": ">=5.16.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
