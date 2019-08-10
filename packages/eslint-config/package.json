@@ -18,7 +18,7 @@
     "index.js"
   ],
   "dependencies": {
-    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard": "^13.0.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jest": "^22.10.0",
     "eslint-plugin-node": "^9.1.0",
