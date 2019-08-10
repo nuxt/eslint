@@ -5,4 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 0.1.0 (2019-08-10)
 
-**Note:** Version bump only for package @nuxtjs/typescript-eslint-config
+* Initial release ([#54](https://github.com/nuxt/eslint-config/pull/54))
