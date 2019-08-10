@@ -2,7 +2,7 @@
   "name": "@nuxtjs/eslint-config",
   "version": "1.1.1",
   "description": "Nuxt.js eslint config",
-  "homepage": "https://github.com/nuxt/eslint-config/packages/eslint-config",
+  "homepage": "https://github.com/nuxt/eslint-config/tree/master/packages/eslint-config",
   "repository": "nuxt/eslint-config",
   "license": "MIT",
   "contributors": [
