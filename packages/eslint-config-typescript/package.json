@@ -1,8 +1,8 @@
 {
-  "name": "@nuxtjs/typescript-eslint-config",
+  "name": "@nuxtjs/eslint-config-typescript",
   "version": "0.1.1",
   "description": "Nuxt.js eslint typescript config",
-  "homepage": "https://github.com/nuxt/eslint-config/packages/eslint-config-typescript",
+  "homepage": "https://github.com/nuxt/eslint-config/tree/master/packages/eslint-config-typescript",
   "repository": "nuxt/eslint-config",
   "license": "MIT",
   "contributors": [
