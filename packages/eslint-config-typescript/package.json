@@ -13,8 +13,8 @@
   ],
   "dependencies": {
     "@nuxtjs/eslint-config": "1.1.2",
-    "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.13.0"
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0"
   },
   "publishConfig": {
     "access": "public"
