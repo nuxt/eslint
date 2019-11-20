@@ -12,17 +12,17 @@
     "index.js"
   ],
   "dependencies": {
-    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.10.0",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-jest": "^23.0.4",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^9.1.1",
-    "eslint-plugin-vue": "^5.2.3"
+    "eslint-plugin-unicorn": "^13.0.0",
+    "eslint-plugin-vue": "^6.0.1"
   },
   "peerDependencies": {
-    "eslint": ">=5.16.0"
+    "eslint": "^6.0.0"
   },
   "publishConfig": {
     "access": "public"
