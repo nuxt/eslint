@@ -9,8 +9,8 @@
     "test": "yarn lint && jest"
   },
   "devDependencies": {
-    "eslint": "latest",
-    "jest": "latest",
-    "lerna": "latest"
+    "eslint": "6.6.0",
+    "jest": "24.9.0",
+    "lerna": "3.18.5"
   }
 }
