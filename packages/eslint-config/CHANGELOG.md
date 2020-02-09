@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@2.0.1...@nuxtjs/eslint-config@2.0.2) (2020-02-09)
+
+
+### Bug Fixes
+
+* eslint-plugin-import ordering errors in windows ([4f6f4a9](https://github.com/nuxt/eslint-config/commit/4f6f4a9566149e438bfdf9046f82151e050d7ce7))
+
+
+
+
+
 ## [2.0.1](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@2.0.0...@nuxtjs/eslint-config@2.0.1) (2020-02-09)
 
 **Note:** Version bump only for package @nuxtjs/eslint-config
