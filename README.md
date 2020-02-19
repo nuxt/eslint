@@ -1,6 +1,6 @@
 # Nuxt ESLint Config
 
-[![Build Status](https://flat.badgen.net/circleci/github/nuxt/eslint-config)](https://circleci.com/gh/nuxt/eslint-config)
+[![GitHub Actions](https://github.com/nuxt/eslint-config/workflows/ci/badge.svg?branch=master)](https://github.com/nuxt/eslint-config/actions?query=workflow%3Aci)
 [![npm (scoped with tag)](https://flat.badgen.net/npm/v/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 [![npm](https://flat.badgen.net/npm/dt/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 
