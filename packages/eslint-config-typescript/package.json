@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/eslint-config-typescript",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Nuxt.js eslint typescript config",
   "homepage": "https://github.com/nuxt/eslint-config/tree/master/packages/eslint-config-typescript",
   "repository": "nuxt/eslint-config",
