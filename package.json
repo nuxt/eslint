@@ -12,5 +12,8 @@
     "eslint": "7.5.0",
     "jest": "26.1.0",
     "lerna": "3.22.1"
+  },
+  "dependencies": {
+    "eslint-plugin-jest": "^24.1.0"
   }
 }
