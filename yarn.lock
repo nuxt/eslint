@@ -3026,18 +3026,18 @@ eslint-plugin-standard@^4.0.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-4.0.1.tgz#ff0519f7ffaff114f76d1bd7c3996eef0f6e20b4"
   integrity sha512-v/KBnfyaOMPmZc/dmc6ozOdWqekGp7bBGq4jLAecEfPGmfKiWS4sA8sC0LqiV9w5qmXAtXVn4M3p1jSyhY85SQ==
 
-eslint-plugin-unicorn@^21.0.0:
-  version "21.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-21.0.0.tgz#7e3a8b0f725f003619e1f40d769939ecd8d708d0"
-  integrity sha512-S8v7+v4gZTQPj4pKKvexhgSUaLQSyItvxW2SVZDaX9Iu5IjlAmF2eni+L6w8a2aqshxgU8Lle4FIAVDtuejSKQ==
+eslint-plugin-unicorn@^22.0.0:
+  version "22.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-22.0.0.tgz#46a93d8de393b865e04c2057a4ed3510864dd3be"
+  integrity sha512-jXPOauNiVFYLr+AeU3l21Ao+iDl/G08vUWui21RCI2L1TJIIoJvAMjMR6I+QPKr8FgIumzuR6gzDKCtEx2IkzA==
   dependencies:
     ci-info "^2.0.0"
     clean-regexp "^1.0.0"
     eslint-ast-utils "^1.1.0"
-    eslint-template-visitor "^2.0.0"
+    eslint-template-visitor "^2.2.1"
     eslint-utils "^2.1.0"
     import-modules "^2.0.0"
-    lodash "^4.17.15"
+    lodash "^4.17.20"
     pluralize "^8.0.0"
     read-pkg-up "^7.0.1"
     regexp-tree "^0.1.21"
@@ -3062,7 +3062,7 @@ eslint-scope@^5.0.0, eslint-scope@^5.1.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-template-visitor@^2.0.0:
+eslint-template-visitor@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/eslint-template-visitor/-/eslint-template-visitor-2.2.1.tgz#2dccb1ab28fa7429e56ba6dd0144def2d89bc2d6"
   integrity sha512-q3SxoBXz0XjPGkUpwGVAwIwIPIxzCAJX1uwfVc8tW3v7u/zS7WXNH3I2Mu2MDz2NgSITAyKLRaQFPHu/iyKxDQ==
@@ -5035,6 +5035,11 @@ lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.2.
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
+
+lodash@^4.17.20:
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
 loud-rejection@^1.0.0:
   version "1.6.0"
