@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@4.0.0...@nuxtjs/eslint-config-typescript@5.0.0) (2020-11-14)
+
+**Note:** Version bump only for package @nuxtjs/eslint-config-typescript
+
+
+
+
+
 # [4.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@3.0.0...@nuxtjs/eslint-config-typescript@4.0.0) (2020-10-20)
 
 **Note:** Version bump only for package @nuxtjs/eslint-config-typescript
