@@ -18,7 +18,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.1.0",
-    "eslint-plugin-unicorn": "^23.0.0",
+    "eslint-plugin-unicorn": "^26.0.1",
     "eslint-plugin-vue": "^7.1.0"
   },
   "peerDependencies": {
