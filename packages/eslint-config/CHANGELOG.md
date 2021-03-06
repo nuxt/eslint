@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@5.0.0...@nuxtjs/eslint-config@6.0.0) (2021-03-06)
+
+**Note:** Version bump only for package @nuxtjs/eslint-config
+
+
+
+
+
 # [5.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@4.0.0...@nuxtjs/eslint-config@5.0.0) (2020-11-14)
 
 **Note:** Version bump only for package @nuxtjs/eslint-config
