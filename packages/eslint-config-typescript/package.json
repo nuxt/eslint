@@ -16,6 +16,9 @@
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1"
   },
+  "peerDependencies": {
+    "eslint": "^7.21.0"
+  },
   "publishConfig": {
     "access": "public"
   }
