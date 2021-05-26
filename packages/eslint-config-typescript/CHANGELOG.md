@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.1](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@6.0.0...@nuxtjs/eslint-config-typescript@6.0.1) (2021-05-26)
+
+
+### Bug Fixes
+
+* turn off typescript 'no-undef' rule per docs ([#144](https://github.com/nuxt/eslint-config/issues/144)) ([ddb552b](https://github.com/nuxt/eslint-config/commit/ddb552bb76b4f379f9f23827ccdf8708be12ad27))
+
+
+
+
+
 # [6.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@5.0.0...@nuxtjs/eslint-config-typescript@6.0.0) (2021-03-06)
 
 **Note:** Version bump only for package @nuxtjs/eslint-config-typescript
