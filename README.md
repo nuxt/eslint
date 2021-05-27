@@ -41,13 +41,13 @@ $ yarn add -D eslint
 ## Full example
 
 A full example `.eslintrc` for a project with babel support:
-> Dont forget to `npm i -D babel-eslint` or `yarn add -D babel-eslint`
+> Dont forget to `npm i -D @babel/eslint-parser` or `yarn add -D @babel/eslint-parser`
 
 ```json
 {
   "root": true,
   "parserOptions": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "sourceType": "module"
   },
   "extends": [
