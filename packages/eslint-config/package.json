@@ -13,16 +13,16 @@
   ],
   "dependencies": {
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^4.1.0",
     "eslint-plugin-unicorn": "^28.0.2",
-    "eslint-plugin-vue": "^7.9.0"
+    "eslint-plugin-vue": "^7.11.1"
   },
   "peerDependencies": {
-    "eslint": "^7.27.0"
+    "eslint": "^7.28.0"
   },
   "publishConfig": {
     "access": "public"
