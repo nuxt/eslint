@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    'jest/globals': true
+    jest: true
   },
   extends: [
     'standard',
