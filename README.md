@@ -46,8 +46,8 @@ A full example `.eslintrc` for a project with babel support:
 ```json
 {
   "root": true,
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "parser": "@babel/eslint-parser",
     "sourceType": "module"
   },
   "extends": [
