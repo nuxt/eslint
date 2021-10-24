@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@7.0.0...@nuxtjs/eslint-config-typescript@7.0.1) (2021-10-24)
+
+
+### Bug Fixes
+
+* use @typescript-eslint/parser under vue-eslint-parser ([bea5b05](https://github.com/nuxt/eslint-config/commit/bea5b052e322d8c59bdef96d90300d3dda28ed9c))
+
+
+
+
+
 # [7.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@6.0.1...@nuxtjs/eslint-config-typescript@7.0.0) (2021-10-24)
 
 
