@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@6.0.1...@nuxtjs/eslint-config-typescript@7.0.0) (2021-10-24)
+
+
+### Bug Fixes
+
+* **eslint-config-typescript:** use parser config ([7617549](https://github.com/nuxt/eslint-config/commit/7617549147d16018ed46a073bffff920b89e1bfb))
+* **typescript:** import/named errors when using TypeScript ([#170](https://github.com/nuxt/eslint-config/issues/170)) ([401d626](https://github.com/nuxt/eslint-config/commit/401d6262eed320465b3fb3eb8a0067fc8bf935b3))
+
+
+
+
+
 ## [6.0.1](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@6.0.0...@nuxtjs/eslint-config-typescript@6.0.1) (2021-05-26)
 
 
