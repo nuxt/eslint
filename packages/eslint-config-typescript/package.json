@@ -18,7 +18,7 @@
     "eslint-import-resolver-typescript": "2.4.0"
   },
   "peerDependencies": {
-    "eslint": "^7.28.0"
+    "eslint": "^8.1.0"
   },
   "publishConfig": {
     "access": "public"
