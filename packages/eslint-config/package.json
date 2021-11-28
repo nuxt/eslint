@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/eslint-config",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "Nuxt.js eslint config",
   "homepage": "https://github.com/nuxt/eslint-config/tree/master/packages/eslint-config",
   "repository": "nuxt/eslint-config",

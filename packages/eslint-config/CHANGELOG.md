@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@7.0.0...@nuxtjs/eslint-config@8.0.0) (2021-11-28)
+
+
+### Bug Fixes
+
+* remove dependency on `eslint-plugin-standard` ([#185](https://github.com/nuxt/eslint-config/issues/185)) ([ee47f83](https://github.com/nuxt/eslint-config/commit/ee47f83e45497354c7002c30a2374a7941bc7ee8))
+
+
+
+
+
 # [7.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@6.0.1...@nuxtjs/eslint-config@7.0.0) (2021-10-24)
 
 **Note:** Version bump only for package @nuxtjs/eslint-config

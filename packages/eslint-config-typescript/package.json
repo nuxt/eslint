@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/eslint-config-typescript",
-  "version": "7.0.2",
+  "version": "8.0.0",
   "description": "Nuxt.js eslint typescript config",
   "homepage": "https://github.com/nuxt/eslint-config/tree/master/packages/eslint-config-typescript",
   "repository": "nuxt/eslint-config",
@@ -12,7 +12,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@nuxtjs/eslint-config": "7.0.0",
+    "@nuxtjs/eslint-config": "8.0.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "eslint-import-resolver-typescript": "^2.5.0"
