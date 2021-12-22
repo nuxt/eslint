@@ -128,5 +128,13 @@ module.exports = {
     'vue/max-attributes-per-line': ['error', {
       singleline: 5
     }]
-  }
+  },
+  overrides: [
+    {
+      files: ['pages/**/*.vue', 'layouts/**/*.vue'],
+      rules: {
+        'vue/multi-word-component-names': 'off',
+      },
+    },
+  ],
 }
