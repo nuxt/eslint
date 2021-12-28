@@ -128,7 +128,7 @@ module.exports = {
     'vue/max-attributes-per-line': ['error', {
       singleline: 5
     }],
-    
+
     // Disable necessity to have multi-word components.
     // Not ideal for pages
     'vue/multi-word-component-names': 'off'
