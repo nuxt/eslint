@@ -133,7 +133,7 @@ module.exports = {
     {
       files: ['pages/**/*.{js,ts,vue}', 'layouts/**/*.{js,ts,vue}'],
       rules: {
-        'vue/multi-word-component-names': 'off',
+        'vue/multi-word-component-names': 'off'
       }
     }
   ]
