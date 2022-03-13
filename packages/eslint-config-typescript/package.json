@@ -13,12 +13,12 @@
   ],
   "dependencies": {
     "@nuxtjs/eslint-config": "8.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
     "eslint-import-resolver-typescript": "^2.5.0"
   },
   "peerDependencies": {
-    "eslint": "^8.3.0"
+    "eslint": "^8.10.0"
   },
   "publishConfig": {
     "access": "public"
