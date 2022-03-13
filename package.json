@@ -9,7 +9,7 @@
     "test": "yarn lint && jest"
   },
   "devDependencies": {
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "jest": "^27.5.1",
     "lerna": "^4.0.0"
   },

@@ -21,7 +21,7 @@
     "eslint-plugin-vue": "^8.5.0"
   },
   "peerDependencies": {
-    "eslint": "^8.10.0"
+    "eslint": "^8.11.0"
   },
   "publishConfig": {
     "access": "public"
