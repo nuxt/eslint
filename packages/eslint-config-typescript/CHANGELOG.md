@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@8.0.0...@nuxtjs/eslint-config-typescript@9.0.0) (2022-03-13)
+
+**Note:** Version bump only for package @nuxtjs/eslint-config-typescript
+
+
+
+
+
 # [8.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@7.0.2...@nuxtjs/eslint-config-typescript@8.0.0) (2021-11-28)
 
 **Note:** Version bump only for package @nuxtjs/eslint-config-typescript

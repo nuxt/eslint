@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@8.0.0...@nuxtjs/eslint-config@9.0.0) (2022-03-13)
+
+
+### Bug Fixes
+
+* disable multiword-rule ([#190](https://github.com/nuxt/eslint-config/issues/190)) ([821057e](https://github.com/nuxt/eslint-config/commit/821057e36dab67caf8052a4282df42ea25e61f3a))
+
+
+
+
+
 # [8.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@7.0.0...@nuxtjs/eslint-config@8.0.0) (2021-11-28)
 
 
