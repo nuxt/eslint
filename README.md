@@ -4,7 +4,7 @@
 [![npm (scoped with tag)](https://flat.badgen.net/npm/v/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 [![npm](https://flat.badgen.net/npm/dt/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 
-[ESlint](https://eslint.org/) config used for Nuxt.js.
+[ESlint](https://eslint.org/) config used for Nuxt.
 
 ## Usage
 

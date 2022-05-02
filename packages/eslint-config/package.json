@@ -1,13 +1,9 @@
 {
   "name": "@nuxtjs/eslint-config",
   "version": "9.0.0",
-  "description": "Nuxt.js eslint config",
-  "homepage": "https://github.com/nuxt/eslint-config/tree/master/packages/eslint-config",
+  "description": "ESlint config used for Nuxt",
   "repository": "nuxt/eslint-config",
   "license": "MIT",
-  "contributors": [
-    "Alexander Lichter <npm@lichter.io>"
-  ],
   "files": [
     "index.js"
   ],
@@ -23,8 +19,5 @@
   },
   "peerDependencies": {
     "eslint": "^8.14.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

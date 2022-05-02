@@ -1,13 +1,9 @@
 {
   "name": "@nuxtjs/eslint-config-typescript",
   "version": "9.0.0",
-  "description": "Nuxt.js eslint typescript config",
-  "homepage": "https://github.com/nuxt/eslint-config/tree/master/packages/eslint-config-typescript",
+  "description": "ESlint config used for Nuxt with Typescript support",
   "repository": "nuxt/eslint-config",
   "license": "MIT",
-  "contributors": [
-    "Kevin Marrec <kevin@marrec.io>"
-  ],
   "files": [
     "index.js"
   ],
@@ -19,8 +15,5 @@
   },
   "peerDependencies": {
     "eslint": "^8.14.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
