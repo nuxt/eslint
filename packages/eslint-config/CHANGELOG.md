@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/nuxt/eslint-config/compare/v1.0.1...v10.0.0) (2022-05-02)
+
+
+### Bug Fixes
+
+* add missing dependency `eslint-plugin-n` ([022aa5f](https://github.com/nuxt/eslint-config/commit/022aa5f69c260242db89d9b4b08ed80de74b2928))
+* disable `vue/multi-word-component-names` for `app.vue` and `error.vue` (resolves [#201](https://github.com/nuxt/eslint-config/issues/201)) ([bbb0e27](https://github.com/nuxt/eslint-config/commit/bbb0e27b5d1b5a7f995f0a352baa5fce88669dc5))
+* disable multiword-rule ([#190](https://github.com/nuxt/eslint-config/issues/190)) ([821057e](https://github.com/nuxt/eslint-config/commit/821057e36dab67caf8052a4282df42ea25e61f3a))
+* eslint-plugin-import ordering errors in windows ([39ad2b4](https://github.com/nuxt/eslint-config/commit/39ad2b46da470198f71ba111ee23d9b037a49a75))
+* eslint-plugin-import ordering errors in windows ([4f6f4a9](https://github.com/nuxt/eslint-config/commit/4f6f4a9566149e438bfdf9046f82151e050d7ce7))
+* remove dependency on `eslint-plugin-standard` ([#185](https://github.com/nuxt/eslint-config/issues/185)) ([ee47f83](https://github.com/nuxt/eslint-config/commit/ee47f83e45497354c7002c30a2374a7941bc7ee8))
+
+
+* feat!: remove `eslint-plugin-jest` dependency (resolves #180) ([952edbb](https://github.com/nuxt/eslint-config/commit/952edbba907501933b71e725d6a668b2870a7d9b)), closes [#180](https://github.com/nuxt/eslint-config/issues/180)
+
+
+### Features
+
+* update eslint config packages ([a3bb0bf](https://github.com/nuxt/eslint-config/commit/a3bb0bfb923f18fd11447e048a29d11f29a3aa75))
+
+
+### BREAKING CHANGES
+
+* You have to manually add jest plugin and `jest/globals` to the `env` object in eslint config
+
+
+
+
+
 # [9.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config@8.0.0...@nuxtjs/eslint-config@9.0.0) (2022-03-13)
 
 

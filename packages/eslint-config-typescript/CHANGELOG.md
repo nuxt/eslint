@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/nuxt/eslint-config/compare/v1.0.1...v10.0.0) (2022-05-02)
+
+
+### Bug Fixes
+
+* add missing peer dependency `eslint-plugin-import` (resolves [#148](https://github.com/nuxt/eslint-config/issues/148)) ([80f0b89](https://github.com/nuxt/eslint-config/commit/80f0b89f6de7f5723c117d4a5554fae2bf7f9606))
+* **eslint-config-typescript:** use parser config ([7617549](https://github.com/nuxt/eslint-config/commit/7617549147d16018ed46a073bffff920b89e1bfb))
+* turn off typescript 'no-undef' rule per docs ([#144](https://github.com/nuxt/eslint-config/issues/144)) ([ddb552b](https://github.com/nuxt/eslint-config/commit/ddb552bb76b4f379f9f23827ccdf8708be12ad27))
+* **typescript:** import/named errors when using TypeScript ([#170](https://github.com/nuxt/eslint-config/issues/170)) ([401d626](https://github.com/nuxt/eslint-config/commit/401d6262eed320465b3fb3eb8a0067fc8bf935b3))
+* use @typescript-eslint/parser under vue-eslint-parser ([bea5b05](https://github.com/nuxt/eslint-config/commit/bea5b052e322d8c59bdef96d90300d3dda28ed9c))
+
+
+
+
+
 # [9.0.0](https://github.com/nuxt/eslint-config/compare/@nuxtjs/eslint-config-typescript@8.0.0...@nuxtjs/eslint-config-typescript@9.0.0) (2022-03-13)
 
 **Note:** Version bump only for package @nuxtjs/eslint-config-typescript
