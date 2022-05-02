@@ -11,7 +11,8 @@
     "@nuxtjs/eslint-config": "9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
-    "eslint-import-resolver-typescript": "^2.7.1"
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0"
   },
   "peerDependencies": {
     "eslint": "^8.14.0"
