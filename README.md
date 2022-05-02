@@ -1,8 +1,8 @@
 # Nuxt ESLint Config
 
-[![GitHub Actions](https://github.com/nuxt/eslint-config/workflows/ci/badge.svg?branch=master)](https://github.com/nuxt/eslint-config/actions?query=workflow%3Aci)
+[![GitHub Actions](https://flat.badgen.net/github/checks/nuxt/eslint-config/main)](https://github.com/nuxt/eslint-config/actions?query=workflow%3Aci)
+[![npm](https://flat.badgen.net/npm/dm/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 [![npm (scoped with tag)](https://flat.badgen.net/npm/v/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
-[![npm](https://flat.badgen.net/npm/dt/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 
 [ESlint](https://eslint.org/) config used for Nuxt.
 
@@ -75,13 +75,8 @@ You can find the list of supported TypeScript rules [here](https://github.com/ty
 
 Also see [Nuxt TypeScript Support](https://typescript.nuxtjs.org/guide/lint.html).
 
-## Migration guide from v0.x.y to v1.x.y
-
-1. ~~Install the new peer dependencies (`yarn add -D eslint-plugin-unicorn` *or* `npm i -D eslint-plugin-unicorn`)~~
-2. Fix issues brought up due to new rules or disable them if needed
-
 ## License
 
 Setup inspired by [eslint-config-standard](https://github.com/standard/eslint-config-standard)
 
-MIT - Nuxt.js team
+Published under the [MIT License](./LICENSE).
