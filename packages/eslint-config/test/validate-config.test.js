@@ -1,8 +1,7 @@
-const eslint = require('eslint')
+import { test, expect } from 'vitest'
+import { CLIEngine } from 'eslint'
 
-test.skip('load config in eslint to validate all rule syntax is correct', () => {
-  const CLIEngine = eslint.CLIEngine
-
+test.todo('load config in eslint to validate all rule syntax is correct', () => {
   const cli = new CLIEngine({
     useEslintrc: false,
     configFile: 'index.js'

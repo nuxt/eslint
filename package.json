@@ -6,15 +6,12 @@
   "scripts": {
     "lint": "eslint . --config=packages/eslint-config/index.js",
     "release": "lerna publish",
-    "test": "yarn lint && jest"
-  },
-  "dependencies": {
-    "eslint-plugin-jest": "^26.1.5"
+    "test": "yarn lint && vitest run"
   },
   "devDependencies": {
     "eslint": "^8.14.0",
-    "jest": "^28.0.3",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "vitest": "^0.10.0"
   },
   "packageManager": "yarn@3.2.0"
 }

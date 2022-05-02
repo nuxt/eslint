@@ -20,5 +20,5 @@ jobs:
           cache: "yarn"
       - run: yarn install
       - run: yarn lint
-      - run: yarn jest
+      - run: yarn vitest run
       - uses: codecov/codecov-action@v3
