@@ -1,8 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
-    'jest/globals': true
+    node: true
   },
   extends: [
     'standard',
@@ -11,7 +10,6 @@ module.exports = {
     'plugin:vue/recommended'
   ],
   plugins: [
-    'jest',
     'unicorn',
     'vue'
   ],
