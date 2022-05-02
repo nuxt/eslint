@@ -2,16 +2,12 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "conventionalCommits": true,
-  "exact": true,
   "packages": [
     "packages/*"
   ],
   "command": {
     "publish": {
       "npmClient": "npm"
-    },
-    "init": {
-      "exact": true
     }
   },
   "version": "10.0.0"
