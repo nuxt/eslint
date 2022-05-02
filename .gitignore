@@ -7,3 +7,7 @@ package-lock.json
 .idea
 
 *.log
+
+# Yarn
+**/.yarn/cache
+**/.yarn/*state*

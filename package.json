@@ -15,5 +15,6 @@
   },
   "dependencies": {
     "eslint-plugin-jest": "^26.1.5"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
