@@ -13,15 +13,15 @@
   ],
   "dependencies": {
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-unicorn": "^41.0.0",
-    "eslint-plugin-vue": "^8.5.0"
+    "eslint-plugin-unicorn": "^41.0.1",
+    "eslint-plugin-vue": "^8.7.1"
   },
   "peerDependencies": {
-    "eslint": "^8.11.0"
+    "eslint": "^8.14.0"
   },
   "publishConfig": {
     "access": "public"
