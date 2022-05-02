@@ -5,7 +5,7 @@
   ],
   "scripts": {
     "lint": "eslint . --config=packages/eslint-config/index.js",
-    "release": "lerna publish",
+    "release": "yarn test && lerna publish",
     "test": "yarn lint && vitest run"
   },
   "devDependencies": {

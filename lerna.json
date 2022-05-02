@@ -1,5 +1,4 @@
 {
-  "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "conventionalCommits": true,
@@ -14,5 +13,6 @@
     "init": {
       "exact": true
     }
-  }
+  },
+  "version": "9.0.0"
 }
