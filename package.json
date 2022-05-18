@@ -9,9 +9,9 @@
     "test": "yarn lint && vitest run"
   },
   "devDependencies": {
-    "eslint": "^8.14.0",
+    "eslint": "^8.15.0",
     "lerna": "^4.0.0",
-    "vitest": "^0.10.0"
+    "vitest": "^0.12.6"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.1"
 }
