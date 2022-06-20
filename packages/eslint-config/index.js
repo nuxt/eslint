@@ -7,7 +7,7 @@ module.exports = {
     'standard',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:vue/recommended'
+    'plugin:vue/vue3-recommended'
   ],
   plugins: [
     'unicorn',
