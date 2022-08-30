@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "eslint": "^8.23.0",
-    "lerna": "^4.0.0",
+    "lerna": "^5.4.3",
     "vitest": "^0.22.1"
   },
   "packageManager": "yarn@3.2.3"
