@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.0.0](https://github.com/nuxt/eslint-config/compare/v10.0.0...v11.0.0) (2022-08-31)
+
+
+### Bug Fixes
+
+* disable vue/multi-word-component-names for files in subdirectories ([#211](https://github.com/nuxt/eslint-config/issues/211)) ([c54d7fd](https://github.com/nuxt/eslint-config/commit/c54d7fd648e39b139cd63ff5f96f63bd40ac4981)), closes [#208](https://github.com/nuxt/eslint-config/issues/208)
+
+
+
+
+
 # [10.0.0](https://github.com/nuxt/eslint-config/compare/v1.0.1...v10.0.0) (2022-05-02)
 
 
