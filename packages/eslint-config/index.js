@@ -125,7 +125,10 @@ module.exports = {
     // Maximum 5 attributes per line instead of one
     'vue/max-attributes-per-line': ['error', {
       singleline: 5
-    }]
+    }],
+    
+    // Vue 3's v-model:foo
+    'vue/no-v-model-argument': 'off'
   },
   overrides: [
     {
