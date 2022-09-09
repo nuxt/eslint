@@ -9,7 +9,7 @@
     "test": "yarn lint && vitest run"
   },
   "devDependencies": {
-    "eslint": "^8.23.0",
+    "eslint": "^8.22.0",
     "lerna": "^5.4.3",
     "vitest": "^0.22.1"
   },
