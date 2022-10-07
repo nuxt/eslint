@@ -13,7 +13,7 @@
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-unicorn": "^43.0.2",
+    "eslint-plugin-unicorn": "^44.0.2",
     "eslint-plugin-vue": "^9.4.0"
   },
   "peerDependencies": {
