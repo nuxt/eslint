@@ -166,6 +166,6 @@ module.exports = {
     'package-lock.json',
     'pnpm-lock.yaml',
     'yarn.lock',
-    '__snapshots__',
+    '__snapshots__'
   ]
 }
