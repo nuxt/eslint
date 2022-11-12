@@ -1,13 +1,22 @@
+const { getPackageInfoSync } = require('local-pkg')
+
+const nuxt = getPackageInfoSync('nuxt')
+const isNuxt2 = nuxt && nuxt.version && nuxt.version.startsWith('2.')
+// console.log({ isNuxt2 })
+
 module.exports = {
   env: {
     browser: true,
-    node: true
+    node: true,
+    ...(isNuxt2 ? {} : { es6: true })
   },
   extends: [
     'standard',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:vue/recommended'
+    isNuxt2
+      ? 'plugin:vue/recommended'
+      : 'plugin:vue/vue3-recommended'
   ],
   plugins: [
     'unicorn',
@@ -125,7 +134,10 @@ module.exports = {
     // Maximum 5 attributes per line instead of one
     'vue/max-attributes-per-line': ['error', {
       singleline: 5
-    }]
+    }],
+ 
+    // v-model argument is supported in Vue3
+    'vue/no-v-model-argument': isNuxt2 ? 'error': 'off'
   },
   overrides: [
     {
@@ -136,8 +148,28 @@ module.exports = {
         '**/error.{js,ts,vue}'
       ],
       rules: {
-        'vue/multi-word-component-names': 'off'
+        'vue/multi-word-component-names': 'off',
+        // Pages and layouts are required to have a single root element
+        'vue/no-multiple-template-root': 'error'
       }
     }
+  ],
+  reportUnusedDisableDirectives: true,
+  ignorePatterns: [
+    '*.min.*',
+    '*.d.ts',
+    'dist',
+    'LICENSE*',
+    'output',
+    'coverage',
+    'public',
+    'temp',
+    'package-lock.json',
+    'pnpm-lock.yaml',
+    'yarn.lock',
+    '__snapshots__',
+    '!.github',
+    '!.vitepress',
+    '!.vscode'
   ]
 }
