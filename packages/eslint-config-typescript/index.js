@@ -21,8 +21,6 @@ module.exports = {
 
     // For easier migration
     '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/consistent-indexed-object-style': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -36,7 +34,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-namespace': 'off',
-    '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off'
   },
   settings: {
     'import/parsers': {

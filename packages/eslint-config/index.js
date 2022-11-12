@@ -135,9 +135,9 @@ module.exports = {
     'vue/max-attributes-per-line': ['error', {
       singleline: 5
     }],
- 
+
     // v-model argument is supported in Vue3
-    'vue/no-v-model-argument': isNuxt2 ? 'error': 'off'
+    'vue/no-v-model-argument': isNuxt2 ? 'error' : 'off'
   },
   overrides: [
     {
