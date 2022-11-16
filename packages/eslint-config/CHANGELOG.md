@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [12.0.0](https://github.com/nuxt/eslint-config/compare/v11.0.0...v12.0.0) (2022-11-16)
+
+
+### Features
+
+* improve Nuxt3 compatibility ([#236](https://github.com/nuxt/eslint-config/issues/236)) ([8f520af](https://github.com/nuxt/eslint-config/commit/8f520af18e401808e4d68c7a580c1f95be7ed3a5))
+
+
+
+
+
 # [11.0.0](https://github.com/nuxt/eslint-config/compare/v10.0.0...v11.0.0) (2022-08-31)
 
 
