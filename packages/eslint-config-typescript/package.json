@@ -9,14 +9,14 @@
   ],
   "dependencies": {
     "@nuxtjs/eslint-config": "^12.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
-    "@typescript-eslint/parser": "^5.43.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-vue": "^9.7.0"
+    "eslint-plugin-vue": "^9.8.0"
   },
   "peerDependencies": {
-    "eslint": "^8.27.0"
+    "eslint": "^8.28.0"
   },
   "devDependencies": {
     "typescript": "^4.9.3"
