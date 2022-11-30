@@ -14,10 +14,10 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-unicorn": "^44.0.2",
-    "eslint-plugin-vue": "^9.7.0",
+    "eslint-plugin-vue": "^9.8.0",
     "local-pkg": "^0.4.2"
   },
   "peerDependencies": {
-    "eslint": "^8.27.0"
+    "eslint": "^8.28.0"
   }
 }
