@@ -13,7 +13,7 @@
     "eslint-plugin-n": "^15.5.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-unicorn": "^44.0.2",
+    "eslint-plugin-unicorn": "^45.0.1",
     "eslint-plugin-vue": "^9.8.0",
     "local-pkg": "^0.4.2"
   },
