@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn vitest run
+      - run: pnpm install
+      - run: pnpm lint
+      - run: pnpm vitest run
       - uses: codecov/codecov-action@v3
