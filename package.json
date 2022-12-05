@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "eslint": "^8.29.0",
-    "vitest": "^0.25.3",
+    "vitest": "^0.25.4",
     "vue": "^3.2.45"
   },
   "packageManager": "pnpm@7.18.0"
