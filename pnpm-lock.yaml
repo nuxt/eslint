@@ -16,16 +16,16 @@ importers:
     specifiers:
       eslint-config-standard: ^17.0.0
       eslint-plugin-import: ^2.26.0
-      eslint-plugin-n: ^15.5.1
+      eslint-plugin-n: ^15.6.0
       eslint-plugin-node: ^11.1.0
       eslint-plugin-promise: ^6.1.1
       eslint-plugin-unicorn: ^45.0.1
       eslint-plugin-vue: ^9.8.0
       local-pkg: ^0.4.2
     dependencies:
-      eslint-config-standard: 17.0.0_lhkiiwwn4vdoqlx6evzkhp5fle
+      eslint-config-standard: 17.0.0_mzlnsyyxf7c4r7amgc7dfek2ve
       eslint-plugin-import: 2.26.0
-      eslint-plugin-n: 15.5.1
+      eslint-plugin-n: 15.6.0
       eslint-plugin-node: 11.1.0
       eslint-plugin-promise: 6.1.1
       eslint-plugin-unicorn: 45.0.1
@@ -994,7 +994,7 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-standard/17.0.0_lhkiiwwn4vdoqlx6evzkhp5fle:
+  /eslint-config-standard/17.0.0_mzlnsyyxf7c4r7amgc7dfek2ve:
     resolution: {integrity: sha512-/2ks1GKyqSOkH7JFvXJicu0iMpoojkwB+f5Du/1SC0PtBL+s8v30k9njRZ21pm2drKYm2342jFnGWzttxPmZVg==}
     peerDependencies:
       eslint: ^8.0.1
@@ -1003,7 +1003,7 @@ packages:
       eslint-plugin-promise: ^6.0.0
     dependencies:
       eslint-plugin-import: 2.26.0
-      eslint-plugin-n: 15.5.1
+      eslint-plugin-n: 15.6.0
       eslint-plugin-promise: 6.1.1
     dev: false
 
@@ -1170,8 +1170,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-n/15.5.1:
-    resolution: {integrity: sha512-kAd+xhZm7brHoFLzKLB7/FGRFJNg/srmv67mqb7tto22rpr4wv/LV6RuXzAfv3jbab7+k1wi42PsIhGviywaaw==}
+  /eslint-plugin-n/15.6.0:
+    resolution: {integrity: sha512-Hd/F7wz4Mj44Jp0H6Jtty13NcE69GNTY0rVlgTIj1XBnGGVI6UTdDrpE6vqu3AHo07bygq/N+7OH/lgz1emUJw==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       eslint: '>=7.0.0'
