@@ -27,7 +27,7 @@ yarn add -D @nuxt/eslint-config eslint
 pnpm add -D @nuxt/eslint-config eslint
 ```
 
-2. Extend the default Nuxt config:
+2. Extend the default Nuxt config by creating an `.eslintrc.cjs`:
 
 ```js
 module.exports = {
