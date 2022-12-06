@@ -1,21 +1,25 @@
 {
-  "name": "@nuxtjs/eslint-config",
-  "version": "12.0.0",
-  "description": "ESlint config used for Nuxt",
+  "name": "@nuxt/eslint-config",
+  "version": "0.1.0",
+  "description": "ESLint config for Nuxt projects",
   "repository": "nuxt/eslint-config",
   "license": "MIT",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
   "files": [
     "index.js"
   ],
   "dependencies": {
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.6.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-unicorn": "^45.0.1",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
     "eslint-plugin-vue": "^9.8.0",
-    "local-pkg": "^0.4.2"
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0"
   },
   "peerDependencies": {
     "eslint": "^8.29.0"
