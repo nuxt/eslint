@@ -1,6 +1,6 @@
 const { getPackageInfoSync } = require('local-pkg')
 
-const nuxt = getPackageInfoSync('nuxt')
+const nuxt = getPackageInfoSync('nuxt') || getPackageInfoSync('nuxt-edge')
 const isNuxt2 = nuxt && nuxt.version && nuxt.version.startsWith('2.')
 
 module.exports = {
