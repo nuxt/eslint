@@ -3,6 +3,7 @@
   "workspaces": [
     "packages/*"
   ],
+  "packageManager": "pnpm@7.18.2",
   "scripts": {
     "lint": "eslint . --config=packages/eslint-config/index.js",
     "release": "pnpm test && pnpm publish -r",
@@ -12,6 +13,5 @@
     "eslint": "^8.30.0",
     "vitest": "^0.26.0",
     "vue": "^3.2.45"
-  },
-  "packageManager": "pnpm@7.18.2"
+  }
 }

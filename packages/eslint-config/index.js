@@ -17,7 +17,10 @@ module.exports = {
     }
   },
   env: { node: true },
-  plugins: ['@typescript-eslint'],
+  plugins: [
+    '@typescript-eslint',
+    'jsonc'
+  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',

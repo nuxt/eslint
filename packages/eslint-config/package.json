@@ -2,15 +2,18 @@
   "name": "@nuxt/eslint-config",
   "version": "0.1.1",
   "description": "ESLint config for Nuxt projects",
-  "repository": "nuxt/eslint-config",
   "license": "MIT",
-  "main": "index.js",
+  "repository": "nuxt/eslint-config",
   "exports": {
     ".": "./index.js"
   },
+  "main": "index.js",
   "files": [
     "index.js"
   ],
+  "peerDependencies": {
+    "eslint": "^8.30.0"
+  },
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
@@ -20,9 +23,7 @@
     "typescript": "^4.9.4"
   },
   "devDependencies": {
-    "eslint": "^8.30.0"
-  },
-  "peerDependencies": {
-    "eslint": "^8.30.0"
+    "eslint": "^8.30.0",
+    "eslint-plugin-jsonc": "^2.6.0"
   }
 }

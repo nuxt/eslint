@@ -2,11 +2,14 @@
   "name": "@nuxtjs/eslint-config-typescript",
   "version": "12.0.0",
   "description": "ESlint config used for Nuxt with Typescript support",
-  "repository": "nuxt/eslint-config",
   "license": "MIT",
+  "repository": "nuxt/eslint-config",
   "files": [
     "index.js"
   ],
+  "peerDependencies": {
+    "eslint": "^8.30.0"
+  },
   "dependencies": {
     "@nuxtjs/eslint-config": "^12.0.0",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
@@ -14,9 +17,6 @@
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-vue": "^9.8.0"
-  },
-  "peerDependencies": {
-    "eslint": "^8.30.0"
   },
   "devDependencies": {
     "typescript": "^4.9.4"
