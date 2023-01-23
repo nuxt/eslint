@@ -4,10 +4,10 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Github Actions][github-actions-src]][github-actions-href]
+<!--[![Github Actions][github-actions-src]][github-actions-href]
 [![Codecov][codecov-src]][codecov-href]
 [![Bundlephobia][bundlephobia-src]][bundlephobia-href]
-[![LGTM][lgtm-src]][lgtm-href]
+[![LGTM][lgtm-src]][lgtm-href]-->
 
 > Non-opinionated [ESlint](https://eslint.org/) configuration for Nuxt 3 apps.
 
