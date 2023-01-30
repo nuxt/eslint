@@ -80,7 +80,7 @@ $ yarn add -D eslint
 
 ```json
 {
-  "extends": ["@nuxtjs"]
+  "extends": ["@nuxt/eslint-config"]
 }
 ```
 
@@ -97,7 +97,7 @@ A full example `.eslintrc` for a project with babel support:
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": ["@nuxtjs"]
+  "extends": ["@nuxt/eslint-config"],
 }
 ```
 
