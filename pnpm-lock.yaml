@@ -15,6 +15,7 @@ importers:
   packages/eslint-config:
     specifiers:
       '@rushstack/eslint-patch': ^1.2.0
+      '@types/eslint': ^8.21.1
       '@typescript-eslint/eslint-plugin': ^5.46.1
       '@typescript-eslint/parser': ^5.46.1
       eslint: ^8.30.0
@@ -27,6 +28,7 @@ importers:
       eslint-plugin-vue: 9.8.0_eslint@8.30.0
       typescript: 4.9.4
     devDependencies:
+      '@types/eslint': 8.21.1
       eslint: 8.30.0
 
   packages/eslint-config-legacy:
@@ -216,9 +218,19 @@ packages:
     resolution: {integrity: sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==}
     dev: true
 
+  /@types/eslint/8.21.1:
+    resolution: {integrity: sha512-rc9K8ZpVjNcLs8Fp0dkozd5Pt2Apk1glO4Vgz8ix1u6yFByxfqo5Yavpy65o+93TAe24jr7v+eSBtFLvOQtCRQ==}
+    dependencies:
+      '@types/estree': 1.0.0
+      '@types/json-schema': 7.0.11
+    dev: true
+
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
-    dev: false
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
