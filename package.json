@@ -9,9 +9,9 @@
     "test": "pnpm lint && vitest run"
   },
   "devDependencies": {
-    "eslint": "^8.30.0",
-    "vitest": "^0.26.0",
-    "vue": "^3.2.45"
+    "eslint": "^8.35.0",
+    "vitest": "^0.29.2",
+    "vue": "^3.2.47"
   },
-  "packageManager": "pnpm@7.18.2"
+  "packageManager": "pnpm@7.28.0"
 }
