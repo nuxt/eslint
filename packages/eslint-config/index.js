@@ -73,7 +73,7 @@ module.exports = {
     },
     {
       // Pages and layouts are required to have a single root element if transitions are enabled.
-      files: ['**/pages/**/*.{js,ts,vue}', '**/layouts/**/*.{js,ts,vue}'],
+      files: ['**/pages/**/*.{js,ts,vue}', '**/layouts/**/*.{js,ts,vue}', '**/components/*/**/*.{js,ts,vue}'],
       rules: { 'vue/no-multiple-template-root': 'error' }
     }
   ]
