@@ -13,9 +13,9 @@
   ],
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.59.2",
-    "@typescript-eslint/parser": "^5.59.2",
-    "eslint-plugin-vue": "^9.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint-plugin-vue": "^9.13.0",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
