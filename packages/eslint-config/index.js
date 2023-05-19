@@ -67,13 +67,14 @@ module.exports = {
         '**/pages/**/*.{js,ts,vue}',
         '**/layouts/**/*.{js,ts,vue}',
         '**/app.{js,ts,vue}',
-        '**/error.{js,ts,vue}'
+        '**/error.{js,ts,vue}',
+        '**/components/*/**/*.{js,ts,vue}'
       ],
       rules: { 'vue/multi-word-component-names': 'off' }
     },
     {
       // Pages and layouts are required to have a single root element if transitions are enabled.
-      files: ['**/pages/**/*.{js,ts,vue}', '**/layouts/**/*.{js,ts,vue}', '**/components/*/**/*.{js,ts,vue}'],
+      files: ['**/pages/**/*.{js,ts,vue}', '**/layouts/**/*.{js,ts,vue}'],
       rules: { 'vue/no-multiple-template-root': 'error' }
     }
   ]
