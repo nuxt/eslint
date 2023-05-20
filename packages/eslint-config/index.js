@@ -62,12 +62,14 @@ module.exports = {
       },
     },
     {
-      // These pages are not used directly by users so they can have one-word names.
       files: [
+        // These pages are not used directly by users so they can have one-word names.
         '**/pages/**/*.{js,ts,vue}',
         '**/layouts/**/*.{js,ts,vue}',
         '**/app.{js,ts,vue}',
-        '**/error.{js,ts,vue}'
+        '**/error.{js,ts,vue}',
+        // These files should have multiple words in their names as they are within subdirectories.
+        '**/components/*/**/*.{js,ts,vue}'
       ],
       rules: { 'vue/multi-word-component-names': 'off' }
     },
