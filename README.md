@@ -80,7 +80,7 @@ $ yarn add -D eslint
 
 ```json
 {
-  "extends": ["@nuxt/eslint-config"]
+  "extends": ["@nuxtjs/eslint-config"]
 }
 ```
 
