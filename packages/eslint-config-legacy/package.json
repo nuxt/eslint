@@ -8,16 +8,16 @@
     "index.js"
   ],
   "dependencies": {
-    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-unicorn": "^47.0.0",
-    "eslint-plugin-vue": "^9.13.0",
+    "eslint-plugin-vue": "^9.14.1",
     "local-pkg": "^0.4.3"
   },
   "peerDependencies": {
-    "eslint": "^8.41.0"
+    "eslint": "^8.43.0"
   }
 }
