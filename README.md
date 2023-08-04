@@ -114,9 +114,7 @@ And in your `.eslintrc` all you need is :
 ```
 
 You can then edit/override same rules as you could with `@nuxtjs/eslint-config` but also TypeScript rules.
-You can find the list of supported TypeScript rules [here](https://typescript-eslint.io/rules/#supported-rules).
-
-Also see [Nuxt TypeScript Support](https://typescript.nuxtjs.org/guide/lint.html).
+You can find the list of supported TypeScript rules [here](https://typescript-eslint.io/rules/#supported-rules) and you can read more about Nuxt's TypeScript support [in the docs](https://nuxt.com/docs/guide/concepts/typescript).
 
 ### License
 
