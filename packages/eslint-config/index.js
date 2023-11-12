@@ -77,6 +77,11 @@ module.exports = {
       // Pages and layouts are required to have a single root element if transitions are enabled.
       files: ['**/pages/**/*.{js,ts,jsx,tsx,vue}', '**/layouts/**/*.{js,ts,jsx,tsx,vue}'],
       rules: { 'vue/no-multiple-template-root': 'error' }
+    },
+    {
+      // Composables can use auto-imports, eslint should not throw an error for undefined
+      files: ['**/composables/**/*.{js,ts,jsx,tsx,vue}'],
+      rules: { 'no-undef': 'off' }
     }
   ]
 }
