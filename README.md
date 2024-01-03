@@ -1,6 +1,6 @@
 # Nuxt ESLint packages
 
-## `@nuxt/eslint-config`
+## Nuxt 3: `@nuxt/eslint-config`
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -46,7 +46,7 @@ You might also want to add a script entry to your `package.json:
 }
 ```
 
-## `@nuxtjs/eslint-config` and `@nuxtjs/eslint-config-typescript`
+## Nuxt 2: `@nuxtjs/eslint-config` and `@nuxtjs/eslint-config-typescript`
 
 [![GitHub Actions](https://flat.badgen.net/github/checks/nuxt/eslint-config/main)](https://github.com/nuxt/eslint-config/actions?query=workflow%3Aci)
 [![npm](https://flat.badgen.net/npm/dm/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
@@ -54,7 +54,7 @@ You might also want to add a script entry to your `package.json:
 
 > Opinionated [ESlint](https://eslint.org/) configuration used internally by Nuxt projects.
 
-## Usage
+### Usage
 
 Do you want to add the config to your own projects? There you go:
 
@@ -84,7 +84,7 @@ $ yarn add -D eslint
 }
 ```
 
-## Full example
+### Full example
 
 A full example `.eslintrc` for a project with babel support:
 
@@ -101,7 +101,7 @@ A full example `.eslintrc` for a project with babel support:
 }
 ```
 
-## TypeScript
+### TypeScript
 
 If you're using TypeScript, follow [Usage](#usage) section by replacing `@nuxtjs/eslint-config` by `@nuxtjs/eslint-config-typescript`.
 
@@ -116,7 +116,7 @@ And in your `.eslintrc` all you need is :
 You can then edit/override same rules as you could with `@nuxtjs/eslint-config` but also TypeScript rules.
 You can find the list of supported TypeScript rules [here](https://typescript-eslint.io/rules/#supported-rules) and you can read more about Nuxt's TypeScript support [in the docs](https://nuxt.com/docs/guide/concepts/typescript).
 
-### License
+## License
 
 Made with ❤️
 
