@@ -4,25 +4,41 @@
   "description": "ESLint config for Nuxt projects",
   "repository": "nuxt/eslint-config",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./dist/legacy.cjs",
   "exports": {
-    ".": "./index.js"
+    ".": {
+      "import": "./dist/legacy.mjs",
+      "require": "./dist/legacy.cjs"
+    },
+    "./flat": {
+      "import": "./dist/flat.mjs",
+      "require": "./dist/flat.cjs"
+    }
   },
   "files": [
-    "index.js"
+    "dist"
   ],
-  "dependencies": {
-    "@rushstack/eslint-patch": "^1.7.2",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "eslint-plugin-vue": "^9.22.0",
-    "typescript": "^5.4.2"
-  },
-  "devDependencies": {
-    "@types/eslint": "^8.56.5",
-    "eslint": "^8.57.0"
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "prepack": "npm run build"
   },
   "peerDependencies": {
     "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "@eslint/js": "^8.57.0",
+    "@nuxt/eslint-plugin": "workspace:*",
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint-plugin-vue": "^9.22.0",
+    "pathe": "^1.1.2",
+    "vue-eslint-parser": "^9.4.2"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.5",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.2"
   }
 }

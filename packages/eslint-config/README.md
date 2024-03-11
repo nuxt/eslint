@@ -9,7 +9,6 @@
 
 - Works out-of-the-box with no additional configuration.
 - Nuxt-specific rules for pages, components and more.
-- ... under active development
 
 ### Installation
 

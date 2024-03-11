@@ -1,5 +1,5 @@
 import type { FlatConfig } from '../types'
-import nuxtPlugin from '../../plugin'
+import nuxtPlugin from '@nuxt/eslint-plugin'
 
 export default function nuxt(): FlatConfig[] {
   return [

@@ -1,10 +1,8 @@
 import * as parserTs from '@typescript-eslint/parser'
 import * as parserVue from 'vue-eslint-parser'
 import pluginTs from '@typescript-eslint/eslint-plugin'
-
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
-
 // @ts-expect-error missing types
 import pluginESLint from '@eslint/js'
 import type { Linter } from 'eslint'
@@ -29,7 +27,7 @@ export default function setup(): Linter.FlatConfig[] {
       },
     },
     {
-      name: 'nuxt:setup',
+      name: 'nuxt:language-options',
       languageOptions: {
         parserOptions: {
           ecmaVersion: 'latest',
@@ -40,7 +38,10 @@ export default function setup(): Linter.FlatConfig[] {
         },
       },
     },
-    pluginESLint.configs.recommended,
+    {
+      name: 'eslint:recommended',
+      ...pluginESLint.configs.recommended,
+    },
     {
       name: 'nuxt:typescript',
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],

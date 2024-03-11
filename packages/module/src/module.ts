@@ -4,9 +4,8 @@ import type { Import } from 'unimport'
 import type { Nuxt } from '@nuxt/schema'
 import { relative, resolve } from 'pathe'
 import { getPort } from 'get-port-please'
-import type { ESLintPluginData } from './utils'
-import { Unimport } from './addons/unimport'
-import type { NuxtESLintConfigOptions } from './config/types'
+import type { ESLintPluginAddon } from './types'
+import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -18,19 +17,6 @@ export interface ModuleOptions {
    * @default true
    */
   standalone?: boolean
-
-  /**
-   * Enable experimental features.
-   */
-  experimental?: {
-    /**
-     * Enable unimport plugin that inserts import statements automatically.
-     *
-     * @experimental
-     * @default false
-     */
-    unimport?: boolean
-  }
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -40,15 +26,11 @@ export default defineNuxtModule<ModuleOptions>({
   },
   defaults: {
     standalone: true,
-    experimental: {
-      unimport: false,
-    },
   },
   setup(options, nuxt) {
-    const addons: ESLintPluginData[] = []
+    const addons: ESLintPluginAddon[] = []
 
-    if (options.experimental?.unimport)
-      addons.push(Unimport(nuxt))
+    // TODO: hook to add more addons
 
     addTemplate({
       filename: 'eslint.config.mjs',
@@ -62,13 +44,13 @@ export default defineNuxtModule<ModuleOptions>({
   },
 })
 
-function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: ESLintPluginData[]) {
+function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: ESLintPluginAddon[]) {
   const importLines: Import[] = []
   const configLines: string[] = []
 
   importLines.push({
-    from: 'nuxt-module-eslint-config/config',
-    name: 'createBasicNuxtConfig',
+    from: '@nuxt/eslint-config/flat',
+    name: 'createNuxtESLintFlatConfig',
   })
 
   const basicOptions: NuxtESLintConfigOptions = {
@@ -78,11 +60,11 @@ function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: ESLint
     dirs: getDirs(nuxt),
   }
 
-  configLines.push(`...createBasicNuxtConfig(\n${JSON.stringify(basicOptions, null, 2)}\n),`)
+  configLines.push(`...createNuxtESLintFlatConfig(\n${JSON.stringify(basicOptions, null, 2)}\n),`)
 
   for (const mod of addons) {
     importLines.push(...mod.imports)
-    configLines.push(...mod.configLines)
+    configLines.push(...mod.configs)
   }
 
   return [

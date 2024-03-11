@@ -1,9 +1,11 @@
 import type { FlatConfig, NuxtESLintConfigOptions } from './types'
-import setup from './parts/setup'
-import disables from './parts/disables'
-import nuxt from './parts/nuxt'
+import setup from './configs/setup'
+import disables from './configs/disables'
+import nuxt from './configs/nuxt'
 
-export function createBasicNuxtConfig(options: NuxtESLintConfigOptions = {}): FlatConfig[] {
+export * from './types'
+
+export function createNuxtESLintFlatConfig(options: NuxtESLintConfigOptions = {}): FlatConfig[] {
   const items: FlatConfig[] = []
 
   if (options.features?.standalone !== false)

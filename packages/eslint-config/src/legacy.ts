@@ -1,7 +1,7 @@
-require('@rushstack/eslint-patch/modern-module-resolution')
+import '@rushstack/eslint-patch/modern-module-resolution'
+import { ESLint } from 'eslint'
 
-/** @type {import('eslint').ESLint.ConfigData}  */
-module.exports = {
+const config: ESLint.ConfigData = {
   parserOptions: {
     ecmaVersion: 'latest',
     parser: {
@@ -80,3 +80,5 @@ module.exports = {
     }
   ]
 }
+
+export default config

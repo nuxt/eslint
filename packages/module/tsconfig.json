@@ -1,9 +1,0 @@
-{
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "moduleResolution": "Bundler"
-  },
-  "exclude": [
-    "playground"
-  ]
-}

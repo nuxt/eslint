@@ -1,13 +1,21 @@
 {
   "private": true,
   "packageManager": "pnpm@8.15.4",
+  "version": "0.3.0-alpha.0",
   "scripts": {
-    "lint": "eslint . --config=packages/eslint-config/index.js",
+    "build": "pnpm run -r build",
+    "stub": "pnpm run -r stub",
     "release": "pnpm test && pnpm publish -r",
-    "test": "pnpm lint && vitest run",
+    "test": "vitest run",
+    "play": "pnpm -C playground run play:dev",
+    "lint": "eslint . --config=packages/eslint-config/index.js",
+    "lint:play": "pnpm -C playground run lint",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^3.11.0",
+    "@nuxt/eslint-config": "workspace:*",
+    "@nuxt/eslint-plugin": "workspace:*",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.25",
     "eslint": "^8.57.0",

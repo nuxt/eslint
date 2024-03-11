@@ -8,7 +8,9 @@
 > [!IMPORTANT]
 > Experimental. Feedbacks are greatly welcome.
 
-A module that generates project-aware [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) for Nuxt. This should replace [`@nuxt/eslint-config`](https://github.com/nuxt/eslint-config) as the flat config version.
+A module that generates project-aware [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) for Nuxt.
+
+Different from [`@nuxtjs/eslint-module`](https://github.com/nuxt-modules/eslint), this module does not run ESLint but only generates config under `.nuxt/eslint.config.mjs` based on your project settings. We command using IDEs and `eslint` CLI to lint your code.
 
 ## Features
 
