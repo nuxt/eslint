@@ -12,15 +12,15 @@
     "index.js"
   ],
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.6.1",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
-    "eslint-plugin-vue": "^9.19.2",
-    "typescript": "^5.3.3"
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint-plugin-vue": "^9.22.0",
+    "typescript": "^5.4.2"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.0",
-    "eslint": "^8.56.0"
+    "@types/eslint": "^8.56.5",
+    "eslint": "^8.57.0"
   },
   "peerDependencies": {
     "eslint": "^8.56.0"
