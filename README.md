@@ -12,7 +12,9 @@ Collection of [ESLint](https://eslint.org)-related packages for Nuxt ✨
 
 ## Packages
 
-- [@nuxt/eslint-config](./packages/eslint-config) - ESLint Config for Nuxt 3
+- [@nuxt/eslint](./packages/module) - Nuxt module generating project-aware ESLint config
+- [@nuxt/eslint-config](./packages/eslint-config) - Static ESLint Config
+- [@nuxt/eslint-plugin](./packages/eslint-plugin) - ESLint Plugin
 
 ## License
 

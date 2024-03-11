@@ -1,13 +1,8 @@
-# Dependencies
 node_modules
-package-lock.json
-
-# Intellij idea
 *.iml
 .idea
-
 *.log
-
-# Yarn
+.nuxt
+.output
 **/.yarn/cache
 **/.yarn/*state*
