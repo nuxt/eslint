@@ -1,33 +1,19 @@
-import * as parserTs from '@typescript-eslint/parser'
 import * as parserVue from 'vue-eslint-parser'
-import pluginTs from '@typescript-eslint/eslint-plugin'
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
-// @ts-expect-error missing types
-import pluginESLint from '@eslint/js'
-import type { Linter } from 'eslint'
+import { FlatConfig } from '../types'
 
-export default function setup(): Linter.FlatConfig[] {
+export default function vue(): FlatConfig[] {
   return [
     {
-      ignores: [
-        '**/dist',
-        '**/node_modules',
-        '**/.nuxt',
-        '**/.output',
-        '**/.vercel',
-        '**/.netlify',
-      ],
-    },
-    {
-      name: 'nuxt:plugins-setup',
+      name: 'nuxt:setup-vue',
       plugins: {
-        '@typescript-eslint': pluginTs as any,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         'vue': pluginVue as any,
       },
     },
     {
-      name: 'nuxt:language-options',
+      name: 'nuxt:vue-language-options',
       languageOptions: {
         parserOptions: {
           ecmaVersion: 'latest',
@@ -36,21 +22,24 @@ export default function setup(): Linter.FlatConfig[] {
             jsx: true,
           },
         },
-      },
-    },
-    {
-      name: 'eslint:recommended',
-      ...pluginESLint.configs.recommended,
-    },
-    {
-      name: 'nuxt:typescript',
-      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
-      languageOptions: {
-        parser: parserTs,
-      },
-      rules: {
-        ...pluginTs.configs['eslint-recommended'].overrides![0].rules,
-        ...pluginTs.configs.recommended.rules,
+        // This allows Vue plugin to work with auto imports
+        // https://github.com/vuejs/eslint-plugin-vue/pull/2422
+        globals: {
+          computed: 'readonly',
+          defineEmits: 'readonly',
+          defineExpose: 'readonly',
+          defineProps: 'readonly',
+          onMounted: 'readonly',
+          onUnmounted: 'readonly',
+          reactive: 'readonly',
+          ref: 'readonly',
+          shallowReactive: 'readonly',
+          shallowRef: 'readonly',
+          toRef: 'readonly',
+          toRefs: 'readonly',
+          watch: 'readonly',
+          watchEffect: 'readonly',
+        },
       },
     },
     {
@@ -61,6 +50,7 @@ export default function setup(): Linter.FlatConfig[] {
       languageOptions: {
         parser: parserVue,
       },
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       processor: pluginVue.processors['.vue'] as any,
       rules: {
         ...pluginVue.configs.base.rules,
@@ -91,16 +81,6 @@ export default function setup(): Linter.FlatConfig[] {
         'prefer-rest-params': 'error', // ts provides better types with rest args over arguments
         'prefer-spread': 'error', // ts transpiles spread to apply, so no need for manual apply
         'valid-typeof': 'off', // ts(2367)
-      },
-    },
-    {
-      name: 'nuxt:typescript-disables',
-      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
-      rules: {
-        // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)
-        // does not work with type definitions.
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'warn',
       },
     },
   ]

@@ -35,11 +35,11 @@
   },
   "dependencies": {
     "@nuxt/devtools-kit": "^1.0.8",
+    "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/kit": "^3.10.3",
     "eslint-flat-config-viewer": "^0.1.11",
     "get-port-please": "^3.1.2",
-    "@nuxt/eslint-config": "workspace:*",
     "pathe": "^1.1.2",
     "unimport": "^3.7.1"
   },

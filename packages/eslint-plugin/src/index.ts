@@ -3,7 +3,7 @@ import rules from './rules'
 
 export default {
   meta: {
-    name: 'nuxt-module-eslint-config/plugin',
+    name: '@nuxt/eslint-plugin',
   },
   rules,
 } satisfies ESLint.Plugin
