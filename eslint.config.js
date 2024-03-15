@@ -5,9 +5,12 @@ export default [
   {
     ignores: [
       'packages-legacy/**',
-    ]
+    ],
   },
   ...createNuxtESLintFlatConfig({
+    features: {
+      stylistic: true,
+    },
     dirs: {
       src: 'playground',
       pages: [
@@ -22,6 +25,6 @@ export default [
         'playground/components',
         'docs/components',
       ],
-    }
-  })
+    },
+  }),
 ]

@@ -25,7 +25,6 @@ const currentStep = ref(0)
 const projectsSectionVisible = ref(false)
 const nuxtProjectsSection = ref(null)
 
-
 useIntersectionObserver(
   nuxtProjectsSection,
   ([{ isIntersecting }]) => {

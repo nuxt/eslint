@@ -7,21 +7,20 @@ const config: ESLint.ConfigData = {
     parser: {
       js: 'espree',
       jsx: 'espree',
-
       ts: '@typescript-eslint/parser',
-      tsx: '@typescript-eslint/parser'
+      tsx: '@typescript-eslint/parser',
     },
     extraFileExtensions: ['.vue'],
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   env: { node: true },
   plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:vue/vue3-recommended'
+    'plugin:vue/vue3-recommended',
   ],
   overrides: [
     {
@@ -30,8 +29,8 @@ const config: ESLint.ConfigData = {
         // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)
         // does not work with type definitions.
         'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'warn'
-      }
+        '@typescript-eslint/no-unused-vars': 'warn',
+      },
     },
     {
       // Include typescript eslint rules in *.vue files
@@ -69,16 +68,16 @@ const config: ESLint.ConfigData = {
         '**/app.{js,ts,jsx,tsx,vue}',
         '**/error.{js,ts,jsx,tsx,vue}',
         // These files should have multiple words in their names as they are within subdirectories.
-        '**/components/*/**/*.{js,ts,jsx,tsx,vue}'
+        '**/components/*/**/*.{js,ts,jsx,tsx,vue}',
       ],
-      rules: { 'vue/multi-word-component-names': 'off' }
+      rules: { 'vue/multi-word-component-names': 'off' },
     },
     {
       // Pages and layouts are required to have a single root element if transitions are enabled.
       files: ['**/pages/**/*.{js,ts,jsx,tsx,vue}', '**/layouts/**/*.{js,ts,jsx,tsx,vue}'],
-      rules: { 'vue/no-multiple-template-root': 'error' }
-    }
-  ]
+      rules: { 'vue/no-multiple-template-root': 'error' },
+    },
+  ],
 }
 
 export default config

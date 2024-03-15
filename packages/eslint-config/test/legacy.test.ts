@@ -18,4 +18,3 @@ describe('eslint-config', () => {
     expect(rules.plugins).toContain('vue')
   })
 })
-

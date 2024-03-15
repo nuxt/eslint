@@ -1,3 +1,4 @@
+import { StylisticCustomizeOptions } from '@stylistic/eslint-plugin'
 import type { Linter } from 'eslint'
 
 export interface NuxtESLintConfigOptions {
@@ -10,6 +11,14 @@ export interface NuxtESLintConfigOptions {
      * @default true
      */
     standalone?: boolean
+
+    /**
+     * Enable stylistic ESLint rules for formatting and code style check
+     *
+     * @see https://eslint.style/guide/config-presets
+     * @default false
+     */
+    stylistic?: boolean | StylisticCustomizeOptions<true>
   }
 
   dirs?: {

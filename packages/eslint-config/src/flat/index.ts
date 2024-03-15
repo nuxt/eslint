@@ -5,6 +5,7 @@ import base from './configs/base'
 import javascript from './configs/javascript'
 import typescript from './configs/typescript'
 import vue from './configs/vue'
+import stylistic from './configs/stylistic'
 
 export * from './types'
 
@@ -16,6 +17,10 @@ export function createNuxtESLintFlatConfig(options: NuxtESLintConfigOptions = {}
     items.push(...javascript())
     items.push(...typescript())
     items.push(...vue())
+  }
+
+  if (options.features?.stylistic) {
+    items.push(stylistic(options.features.stylistic === true ? {} : options.features.stylistic))
   }
 
   items.push(...nuxt(options))

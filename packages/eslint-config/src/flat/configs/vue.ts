@@ -11,7 +11,7 @@ export default function vue(): FlatConfig[] {
       name: 'nuxt:setup-vue',
       plugins: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        'vue': pluginVue as any,
+        vue: pluginVue as any,
       },
     },
     {
