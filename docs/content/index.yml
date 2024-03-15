@@ -1,0 +1,21 @@
+navigation: false
+hero:
+  title: '<span class="text-primary-400">Nuxt</span> ESLint'
+  description: Collection of ESLint-related packages for Nuxt
+  button: Get started
+sections:
+  - title: Packages
+    slot: tools
+    toolsCards:
+      - title: Nuxt Module
+        description: All-in-one Nuxt module for ESLint, generates custom ESLint configuration based on your Nuxt project.
+        icon: i-ph-cube-transparent-light
+        to: ''
+      - title: ESLint Config
+        description: Shareable ESLint configuration for Nuxt projects.
+        icon: i-ph-gear-six-light
+        to: ''
+      - title: ESLint Plugin
+        description: ESLint plugin for Nuxt projects, that enable Nuxt specific rules.
+        icon: i-ph-ruler-light
+        to: ''

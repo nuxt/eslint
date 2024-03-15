@@ -2,3 +2,4 @@ packages:
   - packages/*
   - packages-legacy/*
   - playground
+  - '!docs'
