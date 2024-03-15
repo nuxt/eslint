@@ -10,7 +10,18 @@ export default [
   ...createNuxtESLintFlatConfig({
     dirs: {
       src: 'playground',
-      pages: ['playground/pages']
+      pages: [
+        'playground/pages',
+        'docs/pages',
+      ],
+      layouts: [
+        'playground/layouts',
+        'docs/layouts',
+      ],
+      components: [
+        'playground/components',
+        'docs/components',
+      ],
     }
   })
 ]

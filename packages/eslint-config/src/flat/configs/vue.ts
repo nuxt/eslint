@@ -1,4 +1,6 @@
 import * as parserVue from 'vue-eslint-parser'
+import * as parserTs from '@typescript-eslint/parser'
+
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
 import { FlatConfig } from '../types'
@@ -18,6 +20,8 @@ export default function vue(): FlatConfig[] {
         parserOptions: {
           ecmaVersion: 'latest',
           extraFileExtensions: ['.vue'],
+          parser: parserTs,
+          sourceType: 'module',
           ecmaFeatures: {
             jsx: true,
           },

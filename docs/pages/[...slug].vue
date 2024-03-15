@@ -69,27 +69,43 @@ const communityLinks = computed(() => [
 
 <template>
   <UPage>
-    <UPageHeader :title="page.title"
-:description="page.description" :links="page.links" :headline="headline" />
+    <UPageHeader
+      :title="page.title"
+      :description="page.description"
+      :links="page.links"
+      :headline="headline"
+    />
 
-    <UPageBody prose
-class="pb-0">
-      <ContentRenderer v-if="page.body"
-:value="page" />
-      <hr v-if="surround?.length"
-class="my-8">
+    <UPageBody
+      prose
+      class="pb-0"
+    >
+      <ContentRenderer
+        v-if="page.body"
+        :value="page"
+      />
+      <hr
+        v-if="surround?.length"
+        class="my-8"
+      >
       <UContentSurround :surround="surround" />
     </UPageBody>
 
-    <template v-if="page.body?.toc?.links?.length"
-#right>
+    <template
+      v-if="page.body?.toc?.links?.length"
+      #right
+    >
       <UContentToc :links="page.body.toc.links">
         <template #bottom>
           <div class="hidden !mt-6 lg:block space-y-6">
-            <UDivider v-if="page.body?.toc?.links?.length"
-dashed />
-            <UPageLinks title="Community"
-:links="communityLinks" />
+            <UDivider
+              v-if="page.body?.toc?.links?.length"
+              dashed
+            />
+            <UPageLinks
+              title="Community"
+              :links="communityLinks"
+            />
           </div>
         </template>
       </UContentToc>
