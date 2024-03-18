@@ -9,7 +9,7 @@ import stylistic from './configs/stylistic'
 
 export * from './types'
 
-export function createNuxtESLintFlatConfig(options: NuxtESLintConfigOptions = {}): FlatConfig[] {
+export default function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): FlatConfig[] {
   const items: FlatConfig[] = []
 
   if (options.features?.standalone !== false) {

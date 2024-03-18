@@ -1,5 +1,5 @@
 // @ts-check
-import { createNuxtESLintFlatConfig } from '@nuxt/eslint-config/flat'
+import createConfig from '@nuxt/eslint-config/flat'
 
 export default [
   {
@@ -7,7 +7,7 @@ export default [
       'packages-legacy/**',
     ],
   },
-  ...createNuxtESLintFlatConfig({
+  ...createConfig({
     features: {
       stylistic: true,
     },

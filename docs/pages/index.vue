@@ -3,6 +3,7 @@
 definePageMeta({
   colorMode: 'dark',
 })
+
 const title = 'Nuxt ESLint'
 const description = 'Collection of ESLint-related packages for Nuxt'
 
@@ -48,24 +49,37 @@ watch(projectsSectionVisible, () => {
   <div>
     <span class="gradient" />
     <ULandingHero
-      orientation="horizontal"
-      :ui="{ container: 'flex lg:gap-12' }"
+      align="center"
+      direction="vertical"
+      :ui="{ base: 'relative z-[1]', container: 'flex flex-col gap-6 lg:gap-8', description: 'mt-6 text-lg/8 lg:px-28 text-gray-400' }"
     >
-      <Illustration class="mx-auto hidden h-64 lg:block" />
+      <!-- <div class="flex w-full justify-center order-first">
+        <UBadge
+          class="w-fit"
+          color="primary"
+          size="md"
+          :ui="{ color: { primary: { solid: 'ring-1 ring-inset ring-primary-700/50 text-primary-400 bg-primary-900/10 hover:bg-primary-900/50 transition-color duration-200' } } }"
+        >
+          <NuxtLink to="https://nuxt.studio/?utm_source=content-site&utm_medium=hero&utm_campaign=home" target="_blank" rel="noopener">
+            Nuxt Studio: the Nuxt Content Editor
+          </NuxtLink>
+        </UBadge>
+      </div> -->
+
       <template #title>
         <span v-html="page.hero?.title" />
       </template>
       <template #description>
-        {{ page.hero?.description }}
+        <span v-html="page.hero?.description" />
       </template>
       <template #links>
         <UButton
-          to="/guide/getting-started"
+          color="primary"
+          label="Get Started"
           icon="i-ph-rocket-launch-duotone"
+          to="/packages/module"
           size="xl"
-        >
-          {{ page.hero?.button }}
-        </UButton>
+        />
       </template>
     </ULandingHero>
 

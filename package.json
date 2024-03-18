@@ -11,6 +11,7 @@
     "play": "pnpm -C playground run play:dev",
     "lint": "eslint .",
     "lint:play": "pnpm -C playground run lint",
+    "docs": "pnpm -C docs run dev",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

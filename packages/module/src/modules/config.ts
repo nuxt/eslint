@@ -34,7 +34,8 @@ function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: ESLint
 
   importLines.push({
     from: '@nuxt/eslint-config/flat',
-    name: 'createNuxtESLintFlatConfig',
+    name: 'default',
+    as: 'createConfigForNuxt',
   })
 
   const basicOptions: NuxtESLintConfigOptions = {
@@ -44,7 +45,7 @@ function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: ESLint
     dirs: getDirs(nuxt),
   }
 
-  configLines.push(`...createNuxtESLintFlatConfig(\n${JSON.stringify(basicOptions, null, 2)}\n),`)
+  configLines.push(`...createConfigForNuxt(\n${JSON.stringify(basicOptions, null, 2)}\n),`)
 
   for (const mod of addons) {
     importLines.push(...mod.imports)

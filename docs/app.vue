@@ -1,21 +1,31 @@
 <script setup>
+import './style.css'
+
 useServerSeoMeta({
   ogSiteName: 'Nuxt ESLint',
   twitterCard: 'summary_large_image',
 })
+
 useHead({
   htmlAttrs: {
     lang: 'en',
   },
 })
-const links = [{
-  label: 'Documentation',
-  to: '/guide/getting-started',
-}, {
-  label: 'Releases',
-  to: 'https://github.com/nuxt/eslint/releases',
-  target: '_blank',
-}]
+const links = [
+  {
+    label: 'Documentation',
+    to: '/packages/module',
+  },
+  {
+    label: 'FAQ',
+    to: '/guide/faq',
+  },
+  {
+    label: 'Releases',
+    to: 'https://github.com/nuxt/eslint/releases',
+    target: '_blank',
+  },
+]
 const { data: files } = useLazyFetch('/api/search.json', {
   default: () => [],
   server: false,
