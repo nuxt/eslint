@@ -14,6 +14,11 @@ export interface CheckerOptions {
   cache?: boolean
 
   /**
+   * ESLint config type
+   */
+  configType?: 'flat' | 'eslintrc'
+
+  /**
    * Files to include for linting
    */
   include?: string[]
@@ -29,6 +34,13 @@ export interface CheckerOptions {
    * @see https://eslint.org/docs/user-guide/formatters/
    */
   formatter?: string
+
+  /**
+   * Path to the ESLint module
+   *
+   * @default 'eslint' or 'eslint/use-at-your-own-risk' based on configType
+   */
+  eslintPath?: string
 
   /**
    * Lint on start
@@ -50,20 +62,6 @@ export interface CheckerOptions {
    * @default true
    */
   emitError?: boolean
-
-  /**
-   * Will cause the module build to fail if there are any errors, based on emitError.
-   *
-   * @default false
-   */
-  failOnError?: boolean
-
-  /**
-   * Will cause the module build to fail if there are any warnings, based on emitWarning.
-   *
-   * @default false
-   */
-  failOnWarning?: boolean
 
   /**
    * Vite specific options
