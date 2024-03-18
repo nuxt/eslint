@@ -3,41 +3,9 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 
-> Non-opinionated [ESlint](https://eslint.org/) configuration for Nuxt 3 apps.
+Shared ESLint config for Nuxt 3 projects. Unopinionated by default, but customizable.
 
-### Features
-
-- Works out-of-the-box with no additional configuration.
-- Nuxt-specific rules for pages, components and more.
-
-### Installation
-
-1. Install this package and `eslint` in your `devDependencies`.
-
-```bash
-npm i -D @nuxt/eslint-config eslint
-yarn add -D @nuxt/eslint-config eslint
-pnpm add -D @nuxt/eslint-config eslint
-```
-
-2. Extend the default Nuxt config by creating an `.eslintrc.cjs`:
-
-```js
-module.exports = {
-  root: true,
-  extends: ["@nuxt/eslint-config"],
-};
-```
-
-You might also want to add a script entry to your `package.json:
-
-```json
-{
-  "scripts": {
-    "lint": "eslint ."
-  }
-}
-```
+Refer to the [documentation](https://eslint.nuxt.com/packages/config) for more details.
 
 <!-- Badges -->
 

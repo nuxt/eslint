@@ -4,8 +4,6 @@
 [![npm](https://flat.badgen.net/npm/dm/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 [![npm (scoped with tag)](https://flat.badgen.net/npm/v/@nuxtjs/eslint-config)](https://npmjs.com/package/@nuxtjs/eslint-config)
 
-> Opinionated [ESlint](https://eslint.org/) configuration used internally by Nuxt projects.
+Opinionated [ESlint](https://eslint.org/) configuration for Nuxt 2.
 
-### Usage
-
-Check docs in [`@nuxtjs/eslint-config`](../eslint-config-legacy/)
+Refer to the [documentation](https://eslint.nuxt.com/legacy/eslint-config) for more details.

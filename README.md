@@ -8,7 +8,10 @@
   </a>
 </p>
 
-Collection of [ESLint](https://eslint.org)-related packages for Nuxt ✨
+Collection of ESLint-related packages for Nuxt,
+provides project-aware, easy-to-use, extensible and future-proof integrations.
+
+Refer to the [documentation](https://eslint.nuxt.com) for more details.
 
 ## Packages
 
