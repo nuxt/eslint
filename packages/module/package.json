@@ -2,7 +2,7 @@
   "name": "@nuxt/eslint",
   "type": "module",
   "version": "0.1.1",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.5",
   "description": "Generate ESLint config from current Nuxt settings",
   "license": "MIT",
   "repository": "antfu/nuxt-module-eslint-config",
@@ -47,7 +47,7 @@
     "@nuxt/devtools-kit": "^1.0.8",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
-    "@nuxt/kit": "^3.10.3",
+    "@nuxt/kit": "^3.11.0",
     "chokidar": "^3.6.0",
     "eslint-flat-config-viewer": "^0.1.11",
     "get-port-please": "^3.1.2",
@@ -56,10 +56,10 @@
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.10.3",
+    "@nuxt/schema": "^3.11.0",
     "@typescript-eslint/scope-manager": "^7.2.0",
     "eslint-webpack-plugin": "^4.1.0",
-    "nuxt": "^3.10.3",
+    "nuxt": "^3.11.0",
     "vite-plugin-eslint2": "^4.4.0"
   }
 }
