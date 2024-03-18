@@ -1,5 +1,5 @@
 import { Import } from 'unimport'
-import type { Options as ViteCheckerOptions } from 'vite-plugin-eslint'
+import type { ESLintPluginOptions as ViteCheckerOptions } from 'vite-plugin-eslint2'
 import type { Options as WebpackCheckerOptions } from 'eslint-webpack-plugin'
 
 export interface ConfigGenOptions {
@@ -13,9 +13,35 @@ export interface ConfigGenOptions {
   standalone?: boolean
 }
 
-export interface CheckerOptions extends ViteCheckerOptions, WebpackCheckerOptions {
+export interface CheckerOptions {
   /**
-   * Checking matched files on start
+   * Use ESLint cache to improve performance
+   *
+   * @default true
+   */
+  cache?: boolean
+
+  /**
+   * Files to include for linting
+   */
+  include?: string[]
+
+  /**
+   * Files to exclude from linting
+   */
+  exclude?: string[]
+
+  /**
+   * ESLint formatter for the output
+   *
+   * @see https://eslint.org/docs/user-guide/formatters/
+   */
+  formatter?: string
+
+  /**
+   * Lint on start
+   *
+   * @default true
    */
   lintOnStart?: boolean
 
@@ -46,6 +72,18 @@ export interface CheckerOptions extends ViteCheckerOptions, WebpackCheckerOption
    * @default false
    */
   failOnWarning?: boolean
+
+  /**
+   * Vite specific options
+   */
+  vite?: ViteCheckerOptions
+
+  /**
+   * Webpack specific options
+   *
+   * @see https://www.npmjs.com/package/eslint-webpack-plugin
+   */
+  webpack?: WebpackCheckerOptions
 }
 
 export interface ModuleOptions {

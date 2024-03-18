@@ -43,7 +43,7 @@
     "get-port-please": "^3.1.2",
     "pathe": "^1.1.2",
     "unimport": "^3.7.1",
-    "vite-plugin-eslint": "^1.8.1"
+    "vite-plugin-eslint2": "^4.4.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.5.5",

@@ -1,13 +1,20 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Nuxt } from '@nuxt/schema'
 import { CheckerOptions, ModuleOptions } from '../module'
-import { defineNuxtModule, addVitePlugin, addWebpackPlugin, useLogger } from '@nuxt/kit'
-import vitePluginEslint from 'vite-plugin-eslint'
+import { addVitePlugin, addWebpackPlugin, useLogger } from '@nuxt/kit'
+import vitePluginEslint from 'vite-plugin-eslint2'
 import EslintWebpackPlugin from 'eslint-webpack-plugin'
 import { relative } from 'pathe'
 import { watch } from 'chokidar'
+import { existsSync } from 'fs'
+import { resolve } from 'path'
 
 const logger = useLogger('nuxt:eslint:checker')
+
+const flatConfigFiles = [
+  'eslint.config.js',
+  'eslint.config.mjs',
+  'eslint.config.cjs',
+]
 
 export function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
   // TODO: maybe support build mode later on
@@ -19,8 +26,6 @@ export function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
     cache: true,
     include: [`${nuxt.options.srcDir}/**/*.{js,jsx,ts,tsx,vue}`],
     exclude: ['**/node_modules/**', nuxt.options.buildDir],
-    eslintPath: 'eslint',
-    formatter: 'stylish',
     lintOnStart: true,
     emitWarning: true,
     emitError: true,
@@ -29,6 +34,8 @@ export function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
     ...(typeof moduleOptions.checker === 'boolean' ? {} : moduleOptions.checker || {}),
   }
 
+  const isUsingFlatConfig = process.env.ESLINT_USE_FLAT_CONFIG || flatConfigFiles.some(file => existsSync(resolve(nuxt.options.rootDir, file)))
+
   const configPaths = [
     '.eslintignore',
     '.eslintrc',
@@ -36,6 +43,7 @@ export function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
     '.eslintrc.yaml',
     '.eslintrc.yml',
     '.eslintrc.json',
+    ...flatConfigFiles,
   ].map(path => relative(nuxt.options.rootDir, path))
 
   if (nuxt.options.watch) {
@@ -49,7 +57,18 @@ export function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
     nuxt.hook('close', () => watcher.close())
   }
 
-  addVitePlugin(() => vitePluginEslint(options), { server: false })
+  addVitePlugin(() => {
+    const viteOptions = {
+      linkInWorker: true,
+      ...options,
+      ...options.vite,
+    }
+
+    // https://github.com/ModyQyW/vite-plugin-eslint2#eslintpath
+    viteOptions.eslintPath ||= isUsingFlatConfig ? 'eslint/use-at-your-own-risk' : 'eslint'
+
+    return vitePluginEslint(viteOptions)
+  }, { server: false })
 
   addWebpackPlugin(() => {
     const webpackOptions = {
