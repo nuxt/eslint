@@ -1,17 +1,9 @@
 import type { Import } from 'unimport'
 import type { ESLintPluginOptions as ViteCheckerOptions } from 'vite-plugin-eslint2'
 import type { Options as WebpackCheckerOptions } from 'eslint-webpack-plugin'
+import { NuxtESLintFeaturesOptions } from '@nuxt/eslint-config/flat'
 
-export interface ConfigGenOptions {
-  /**
-   * Setup basic JavaScript, TypeScript and Vue plugins and rules.
-   *
-   * You might want to disable it when you are using other ESLint config that handles the basic setup.
-   *
-   * @default true
-   */
-  standalone?: boolean
-}
+export interface ConfigGenOptions extends NuxtESLintFeaturesOptions {}
 
 export interface CheckerOptions {
   /**

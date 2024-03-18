@@ -1,25 +1,27 @@
 import { StylisticCustomizeOptions } from '@stylistic/eslint-plugin'
 import type { Linter } from 'eslint'
 
-export interface NuxtESLintConfigOptions {
-  features?: {
-    /**
-     * Setup basic JavaScript, TypeScript and Vue plugins and rules.
-     *
-     * You might want to disable it when you are using other ESLint config that handles the basic setup.
-     *
-     * @default true
-     */
-    standalone?: boolean
+export interface NuxtESLintFeaturesOptions {
+  /**
+   * Setup basic JavaScript, TypeScript and Vue plugins and rules.
+   *
+   * You might want to disable it when you are using other ESLint config that handles the basic setup.
+   *
+   * @default true
+   */
+  standalone?: boolean
 
-    /**
-     * Enable stylistic ESLint rules for formatting and code style check
-     *
-     * @see https://eslint.style/guide/config-presets
-     * @default false
-     */
-    stylistic?: boolean | StylisticCustomizeOptions<true>
-  }
+  /**
+   * Enable stylistic ESLint rules for formatting and code style check
+   *
+   * @see https://eslint.style/guide/config-presets
+   * @default false
+   */
+  stylistic?: boolean | StylisticCustomizeOptions<true>
+}
+
+export interface NuxtESLintConfigOptions {
+  features?: NuxtESLintFeaturesOptions
 
   dirs?: {
     /**

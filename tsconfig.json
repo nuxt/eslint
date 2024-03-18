@@ -6,6 +6,8 @@
     "strict": true,
     "allowJs": true,
     "noEmit": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
     "paths": {
       "@nuxt/eslint-plugin": [
         "./packages/eslint-plugin/src/index.ts"
@@ -17,5 +19,9 @@
         "./packages/eslint-config/src/flat.ts"
       ],
     }
-  }
+  },
+  "exclude": [
+    "playground",
+    "docs"
+  ]
 }
