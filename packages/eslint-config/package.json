@@ -13,8 +13,8 @@
   ],
   "dependencies": {
     "@rushstack/eslint-patch": "^1.6.1",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
     "eslint-plugin-vue": "^9.19.2",
     "typescript": "^5.3.3"
   },
