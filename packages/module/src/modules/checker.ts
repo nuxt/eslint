@@ -1,12 +1,9 @@
 import { Nuxt } from '@nuxt/schema'
 import { CheckerOptions, ModuleOptions } from '../module'
 import { addVitePlugin, addWebpackPlugin, useLogger } from '@nuxt/kit'
-import vitePluginEslint from 'vite-plugin-eslint2'
-import EslintWebpackPlugin from 'eslint-webpack-plugin'
-import { relative } from 'pathe'
+import { relative, resolve } from 'pathe'
 import { watch } from 'chokidar'
 import { existsSync } from 'fs'
-import { resolve } from 'path'
 
 const logger = useLogger('nuxt:eslint:checker')
 
@@ -16,7 +13,7 @@ const flatConfigFiles = [
   'eslint.config.cjs',
 ]
 
-export function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
+export async function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
   // TODO: maybe support build mode later on
   if (!nuxt.options.dev) {
     return
@@ -57,30 +54,39 @@ export function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
     nuxt.hook('close', () => watcher.close())
   }
 
-  addVitePlugin(() => {
-    const viteOptions = {
-      linkInWorker: true,
-      ...options,
-      ...options.vite,
-    }
+  if (nuxt.options.builder === '@nuxt/vite-builder') {
+    const vitePluginEslint = await import('vite-plugin-eslint2').then(m => m.default)
+    addVitePlugin(() => {
+      const viteOptions = {
+        linkInWorker: true,
+        ...options,
+        ...options.vite,
+      }
 
-    // https://github.com/ModyQyW/vite-plugin-eslint2#eslintpath
-    viteOptions.eslintPath ||= isUsingFlatConfig ? 'eslint/use-at-your-own-risk' : 'eslint'
+      // https://github.com/ModyQyW/vite-plugin-eslint2#eslintpath
+      viteOptions.eslintPath ||= isUsingFlatConfig ? 'eslint/use-at-your-own-risk' : 'eslint'
 
-    return vitePluginEslint(viteOptions)
-  }, { server: false })
+      return vitePluginEslint(viteOptions)
+    }, { server: false })
+  }
+  else if (nuxt.options.builder === '@nuxt/webpack-builder') {
+    const EslintWebpackPlugin = await import('eslint-webpack-plugin').then(m => m.default)
 
-  addWebpackPlugin(() => {
-    const webpackOptions = {
-      ...options,
-      context: nuxt.options.srcDir,
-      files: options.include,
-      lintDirtyModulesOnly: !options.lintOnStart,
-    }
+    addWebpackPlugin(() => {
+      const webpackOptions = {
+        ...options,
+        context: nuxt.options.srcDir,
+        files: options.include,
+        lintDirtyModulesOnly: !options.lintOnStart,
+      }
 
-    delete webpackOptions.include
-    delete webpackOptions.lintOnStart
+      delete webpackOptions.include
+      delete webpackOptions.lintOnStart
 
-    return new EslintWebpackPlugin(webpackOptions)
-  }, { server: false })
+      return new EslintWebpackPlugin(webpackOptions)
+    }, { server: false })
+  }
+  else {
+    logger.warn('Unsupported builder ' + nuxt.options.builder + ', ESLint checker is not enabled.')
+  }
 }

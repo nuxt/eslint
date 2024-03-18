@@ -31,24 +31,35 @@
     "test:watch": "vitest watch"
   },
   "peerDependencies": {
-    "eslint": "^8.55.0"
+    "eslint": "^8.55.0",
+    "eslint-webpack-plugin": "^4.1.0",
+    "vite-plugin-eslint2": "^4.4.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-webpack-plugin": {
+      "optional": true
+    },
+    "vite-plugin-eslint2": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@nuxt/devtools-kit": "^1.0.8",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/kit": "^3.10.3",
+    "chokidar": "^3.6.0",
     "eslint-flat-config-viewer": "^0.1.11",
-    "eslint-webpack-plugin": "^4.1.0",
     "get-port-please": "^3.1.2",
     "pathe": "^1.1.2",
-    "unimport": "^3.7.1",
-    "vite-plugin-eslint2": "^4.4.0"
+    "unimport": "^3.7.1"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.10.3",
     "@typescript-eslint/scope-manager": "^7.2.0",
-    "nuxt": "^3.10.3"
+    "eslint-webpack-plugin": "^4.1.0",
+    "nuxt": "^3.10.3",
+    "vite-plugin-eslint2": "^4.4.0"
   }
 }
