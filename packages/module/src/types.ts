@@ -1,4 +1,6 @@
 import { Import } from 'unimport'
+import type { Options as ViteCheckerOptions } from 'vite-plugin-eslint'
+import type { Options as WebpackCheckerOptions } from 'eslint-webpack-plugin'
 
 export interface ConfigGenOptions {
   /**
@@ -11,7 +13,7 @@ export interface ConfigGenOptions {
   standalone?: boolean
 }
 
-export interface CheckerOptions {
+export interface CheckerOptions extends ViteCheckerOptions, WebpackCheckerOptions {
   /**
    * Checking matched files on start
    */

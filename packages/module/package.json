@@ -39,9 +39,11 @@
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/kit": "^3.10.3",
     "eslint-flat-config-viewer": "^0.1.11",
+    "eslint-webpack-plugin": "^4.1.0",
     "get-port-please": "^3.1.2",
     "pathe": "^1.1.2",
-    "unimport": "^3.7.1"
+    "unimport": "^3.7.1",
+    "vite-plugin-eslint": "^1.8.1"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.5.5",

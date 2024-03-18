@@ -1,6 +1,5 @@
 import { defineNuxtModule } from '@nuxt/kit'
 import { setupConfigGen } from './modules/config'
-import { setupESLintChecker } from './modules/checker'
 import { ModuleOptions } from './types'
 
 export * from './types'
@@ -14,12 +13,15 @@ export default defineNuxtModule<ModuleOptions>({
     config: true,
     checker: false,
   },
-  setup(options, nuxt) {
+  async setup(options, nuxt) {
     if (options.config) {
       setupConfigGen(options, nuxt)
     }
     if (options.checker) {
-      setupESLintChecker(options, nuxt)
+      await import('./modules/checker')
+        .then(({ setupESLintChecker }) => {
+          setupESLintChecker(options, nuxt)
+        })
     }
   },
 })

@@ -5,6 +5,7 @@
     "moduleResolution": "Bundler",
     "strict": true,
     "allowJs": true,
+    "noEmit": true,
     "paths": {
       "@nuxt/eslint-plugin": [
         "./packages/eslint-plugin/src/index.ts"
