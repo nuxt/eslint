@@ -65,18 +65,20 @@ export async function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nux
   }
 
   if (nuxt.options.builder === '@nuxt/vite-builder') {
-    const vitePluginEslint = await import('vite-plugin-eslint2').then(m => m.default)
+    const vitePluginEslint = await import('vite-plugin-eslint2').then(m => 'default' in m ? m.default : m)
     addVitePlugin(() => {
       const viteOptions: Partial<ViteCheckerOptions> = {
         lintInWorker: true,
         ...options,
         ...options.vite,
       }
+      // @ts-expect-error extra vite options
+      delete viteOptions.configType
       return vitePluginEslint(viteOptions)
     }, { server: false })
   }
   else if (nuxt.options.builder === '@nuxt/webpack-builder') {
-    const EslintWebpackPlugin = await import('eslint-webpack-plugin').then(m => m.default)
+    const EslintWebpackPlugin = await import('eslint-webpack-plugin').then(m => 'default' in m ? m.default : m)
 
     addWebpackPlugin(() => {
       const webpackOptions: WebpackCheckerOptions = {
