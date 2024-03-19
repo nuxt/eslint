@@ -1,11 +1,10 @@
 {
   "name": "@nuxt/eslint",
   "type": "module",
-  "version": "0.1.1",
-  "packageManager": "pnpm@8.15.5",
+  "version": "0.3.0-alpha.0",
   "description": "Generate ESLint config from current Nuxt settings",
   "license": "MIT",
-  "repository": "antfu/nuxt-module-eslint-config",
+  "repository": "nuxt/eslint",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",

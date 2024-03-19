@@ -1,8 +1,8 @@
 {
   "name": "@nuxt/eslint-config",
-  "version": "0.2.0",
+  "version": "0.3.0-alpha.0",
   "description": "ESLint config for Nuxt projects",
-  "repository": "nuxt/eslint-config",
+  "repository": "nuxt/eslint",
   "license": "MIT",
   "main": "./dist/legacy.cjs",
   "exports": {

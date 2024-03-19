@@ -6,7 +6,7 @@
   "scripts": {
     "build": "pnpm run -r build",
     "stub": "pnpm run -r stub",
-    "release": "pnpm test && pnpm publish -r",
+    "release": "bumpp \"package.json\" \"packages/**/package.json\" && pnpm publish -r",
     "test": "vitest run",
     "play": "pnpm -C playground run play:dev",
     "lint": "eslint .",
@@ -20,6 +20,7 @@
     "@nuxt/test-utils": "^3.12.0",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.28",
+    "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
     "typescript": "^5.4.2",
     "vitest": "^1.4.0",
