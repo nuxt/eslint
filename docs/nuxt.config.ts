@@ -33,9 +33,6 @@ export default defineNuxtConfig({
       routes: ['/api/search.json'],
       autoSubfolderIndex: false,
     },
-    experimental: {
-      wasm: true,
-    },
   },
 
   hooks: {
