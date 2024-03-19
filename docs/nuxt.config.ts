@@ -5,6 +5,10 @@ export default defineNuxtConfig({
     '/guide': { redirect: '/guide/getting-started' },
   },
 
+  site: {
+    url: 'https://eslint.nuxt.com',
+  },
+
   modules: [
     '@nuxt/image',
     '@nuxt/content',
@@ -28,6 +32,9 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/api/search.json'],
       autoSubfolderIndex: false,
+    },
+    experimental: {
+      wasm: true,
     },
   },
 
