@@ -1,7 +1,8 @@
 import type { Import } from 'unimport'
 import type { ESLintPluginOptions as ViteCheckerOptions } from 'vite-plugin-eslint2'
 import type { Options as WebpackCheckerOptions } from 'eslint-webpack-plugin'
-import { NuxtESLintFeaturesOptions } from '@nuxt/eslint-config/flat'
+import { FlatConfig, NuxtESLintFeaturesOptions } from '@nuxt/eslint-config/flat'
+import { Nuxt } from '@nuxt/schema'
 
 export interface ConfigGenOptions extends NuxtESLintFeaturesOptions {}
 
@@ -91,7 +92,17 @@ export interface ModuleOptions {
   checker?: CheckerOptions | boolean
 }
 
-export interface ESLintPluginAddon {
-  imports: Import[]
-  configs: string[]
+export interface ESLintConfigGenAddonResult {
+  /**
+   * Imports statements to add to the generated ESLint config
+   */
+  imports?: Import[]
+  /**
+   * Flat config items, should be stringified
+   */
+  configs?: string[]
 }
+
+export type Awaitable<T> = T | Promise<T>
+
+export type ESLintConfigGenAddon = () => Awaitable<ESLintConfigGenAddonResult | void>
