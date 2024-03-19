@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "allowJs": true,
+    "noEmit": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@nuxt/eslint-plugin": [
+        "./packages/eslint-plugin/src/index.ts"
+      ],
+      "@nuxt/eslint-config": [
+        "./packages/eslint-config/src/legacy.ts"
+      ],
+      "@nuxt/eslint-config/flat": [
+        "./packages/eslint-config/src/flat.ts"
+      ],
+    }
+  },
+  "exclude": [
+    "playground",
+    "docs"
+  ]
+}

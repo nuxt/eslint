@@ -1,0 +1,29 @@
+.packages-disambiguation-table .badge-nuxt3 code {
+  color: rgb(var(--color-primary-400));
+  background-color: rgb(var(--color-primary-400) / 0.1);
+  border-color: rgb(var(--color-primary-400) / 0.3);
+}
+
+.packages-disambiguation-table .badge-nuxt2 code {
+  color: #89c234;
+  background-color: #89c23420;
+  border-color: #89c23450;
+}
+
+.packages-disambiguation-table .badge-flat code {
+  color: #b87be0;
+  background-color: #b87be020;
+  border-color: #b87be050;
+}
+
+.packages-disambiguation-table .badge-recommend code {
+  color: #46c79a;
+  background-color: #46c79a20;
+  border-color: #46c79a50;
+}
+
+.packages-disambiguation-table .badge-legacy code {
+  color: #a7753d;
+  background-color: #a7753d20;
+  border-color: #a7753d50;
+}

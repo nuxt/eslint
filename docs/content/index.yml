@@ -1,0 +1,21 @@
+navigation: false
+hero:
+  title: '<span class="text-primary-400">All-in-one</span><br>ESLint integrations for Nuxt'
+  description: Collection of ESLint-related packages for Nuxt,<br>provides project-aware, easy-to-use, extensible and future-proof integrations.
+  button: Get started
+sections:
+  - title: Packages
+    slot: tools
+    toolsCards:
+      - title: Nuxt Module
+        description: All-in-one Nuxt module for ESLint, generates custom ESLint configuration based on your Nuxt project.
+        icon: i-ph-cube-transparent-light
+        to: '/packages/module'
+      - title: ESLint Config
+        description: Shareable ESLint configuration for Nuxt projects.
+        icon: i-ph-gear-six-light
+        to: 'packages/config'
+      - title: ESLint Plugin
+        description: ESLint plugin for Nuxt projects, that enable Nuxt specific rules.
+        icon: i-ph-ruler-light
+        to: 'packages/plugin'
