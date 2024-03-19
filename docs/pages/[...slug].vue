@@ -37,13 +37,13 @@ const communityLinks = computed(() => [
   {
     icon: 'i-ph-pen-duotone',
     label: 'Edit this page',
-    to: `https://github.com/nuxt/devtools/edit/main/docs/content/${page?.value?._file}`,
+    to: `https://github.com/nuxt/eslint/edit/main/docs/content/${page?.value?._file}`,
     target: '_blank',
   },
   {
     icon: 'i-ph-shooting-star-duotone',
     label: 'Star on GitHub',
-    to: 'https://github.com/nuxt/devtools',
+    to: 'https://github.com/nuxt/eslint',
     target: '_blank',
   },
   {
