@@ -1,4 +1,4 @@
-import { join, relative } from 'pathe'
+import { join } from 'pathe'
 import { GLOB_EXTS } from '../constants'
 import type { FlatConfig, NuxtESLintConfigOptions } from '../types'
 
@@ -7,8 +7,11 @@ export default function disables(options: NuxtESLintConfigOptions): FlatConfig[]
   const nestedGlobPattern = `**/*.${GLOB_EXTS}`
 
   const fileRoutes = [
-    relative(dirs.src || '', `app.${GLOB_EXTS}`),
-    relative(dirs.src || '', `error.${GLOB_EXTS}`),
+    // These files must have one-word names as they have a special meaning in Nuxt.
+    ...dirs.layers?.flatMap(layersDir => [
+      join(layersDir, `app.${GLOB_EXTS}`),
+      join(layersDir, `error.${GLOB_EXTS}`),
+    ]) || [],
 
     // Layouts and pages are not used directly by users so they can have one-word names.
     ...(dirs.layouts?.map(layoutsDir => join(layoutsDir, nestedGlobPattern)) || []),
