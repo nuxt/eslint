@@ -30,7 +30,7 @@
     "test:watch": "vitest watch"
   },
   "peerDependencies": {
-    "eslint": "^8.55.0",
+    "eslint": "^8.57.0",
     "eslint-webpack-plugin": "^4.1.0",
     "vite-plugin-eslint2": "^4.4.0"
   },
@@ -56,7 +56,7 @@
   "devDependencies": {
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.11.1",
-    "@typescript-eslint/scope-manager": "^7.2.0",
+    "@typescript-eslint/scope-manager": "^7.3.1",
     "eslint-webpack-plugin": "^4.1.0",
     "nuxt": "^3.11.1",
     "vite-plugin-eslint2": "^4.4.0"
