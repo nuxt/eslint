@@ -8,6 +8,6 @@
     "lint": "nuxi preprare && eslint ."
   },
   "devDependencies": {
-    "nuxt": "^3.11.0"
+    "nuxt": "^3.11.1"
   }
 }
