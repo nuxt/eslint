@@ -8,9 +8,9 @@ export default function disables(options: NuxtESLintConfigOptions): FlatConfig[]
 
   const fileRoutes = [
     // These files must have one-word names as they have a special meaning in Nuxt.
-    ...dirs.layers?.flatMap((layersDir) => [
+    ...dirs.layers?.flatMap(layersDir => [
       join(layersDir, `app.${GLOB_EXTS}`),
-      join(layersDir, `error.${GLOB_EXTS}`)
+      join(layersDir, `error.${GLOB_EXTS}`),
     ]) || [],
 
     // Layouts and pages are not used directly by users so they can have one-word names.
