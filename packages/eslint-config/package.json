@@ -21,7 +21,7 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
-    "prepack": "npm run build"
+    "prepack": "pnpm run build"
   },
   "peerDependencies": {
     "eslint": "^8.56.0"
