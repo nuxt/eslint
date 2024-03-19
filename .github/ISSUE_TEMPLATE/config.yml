@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Nuxt ESLint Documentation
+    url: https://eslint.nuxt.com/docs/
+    about: Check the documentation for usage of Nuxt ESLint
+  - name: 💬 Discussions
+    url: https://github.com/nuxt/eslint/discussions
+    about: Use discussions if you have another issue, an idea for improvement or for asking questions.
