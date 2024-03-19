@@ -1,4 +1,4 @@
-import { join, relative } from 'pathe'
+import { join } from 'pathe'
 import { GLOB_EXTS } from '../constants'
 import type { FlatConfig, NuxtESLintConfigOptions } from '../types'
 
