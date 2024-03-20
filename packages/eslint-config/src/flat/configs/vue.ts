@@ -3,9 +3,10 @@ import * as parserTs from '@typescript-eslint/parser'
 
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
-import { FlatConfig } from '../types'
+import { FlatConfig, NuxtESLintConfigOptions } from '../types'
+import { removeUndefined } from '../utils'
 
-export default function vue(): FlatConfig[] {
+export default function vue(options: NuxtESLintConfigOptions): FlatConfig[] {
   return [
     {
       name: 'nuxt:setup-vue',
@@ -56,11 +57,15 @@ export default function vue(): FlatConfig[] {
       },
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       processor: pluginVue.processors['.vue'] as any,
-      rules: {
+      rules: removeUndefined({
         ...pluginVue.configs.base.rules,
         ...pluginVue.configs['vue3-essential'].rules,
         ...pluginVue.configs['vue3-strongly-recommended'].rules,
         ...pluginVue.configs['vue3-recommended'].rules,
+
+        // Deprecated in favor of 'vue/block-order'
+        'vue/component-tags-order': undefined,
+        'vue/block-order': 'warn',
 
         // Include typescript eslint rules in *.vue files
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
@@ -85,7 +90,19 @@ export default function vue(): FlatConfig[] {
         'prefer-rest-params': 'error', // ts provides better types with rest args over arguments
         'prefer-spread': 'error', // ts transpiles spread to apply, so no need for manual apply
         'valid-typeof': 'off', // ts(2367)
-      },
+
+        ...(options.features?.stylistic
+          ? {}
+          : {
+              // Disable Vue's default stylistic rules when stylistic is not enabled
+              'vue/max-attributes-per-line': undefined,
+              'vue/no-multi-spaces': undefined,
+              'vue/no-spaces-around-equal-signs-in-attribute': undefined,
+              'vue/html-indent': undefined,
+              'vue/html-quotes': undefined,
+              'vue/multiline-html-element-content-newline': undefined,
+            }),
+      }),
     },
   ]
 }

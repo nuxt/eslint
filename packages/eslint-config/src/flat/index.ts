@@ -34,7 +34,7 @@ export async function createConfigForNuxt(options: NuxtESLintConfigOptions = {})
     items.push(...base())
     items.push(...javascript())
     items.push(...typescript())
-    items.push(...vue())
+    items.push(...vue(options))
   }
 
   if (options.features?.stylistic) {
