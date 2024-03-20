@@ -3,6 +3,15 @@ import type { ESLintPluginOptions as ViteCheckerOptions } from 'vite-plugin-esli
 import type { Options as WebpackCheckerOptions } from 'eslint-webpack-plugin'
 import { NuxtESLintFeaturesOptions } from '@nuxt/eslint-config/flat'
 
+declare module '@nuxt/schema' {
+  interface NuxtHooks {
+    /**
+     * Called before generating ESLint config, can be used to custom ESLint config integrations
+     */
+    'eslint:config:addons': (addons: ESLintConfigGenAddon[]) => void
+  }
+}
+
 export interface ConfigGenOptions extends NuxtESLintFeaturesOptions {}
 
 export interface CheckerOptions {
@@ -104,4 +113,7 @@ export interface ESLintConfigGenAddonResult {
 
 export type Awaitable<T> = T | Promise<T>
 
-export type ESLintConfigGenAddon = () => Awaitable<ESLintConfigGenAddonResult | void>
+export type ESLintConfigGenAddon = {
+  name: string
+  getConfigs: () => Awaitable<ESLintConfigGenAddonResult | void>
+}

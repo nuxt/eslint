@@ -10,15 +10,20 @@ export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
     unimport = context
   })
 
-  return async () => ({
-    configs: [
-      '// Set globals from imports registry\n'
-      + JSON.stringify(<FlatConfig>{
-        name: 'nuxt:import-globals',
-        languageOptions: {
-          globals: Object.fromEntries((await unimport.getImports()).map(i => [i.as || i.name, 'readonly'])),
-        },
-      }),
-    ],
-  })
+  return {
+    name: 'nuxt:eslint:import-globals',
+    async getConfigs() {
+      return {
+        configs: [
+          '// Set globals from imports registry\n'
+          + JSON.stringify(<FlatConfig>{
+            name: 'nuxt:import-globals',
+            languageOptions: {
+              globals: Object.fromEntries((await unimport.getImports()).map(i => [i.as || i.name, 'readonly'])),
+            },
+          }),
+        ],
+      }
+    },
+  }
 }

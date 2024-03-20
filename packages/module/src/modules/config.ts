@@ -10,19 +10,14 @@ import { ConfigGenOptions, ModuleOptions } from '../module'
 import { createAddonGlobals } from '../config-addons/globals'
 
 export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
-  const addons: ESLintConfigGenAddon[] = [
-    createAddonGlobals(nuxt),
-  ]
-
-  // TODO: hook to add more addons
-  // nuxt.hook('app:resolve', async () => {
-  //   await nuxt.callHook('eslint:config:addons', addons)
-  // })
-
   addTemplate({
     filename: 'eslint.config.mjs',
     write: true,
     async getContents() {
+      const addons: ESLintConfigGenAddon[] = [
+        createAddonGlobals(nuxt),
+      ]
+      await nuxt.callHook('eslint:config:addons', addons)
       return generateESLintConfig(options, nuxt, addons)
     },
   })
@@ -75,7 +70,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
   configItems.push(`// Nuxt Configs\ncreateConfigForNuxt(${JSON.stringify(basicOptions, null, 2)})`)
 
   for (const addon of addons) {
-    const resolved = await addon()
+    const resolved = await addon.getConfigs()
     if (resolved?.imports)
       importLines.push(...resolved.imports)
     if (resolved?.configs)
