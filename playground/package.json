@@ -5,7 +5,7 @@
   "scripts": {
     "play:dev": "nuxi dev",
     "play:build": "nuxi build",
-    "lint": "nuxi preprare && eslint ."
+    "lint": "nuxi prepare && eslint ."
   },
   "devDependencies": {
     "nuxt": "^3.11.1"

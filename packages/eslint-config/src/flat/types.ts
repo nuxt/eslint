@@ -79,3 +79,5 @@ export interface NuxtESLintConfigOptions {
 export interface FlatConfig extends Linter.FlatConfig {
   name?: string
 }
+
+export type Awaitable<T> = T | Promise<T>

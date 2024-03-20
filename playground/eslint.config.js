@@ -1,3 +1,4 @@
-import nuxt from './.nuxt/eslint.config.mjs'
+// @ts-check
+import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default nuxt
+export default withNuxt()
