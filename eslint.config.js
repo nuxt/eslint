@@ -27,4 +27,10 @@ export default [
       ],
     },
   }),
+  {
+    files: ['docs/**/*.vue'],
+    rules: {
+      'vue/no-v-html': 'off',
+    },
+  },
 ]
