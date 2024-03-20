@@ -1,13 +1,13 @@
 // @ts-check
-import createConfig from '@nuxt/eslint-config/flat'
+import { createConfigForNuxt, defineFlatConfigs } from '@nuxt/eslint-config/flat'
 
-export default [
+export default defineFlatConfigs(
   {
     ignores: [
       'packages-legacy/**',
     ],
   },
-  ...createConfig({
+  createConfigForNuxt({
     features: {
       stylistic: true,
     },
@@ -33,4 +33,4 @@ export default [
       'vue/no-v-html': 'off',
     },
   },
-]
+)

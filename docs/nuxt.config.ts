@@ -33,9 +33,6 @@ export default defineNuxtConfig({
       routes: ['/api/search.json'],
       autoSubfolderIndex: false,
     },
-    experimental: {
-      wasm: true,
-    },
   },
 
   hooks: {
@@ -47,6 +44,14 @@ export default defineNuxtConfig({
         if (comp.global)
           comp.global = 'sync'
       }
+    },
+  },
+
+  $production: {
+    nitro: {
+      experimental: {
+        wasm: true,
+      },
     },
   },
 })
