@@ -13,6 +13,7 @@
     "lint:fix": "eslint . --fix",
     "lint:play": "pnpm -C playground run lint",
     "docs": "pnpm -C docs run dev",
+    "prepare": "pnpm -C docs install",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
