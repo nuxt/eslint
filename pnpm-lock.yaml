@@ -167,8 +167,8 @@ importers:
         specifier: ^8.57.0
         version: 8.57.0
       eslint-flat-config-viewer:
-        specifier: ^0.1.12
-        version: 0.1.12(eslint@8.57.0)(typescript@5.4.2)
+        specifier: ^0.1.13
+        version: 0.1.13(eslint@8.57.0)(typescript@5.4.2)
       get-port-please:
         specifier: ^3.1.2
         version: 3.1.2
@@ -4173,8 +4173,8 @@ packages:
       eslint-plugin-promise: 6.1.1(eslint@8.57.0)
     dev: false
 
-  /eslint-flat-config-viewer@0.1.12(eslint@8.57.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-3br3fRK8Q9zY8mkt2VwNHUi3gdND3zcuS4Hc88rMbbhgW0zzPjUSBDwrLjEwvkO6keGr2cayUpYHE/i4FQ5dOA==}
+  /eslint-flat-config-viewer@0.1.13(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-ZR++uDrSrjxUogGqZH6ET2lwCXybN195QKTX0pDurq6EiWk2JiNBWgR+XuHnj0gjgGRk6enj3Dr7zWGXBER/aA==}
     hasBin: true
     peerDependencies:
       eslint: ^8.50.0
