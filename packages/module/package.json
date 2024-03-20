@@ -43,7 +43,7 @@
     }
   },
   "dependencies": {
-    "@nuxt/devtools-kit": "^1.0.8",
+    "@nuxt/devtools-kit": "^1.1.0",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/kit": "^3.11.1",
