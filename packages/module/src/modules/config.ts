@@ -192,7 +192,7 @@ function getDirs(nuxt: Nuxt): NuxtESLintConfigOptions['dirs'] {
         dirs.composables.push(r(dir))
     }
 
-    if (layer.config.components !== false) {
+    if (layer.config.components) {
       const options = layer.config.components || {}
       if (options !== true && 'dirs' in options) {
         for (const dir of options.dirs || []) {
