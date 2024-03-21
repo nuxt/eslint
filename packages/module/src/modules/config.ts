@@ -32,11 +32,11 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     async getContents() {
       return [
         'import type { FlatConfig } from "@nuxt/eslint-config/flat"',
-        'export { defineFlatConfigs } from "@nuxt/eslint-config/flat"',
+        'import { defineFlatConfigs } from "@nuxt/eslint-config/flat"',
         'declare const configs: Promise<FlatConfig[]>',
         'declare const withNuxt: typeof defineFlatConfigs',
         'export default withNuxt',
-        'export { withNuxt }',
+        'export { withNuxt, defineFlatConfigs }',
       ].join('\n')
     },
   })
