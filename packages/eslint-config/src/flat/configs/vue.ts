@@ -97,7 +97,6 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfig[] {
               // Disable Vue's default stylistic rules when stylistic is not enabled
               'vue/html-closing-bracket-newline': undefined,
               'vue/html-closing-bracket-spacing': undefined,
-              'vue/html-end-tags': undefined,
               'vue/html-indent': undefined,
               'vue/html-quotes': undefined,
               'vue/max-attributes-per-line': undefined,
