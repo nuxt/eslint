@@ -1,7 +1,7 @@
 navigation: false
 hero:
-  title: '<span class="text-primary-400">All-in-one</span><br>ESLint integrations for Nuxt'
-  description: Collection of ESLint-related packages for Nuxt,<br>provides project-aware, easy-to-use, extensible and future-proof integrations.
+  title: '<span class="text-primary-400">All-in-one</span><br>ESLint integration for Nuxt'
+  description: Collection of ESLint-related packages for Nuxt,<br>providing project-aware, easy-to-use, extensible and future-proof integration.
   button: Get started
 sections:
   - title: Packages
