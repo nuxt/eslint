@@ -6,8 +6,17 @@ import globals from 'globals'
 export default function javascript(): Linter.FlatConfig[] {
   return [
     {
-      name: 'eslint:recommended',
+      name: 'nuxt:javascript',
       languageOptions: {
+        ecmaVersion: 2022,
+        parserOptions: {
+          ecmaFeatures: {
+            jsx: true,
+          },
+          ecmaVersion: 2022,
+          sourceType: 'module',
+        },
+        sourceType: 'module',
         globals: {
           ...globals.browser,
           ...globals.es2021,
@@ -16,6 +25,9 @@ export default function javascript(): Linter.FlatConfig[] {
           navigator: 'readonly',
           window: 'readonly',
         },
+      },
+      linterOptions: {
+        reportUnusedDisableDirectives: true,
       },
       ...pluginESLint.configs.recommended,
     },
