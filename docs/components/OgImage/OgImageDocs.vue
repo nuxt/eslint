@@ -38,6 +38,6 @@ defineProps({
         {{ description }}
       </p>
     </div>
-    <Logo class="h-[60px] w-[492px] text-white" />
+    <NuxtLogo class="h-[60px] w-[492px] text-white" />
   </div>
 </template>
