@@ -18,7 +18,7 @@ export default function disables(options: NuxtESLintConfigOptions): FlatConfig[]
     ...(dirs.pages?.map(pagesDir => join(pagesDir, nestedGlobPattern)) || []),
 
     // These files should have multiple words in their names as they are within subdirectories.
-    ...(dirs.components?.map(componentsDir => join(componentsDir, nestedGlobPattern)) || []),
+    ...(dirs.components?.map(componentsDir => join(componentsDir, '*', nestedGlobPattern)) || []),
   ]
 
   const configs: FlatConfig[] = []
