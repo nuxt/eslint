@@ -65,7 +65,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
     {
       from: '@nuxt/eslint-config/flat',
       name: 'defineFlatConfigs',
-    }
+    },
   )
 
   const basicOptions: NuxtESLintConfigOptions = {
