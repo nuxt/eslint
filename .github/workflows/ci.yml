@@ -21,5 +21,6 @@ jobs:
       - run: pnpm install
       - run: pnpm build
       - run: pnpm lint
+      - run: pnpm lint:play
       - run: pnpm vitest run
       - uses: codecov/codecov-action@v4
