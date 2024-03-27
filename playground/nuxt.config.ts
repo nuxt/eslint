@@ -7,5 +7,5 @@ export default defineNuxtConfig({
   },
   eslint: {
     checker: true,
-  },
+  }
 })

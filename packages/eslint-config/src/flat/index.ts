@@ -17,9 +17,8 @@ export * from './types'
  * This function takes flat config item, or an array of them as rest arguments.
  * It also automatically resolves the promise if the config item is a promise.
  */
-export async function defineFlatConfigs(...configs: Awaitable<FlatConfigItem | FlatConfigItem[]>[]): Promise<FlatConfigItem[]> {
-  const resolved = await Promise.all(configs)
-  return resolved.flat()
+export function defineFlatConfigs(...configs: Awaitable<FlatConfigItem | FlatConfigItem[]>[]): FlatConfigPipeline<FlatConfigItem> {
+  return pipe(...configs)
 }
 
 /**

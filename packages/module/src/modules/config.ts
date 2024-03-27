@@ -31,9 +31,9 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     write: true,
     async getContents() {
       return [
-        'import type { FlatConfig } from "@nuxt/eslint-config/flat"',
+        'import type { FlatConfigPipeline, FlatConfigItem } from "eslint-flat-config-utils"',
         'import { defineFlatConfigs } from "@nuxt/eslint-config/flat"',
-        'declare const configs: Promise<FlatConfig[]>',
+        'declare const configs: FlatConfigPipeline<FlatConfigItem>',
         'declare const withNuxt: typeof defineFlatConfigs',
         'export default withNuxt',
         'export { withNuxt, defineFlatConfigs }',
@@ -55,12 +55,17 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
 
   importLines.push(
     {
+      from: 'eslint-flat-config-utils',
+      name: 'pipe',
+    },
+    {
       from: '@nuxt/eslint-config/flat',
       name: 'createConfigForNuxt',
-    }, {
+    },
+    {
       from: '@nuxt/eslint-config/flat',
       name: 'defineFlatConfigs',
-    },
+    }
   )
 
   const basicOptions: NuxtESLintConfigOptions = {
@@ -86,12 +91,14 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
     stringifyImports(importLines, false),
     'export { defineFlatConfigs }',
     '',
-    `export const configs = defineFlatConfigs(`,
+    `export const configs = pipe()`,
+    ``,
+    `configs.append(`,
     configItems.join(',\n\n'),
     `)`,
     '',
     'export function withNuxt(...customs) {',
-    '  return defineFlatConfigs(configs, ...customs)',
+    '  return configs.append(...customs)',
     '}',
     '',
     'export default withNuxt',
