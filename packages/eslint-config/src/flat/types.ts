@@ -1,4 +1,4 @@
-import { StylisticCustomizeOptions } from '@stylistic/eslint-plugin'
+import type { StylisticCustomizeOptions } from '@stylistic/eslint-plugin'
 
 export interface NuxtESLintFeaturesOptions {
   /**

@@ -1,6 +1,6 @@
 // @ts-expect-error missing types
 import pluginESLint from '@eslint/js'
-import { FlatConfigItem } from 'eslint-flat-config-utils'
+import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import globals from 'globals'
 
 export default function javascript(): FlatConfigItem[] {

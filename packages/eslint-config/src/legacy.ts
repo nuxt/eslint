@@ -1,5 +1,5 @@
 import '@rushstack/eslint-patch/modern-module-resolution'
-import { ESLint } from 'eslint'
+import type { ESLint } from 'eslint'
 
 const config: ESLint.ConfigData = {
   parserOptions: {

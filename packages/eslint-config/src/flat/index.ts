@@ -6,7 +6,8 @@ import javascript from './configs/javascript'
 import typescript from './configs/typescript'
 import vue from './configs/vue'
 import stylistic from './configs/stylistic'
-import { pipe, FlatConfigPipeline, FlatConfigItem } from 'eslint-flat-config-utils'
+import type { FlatConfigPipeline, FlatConfigItem } from 'eslint-flat-config-utils'
+import { pipe } from 'eslint-flat-config-utils'
 
 export * from './types'
 

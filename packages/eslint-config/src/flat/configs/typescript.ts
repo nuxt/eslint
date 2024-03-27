@@ -1,6 +1,6 @@
 import * as parserTs from '@typescript-eslint/parser'
 import pluginTs from '@typescript-eslint/eslint-plugin'
-import { FlatConfigItem } from 'eslint-flat-config-utils'
+import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
 export default function typescript(): FlatConfigItem[] {
   return [
@@ -13,7 +13,7 @@ export default function typescript(): FlatConfigItem[] {
     },
     {
       name: 'nuxt:typescript',
-      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'],
+      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
       languageOptions: {
         parser: parserTs,
       },
@@ -21,6 +21,8 @@ export default function typescript(): FlatConfigItem[] {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ...pluginTs.configs['eslint-recommended'].overrides![0].rules as any,
         ...pluginTs.configs.recommended.rules,
+
+        '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: false, prefer: 'type-imports' }],
       },
     },
     {

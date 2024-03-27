@@ -2,7 +2,7 @@ import { join } from 'pathe'
 import type { NuxtESLintConfigOptions } from '../types'
 import nuxtPlugin from '@nuxt/eslint-plugin'
 import { GLOB_EXTS } from '../constants'
-import { FlatConfigItem } from 'eslint-flat-config-utils'
+import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
 export default function nuxt(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const dirs = options.dirs ?? {}

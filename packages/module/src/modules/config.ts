@@ -6,7 +6,7 @@ import { relative, resolve } from 'pathe'
 import { getPort } from 'get-port-please'
 import type { ESLintConfigGenAddon } from '../types'
 import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
-import { ConfigGenOptions, ModuleOptions } from '../module'
+import type { ConfigGenOptions, ModuleOptions } from '../module'
 import { createAddonGlobals } from '../config-addons/globals'
 
 export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {

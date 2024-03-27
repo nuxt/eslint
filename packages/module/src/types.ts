@@ -1,7 +1,7 @@
 import type { Import } from 'unimport'
 import type { ESLintPluginOptions as ViteCheckerOptions } from 'vite-plugin-eslint2'
 import type { Options as WebpackCheckerOptions } from 'eslint-webpack-plugin'
-import { NuxtESLintFeaturesOptions } from '@nuxt/eslint-config/flat'
+import type { NuxtESLintFeaturesOptions } from '@nuxt/eslint-config/flat'
 
 declare module '@nuxt/schema' {
   interface NuxtHooks {
