@@ -1,4 +1,4 @@
-import { addTemplate } from '@nuxt/kit'
+import { addTemplate, resolvePath } from '@nuxt/kit'
 import { stringifyImports } from 'unimport'
 import type { Import } from 'unimport'
 import type { Nuxt } from '@nuxt/schema'
@@ -57,24 +57,26 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
     ...typeof options.config !== 'boolean' ? options.config || {} : {},
   }
 
+  const flatConfigEntry = await resolvePath('@nuxt/eslint-config/flat', { cwd: import.meta.url })
+
   importLines.push(
     {
-      from: 'eslint-flat-config-utils',
+      from: await resolvePath('eslint-flat-config-utils', { cwd: import.meta.url }),
       name: 'pipe',
     },
     {
-      from: '@nuxt/eslint-config/flat',
+      from: await resolvePath('eslint-typegen', { cwd: import.meta.url }),
+      name: 'default',
+      as: 'typegen'
+    },
+    {
+      from: flatConfigEntry,
       name: 'createConfigForNuxt',
     },
     {
-      from: '@nuxt/eslint-config/flat',
+      from: flatConfigEntry,
       name: 'defineFlatConfigs',
     },
-    {
-      from: 'eslint-typegen',
-      name: 'default',
-      as: 'typegen'
-    }
   )
 
   const basicOptions: NuxtESLintConfigOptions = {
