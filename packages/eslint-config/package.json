@@ -36,6 +36,7 @@
     "eslint-plugin-vue": "^9.24.0",
     "globals": "^15.0.0",
     "pathe": "^1.1.2",
+    "eslint-flat-config-utils": "^0.1.0",
     "vue-eslint-parser": "^9.4.2"
   },
   "devDependencies": {

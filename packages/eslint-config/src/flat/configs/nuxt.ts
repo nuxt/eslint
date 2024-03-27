@@ -1,9 +1,10 @@
 import { join } from 'pathe'
-import type { FlatConfig, NuxtESLintConfigOptions } from '../types'
+import type { NuxtESLintConfigOptions } from '../types'
 import nuxtPlugin from '@nuxt/eslint-plugin'
 import { GLOB_EXTS } from '../constants'
+import { FlatConfigItem } from 'eslint-flat-config-utils'
 
-export default function nuxt(options: NuxtESLintConfigOptions): FlatConfig[] {
+export default function nuxt(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const dirs = options.dirs ?? {}
 
   const fileSingleRoot = [
@@ -11,7 +12,7 @@ export default function nuxt(options: NuxtESLintConfigOptions): FlatConfig[] {
     ...(dirs.pages?.map(pagesDir => join(pagesDir, `**/*.${GLOB_EXTS}`)) || []),
   ]
 
-  const configs: FlatConfig[] = [
+  const configs: FlatConfigItem[] = [
     {
       name: 'nuxt:rules',
       plugins: {

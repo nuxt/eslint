@@ -1,4 +1,4 @@
-import type { Awaitable, FlatConfig, NuxtESLintConfigOptions } from './types'
+import type { Awaitable, NuxtESLintConfigOptions } from './types'
 import disables from './configs/disables'
 import nuxt from './configs/nuxt'
 import base from './configs/base'
@@ -6,6 +6,7 @@ import javascript from './configs/javascript'
 import typescript from './configs/typescript'
 import vue from './configs/vue'
 import stylistic from './configs/stylistic'
+import { pipe, FlatConfigPipeline, FlatConfigItem } from 'eslint-flat-config-utils'
 
 export * from './types'
 
@@ -15,7 +16,7 @@ export * from './types'
  * This function takes flat config item, or an array of them as rest arguments.
  * It also automatically resolves the promise if the config item is a promise.
  */
-export async function defineFlatConfigs(...configs: Awaitable<FlatConfig | FlatConfig[]>[]): Promise<FlatConfig[]> {
+export async function defineFlatConfigs(...configs: Awaitable<FlatConfigItem | FlatConfigItem[]>[]): Promise<FlatConfigItem[]> {
   const resolved = await Promise.all(configs)
   return resolved.flat()
 }
@@ -27,22 +28,28 @@ export async function defineFlatConfigs(...configs: Awaitable<FlatConfig | FlatC
  *
  * @see https://eslint.nuxt.com/packages/module
  */
-export async function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Promise<FlatConfig[]> {
-  const items: FlatConfig[] = []
+export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): FlatConfigPipeline<FlatConfigItem> {
+  const pipeline = pipe()
 
   if (options.features?.standalone !== false) {
-    items.push(...base())
-    items.push(...javascript())
-    items.push(...typescript())
-    items.push(...vue(options))
+    pipeline.append(
+      base(),
+      javascript(),
+      typescript(),
+      vue(options),
+    )
   }
 
   if (options.features?.stylistic) {
-    items.push(stylistic(options.features.stylistic === true ? {} : options.features.stylistic))
+    pipeline.append(
+      stylistic(options.features.stylistic === true ? {} : options.features.stylistic),
+    )
   }
 
-  items.push(...nuxt(options))
-  items.push(...disables(options))
+  pipeline.append(
+    nuxt(options),
+    disables(options),
+  )
 
-  return items
+  return pipeline
 }

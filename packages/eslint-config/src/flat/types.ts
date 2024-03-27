@@ -1,5 +1,4 @@
 import { StylisticCustomizeOptions } from '@stylistic/eslint-plugin'
-import type { Linter } from 'eslint'
 
 export interface NuxtESLintFeaturesOptions {
   /**
@@ -74,10 +73,6 @@ export interface NuxtESLintConfigOptions {
      */
     layers?: string[]
   }
-}
-
-export interface FlatConfig extends Linter.FlatConfig {
-  name?: string
 }
 
 export type Awaitable<T> = T | Promise<T>

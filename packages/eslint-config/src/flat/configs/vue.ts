@@ -3,10 +3,11 @@ import * as parserTs from '@typescript-eslint/parser'
 
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
-import { FlatConfig, NuxtESLintConfigOptions } from '../types'
+import { NuxtESLintConfigOptions } from '../types'
 import { removeUndefined } from '../utils'
+import { FlatConfigItem } from 'eslint-flat-config-utils'
 
-export default function vue(options: NuxtESLintConfigOptions): FlatConfig[] {
+export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   return [
     {
       name: 'nuxt:setup-vue',

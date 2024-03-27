@@ -1,8 +1,8 @@
 import * as parserTs from '@typescript-eslint/parser'
 import pluginTs from '@typescript-eslint/eslint-plugin'
-import { FlatConfig } from '../types'
+import { FlatConfigItem } from 'eslint-flat-config-utils'
 
-export default function typescript(): FlatConfig[] {
+export default function typescript(): FlatConfigItem[] {
   return [
     {
       name: 'nuxt:setup:typescript',

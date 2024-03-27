@@ -133,6 +133,9 @@ importers:
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
+      eslint-flat-config-utils:
+        specifier: ^0.1.0
+        version: 0.1.0
       typescript:
         specifier: ^5.4.3
         version: 5.4.3
@@ -169,6 +172,9 @@ importers:
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
+      eslint-flat-config-utils:
+        specifier: ^0.1.0
+        version: 0.1.0
       eslint-flat-config-viewer:
         specifier: ^0.1.14
         version: 0.1.14(eslint@8.57.0)(typescript@5.4.3)
@@ -4175,6 +4181,11 @@ packages:
       eslint-plugin-n: 16.6.2(eslint@8.57.0)
       eslint-plugin-promise: 6.1.1(eslint@8.57.0)
     dev: false
+
+  /eslint-flat-config-utils@0.1.0:
+    resolution: {integrity: sha512-GVjeM6BITHRpax/lLV8IEdsyIFHH0/4ggN3WJ3IcMTxKRmbo1pA8chPE/WP4sjvkEo8W6WaeIopUMhlzHYeP4g==}
+    dependencies:
+      '@types/eslint': 8.56.6
 
   /eslint-flat-config-viewer@0.1.14(eslint@8.57.0)(typescript@5.4.3):
     resolution: {integrity: sha512-2ErHkowC7N9jiLHYAEI7lrm9phEPkyuZTCbRjVmj3B9yk/zVHhLCSlPGWzkgAEDW2MQRGSkvlbbhD7C9FRhYXQ==}
