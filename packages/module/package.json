@@ -51,6 +51,7 @@
     "eslint-flat-config-utils": "^0.1.0",
     "eslint-flat-config-viewer": "^0.1.14",
     "get-port-please": "^3.1.2",
+    "eslint-typegen": "^0.1.4",
     "pathe": "^1.1.2",
     "unimport": "^3.7.1"
   },
