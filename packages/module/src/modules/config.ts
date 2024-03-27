@@ -67,7 +67,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
     {
       from: await resolvePath('eslint-typegen', { cwd: import.meta.url }),
       name: 'default',
-      as: 'typegen'
+      as: 'typegen',
     },
     {
       from: flatConfigEntry,
