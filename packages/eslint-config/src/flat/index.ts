@@ -1,4 +1,4 @@
-import type { Awaitable, NuxtESLintConfigOptions } from './types'
+import type { NuxtESLintConfigOptions } from './types'
 import disables from './configs/disables'
 import nuxt from './configs/nuxt'
 import base from './configs/base'
@@ -6,7 +6,8 @@ import javascript from './configs/javascript'
 import typescript from './configs/typescript'
 import vue from './configs/vue'
 import stylistic from './configs/stylistic'
-import type { FlatConfigPipeline, FlatConfigItem } from 'eslint-flat-config-utils'
+import type { FlatConfigItem, ResolvableFlatConfig } from 'eslint-flat-config-utils'
+import { FlatConfigPipeline } from 'eslint-flat-config-utils'
 import { pipe } from 'eslint-flat-config-utils'
 
 export * from './types'
@@ -17,8 +18,10 @@ export * from './types'
  * This function takes flat config item, or an array of them as rest arguments.
  * It also automatically resolves the promise if the config item is a promise.
  */
-export function defineFlatConfigs(...configs: Awaitable<FlatConfigItem | FlatConfigItem[]>[]): FlatConfigPipeline<FlatConfigItem> {
-  return pipe(...configs)
+export function defineFlatConfigs(
+  ...configs: ResolvableFlatConfig[]
+): FlatConfigPipeline<FlatConfigItem> {
+  return new FlatConfigPipeline().append(...configs)
 }
 
 /**
