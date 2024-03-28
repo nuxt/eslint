@@ -4,7 +4,11 @@
   "version": "0.3.0-beta.5",
   "description": "Generate ESLint config from current Nuxt settings",
   "license": "MIT",
-  "repository": "nuxt/eslint",
+  "repository": { 
+    "type": "git", 
+    "url": "git+https://github.com/nuxt/eslint.git",
+    "directory": "packages/module"
+  },
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -13,6 +17,7 @@
     }
   },
   "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
   "types": "./dist/types.d.ts",
   "files": [
     "dist"

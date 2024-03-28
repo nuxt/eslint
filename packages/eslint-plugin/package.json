@@ -4,7 +4,11 @@
   "version": "0.3.0-beta.5",
   "description": "ESLint plugin for Nuxt",
   "license": "MIT",
-  "repository": "nuxt/eslint",
+  "repository": { 
+    "type": "git", 
+    "url": "git+https://github.com/nuxt/eslint.git",
+    "directory": "packages/eslint-plugin"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
