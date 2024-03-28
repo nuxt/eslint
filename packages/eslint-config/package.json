@@ -2,27 +2,29 @@
   "name": "@nuxt/eslint-config",
   "version": "0.3.0-beta.5",
   "description": "ESLint config for Nuxt projects",
-  "repository": { 
-    "type": "git", 
+  "repository": {
+    "type": "git",
     "url": "git+https://github.com/nuxt/eslint.git",
     "directory": "packages/eslint-config"
   },
   "license": "MIT",
+  "main": "./dist/legacy.cjs",
+  "module": "./dist/legacy.mjs",
+  "types": "./dist/legacy.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/flat.d.ts",
+      "import": "./dist/legacy.mjs",
+      "require": "./dist/legacy.cjs"
+    },
+    "./flat": {
       "import": "./dist/flat.mjs",
       "require": "./dist/flat.cjs"
     },
     "./legacy": {
-      "types": "./dist/legacy.d.ts",
       "import": "./dist/legacy.mjs",
       "require": "./dist/legacy.cjs"
     }
   },
-  "main": "./dist/flat.cjs",
-  "module": "./dist/flat.mjs",
-  "types": "./dist/flat.d.ts",
   "files": [
     "dist"
   ],
