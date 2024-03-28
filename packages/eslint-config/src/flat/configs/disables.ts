@@ -1,8 +1,9 @@
 import { join } from 'pathe'
 import { GLOB_EXTS } from '../constants'
-import type { FlatConfig, NuxtESLintConfigOptions } from '../types'
+import type { NuxtESLintConfigOptions } from '../types'
+import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
-export default function disables(options: NuxtESLintConfigOptions): FlatConfig[] {
+export default function disables(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const dirs = options.dirs ?? {}
   const nestedGlobPattern = `**/*.${GLOB_EXTS}`
 
@@ -18,10 +19,10 @@ export default function disables(options: NuxtESLintConfigOptions): FlatConfig[]
     ...(dirs.pages?.map(pagesDir => join(pagesDir, nestedGlobPattern)) || []),
 
     // These files should have multiple words in their names as they are within subdirectories.
-    ...(dirs.components?.map(componentsDir => join(componentsDir, nestedGlobPattern)) || []),
+    ...(dirs.components?.map(componentsDir => join(componentsDir, '*', nestedGlobPattern)) || []),
   ]
 
-  const configs: FlatConfig[] = []
+  const configs: FlatConfigItem[] = []
 
   if (fileRoutes.length) {
     configs.push({

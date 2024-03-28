@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/eslint-config",
-  "version": "0.3.0-beta.2",
+  "version": "0.3.0-beta.5",
   "description": "ESLint config for Nuxt projects",
   "repository": { 
     "type": "git", 
@@ -37,17 +37,19 @@
   "dependencies": {
     "@eslint/js": "^8.57.0",
     "@nuxt/eslint-plugin": "workspace:*",
-    "@rushstack/eslint-patch": "^1.8.0",
+    "@rushstack/eslint-patch": "^1.9.0",
     "@stylistic/eslint-plugin": "^1.7.0",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
-    "eslint-plugin-vue": "^9.23.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint-flat-config-utils": "^0.1.0",
+    "eslint-plugin-vue": "^9.24.0",
+    "globals": "^15.0.0",
     "pathe": "^1.1.2",
     "vue-eslint-parser": "^9.4.2"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.6",
     "eslint": "^8.57.0",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   }
 }

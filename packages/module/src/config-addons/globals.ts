@@ -1,7 +1,7 @@
 import type { Nuxt } from '@nuxt/schema'
 import type { Unimport } from 'unimport'
 import type { ESLintConfigGenAddon } from '../types'
-import type { FlatConfig } from '@nuxt/eslint-config/flat'
+import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
 export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
   let unimport: Unimport
@@ -16,7 +16,7 @@ export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
       return {
         configs: [
           '// Set globals from imports registry\n'
-          + JSON.stringify(<FlatConfig>{
+          + JSON.stringify(<FlatConfigItem>{
             name: 'nuxt:import-globals',
             languageOptions: {
               globals: Object.fromEntries((await unimport.getImports()).map(i => [i.as || i.name, 'readonly'])),

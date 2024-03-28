@@ -3,10 +3,11 @@ import * as parserTs from '@typescript-eslint/parser'
 
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
-import { FlatConfig, NuxtESLintConfigOptions } from '../types'
+import type { NuxtESLintConfigOptions } from '../types'
 import { removeUndefined } from '../utils'
+import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
-export default function vue(options: NuxtESLintConfigOptions): FlatConfig[] {
+export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   return [
     {
       name: 'nuxt:setup-vue',
@@ -95,12 +96,16 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfig[] {
           ? {}
           : {
               // Disable Vue's default stylistic rules when stylistic is not enabled
-              'vue/max-attributes-per-line': undefined,
-              'vue/no-multi-spaces': undefined,
-              'vue/no-spaces-around-equal-signs-in-attribute': undefined,
+              'vue/html-closing-bracket-newline': undefined,
+              'vue/html-closing-bracket-spacing': undefined,
               'vue/html-indent': undefined,
               'vue/html-quotes': undefined,
+              'vue/max-attributes-per-line': undefined,
               'vue/multiline-html-element-content-newline': undefined,
+              'vue/mustache-interpolation-spacing': undefined,
+              'vue/no-multi-spaces': undefined,
+              'vue/no-spaces-around-equal-signs-in-attribute': undefined,
+              'vue/singleline-html-element-content-newline': undefined,
             }),
       }),
     },

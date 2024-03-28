@@ -1,5 +1,5 @@
-import { Nuxt } from '@nuxt/schema'
-import { CheckerOptions, ModuleOptions } from '../module'
+import type { Nuxt } from '@nuxt/schema'
+import type { CheckerOptions, ModuleOptions } from '../module'
 import { addVitePlugin, addWebpackPlugin, useLogger } from '@nuxt/kit'
 import { relative, resolve } from 'pathe'
 import { watch } from 'chokidar'

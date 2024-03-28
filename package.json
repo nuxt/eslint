@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@8.15.5",
-  "version": "0.3.0-beta.2",
+  "version": "0.3.0-beta.5",
   "scripts": {
     "build": "pnpm run -r build",
     "stub": "pnpm run -r stub",
@@ -24,7 +24,7 @@
     "@types/node": "^20.11.30",
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
-    "typescript": "^5.4.2",
+    "typescript": "^5.4.3",
     "vitest": "^1.4.0",
     "vue": "^3.4.21"
   }

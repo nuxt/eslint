@@ -32,4 +32,7 @@ jobs:
       - name: Lint (code)
         run: pnpm lint:fix
 
+      - name: Lint (playground)
+        run: pnpm lint:play --fix
+
       - uses: autofix-ci/action@ea32e3a12414e6d3183163c3424a7d7a8631ad84

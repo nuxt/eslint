@@ -1,6 +1,6 @@
 import { defineNuxtModule } from '@nuxt/kit'
 import { setupConfigGen } from './modules/config'
-import { ModuleOptions } from './types'
+import type { ModuleOptions } from './types'
 
 export * from './types'
 
