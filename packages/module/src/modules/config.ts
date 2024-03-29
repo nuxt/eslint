@@ -9,6 +9,7 @@ import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
 import type { ConfigGenOptions, ModuleOptions } from '../module'
 import { createAddonGlobals } from '../config-addons/globals'
 import { isAbsolute } from 'path'
+import { pathToFileURL } from 'url'
 
 export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
   const defaultAddons = [
@@ -105,7 +106,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
   const imports = await Promise.all(importLines.map(async (line): Promise<Import> => {
     return {
       ...line,
-      from: await resolveModule(line.from),
+      from: pathToFileURL(await resolveModule(line.from)).toString(),
     }
   }))
 
