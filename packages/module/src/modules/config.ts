@@ -1,4 +1,6 @@
 import { addTemplate, createResolver } from '@nuxt/kit'
+import { pathToFileURL } from 'node:url'
+import { builtinModules } from 'node:module'
 import { stringifyImports } from 'unimport'
 import type { Import } from 'unimport'
 import type { Nuxt } from '@nuxt/schema'
@@ -8,7 +10,6 @@ import type { ESLintConfigGenAddon } from '../types'
 import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
 import type { ConfigGenOptions, ModuleOptions } from '../module'
 import { createAddonGlobals } from '../config-addons/globals'
-import { pathToFileURL } from 'url'
 
 const r = createResolver(import.meta.url)
 
@@ -101,7 +102,9 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
   const imports = await Promise.all(importLines.map(async (line): Promise<Import> => {
     return {
       ...line,
-      from: pathToFileURL(await r.resolvePath(line.from)).toString(),
+      from: (line.from.match(/^\w+:/) || builtinModules.includes(line.from))
+        ? line.from
+        : pathToFileURL(await r.resolvePath(line.from)).toString(),
     }
   }))
 
