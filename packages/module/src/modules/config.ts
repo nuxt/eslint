@@ -97,20 +97,20 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
   }
 
   function absoluteImportPath(path: string) {
-    return `file://${path}`;
+    return `file://${path}`
   }
 
   async function resolveModule(id: string) {
     if (id) {
       if (id.includes('://'))
-        return id;
+        return id
       if (isAbsolute(id))
-        return absoluteImportPath(id);
+        return absoluteImportPath(id)
     }
 
-    let resolvedModule = await tryResolveModule(id, import.meta.url) || id;
+    let resolvedModule = await tryResolveModule(id, import.meta.url) || id
     if (isAbsolute(resolvedModule))
-      resolvedModule = absoluteImportPath(resolvedModule);
+      resolvedModule = absoluteImportPath(resolvedModule)
     return resolvedModule
   }
 
