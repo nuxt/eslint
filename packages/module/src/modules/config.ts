@@ -1,4 +1,4 @@
-import { addTemplate, tryResolveModule } from '@nuxt/kit'
+import { addTemplate, createResolver } from '@nuxt/kit'
 import { stringifyImports } from 'unimport'
 import type { Import } from 'unimport'
 import type { Nuxt } from '@nuxt/schema'
@@ -8,7 +8,8 @@ import type { ESLintConfigGenAddon } from '../types'
 import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
 import type { ConfigGenOptions, ModuleOptions } from '../module'
 import { createAddonGlobals } from '../config-addons/globals'
-import { isAbsolute } from 'path'
+
+const r = createResolver(import.meta.url)
 
 export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
   const defaultAddons = [
@@ -96,28 +97,10 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
       configItems.push(...resolved.configs)
   }
 
-  function absoluteImportPath(path: string) {
-    return `file://${path}`
-  }
-
-  async function resolveModule(id: string) {
-    if (id) {
-      if (id.includes('://'))
-        return id
-      if (isAbsolute(id))
-        return absoluteImportPath(id)
-    }
-
-    let resolvedModule = await tryResolveModule(id, import.meta.url) || id
-    if (isAbsolute(resolvedModule))
-      resolvedModule = absoluteImportPath(resolvedModule)
-    return resolvedModule
-  }
-
   const imports = await Promise.all(importLines.map(async (line): Promise<Import> => {
     return {
       ...line,
-      from: await resolveModule(line.from),
+      from: await r.resolvePath(line.from),
     }
   }))
 
