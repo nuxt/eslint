@@ -139,7 +139,7 @@ function setupDevToolsIntegration(nuxt: Nuxt) {
     tabs.push({
       name: 'eslint-config',
       title: 'ESLint Config',
-      icon: 'https://raw.githubusercontent.com/antfu/eslint-flat-config-viewer/main/public/favicon.svg',
+      icon: 'https://raw.githubusercontent.com/eslint/config-inspector/main/public/favicon.svg',
       view: viewerUrl
         ? {
             type: 'iframe',
@@ -147,7 +147,7 @@ function setupDevToolsIntegration(nuxt: Nuxt) {
           }
         : {
             type: 'launch',
-            description: 'Start ESLint config viewer to inspect the local ESLint config',
+            description: 'Start ESLint config inspector to analyze the local ESLint configs',
             actions: [
               {
                 label: 'Launch',
@@ -161,7 +161,7 @@ function setupDevToolsIntegration(nuxt: Nuxt) {
                   viewerProcess = startSubprocess(
                     {
                       command: 'npx',
-                      args: ['eslint-flat-config-viewer'],
+                      args: ['@eslint/config-inspector'],
                       cwd: nuxt.options.rootDir,
                       env: {
                         PORT: viewerPort.toString(),
@@ -169,7 +169,7 @@ function setupDevToolsIntegration(nuxt: Nuxt) {
                       },
                     },
                     {
-                      id: 'eslint-flat-config-viewer',
+                      id: 'eslint-config-inspector',
                       name: 'ESLint Config Viewer',
                     },
                     nuxt,

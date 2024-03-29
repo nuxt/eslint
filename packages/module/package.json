@@ -48,13 +48,13 @@
     }
   },
   "dependencies": {
+    "@eslint/config-inspector": "^0.1.0",
     "@nuxt/devtools-kit": "^1.1.5",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/kit": "^3.11.1",
     "chokidar": "^3.6.0",
     "eslint-flat-config-utils": "^0.1.2",
-    "eslint-flat-config-viewer": "^0.1.20",
     "eslint-typegen": "^0.1.6",
     "get-port-please": "^3.1.2",
     "pathe": "^1.1.2",

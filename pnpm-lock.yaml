@@ -154,6 +154,9 @@ importers:
 
   packages/module:
     dependencies:
+      '@eslint/config-inspector':
+        specifier: ^0.1.0
+        version: 0.1.0(eslint@8.57.0)(typescript@5.4.3)
       '@nuxt/devtools-kit':
         specifier: ^1.1.5
         version: 1.1.5(nuxt@3.11.1)(rollup@3.29.4)(vite@5.1.6)
@@ -175,9 +178,6 @@ importers:
       eslint-flat-config-utils:
         specifier: ^0.1.2
         version: 0.1.2
-      eslint-flat-config-viewer:
-        specifier: ^0.1.20
-        version: 0.1.20(eslint@8.57.0)(typescript@5.4.3)
       eslint-typegen:
         specifier: ^0.1.6
         version: 0.1.6
@@ -923,6 +923,34 @@ packages:
   /@eslint-community/regexpp@4.10.0:
     resolution: {integrity: sha512-Cu96Sd2By9mCNTx2iyKOmq10v22jUVQv0lQnlGNy16oE9589yE+QADPbrMGCkA51cKZSg3Pu/aTJVTGfL/qjUA==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+
+  /@eslint/config-inspector@0.1.0(eslint@8.57.0)(typescript@5.4.3):
+    resolution: {integrity: sha512-IN6ya0BFv/y1VsRD6SOSLJCSWMo0WFdsHSfmhcKAJXQzetpNJ6MMvgQ37Vaxl+NngagiT3cr72cJ8bDYLrHRNQ==}
+    hasBin: true
+    peerDependencies:
+      eslint: ^8.50.0
+    dependencies:
+      '@unhead/shared': 1.9.3
+      '@unhead/ssr': 1.9.3
+      chokidar: 3.6.0
+      consola: 3.2.3
+      devalue: 4.3.2
+      eslint: 8.57.0
+      fast-glob: 3.3.2
+      get-port-please: 3.1.2
+      jiti: 1.21.0
+      minimatch: 9.0.4
+      ofetch: 1.3.4
+      open: 10.1.0
+      unhead: 1.9.3
+      vue: 3.4.21(typescript@5.4.3)
+      vue-bundle-renderer: 2.0.0
+      ws: 8.16.0
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+    dev: false
 
   /@eslint/eslintrc@2.1.4:
     resolution: {integrity: sha512-269Z39MS6wVJtsoUl10L60WdkhJVdPG24Q4eZTH3nnF6lpvSShEK3wQjDX9JRWAUPvPh7COouPpU9IrqaZFvtQ==}
@@ -2286,7 +2314,7 @@ packages:
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       '@tufjs/canonical-json': 2.0.0
-      minimatch: 9.0.3
+      minimatch: 9.0.4
 
   /@types/eslint-scope@3.7.7:
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
@@ -4231,34 +4259,6 @@ packages:
       '@types/eslint': 8.56.6
     dev: false
 
-  /eslint-flat-config-viewer@0.1.20(eslint@8.57.0)(typescript@5.4.3):
-    resolution: {integrity: sha512-TYYsH8k4b/P7JDaPfAMo362QaEHE4vTQh5UNrJ9/ZBzGxjpb6ESOTM1Gaij5SP+59YwY6ETJDWmaMnbi9qmLpA==}
-    hasBin: true
-    peerDependencies:
-      eslint: ^8.50.0
-    dependencies:
-      '@unhead/shared': 1.9.3
-      '@unhead/ssr': 1.9.3
-      chokidar: 3.6.0
-      consola: 3.2.3
-      devalue: 4.3.2
-      eslint: 8.57.0
-      fast-glob: 3.3.2
-      get-port-please: 3.1.2
-      jiti: 1.21.0
-      minimatch: 9.0.4
-      ofetch: 1.3.4
-      open: 10.1.0
-      unhead: 1.9.3
-      vue: 3.4.21(typescript@5.4.3)
-      vue-bundle-renderer: 2.0.0
-      ws: 8.16.0
-    transitivePeerDependencies:
-      - bufferutil
-      - typescript
-      - utf-8-validate
-    dev: false
-
   /eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
     dependencies:
@@ -4880,7 +4880,7 @@ packages:
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       minipass: 7.0.4
       path-scurry: 1.10.1
 
@@ -5134,7 +5134,7 @@ packages:
     resolution: {integrity: sha512-t7sv42WkwFkyKbivUCglsQW5YWMskWtbEf4MNKX5u/CCWHKSPzN4FtBQGsQZgCLbxOzpVlcbWVK5KB3auIOjSw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      minimatch: 9.0.3
+      minimatch: 9.0.4
 
   /ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
@@ -5809,13 +5809,13 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
+    dev: false
 
   /minimatch@9.0.4:
     resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==}
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       brace-expansion: 2.0.1
-    dev: false
 
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
