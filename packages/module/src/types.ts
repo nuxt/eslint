@@ -115,5 +115,5 @@ export type Awaitable<T> = T | Promise<T>
 
 export type ESLintConfigGenAddon = {
   name: string
-  getConfigs: () => Awaitable<ESLintConfigGenAddonResult | void>
+  getConfigs: () => Awaitable<ESLintConfigGenAddonResult | undefined>
 }

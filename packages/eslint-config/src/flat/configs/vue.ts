@@ -12,14 +12,11 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] 
 
   return [
     {
-      name: 'nuxt:setup-vue',
+      name: 'nuxt:vue:setup',
       plugins: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         vue: pluginVue as any,
       },
-    },
-    {
-      name: 'nuxt:vue-language-options',
       languageOptions: {
         parserOptions: {
           ecmaVersion: 'latest',

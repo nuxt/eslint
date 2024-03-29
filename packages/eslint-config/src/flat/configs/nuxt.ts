@@ -28,7 +28,7 @@ export default function nuxt(options: NuxtESLintConfigOptions): FlatConfigItem[]
 
   if (fileSingleRoot.length)
     configs.push({
-      name: 'nuxt:vue-single-root',
+      name: 'nuxt:vue:single-root',
       files: fileSingleRoot,
       rules: {
         'vue/no-multiple-template-root': 'error',

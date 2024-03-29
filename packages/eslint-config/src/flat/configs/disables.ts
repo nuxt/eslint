@@ -28,7 +28,7 @@ export default function disables(options: NuxtESLintConfigOptions): FlatConfigIt
 
   if (fileRoutes.length) {
     configs.push({
-      name: 'nuxt:vue-routes-disables',
+      name: 'nuxt:vue:routes:disables',
       files: fileRoutes,
       rules: {
         'vue/multi-word-component-names': 'off',
