@@ -1,8 +1,18 @@
 import * as parserTs from '@typescript-eslint/parser'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
+import { resolveOptions } from '../utils'
+import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
 
-export default function typescript(): FlatConfigItem[] {
+export default function typescript(options: NuxtESLintConfigOptions): FlatConfigItem[] {
+  const resolved = resolveOptions(options)
+
+  if (resolved.features.typescript === false) {
+    return []
+  }
+
+  const tsOptions = resolved.features.typescript === true ? {} : resolved.features.typescript
+
   return [
     {
       name: 'nuxt:typescript:setup',
@@ -21,7 +31,9 @@ export default function typescript(): FlatConfigItem[] {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ...pluginTs.configs['eslint-recommended'].overrides![0].rules as any,
         ...pluginTs.configs.recommended.rules,
-        ...pluginTs.configs.strict.rules,
+        ...(tsOptions.strict === false
+          ? {}
+          : pluginTs.configs.strict.rules),
 
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: false, prefer: 'type-imports' }],

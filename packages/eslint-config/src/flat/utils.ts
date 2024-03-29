@@ -15,7 +15,7 @@ export function resolveOptions(
     ...config.dirs,
   } as NuxtESLintConfigOptionsResolved['dirs']
 
-  dirs.root ||= [process.cwd()]
+  dirs.root ||= ['.']
   dirs.src ||= dirs.root
   dirs.pages ||= dirs.src.map(src => `${src}/pages`)
   dirs.layouts ||= dirs.src.map(src => `${src}/layouts`)
@@ -30,6 +30,7 @@ export function resolveOptions(
     features: {
       standalone: true,
       stylistic: false,
+      typescript: true,
       ...config.features,
     },
     dirs,

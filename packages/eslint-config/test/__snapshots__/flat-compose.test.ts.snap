@@ -1,0 +1,173 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`flat config composition > custom src dirs 1`] = `
+[
+  {
+    "ignores": [
+      "**/dist",
+      "**/node_modules",
+      "**/.nuxt",
+      "**/.output",
+      "**/.vercel",
+      "**/.netlify",
+    ],
+  },
+  {
+    "name": "nuxt:javascript",
+  },
+  {
+    "name": "nuxt:typescript:setup",
+  },
+  {
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt:typescript",
+  },
+  {
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt:typescript:disables",
+  },
+  {
+    "name": "nuxt:vue:setup",
+  },
+  {
+    "files": [
+      "**/*.vue",
+    ],
+    "name": "nuxt:vue",
+  },
+  {
+    "name": "nuxt:rules",
+  },
+  {
+    "files": [
+      "src1/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt:vue:single-root",
+  },
+  {
+    "files": [
+      "src1/app.{js,ts,jsx,tsx,vue}",
+      "src1/error.{js,ts,jsx,tsx,vue}",
+      "src2/app.{js,ts,jsx,tsx,vue}",
+      "src2/error.{js,ts,jsx,tsx,vue}",
+      "src1/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "src1/components/*/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/components/*/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt:vue:routes:disables",
+  },
+]
+`;
+
+exports[`flat config composition > empty 1`] = `
+[
+  {
+    "ignores": [
+      "**/dist",
+      "**/node_modules",
+      "**/.nuxt",
+      "**/.output",
+      "**/.vercel",
+      "**/.netlify",
+    ],
+  },
+  {
+    "name": "nuxt:javascript",
+  },
+  {
+    "name": "nuxt:typescript:setup",
+  },
+  {
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt:typescript",
+  },
+  {
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt:typescript:disables",
+  },
+  {
+    "name": "nuxt:vue:setup",
+  },
+  {
+    "files": [
+      "**/*.vue",
+    ],
+    "name": "nuxt:vue",
+  },
+  {
+    "name": "nuxt:rules",
+  },
+  {
+    "files": [
+      "layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt:vue:single-root",
+  },
+  {
+    "files": [
+      "app.{js,ts,jsx,tsx,vue}",
+      "error.{js,ts,jsx,tsx,vue}",
+      "layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+      "components/*/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt:vue:routes:disables",
+  },
+]
+`;
+
+exports[`flat config composition > non-standalone 1`] = `
+[
+  {
+    "name": "nuxt:rules",
+  },
+  {
+    "files": [
+      "layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt:vue:single-root",
+  },
+  {
+    "files": [
+      "app.{js,ts,jsx,tsx,vue}",
+      "error.{js,ts,jsx,tsx,vue}",
+      "layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+      "components/*/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt:vue:routes:disables",
+  },
+]
+`;

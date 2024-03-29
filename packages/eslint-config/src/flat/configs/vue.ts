@@ -9,6 +9,7 @@ import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
 export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const resolved = resolveOptions(options)
+  const hasTs = resolved.features.typescript !== false
 
   return [
     {
@@ -21,7 +22,7 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] 
         parserOptions: {
           ecmaVersion: 'latest',
           extraFileExtensions: ['.vue'],
-          parser: parserTs,
+          parser: hasTs ? parserTs : undefined,
           sourceType: 'module',
           ecmaFeatures: {
             jsx: true,

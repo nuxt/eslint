@@ -17,6 +17,20 @@ export interface NuxtESLintFeaturesOptions {
    * @default false
    */
   stylistic?: boolean | StylisticCustomizeOptions<true>
+
+  /**
+   * Options for TypeScript setup
+   *
+   * @default true
+   */
+  typescript?: boolean | {
+    /**
+     * Enable strict rules
+     * @see https://typescript-eslint.io/users/configs#strict
+     * @default true
+     */
+    strict?: boolean
+  }
 }
 
 export interface NuxtESLintConfigOptions {

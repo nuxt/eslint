@@ -41,7 +41,7 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
     pipeline.append(
       base(),
       javascript(),
-      typescript(),
+      typescript(resolved),
       vue(resolved),
     )
   }
