@@ -26,7 +26,12 @@ export interface NuxtESLintConfigOptions {
     /**
      * Nuxt source directory
      */
-    src?: string
+    src?: string[]
+
+    /**
+     * Root directory for nuxt project
+     */
+    root?: string[]
 
     /**
      * Directory for pages
@@ -67,12 +72,14 @@ export interface NuxtESLintConfigOptions {
      * Directory for server
      */
     servers?: string[]
-
-    /**
-     * Directory for layers
-     */
-    layers?: string[]
   }
+}
+
+type NotNill<T> = T extends null | undefined ? never : T
+
+export interface NuxtESLintConfigOptionsResolved {
+  features: Required<NotNill<NuxtESLintFeaturesOptions>>
+  dirs: Required<NotNill<NuxtESLintConfigOptions['dirs']>>
 }
 
 export type Awaitable<T> = T | Promise<T>

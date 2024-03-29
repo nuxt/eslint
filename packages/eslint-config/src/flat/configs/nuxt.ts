@@ -3,9 +3,11 @@ import type { NuxtESLintConfigOptions } from '../types'
 import nuxtPlugin from '@nuxt/eslint-plugin'
 import { GLOB_EXTS } from '../constants'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
+import { resolveOptions } from '../utils'
 
 export default function nuxt(options: NuxtESLintConfigOptions): FlatConfigItem[] {
-  const dirs = options.dirs ?? {}
+  const resolved = resolveOptions(options)
+  const dirs = resolved.dirs
 
   const fileSingleRoot = [
     ...(dirs.layouts?.map(layoutsDir => join(layoutsDir, `**/*.${GLOB_EXTS}`)) || []),
