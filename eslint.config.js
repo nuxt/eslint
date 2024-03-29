@@ -6,30 +6,22 @@ export default createConfigForNuxt({
     stylistic: true,
   },
   dirs: {
-    src: 'playground',
-    pages: [
-      'playground/pages',
-      'docs/pages',
-    ],
-    layouts: [
-      'playground/layouts',
-      'docs/layouts',
-    ],
-    components: [
-      'playground/components',
-      'docs/components',
+    src: [
+      'playground',
+      'docs',
     ],
   },
-}).append(
-  {
-    ignores: [
-      'packages-legacy/**',
-    ],
-  },
-  {
-    files: ['docs/**/*.vue'],
-    rules: {
-      'vue/no-v-html': 'off',
+})
+  .append(
+    {
+      ignores: [
+        'packages-legacy/**',
+      ],
     },
-  },
-)
+    {
+      files: ['docs/**/*.vue'],
+      rules: {
+        'vue/no-v-html': 'off',
+      },
+    },
+  )

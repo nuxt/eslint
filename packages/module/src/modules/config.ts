@@ -203,15 +203,15 @@ function getDirs(nuxt: Nuxt): NuxtESLintConfigOptions['dirs'] {
     plugins: [],
     middleware: [],
     modules: [],
-    layers: [],
     servers: [],
-    src: nuxt.options.srcDir,
+    root: [nuxt.options.rootDir],
+    src: [nuxt.options.srcDir],
   }
 
   for (const layer of nuxt.options._layers) {
     const r = (t: string) => relative(nuxt.options.rootDir, resolve(layer.config.srcDir, t))
 
-    dirs.layers.push(r(''))
+    dirs.src.push(r(''))
     dirs.pages.push(r(nuxt.options.dir.pages || 'pages'))
     dirs.layouts.push(r(nuxt.options.dir.layouts || 'layouts'))
     dirs.plugins.push(r(nuxt.options.dir.plugins || 'plugins'))
