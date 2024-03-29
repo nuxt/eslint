@@ -39,7 +39,7 @@
   "dependencies": {
     "@eslint/js": "^8.57.0",
     "@nuxt/eslint-plugin": "workspace:*",
-    "@rushstack/eslint-patch": "^1.9.0",
+    "@rushstack/eslint-patch": "^1.10.1",
     "@stylistic/eslint-plugin": "^1.7.0",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",

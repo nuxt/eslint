@@ -9,6 +9,7 @@ import stylistic from './configs/stylistic'
 import type { FlatConfigItem, ResolvableFlatConfig } from 'eslint-flat-config-utils'
 import { FlatConfigPipeline } from 'eslint-flat-config-utils'
 import { pipe } from 'eslint-flat-config-utils'
+import { resolveOptions } from './utils'
 
 export * from './types'
 
@@ -34,24 +35,26 @@ export function defineFlatConfigs(
 export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): FlatConfigPipeline<FlatConfigItem> {
   const pipeline = pipe()
 
-  if (options.features?.standalone !== false) {
+  const resolved = resolveOptions(options)
+
+  if (resolved.features.standalone !== false) {
     pipeline.append(
       base(),
       javascript(),
       typescript(),
-      vue(options),
+      vue(resolved),
     )
   }
 
-  if (options.features?.stylistic) {
+  if (resolved.features.stylistic) {
     pipeline.append(
-      stylistic(options.features.stylistic === true ? {} : options.features.stylistic),
+      stylistic(resolved.features.stylistic === true ? {} : resolved.features.stylistic),
     )
   }
 
   pipeline.append(
-    nuxt(options),
-    disables(options),
+    nuxt(resolved),
+    disables(resolved),
   )
 
   return pipeline

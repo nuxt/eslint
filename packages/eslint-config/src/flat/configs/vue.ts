@@ -4,10 +4,12 @@ import * as parserTs from '@typescript-eslint/parser'
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
 import type { NuxtESLintConfigOptions } from '../types'
-import { removeUndefined } from '../utils'
+import { removeUndefined, resolveOptions } from '../utils'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
 export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] {
+  const resolved = resolveOptions(options)
+
   return [
     {
       name: 'nuxt:setup-vue',
@@ -92,7 +94,7 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] 
         'prefer-spread': 'error', // ts transpiles spread to apply, so no need for manual apply
         'valid-typeof': 'off', // ts(2367)
 
-        ...(options.features?.stylistic
+        ...(resolved.features.stylistic
           ? {}
           : {
               // Disable Vue's default stylistic rules when stylistic is not enabled
