@@ -1,10 +1,11 @@
 import { addTemplate, createResolver } from '@nuxt/kit'
-import { pathToFileURL } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { builtinModules } from 'node:module'
 import { stringifyImports } from 'unimport'
 import type { Import } from 'unimport'
+import { resolvePath } from 'mlly'
 import type { Nuxt } from '@nuxt/schema'
-import { relative, resolve } from 'pathe'
+import { relative, resolve, join, dirname } from 'pathe'
 import { getPort } from 'get-port-please'
 import type { ESLintConfigGenAddon } from '../types'
 import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
@@ -39,9 +40,9 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     write: true,
     async getContents() {
       return [
-        'import type { FlatConfigPipeline, FlatConfigItem } from "eslint-flat-config-utils"',
+        'import type { FlatConfigComposer, FlatConfigItem } from "eslint-flat-config-utils"',
         'import { defineFlatConfigs } from "@nuxt/eslint-config/flat"',
-        'declare const configs: FlatConfigPipeline<FlatConfigItem>',
+        'declare const configs: FlatConfigComposer<FlatConfigItem>',
         'declare const withNuxt: typeof defineFlatConfigs',
         'export default withNuxt',
         'export { withNuxt, defineFlatConfigs }',
@@ -64,7 +65,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
   importLines.push(
     {
       from: 'eslint-flat-config-utils',
-      name: 'pipe',
+      name: 'composer',
     },
     {
       from: 'eslint-typegen',
@@ -116,7 +117,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
     '',
     'export { defineFlatConfigs }',
     '',
-    `export const configs = pipe()`,
+    `export const configs = composer()`,
     ``,
     `configs.append(`,
     configItems.join(',\n\n'),
@@ -130,7 +131,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
   ].join('\n')
 }
 
-function setupDevToolsIntegration(nuxt: Nuxt) {
+async function setupDevToolsIntegration(nuxt: Nuxt) {
   let viewerProcess: ReturnType<typeof import('@nuxt/devtools-kit')['startSubprocess']> | undefined
   let viewerPort: number | undefined
   let viewerUrl: string | undefined
@@ -154,14 +155,22 @@ function setupDevToolsIntegration(nuxt: Nuxt) {
                 pending: !!viewerProcess,
                 handle: async () => {
                   const { startSubprocess } = await import('@nuxt/devtools-kit')
+                  const inspectorBinPath = join(
+                    dirname(await resolvePath(
+                      '@eslint/config-inspector/package.json',
+                      { url: dirname(fileURLToPath(import.meta.url)) },
+                    )),
+                    'bin.mjs',
+                  )
+
                   viewerPort = await getPort({
                     port: 8123,
                     portRange: [8123, 10000],
                   })
                   viewerProcess = startSubprocess(
                     {
-                      command: 'npx',
-                      args: ['@eslint/config-inspector'],
+                      command: 'node',
+                      args: [inspectorBinPath],
                       cwd: nuxt.options.rootDir,
                       env: {
                         PORT: viewerPort.toString(),

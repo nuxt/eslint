@@ -7,8 +7,8 @@ import typescript from './configs/typescript'
 import vue from './configs/vue'
 import stylistic from './configs/stylistic'
 import type { FlatConfigItem, ResolvableFlatConfig } from 'eslint-flat-config-utils'
-import { FlatConfigPipeline } from 'eslint-flat-config-utils'
-import { pipe } from 'eslint-flat-config-utils'
+import type { FlatConfigComposer } from 'eslint-flat-config-utils'
+import { composer } from 'eslint-flat-config-utils'
 import { resolveOptions } from './utils'
 
 export * from './types'
@@ -21,8 +21,8 @@ export * from './types'
  */
 export function defineFlatConfigs(
   ...configs: ResolvableFlatConfig[]
-): FlatConfigPipeline<FlatConfigItem> {
-  return new FlatConfigPipeline().append(...configs)
+): FlatConfigComposer<FlatConfigItem> {
+  return composer(...configs)
 }
 
 /**
@@ -32,13 +32,13 @@ export function defineFlatConfigs(
  *
  * @see https://eslint.nuxt.com/packages/module
  */
-export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): FlatConfigPipeline<FlatConfigItem> {
-  const pipeline = pipe()
+export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): FlatConfigComposer<FlatConfigItem> {
+  const c = composer()
 
   const resolved = resolveOptions(options)
 
   if (resolved.features.standalone !== false) {
-    pipeline.append(
+    c.append(
       base(),
       javascript(),
       typescript(resolved),
@@ -47,15 +47,15 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
   }
 
   if (resolved.features.stylistic) {
-    pipeline.append(
+    c.append(
       stylistic(resolved.features.stylistic === true ? {} : resolved.features.stylistic),
     )
   }
 
-  pipeline.append(
+  c.append(
     nuxt(resolved),
     disables(resolved),
   )
 
-  return pipeline
+  return c
 }
