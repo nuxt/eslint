@@ -42,10 +42,13 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
       return [
         'import type { FlatConfigComposer, FlatConfigItem } from "eslint-flat-config-utils"',
         'import { defineFlatConfigs } from "@nuxt/eslint-config/flat"',
+        'import type { NuxtESLintConfigOptionsResolved } from "@nuxt/eslint-config/flat"',
+        '',
         'declare const configs: FlatConfigComposer<FlatConfigItem>',
+        'declare const options: NuxtESLintConfigOptionsResolved',
         'declare const withNuxt: typeof defineFlatConfigs',
         'export default withNuxt',
-        'export { withNuxt, defineFlatConfigs }',
+        'export { withNuxt, defineFlatConfigs, configs, options }',
       ].join('\n')
     },
   })
@@ -80,6 +83,10 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
       from: '@nuxt/eslint-config/flat',
       name: 'defineFlatConfigs',
     },
+    {
+      from: '@nuxt/eslint-config/flat',
+      name: 'resolveOptions',
+    },
   )
 
   const basicOptions: NuxtESLintConfigOptions = {
@@ -90,7 +97,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
     dirs: getDirs(nuxt),
   }
 
-  configItems.push(`// Nuxt Configs\ncreateConfigForNuxt(${JSON.stringify(basicOptions, null, 2)})`)
+  configItems.push(`// Nuxt Configs\ncreateConfigForNuxt(options)`)
 
   for (const addon of addons) {
     const resolved = await addon.getConfigs()
@@ -118,6 +125,8 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
     'export { defineFlatConfigs }',
     '',
     `export const configs = composer()`,
+    '',
+    `export const options = resolveOptions(${JSON.stringify(basicOptions, null, 2)})`,
     ``,
     `configs.append(`,
     configItems.join(',\n\n'),

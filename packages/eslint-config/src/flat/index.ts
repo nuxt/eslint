@@ -13,6 +13,8 @@ import { resolveOptions } from './utils'
 
 export * from './types'
 
+export { resolveOptions }
+
 /**
  * Provide type definitions for constructing ESLint flat config items.
  *
@@ -46,6 +48,10 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
     )
   }
 
+  c.append(
+    nuxt(resolved),
+  )
+
   if (resolved.features.stylistic) {
     c.append({
       name: 'nuxt/stylistic',
@@ -58,7 +64,6 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
   }
 
   c.append(
-    nuxt(resolved),
     disables(resolved),
   )
 
