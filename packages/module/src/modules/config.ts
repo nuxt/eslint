@@ -221,7 +221,7 @@ function getDirs(nuxt: Nuxt): NuxtESLintConfigOptions['dirs'] {
     modules: [],
     servers: [],
     root: [nuxt.options.rootDir],
-    src: [nuxt.options.srcDir],
+    src: [],
   }
 
   for (const layer of nuxt.options._layers) {
