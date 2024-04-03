@@ -45,8 +45,8 @@ importers:
         specifier: ^3.11.1
         version: 3.11.1(vite@5.1.6)
       nuxt-og-image:
-        specifier: ^3.0.0-rc.48
-        version: 3.0.0-rc.48(@lezer/common@1.2.1)(@nuxt/devtools@1.0.8)(@vue/compiler-core@3.4.21)(nuxt@3.11.1)(postcss@8.4.36)(vite@5.1.6)(vue@3.4.21)(webpack@5.90.3)
+        specifier: ^3.0.0-rc.49
+        version: 3.0.0-rc.49(@lezer/common@1.2.1)(@nuxt/devtools@1.0.8)(@vue/compiler-core@3.4.21)(nuxt@3.11.1)(postcss@8.4.36)(vite@5.1.6)(vue@3.4.21)(webpack@5.90.3)
 
 packages:
 
@@ -1569,22 +1569,6 @@ packages:
 
   /@nuxt/devtools-kit@1.0.8(nuxt@3.11.1)(vite@5.1.6):
     resolution: {integrity: sha512-j7bNZmoAXQ1a8qv6j6zk4c/aekrxYqYVQM21o/Hy4XHCUq4fajSgpoc8mjyWJSTfpkOmuLyEzMexpDWiIVSr6A==}
-    peerDependencies:
-      nuxt: ^3.9.0
-      vite: '*'
-    dependencies:
-      '@nuxt/kit': 3.11.1
-      '@nuxt/schema': 3.11.1
-      execa: 7.2.0
-      nuxt: 3.11.1(vite@5.1.6)
-      vite: 5.1.6
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: false
-
-  /@nuxt/devtools-kit@1.1.3(nuxt@3.11.1)(vite@5.1.6):
-    resolution: {integrity: sha512-bVIGng74haYAvJXiV+xtk7xrpHPZOJtcV4Flgl9IM+PYSjqs5pIRFRDnDwCQYAGt99hxGtQkdTBRqPQLxVCmeA==}
     peerDependencies:
       nuxt: ^3.9.0
       vite: '*'
@@ -3247,7 +3231,7 @@ packages:
       chokidar: 3.6.0
       fast-glob: 3.3.2
       magic-string: 0.30.8
-      unplugin: 1.10.0
+      unplugin: 1.10.1
       webpack: 5.90.3
       webpack-sources: 3.2.3
     transitivePeerDependencies:
@@ -7787,7 +7771,7 @@ packages:
     dependencies:
       '@iconify/collections': 1.0.408
       '@iconify/vue': 4.1.1(vue@3.4.21)
-      '@nuxt/devtools-kit': 1.1.3(nuxt@3.11.1)(vite@5.1.6)
+      '@nuxt/devtools-kit': 1.1.5(nuxt@3.11.1)(vite@5.1.6)
       '@nuxt/kit': 3.11.1
     transitivePeerDependencies:
       - nuxt
@@ -7797,8 +7781,8 @@ packages:
       - vue
     dev: false
 
-  /nuxt-og-image@3.0.0-rc.48(@lezer/common@1.2.1)(@nuxt/devtools@1.0.8)(@vue/compiler-core@3.4.21)(nuxt@3.11.1)(postcss@8.4.36)(vite@5.1.6)(vue@3.4.21)(webpack@5.90.3):
-    resolution: {integrity: sha512-ah/Zux+7vctX3cljOm/iLthyqe+6b0KRCXSll2JBijbvL3FGSHI8re0sQ5qejNPfIhyao6s5CfIg3GnL9Aapgw==}
+  /nuxt-og-image@3.0.0-rc.49(@lezer/common@1.2.1)(@nuxt/devtools@1.0.8)(@vue/compiler-core@3.4.21)(nuxt@3.11.1)(postcss@8.4.36)(vite@5.1.6)(vue@3.4.21)(webpack@5.90.3):
+    resolution: {integrity: sha512-0ZXqKV0CVbuLpomfiredKXjVuyQqmLXuZ9tmXSgSQnUGuNrBKakaM0IoztlNbMBDBOPiCj6rlcVacTEP8NGqNw==}
     dependencies:
       '@css-inline/css-inline': 0.14.0
       '@css-inline/css-inline-wasm': 0.14.0
@@ -10500,7 +10484,7 @@ packages:
       mlly: 1.6.1
       pathe: 1.1.2
       pkg-types: 1.0.3
-      unplugin: 1.10.0
+      unplugin: 1.10.1
     dev: false
 
   /update-browserslist-db@1.0.13(browserslist@4.23.0):
@@ -10581,7 +10565,7 @@ packages:
       natural-compare-lite: 1.4.0
       sass: 1.72.0
       svelte: 4.2.12
-      vanilla-picker: 2.12.2
+      vanilla-picker: 2.12.3
     transitivePeerDependencies:
       - '@lezer/common'
     dev: false
@@ -10616,12 +10600,6 @@ packages:
       vanilla-picker: 2.12.3
     transitivePeerDependencies:
       - '@lezer/common'
-    dev: false
-
-  /vanilla-picker@2.12.2:
-    resolution: {integrity: sha512-dk0gNeNL9fQFGd1VEhNDQfFlbCqAiksRh1H2tVPlavkH88n/a/y30rXi9PPKrYPTK5kEfPO4xcldt4ts/1wIAg==}
-    dependencies:
-      '@sphinxxxx/color-conversion': 2.2.2
     dev: false
 
   /vanilla-picker@2.12.3:

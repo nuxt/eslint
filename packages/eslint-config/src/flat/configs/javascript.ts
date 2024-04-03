@@ -6,7 +6,7 @@ import globals from 'globals'
 export default function javascript(): FlatConfigItem[] {
   return [
     {
-      name: 'nuxt:javascript',
+      name: 'nuxt/javascript',
       languageOptions: {
         ecmaVersion: 2022,
         parserOptions: {

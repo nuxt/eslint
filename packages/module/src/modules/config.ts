@@ -140,7 +140,7 @@ async function setupDevToolsIntegration(nuxt: Nuxt) {
     tabs.push({
       name: 'eslint-config',
       title: 'ESLint Config',
-      icon: 'https://raw.githubusercontent.com/eslint/config-inspector/main/public/favicon.svg',
+      icon: 'https://raw.githubusercontent.com/eslint/config-inspector/main/app/public/favicon.svg',
       view: viewerUrl
         ? {
             type: 'iframe',
@@ -170,11 +170,10 @@ async function setupDevToolsIntegration(nuxt: Nuxt) {
                   viewerProcess = startSubprocess(
                     {
                       command: 'node',
-                      args: [inspectorBinPath],
+                      args: [inspectorBinPath, '--no-open'],
                       cwd: nuxt.options.rootDir,
                       env: {
                         PORT: viewerPort.toString(),
-                        NO_OPEN: 'true',
                       },
                     },
                     {

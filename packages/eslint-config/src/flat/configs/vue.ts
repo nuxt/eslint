@@ -1,5 +1,5 @@
 import * as parserVue from 'vue-eslint-parser'
-import * as parserTs from '@typescript-eslint/parser'
+import parserTs from '@typescript-eslint/parser'
 
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
@@ -13,7 +13,7 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] 
 
   return [
     {
-      name: 'nuxt:vue:setup',
+      name: 'nuxt/vue/setup',
       plugins: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         vue: pluginVue as any,
@@ -49,7 +49,7 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] 
       },
     },
     {
-      name: 'nuxt:vue',
+      name: 'nuxt/vue/rules',
       files: [
         '**/*.vue',
       ],

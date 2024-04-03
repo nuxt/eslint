@@ -14,26 +14,26 @@ export default function nuxt(options: NuxtESLintConfigOptions): FlatConfigItem[]
     ...(dirs.pages?.map(pagesDir => join(pagesDir, `**/*.${GLOB_EXTS}`)) || []),
   ]
 
-  const configs: FlatConfigItem[] = [
-    {
-      name: 'nuxt:rules',
-      plugins: {
-        nuxt: nuxtPlugin,
-      },
-      rules: {
-        'nuxt/prefer-import-meta': 'error',
-      },
-    },
-  ]
+  const configs: FlatConfigItem[] = []
 
   if (fileSingleRoot.length)
     configs.push({
-      name: 'nuxt:vue:single-root',
+      name: 'nuxt/vue/single-root',
       files: fileSingleRoot,
       rules: {
         'vue/no-multiple-template-root': 'error',
       },
     })
+
+  configs.push({
+    name: 'nuxt/rules',
+    plugins: {
+      nuxt: nuxtPlugin,
+    },
+    rules: {
+      'nuxt/prefer-import-meta': 'error',
+    },
+  })
 
   return configs
 }

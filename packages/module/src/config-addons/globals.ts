@@ -17,7 +17,7 @@ export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
         configs: [
           '// Set globals from imports registry\n'
           + JSON.stringify(<FlatConfigItem>{
-            name: 'nuxt:import-globals',
+            name: 'nuxt/import-globals',
             languageOptions: {
               globals: Object.fromEntries((await unimport.getImports()).map(i => [i.as || i.name, 'readonly'])),
             },

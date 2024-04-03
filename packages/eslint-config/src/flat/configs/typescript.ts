@@ -1,4 +1,4 @@
-import * as parserTs from '@typescript-eslint/parser'
+import parserTs from '@typescript-eslint/parser'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import { resolveOptions } from '../utils'
@@ -15,14 +15,14 @@ export default function typescript(options: NuxtESLintConfigOptions): FlatConfig
 
   return [
     {
-      name: 'nuxt:typescript:setup',
+      name: 'nuxt/typescript/setup',
       plugins: {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         '@typescript-eslint': pluginTs as any,
       },
     },
     {
-      name: 'nuxt:typescript',
+      name: 'nuxt/typescript/rules',
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
       languageOptions: {
         parser: parserTs,
@@ -40,7 +40,7 @@ export default function typescript(options: NuxtESLintConfigOptions): FlatConfig
       },
     },
     {
-      name: 'nuxt:typescript:disables',
+      name: 'nuxt/typescript/disables',
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
       rules: {
         // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)

@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@8.15.5",
+  "packageManager": "pnpm@8.15.6",
   "version": "0.3.0-beta.8",
   "scripts": {
     "build": "pnpm run -r build",
@@ -21,7 +21,7 @@
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/test-utils": "^3.12.0",
     "@types/eslint": "^8.56.7",
-    "@types/node": "^20.12.2",
+    "@types/node": "^20.12.3",
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
     "typescript": "^5.4.3",
