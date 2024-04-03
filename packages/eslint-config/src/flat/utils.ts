@@ -31,6 +31,7 @@ export function resolveOptions(
       standalone: true,
       stylistic: false,
       typescript: true,
+      tooling: false,
       ...config.features,
     },
     dirs,

@@ -10,6 +10,8 @@ import type { FlatConfigItem, ResolvableFlatConfig } from 'eslint-flat-config-ut
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import { composer } from 'eslint-flat-config-utils'
 import { resolveOptions } from './utils'
+import jsdoc from './configs-tooling/jsdoc'
+import unicorn from './configs-tooling/unicorn'
 
 export * from './types'
 
@@ -51,6 +53,13 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
   c.append(
     nuxt(resolved),
   )
+
+  if (resolved.features.tooling) {
+    c.append(
+      jsdoc(resolved),
+      unicorn(),
+    )
+  }
 
   if (resolved.features.stylistic) {
     c.append({
