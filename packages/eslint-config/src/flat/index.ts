@@ -47,9 +47,14 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
   }
 
   if (resolved.features.stylistic) {
-    c.append(
-      stylistic(resolved.features.stylistic === true ? {} : resolved.features.stylistic),
-    )
+    c.append({
+      name: 'nuxt/stylistic',
+      ...stylistic(
+        resolved.features.stylistic === true
+          ? {}
+          : resolved.features.stylistic,
+      ),
+    })
   }
 
   c.append(
