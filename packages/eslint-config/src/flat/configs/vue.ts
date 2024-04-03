@@ -3,9 +3,9 @@ import parserTs from '@typescript-eslint/parser'
 
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
+import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import type { NuxtESLintConfigOptions } from '../types'
 import { removeUndefined, resolveOptions } from '../utils'
-import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
 export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const resolved = resolveOptions(options)

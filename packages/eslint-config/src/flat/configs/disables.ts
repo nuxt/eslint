@@ -1,7 +1,7 @@
 import { join } from 'pathe'
+import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import { GLOB_EXTS } from '../constants'
 import type { NuxtESLintConfigOptions } from '../types'
-import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import { resolveOptions } from '../utils'
 
 export default function disables(options: NuxtESLintConfigOptions): FlatConfigItem[] {

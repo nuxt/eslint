@@ -44,9 +44,11 @@
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
     "eslint-flat-config-utils": "^0.2.0",
+    "eslint-plugin-import-x": "^0.5.0",
     "eslint-plugin-vue": "^9.24.0",
     "globals": "^15.0.0",
     "pathe": "^1.1.2",
+    "tslib": "^2.6.2",
     "vue-eslint-parser": "^9.4.2"
   },
   "devDependencies": {
