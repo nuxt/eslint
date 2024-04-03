@@ -10,6 +10,7 @@ import type { FlatConfigItem, ResolvableFlatConfig } from 'eslint-flat-config-ut
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import { composer } from 'eslint-flat-config-utils'
 import { resolveOptions } from './utils'
+import gitignore from 'eslint-config-flat-gitignore'
 
 export * from './types'
 
@@ -41,6 +42,7 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
 
   if (resolved.features.standalone !== false) {
     c.append(
+      gitignore(),
       base(),
       javascript(),
       typescript(resolved),
