@@ -4,6 +4,28 @@ exports[`flat config composition > custom src dirs 1`] = `
 [
   {
     "ignores": [
+      "node_modules",
+      "**/node_modules/**",
+      "*.iml",
+      "**/*.iml/**",
+      ".idea",
+      "**/.idea/**",
+      "*.log",
+      "**/*.log/**",
+      ".nuxt",
+      "**/.nuxt/**",
+      ".output",
+      "**/.output/**",
+      "**/.yarn/cache",
+      "**/.yarn/*state*",
+      "dist",
+      "**/dist/**",
+      ".eslintcache",
+      "**/.eslintcache/**",
+    ],
+  },
+  {
+    "ignores": [
       "**/dist",
       "**/node_modules",
       "**/.nuxt",
@@ -79,6 +101,28 @@ exports[`flat config composition > custom src dirs 1`] = `
 
 exports[`flat config composition > empty 1`] = `
 [
+  {
+    "ignores": [
+      "node_modules",
+      "**/node_modules/**",
+      "*.iml",
+      "**/*.iml/**",
+      ".idea",
+      "**/.idea/**",
+      "*.log",
+      "**/*.log/**",
+      ".nuxt",
+      "**/.nuxt/**",
+      ".output",
+      "**/.output/**",
+      "**/.yarn/cache",
+      "**/.yarn/*state*",
+      "dist",
+      "**/dist/**",
+      ".eslintcache",
+      "**/.eslintcache/**",
+    ],
+  },
   {
     "ignores": [
       "**/dist",
