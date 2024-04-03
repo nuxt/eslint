@@ -42,7 +42,7 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
 
   if (resolved.features.standalone !== false) {
     c.append(
-      gitignore(),
+      gitignore({ strict: false }),
       base(),
       javascript(),
       typescript(resolved),
