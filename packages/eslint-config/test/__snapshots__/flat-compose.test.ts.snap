@@ -13,20 +13,10 @@ exports[`flat config composition > custom src dirs 1`] = `
     ],
   },
   {
-    "name": "nuxt:javascript",
+    "name": "nuxt/javascript",
   },
   {
-    "name": "nuxt:typescript:setup",
-  },
-  {
-    "files": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.mts",
-      "**/*.cts",
-      "**/*.vue",
-    ],
-    "name": "nuxt:typescript",
+    "name": "nuxt/typescript/setup",
   },
   {
     "files": [
@@ -36,19 +26,26 @@ exports[`flat config composition > custom src dirs 1`] = `
       "**/*.cts",
       "**/*.vue",
     ],
-    "name": "nuxt:typescript:disables",
+    "name": "nuxt/typescript/rules",
   },
   {
-    "name": "nuxt:vue:setup",
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt/typescript/disables",
+  },
+  {
+    "name": "nuxt/vue/setup",
   },
   {
     "files": [
       "**/*.vue",
     ],
-    "name": "nuxt:vue",
-  },
-  {
-    "name": "nuxt:rules",
+    "name": "nuxt/vue/rules",
   },
   {
     "files": [
@@ -57,7 +54,10 @@ exports[`flat config composition > custom src dirs 1`] = `
       "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
       "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
     ],
-    "name": "nuxt:vue:single-root",
+    "name": "nuxt/vue/single-root",
+  },
+  {
+    "name": "nuxt/rules",
   },
   {
     "files": [
@@ -72,7 +72,7 @@ exports[`flat config composition > custom src dirs 1`] = `
       "src1/components/*/**/*.{js,ts,jsx,tsx,vue}",
       "src2/components/*/**/*.{js,ts,jsx,tsx,vue}",
     ],
-    "name": "nuxt:vue:routes:disables",
+    "name": "nuxt/disables/routes",
   },
 ]
 `;
@@ -90,20 +90,10 @@ exports[`flat config composition > empty 1`] = `
     ],
   },
   {
-    "name": "nuxt:javascript",
+    "name": "nuxt/javascript",
   },
   {
-    "name": "nuxt:typescript:setup",
-  },
-  {
-    "files": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.mts",
-      "**/*.cts",
-      "**/*.vue",
-    ],
-    "name": "nuxt:typescript",
+    "name": "nuxt/typescript/setup",
   },
   {
     "files": [
@@ -113,26 +103,36 @@ exports[`flat config composition > empty 1`] = `
       "**/*.cts",
       "**/*.vue",
     ],
-    "name": "nuxt:typescript:disables",
+    "name": "nuxt/typescript/rules",
   },
   {
-    "name": "nuxt:vue:setup",
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt/typescript/disables",
+  },
+  {
+    "name": "nuxt/vue/setup",
   },
   {
     "files": [
       "**/*.vue",
     ],
-    "name": "nuxt:vue",
-  },
-  {
-    "name": "nuxt:rules",
+    "name": "nuxt/vue/rules",
   },
   {
     "files": [
       "layouts/**/*.{js,ts,jsx,tsx,vue}",
       "pages/**/*.{js,ts,jsx,tsx,vue}",
     ],
-    "name": "nuxt:vue:single-root",
+    "name": "nuxt/vue/single-root",
+  },
+  {
+    "name": "nuxt/rules",
   },
   {
     "files": [
@@ -142,7 +142,7 @@ exports[`flat config composition > empty 1`] = `
       "pages/**/*.{js,ts,jsx,tsx,vue}",
       "components/*/**/*.{js,ts,jsx,tsx,vue}",
     ],
-    "name": "nuxt:vue:routes:disables",
+    "name": "nuxt/disables/routes",
   },
 ]
 `;
@@ -150,14 +150,14 @@ exports[`flat config composition > empty 1`] = `
 exports[`flat config composition > non-standalone 1`] = `
 [
   {
-    "name": "nuxt:rules",
-  },
-  {
     "files": [
       "layouts/**/*.{js,ts,jsx,tsx,vue}",
       "pages/**/*.{js,ts,jsx,tsx,vue}",
     ],
-    "name": "nuxt:vue:single-root",
+    "name": "nuxt/vue/single-root",
+  },
+  {
+    "name": "nuxt/rules",
   },
   {
     "files": [
@@ -167,7 +167,7 @@ exports[`flat config composition > non-standalone 1`] = `
       "pages/**/*.{js,ts,jsx,tsx,vue}",
       "components/*/**/*.{js,ts,jsx,tsx,vue}",
     ],
-    "name": "nuxt:vue:routes:disables",
+    "name": "nuxt/disables/routes",
   },
 ]
 `;
