@@ -1,5 +1,6 @@
 import type { FlatConfigItem, ResolvableFlatConfig, FlatConfigComposer } from 'eslint-flat-config-utils'
 import { composer } from 'eslint-flat-config-utils'
+import gitignore from 'eslint-config-flat-gitignore'
 import type { NuxtESLintConfigOptions } from './types'
 import disables from './configs/disables'
 import nuxt from './configs/nuxt'
@@ -10,7 +11,6 @@ import vue from './configs/vue'
 import stylistic from './configs/stylistic'
 import { resolveOptions } from './utils'
 import imports from './configs/import'
-import gitignore from 'eslint-config-flat-gitignore'
 
 export * from './types'
 
