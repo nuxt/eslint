@@ -10,6 +10,7 @@ import vue from './configs/vue'
 import stylistic from './configs/stylistic'
 import { resolveOptions } from './utils'
 import imports from './configs/import'
+import gitignore from 'eslint-config-flat-gitignore'
 
 export * from './types'
 
@@ -41,6 +42,7 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
 
   if (resolved.features.standalone !== false) {
     c.append(
+      gitignore({ strict: false }),
       base(),
       javascript(),
       typescript(resolved),
