@@ -52,12 +52,21 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
     nuxt(resolved),
   )
 
+  if (resolved.features.tooling) {
+    c.append(
+      import('./configs-tooling/jsdoc').then(m => m.default(resolved)),
+      import('./configs-tooling/unicorn').then(m => m.default()),
+    )
+  }
+
   if (resolved.features.stylistic) {
-    c.append(import('./configs/stylistic').then(m => m.default(
-      typeof resolved.features.stylistic === 'boolean'
-        ? {}
-        : resolved.features.stylistic,
-    )))
+    const stylisticOptions = typeof resolved.features.stylistic === 'boolean'
+      ? {}
+      : resolved.features.stylistic
+
+    c.append(
+      import('./configs/stylistic').then(m => m.default(stylisticOptions)),
+    )
   }
 
   c.append(

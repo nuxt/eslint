@@ -11,6 +11,14 @@ export interface NuxtESLintFeaturesOptions {
   standalone?: boolean
 
   /**
+   * Enable rules for Nuxt module authors or library authors
+   *
+   * @experimental Changes might not follow semver
+   * @default false
+   */
+  tooling?: boolean
+
+  /**
    * Enable stylistic ESLint rules for formatting and code style check
    *
    * @see https://eslint.style/guide/config-presets
