@@ -1,4 +1,4 @@
-import { existsSync } from 'fs'
+import { existsSync } from 'node:fs'
 import { addVitePlugin, addWebpackPlugin, useLogger } from '@nuxt/kit'
 import { relative, resolve } from 'pathe'
 import { watch } from 'chokidar'
