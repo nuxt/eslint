@@ -1,8 +1,8 @@
 import parserTs from '@typescript-eslint/parser'
 import pluginTs from '@typescript-eslint/eslint-plugin'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
-import { resolveOptions } from '../utils'
 import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
+import { resolveOptions } from '../utils'
 
 export default function typescript(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const resolved = resolveOptions(options)

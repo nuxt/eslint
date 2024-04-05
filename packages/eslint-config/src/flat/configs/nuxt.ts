@@ -1,8 +1,8 @@
 import { join } from 'pathe'
-import type { NuxtESLintConfigOptions } from '../types'
 import nuxtPlugin from '@nuxt/eslint-plugin'
-import { GLOB_EXTS } from '../constants'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
+import type { NuxtESLintConfigOptions } from '../types'
+import { GLOB_EXTS } from '../constants'
 import { resolveOptions } from '../utils'
 
 export default function nuxt(options: NuxtESLintConfigOptions): FlatConfigItem[] {

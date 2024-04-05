@@ -1,3 +1,6 @@
+import type { FlatConfigItem, ResolvableFlatConfig, FlatConfigComposer } from 'eslint-flat-config-utils'
+import { composer } from 'eslint-flat-config-utils'
+import gitignore from 'eslint-config-flat-gitignore'
 import type { NuxtESLintConfigOptions } from './types'
 import disables from './configs/disables'
 import nuxt from './configs/nuxt'
@@ -6,11 +9,8 @@ import javascript from './configs/javascript'
 import typescript from './configs/typescript'
 import vue from './configs/vue'
 import stylistic from './configs/stylistic'
-import type { FlatConfigItem, ResolvableFlatConfig } from 'eslint-flat-config-utils'
-import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import { composer } from 'eslint-flat-config-utils'
 import { resolveOptions } from './utils'
-import gitignore from 'eslint-config-flat-gitignore'
+import imports from './configs/import'
 
 export * from './types'
 
@@ -47,6 +47,7 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
       javascript(),
       typescript(resolved),
       vue(resolved),
+      imports(resolved),
     )
   }
 

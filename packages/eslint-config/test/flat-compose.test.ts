@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { createConfigForNuxt } from '../src/flat'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
+import { createConfigForNuxt } from '../src/flat'
 
 const cwd = process.cwd()
 
