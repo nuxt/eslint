@@ -1,4 +1,3 @@
-import '@rushstack/eslint-patch/modern-module-resolution'
 import type { ESLint } from 'eslint'
 
 const config: ESLint.ConfigData = {
