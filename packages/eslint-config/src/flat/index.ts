@@ -31,7 +31,7 @@ export function defineFlatConfigs(
  *
  * @see https://eslint.nuxt.com/packages/module
  */
-export async function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Promise<FlatConfigComposer<FlatConfigItem>> {
+export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): FlatConfigComposer<FlatConfigItem> {
   const c = composer()
 
   const resolved = resolveOptions(options)
