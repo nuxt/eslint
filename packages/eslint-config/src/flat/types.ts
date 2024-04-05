@@ -13,6 +13,7 @@ export interface NuxtESLintFeaturesOptions {
   /**
    * Enable rules for Nuxt module authors or library authors
    *
+   * @experimental Changes might not follow semver
    * @default false
    */
   tooling?: boolean
