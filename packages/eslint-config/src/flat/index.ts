@@ -4,13 +4,9 @@ import gitignore from 'eslint-config-flat-gitignore'
 import type { NuxtESLintConfigOptions } from './types'
 import disables from './configs/disables'
 import nuxt from './configs/nuxt'
-import base from './configs/base'
+import ignores from './configs/ignores'
 import javascript from './configs/javascript'
-import typescript from './configs/typescript'
-import vue from './configs/vue'
-import stylistic from './configs/stylistic'
 import { resolveOptions } from './utils'
-import imports from './configs/import'
 
 export * from './types'
 
@@ -35,7 +31,7 @@ export function defineFlatConfigs(
  *
  * @see https://eslint.nuxt.com/packages/module
  */
-export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): FlatConfigComposer<FlatConfigItem> {
+export async function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Promise<FlatConfigComposer<FlatConfigItem>> {
   const c = composer()
 
   const resolved = resolveOptions(options)
@@ -43,11 +39,12 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
   if (resolved.features.standalone !== false) {
     c.append(
       gitignore({ strict: false }),
-      base(),
+      ignores(),
       javascript(),
-      typescript(resolved),
-      vue(resolved),
-      imports(resolved),
+      // Make these imports async, as they are optional and imports plugins
+      import('./configs/typescript').then(m => m.default(resolved)),
+      import('./configs/vue').then(m => m.default(resolved)),
+      import('./configs/import').then(m => m.default(resolved)),
     )
   }
 
@@ -56,14 +53,11 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
   )
 
   if (resolved.features.stylistic) {
-    c.append({
-      name: 'nuxt/stylistic',
-      ...stylistic(
-        resolved.features.stylistic === true
-          ? {}
-          : resolved.features.stylistic,
-      ),
-    })
+    c.append(import('./configs/stylistic').then(m => m.default(
+      typeof resolved.features.stylistic === 'boolean'
+        ? {}
+        : resolved.features.stylistic,
+    )))
   }
 
   c.append(
