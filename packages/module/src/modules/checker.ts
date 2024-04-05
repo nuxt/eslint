@@ -1,11 +1,11 @@
-import type { Nuxt } from '@nuxt/schema'
-import type { CheckerOptions, ModuleOptions } from '../module'
+import { existsSync } from 'fs'
 import { addVitePlugin, addWebpackPlugin, useLogger } from '@nuxt/kit'
 import { relative, resolve } from 'pathe'
 import { watch } from 'chokidar'
-import { existsSync } from 'fs'
+import type { Nuxt } from '@nuxt/schema'
 import type { ESLintPluginOptions as ViteCheckerOptions } from 'vite-plugin-eslint2'
 import type { Options as WebpackCheckerOptions } from 'eslint-webpack-plugin'
+import type { CheckerOptions, ModuleOptions } from '../module'
 
 const logger = useLogger('nuxt:eslint:checker')
 

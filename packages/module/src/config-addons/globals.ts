@@ -1,7 +1,7 @@
 import type { Nuxt } from '@nuxt/schema'
 import type { Unimport } from 'unimport'
-import type { ESLintConfigGenAddon } from '../types'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
+import type { ESLintConfigGenAddon } from '../types'
 
 export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
   let unimport: Unimport

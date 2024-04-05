@@ -4,81 +4,26 @@ exports[`flat config composition > custom src dirs 1`] = `
 [
   {
     "ignores": [
-      "**/dist",
-      "**/node_modules",
-      "**/.nuxt",
-      "**/.output",
-      "**/.vercel",
-      "**/.netlify",
+      "node_modules",
+      "**/node_modules/**",
+      "*.iml",
+      "**/*.iml/**",
+      ".idea",
+      "**/.idea/**",
+      "*.log",
+      "**/*.log/**",
+      ".nuxt",
+      "**/.nuxt/**",
+      ".output",
+      "**/.output/**",
+      "**/.yarn/cache",
+      "**/.yarn/*state*",
+      "dist",
+      "**/dist/**",
+      ".eslintcache",
+      "**/.eslintcache/**",
     ],
   },
-  {
-    "name": "nuxt/javascript",
-  },
-  {
-    "name": "nuxt/typescript/setup",
-  },
-  {
-    "files": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.mts",
-      "**/*.cts",
-      "**/*.vue",
-    ],
-    "name": "nuxt/typescript/rules",
-  },
-  {
-    "files": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.mts",
-      "**/*.cts",
-      "**/*.vue",
-    ],
-    "name": "nuxt/typescript/disables",
-  },
-  {
-    "name": "nuxt/vue/setup",
-  },
-  {
-    "files": [
-      "**/*.vue",
-    ],
-    "name": "nuxt/vue/rules",
-  },
-  {
-    "files": [
-      "src1/layouts/**/*.{js,ts,jsx,tsx,vue}",
-      "src2/layouts/**/*.{js,ts,jsx,tsx,vue}",
-      "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
-      "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
-    ],
-    "name": "nuxt/vue/single-root",
-  },
-  {
-    "name": "nuxt/rules",
-  },
-  {
-    "files": [
-      "src1/app.{js,ts,jsx,tsx,vue}",
-      "src1/error.{js,ts,jsx,tsx,vue}",
-      "src2/app.{js,ts,jsx,tsx,vue}",
-      "src2/error.{js,ts,jsx,tsx,vue}",
-      "src1/layouts/**/*.{js,ts,jsx,tsx,vue}",
-      "src2/layouts/**/*.{js,ts,jsx,tsx,vue}",
-      "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
-      "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
-      "src1/components/*/**/*.{js,ts,jsx,tsx,vue}",
-      "src2/components/*/**/*.{js,ts,jsx,tsx,vue}",
-    ],
-    "name": "nuxt/disables/routes",
-  },
-]
-`;
-
-exports[`flat config composition > empty 1`] = `
-[
   {
     "ignores": [
       "**/dist",
@@ -123,6 +68,111 @@ exports[`flat config composition > empty 1`] = `
       "**/*.vue",
     ],
     "name": "nuxt/vue/rules",
+  },
+  {
+    "name": "nuxt/import/rules",
+  },
+  {
+    "files": [
+      "src1/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt/vue/single-root",
+  },
+  {
+    "name": "nuxt/rules",
+  },
+  {
+    "files": [
+      "src1/app.{js,ts,jsx,tsx,vue}",
+      "src1/error.{js,ts,jsx,tsx,vue}",
+      "src2/app.{js,ts,jsx,tsx,vue}",
+      "src2/error.{js,ts,jsx,tsx,vue}",
+      "src1/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "src1/components/*/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/components/*/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt/disables/routes",
+  },
+]
+`;
+
+exports[`flat config composition > empty 1`] = `
+[
+  {
+    "ignores": [
+      "node_modules",
+      "**/node_modules/**",
+      "*.iml",
+      "**/*.iml/**",
+      ".idea",
+      "**/.idea/**",
+      "*.log",
+      "**/*.log/**",
+      ".nuxt",
+      "**/.nuxt/**",
+      ".output",
+      "**/.output/**",
+      "**/.yarn/cache",
+      "**/.yarn/*state*",
+      "dist",
+      "**/dist/**",
+      ".eslintcache",
+      "**/.eslintcache/**",
+    ],
+  },
+  {
+    "ignores": [
+      "**/dist",
+      "**/node_modules",
+      "**/.nuxt",
+      "**/.output",
+      "**/.vercel",
+      "**/.netlify",
+    ],
+  },
+  {
+    "name": "nuxt/javascript",
+  },
+  {
+    "name": "nuxt/typescript/setup",
+  },
+  {
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt/typescript/rules",
+  },
+  {
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt/typescript/disables",
+  },
+  {
+    "name": "nuxt/vue/setup",
+  },
+  {
+    "files": [
+      "**/*.vue",
+    ],
+    "name": "nuxt/vue/rules",
+  },
+  {
+    "name": "nuxt/import/rules",
   },
   {
     "files": [

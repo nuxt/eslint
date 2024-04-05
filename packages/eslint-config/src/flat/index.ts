@@ -1,17 +1,12 @@
+import type { FlatConfigItem, ResolvableFlatConfig, FlatConfigComposer } from 'eslint-flat-config-utils'
+import { composer } from 'eslint-flat-config-utils'
+import gitignore from 'eslint-config-flat-gitignore'
 import type { NuxtESLintConfigOptions } from './types'
 import disables from './configs/disables'
 import nuxt from './configs/nuxt'
-import base from './configs/base'
+import ignores from './configs/ignores'
 import javascript from './configs/javascript'
-import typescript from './configs/typescript'
-import vue from './configs/vue'
-import stylistic from './configs/stylistic'
-import type { FlatConfigItem, ResolvableFlatConfig } from 'eslint-flat-config-utils'
-import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import { composer } from 'eslint-flat-config-utils'
 import { resolveOptions } from './utils'
-import jsdoc from './configs-tooling/jsdoc'
-import unicorn from './configs-tooling/unicorn'
 
 export * from './types'
 
@@ -43,10 +38,13 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
 
   if (resolved.features.standalone !== false) {
     c.append(
-      base(),
+      gitignore({ strict: false }),
+      ignores(),
       javascript(),
-      typescript(resolved),
-      vue(resolved),
+      // Make these imports async, as they are optional and imports plugins
+      import('./configs/typescript').then(m => m.default(resolved)),
+      import('./configs/vue').then(m => m.default(resolved)),
+      import('./configs/import').then(m => m.default(resolved)),
     )
   }
 
@@ -56,20 +54,19 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
 
   if (resolved.features.tooling) {
     c.append(
-      jsdoc(resolved),
-      unicorn(),
+      import('./configs-tooling/jsdoc').then(m => m.default(resolved)),
+      import('./configs-tooling/unicorn').then(m => m.default()),
     )
   }
 
   if (resolved.features.stylistic) {
-    c.append({
-      name: 'nuxt/stylistic',
-      ...stylistic(
-        resolved.features.stylistic === true
-          ? {}
-          : resolved.features.stylistic,
-      ),
-    })
+    const stylisticOptions = typeof resolved.features.stylistic === 'boolean'
+      ? {}
+      : resolved.features.stylistic
+
+    c.append(
+      import('./configs/stylistic').then(m => m.default(stylisticOptions)),
+    )
   }
 
   c.append(

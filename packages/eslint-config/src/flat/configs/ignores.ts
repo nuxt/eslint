@@ -1,6 +1,6 @@
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
 
-export default function base(): FlatConfigItem[] {
+export default function ignores(): FlatConfigItem[] {
   return [
     {
       ignores: [

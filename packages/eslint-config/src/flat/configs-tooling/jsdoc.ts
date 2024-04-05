@@ -1,7 +1,7 @@
-import { resolveOptions } from '../utils'
-import type { NuxtESLintConfigOptions } from '../types'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import jsdocPlugin from 'eslint-plugin-jsdoc'
+import { resolveOptions } from '../utils'
+import type { NuxtESLintConfigOptions } from '../types'
 
 export default function jsdoc(options: NuxtESLintConfigOptions = {}): FlatConfigItem[] {
   const resolved = resolveOptions(options)
