@@ -90,10 +90,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
   )
 
   const basicOptions: NuxtESLintConfigOptions = {
-    features: {
-      stylistic: config.stylistic,
-      standalone: config.standalone,
-    },
+    features: config,
     dirs: getDirs(nuxt),
   }
 
