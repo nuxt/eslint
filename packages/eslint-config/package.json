@@ -48,7 +48,7 @@
     "eslint-plugin-import-x": "^0.5.0",
     "eslint-plugin-jsdoc": "^48.2.3",
     "eslint-plugin-unicorn": "^52.0.0",
-    "eslint-plugin-vue": "^9.24.0",
+    "eslint-plugin-vue": "^9.24.1",
     "globals": "^15.0.0",
     "pathe": "^1.1.2",
     "tslib": "^2.6.2",
