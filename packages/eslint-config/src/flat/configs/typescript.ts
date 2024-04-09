@@ -58,19 +58,20 @@ export default function typescript(options: NuxtESLintConfigOptions): FlatConfig
         'prefer-rest-params': 'error', // ts provides better types with rest args over arguments
         'prefer-spread': 'error', // ts transpiles spread to apply, so no need for manual apply
         'valid-typeof': 'off', // ts(2367)
+        'no-unused-vars': 'off', // ts takes care of this
 
         '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: false, prefer: 'type-imports' }],
-      },
-    },
-    {
-      name: 'nuxt/typescript/disables',
-      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
-      rules: {
-        // The core 'no-unused-vars' rules (in the eslint:recommended ruleset)
-        // does not work with type definitions.
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': 'warn',
+        '@typescript-eslint/consistent-type-imports': ['error', {
+          disallowTypeAnnotations: false,
+          prefer: 'type-imports',
+        }],
+        '@typescript-eslint/no-unused-vars': ['error', {
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+          vars: 'all',
+          varsIgnorePattern: '^_',
+        }],
       },
     },
   ]
