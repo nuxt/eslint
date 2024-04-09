@@ -25,6 +25,20 @@
       "require": "./dist/legacy.cjs"
     }
   },
+  "typesVersions": {
+    "*": {
+      "flat": [
+        "./dist/flat.d.ts"
+      ],
+      "legacy": [
+        "./dist/legacy.d.ts"
+      ],
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
