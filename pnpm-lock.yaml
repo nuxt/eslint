@@ -170,8 +170,8 @@ importers:
   packages/module:
     dependencies:
       '@eslint/config-inspector':
-        specifier: ^0.4.3
-        version: 0.4.3(eslint@9.0.0)
+        specifier: ^0.4.4
+        version: 0.4.4(eslint@9.0.0)
       '@nuxt/devtools-kit':
         specifier: ^1.1.5
         version: 1.1.5(nuxt@3.11.2)(rollup@3.29.4)(vite@5.2.8)
@@ -1015,8 +1015,8 @@ packages:
     resolution: {integrity: sha512-Cu96Sd2By9mCNTx2iyKOmq10v22jUVQv0lQnlGNy16oE9589yE+QADPbrMGCkA51cKZSg3Pu/aTJVTGfL/qjUA==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  /@eslint/config-inspector@0.4.3(eslint@9.0.0):
-    resolution: {integrity: sha512-Y/6dmOT+LJ9qCzhQk9sXIfNyhqSrVWbuWGrcpALulOVh9+Wk/FNUcYdcaNCY77hT9hmUR08m4SSGjXZ7Z8WVXA==}
+  /@eslint/config-inspector@0.4.4(eslint@9.0.0):
+    resolution: {integrity: sha512-iSlwhvGp4iUxVCkdSVE9Ss1op82mDvqAMwTDIvSg3QHWrPLIaU/XCZoGPof/IixndHExqX0C/hJG/fjhG4maCQ==}
     hasBin: true
     peerDependencies:
       eslint: ^8.50.0 || ^9.0.0

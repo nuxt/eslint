@@ -51,16 +51,6 @@ exports[`flat config composition > custom src dirs 1`] = `
     "name": "nuxt/typescript/rules",
   },
   {
-    "files": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.mts",
-      "**/*.cts",
-      "**/*.vue",
-    ],
-    "name": "nuxt/typescript/disables",
-  },
-  {
     "name": "nuxt/vue/setup",
   },
   {
@@ -151,16 +141,6 @@ exports[`flat config composition > empty 1`] = `
       "**/*.vue",
     ],
     "name": "nuxt/typescript/rules",
-  },
-  {
-    "files": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.mts",
-      "**/*.cts",
-      "**/*.vue",
-    ],
-    "name": "nuxt/typescript/disables",
   },
   {
     "name": "nuxt/vue/setup",
