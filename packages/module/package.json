@@ -48,14 +48,14 @@
     }
   },
   "dependencies": {
-    "@eslint/config-inspector": "^0.4.4",
+    "@eslint/config-inspector": "^0.4.5",
     "@nuxt/devtools-kit": "^1.1.5",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/kit": "^3.11.2",
     "chokidar": "^3.6.0",
-    "eslint-flat-config-utils": "^0.2.1",
-    "eslint-typegen": "^0.2.1",
+    "eslint-flat-config-utils": "^0.2.2",
+    "eslint-typegen": "^0.2.2",
     "find-up": "^7.0.0",
     "get-port-please": "^3.1.2",
     "mlly": "^1.6.1",

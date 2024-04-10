@@ -182,7 +182,7 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
     `)`,
     '',
     'export function withNuxt(...customs) {',
-    '  return configs.append(...customs).onResolved(configs => typegen(configs, { dtsPath: new URL("./eslint-typegen.d.ts", import.meta.url) }))',
+    '  return configs.clone().append(...customs).onResolved(configs => typegen(configs, { dtsPath: new URL("./eslint-typegen.d.ts", import.meta.url) }))',
     '}',
     '',
     'export default withNuxt',
