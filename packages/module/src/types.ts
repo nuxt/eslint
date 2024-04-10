@@ -31,6 +31,10 @@ export interface CheckerOptions {
 
   /**
    * ESLint config type
+   *
+   * Default to `flat` unless env `ESLINT_USE_FLAT_CONFIG` is set to `false`
+   *
+   * @default 'flat'
    */
   configType?: 'flat' | 'eslintrc'
 

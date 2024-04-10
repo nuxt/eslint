@@ -1,6 +1,5 @@
-import { existsSync } from 'node:fs'
 import { addVitePlugin, addWebpackPlugin, useLogger } from '@nuxt/kit'
-import { relative, resolve } from 'pathe'
+import { relative } from 'pathe'
 import { watch } from 'chokidar'
 import type { Nuxt } from '@nuxt/schema'
 import type { ESLintPluginOptions as ViteCheckerOptions } from 'vite-plugin-eslint2'
@@ -28,7 +27,7 @@ export async function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nux
   }
 
   // When not specified, we try to detect the configType
-  options.configType ||= (process.env.ESLINT_USE_FLAT_CONFIG || flatConfigFiles.some(file => existsSync(resolve(nuxt.options.rootDir, file))))
+  options.configType ||= process.env.ESLINT_USE_FLAT_CONFIG !== 'false'
     ? 'flat'
     : 'eslintrc'
 
