@@ -26,12 +26,15 @@ export function defineFlatConfigs(
 
 /**
  * Create an array of ESLint flat configs for Nuxt 3, based on the given options.
+ * Accpets appending user configs as rest arguments from the second argument.
  *
- * Usually it would be use `@nuxt/eslint` module which will generate the necessary configuration based on your project.
- *
+ * For Nuxt apps, it's recommanded to use `@nuxt/eslint` module instead, which will generate the necessary configuration based on your project.
  * @see https://eslint.nuxt.com/packages/module
  */
-export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): FlatConfigComposer<FlatConfigItem> {
+export function createConfigForNuxt(
+  options: NuxtESLintConfigOptions = {},
+  ...userConfigs: ResolvableFlatConfig[]
+): FlatConfigComposer<FlatConfigItem> {
   const c = composer()
 
   const resolved = resolveOptions(options)
@@ -73,5 +76,11 @@ export function createConfigForNuxt(options: NuxtESLintConfigOptions = {}): Flat
     disables(resolved),
   )
 
+  if (userConfigs.length > 0) {
+    c.append(...userConfigs)
+  }
+
   return c
 }
+
+export default createConfigForNuxt
