@@ -16,11 +16,6 @@ const flatConfigFiles = [
 ]
 
 export async function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nuxt) {
-  // TODO: maybe support build mode later on
-  if (!nuxt.options.dev) {
-    return
-  }
-
   const options: CheckerOptions = {
     cache: true,
     include: [`${nuxt.options.srcDir}/**/*.{js,jsx,ts,tsx,vue}`],

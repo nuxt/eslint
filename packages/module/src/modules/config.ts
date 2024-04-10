@@ -1,6 +1,7 @@
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { builtinModules } from 'node:module'
-import { addTemplate, createResolver } from '@nuxt/kit'
+import fs from 'node:fs/promises'
+import { addTemplate, createResolver, logger } from '@nuxt/kit'
 import { stringifyImports } from 'unimport'
 import type { Import } from 'unimport'
 import { resolvePath } from 'mlly'
@@ -15,6 +16,10 @@ import { createAddonGlobals } from '../config-addons/globals'
 const r = createResolver(import.meta.url)
 
 export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
+  const {
+    autoInit = true,
+  } = typeof options.config !== 'boolean' ? options.config || {} : {}
+
   const defaultAddons = [
     createAddonGlobals(nuxt),
   ]
@@ -23,7 +28,7 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     declarations.push('/// <reference path="./eslint-typegen.d.ts" />')
   })
 
-  addTemplate({
+  const template = addTemplate({
     filename: 'eslint.config.mjs',
     write: true,
     async getContents() {
@@ -53,7 +58,54 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     },
   })
 
+  if (autoInit) {
+    await initRootESLintConfig(nuxt, template.dst)
+  }
+
   setupDevToolsIntegration(nuxt)
+}
+
+async function initRootESLintConfig(nuxt: Nuxt, generateConfigPath: string) {
+  const { findUp } = await import('find-up')
+
+  const hasFlatConfig = await findUp(
+    [
+      'eslint.config.js',
+      'eslint.config.mjs',
+      'eslint.config.cjs',
+      'eslint.config.ts',
+      'eslint.config.mts',
+      'eslint.config.cts',
+    ],
+    {
+      cwd: nuxt.options.rootDir,
+    },
+  )
+
+  if (hasFlatConfig)
+    return
+
+  const targetPath = join(nuxt.options.rootDir, 'eslint.config.mjs')
+  let relativeDistPath = relative(nuxt.options.rootDir, generateConfigPath)
+  if (!relativeDistPath.startsWith('./') && !relativeDistPath.startsWith('../'))
+    relativeDistPath = './' + relativeDistPath
+
+  await fs.writeFile(
+    targetPath,
+    [
+      '// @ts-check',
+      `import withNuxt from '${relativeDistPath}'`,
+      '',
+      'export default withNuxt(',
+      '  // Your custom configs here',
+      ')',
+      '',
+    ].join('\n'),
+    'utf-8',
+  )
+
+  logger.success(`ESLint config file created at ${targetPath}`)
+  logger.info(`If you have .eslintrc or .eslintignore files, you might want to migrate them to the new config file`)
 }
 
 async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: ESLintConfigGenAddon[]) {

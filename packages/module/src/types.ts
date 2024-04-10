@@ -12,7 +12,14 @@ declare module '@nuxt/schema' {
   }
 }
 
-export interface ConfigGenOptions extends NuxtESLintFeaturesOptions {}
+export interface ConfigGenOptions extends NuxtESLintFeaturesOptions {
+  /**
+   * Create `eslint.config.mjs` file automatically if not exists
+   *
+   * @default true
+   */
+  autoInit?: boolean
+}
 
 export interface CheckerOptions {
   /**
