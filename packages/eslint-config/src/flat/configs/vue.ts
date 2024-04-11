@@ -1,52 +1,12 @@
 import * as parserVue from 'vue-eslint-parser'
 import parserTs from '@typescript-eslint/parser'
+import INLINE_ELEMENTS from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json' with { type: 'json' }
 
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import type { NuxtESLintConfigOptions } from '../types'
 import { removeUndefined, resolveOptions } from '../utils'
-
-const INLINE_ELEMENTS = [
-  'a',
-  'abbr',
-  'audio',
-  'b',
-  'bdi',
-  'bdo',
-  'canvas',
-  'cite',
-  'code',
-  'data',
-  'del',
-  'dfn',
-  'em',
-  'i',
-  'iframe',
-  'ins',
-  'kbd',
-  'label',
-  'map',
-  'mark',
-  'noscript',
-  'object',
-  'output',
-  'picture',
-  'q',
-  'ruby',
-  's',
-  'samp',
-  'small',
-  'span',
-  'strong',
-  'sub',
-  'sup',
-  'svg',
-  'time',
-  'u',
-  'var',
-  'video',
-]
 
 export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const resolved = resolveOptions(options)
@@ -154,7 +114,7 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] 
               'vue/template-curly-spacing': 'error',
               'vue/multiline-html-element-content-newline': ['error', {
                 ignoreWhenEmpty: true,
-                ignores: ['pre', 'textarea', 'router-link', 'RouterLink', 'nuxt-link', 'NuxtLink', ...INLINE_ELEMENTS],
+                ignores: ['pre', 'textarea', 'router-link', 'RouterLink', 'nuxt-link', 'NuxtLink', 'u-link', 'ULink', ...INLINE_ELEMENTS],
                 allowEmptyLines: false,
               }],
             }
