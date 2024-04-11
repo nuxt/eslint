@@ -1,5 +1,6 @@
 import * as parserVue from 'vue-eslint-parser'
 import parserTs from '@typescript-eslint/parser'
+import INLINE_ELEMENTS from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json' with { type: 'json' }
 
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
@@ -111,6 +112,11 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] 
               'vue/require-default-prop': 'off',
               'vue/space-in-parens': ['error', 'never'],
               'vue/template-curly-spacing': 'error',
+              'vue/multiline-html-element-content-newline': ['error', {
+          ignoreWhenEmpty: true,
+          ignores: ['pre', 'textarea', 'router-link', 'RouterLink', 'nuxt-link', 'NuxtLink', ...INLINE_ELEMENTS],
+          allowEmptyLines: false,
+        }]
             }
           : {
               // Disable Vue's default stylistic rules when stylistic is not enabled
