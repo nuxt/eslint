@@ -1,12 +1,53 @@
 import * as parserVue from 'vue-eslint-parser'
 import parserTs from '@typescript-eslint/parser'
-import INLINE_ELEMENTS from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json' with { type: 'json' }
 
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
 import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import type { NuxtESLintConfigOptions } from '../types'
 import { removeUndefined, resolveOptions } from '../utils'
+
+// imported from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json'
+const INLINE_ELEMENTS = [
+  "a",
+  "abbr",
+  "audio",
+  "b",
+  "bdi",
+  "bdo",
+  "canvas",
+  "cite",
+  "code",
+  "data",
+  "del",
+  "dfn",
+  "em",
+  "i",
+  "iframe",
+  "ins",
+  "kbd",
+  "label",
+  "map",
+  "mark",
+  "noscript",
+  "object",
+  "output",
+  "picture",
+  "q",
+  "ruby",
+  "s",
+  "samp",
+  "small",
+  "span",
+  "strong",
+  "sub",
+  "sup",
+  "svg",
+  "time",
+  "u",
+  "var",
+  "video"
+]
 
 export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const resolved = resolveOptions(options)
