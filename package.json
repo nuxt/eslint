@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@8.15.7",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "scripts": {
     "build": "pnpm run -r build",
     "stub": "pnpm run -r stub",
