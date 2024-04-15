@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@8.15.7",
   "version": "0.3.6",
   "scripts": {
     "build": "pnpm run -r build",
@@ -21,12 +21,12 @@
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/test-utils": "^3.12.0",
-    "@types/eslint": "^8.56.7",
+    "@types/eslint": "^8.56.9",
     "@types/node": "^20.12.7",
     "bumpp": "^9.4.0",
     "eslint": "^9.0.0",
     "typescript": "^5.4.5",
-    "vitest": "^1.4.0",
+    "vitest": "^1.5.0",
     "vue": "^3.4.21"
   }
 }
