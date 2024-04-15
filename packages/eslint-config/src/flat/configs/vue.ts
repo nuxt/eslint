@@ -7,6 +7,9 @@ import type { FlatConfigItem } from 'eslint-flat-config-utils'
 import type { NuxtESLintConfigOptions } from '../types'
 import { removeUndefined, resolveOptions } from '../utils'
 
+// imported from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json'
+const INLINE_ELEMENTS = ['a', 'abbr', 'audio', 'b', 'bdi', 'bdo', 'canvas', 'cite', 'code', 'data', 'del', 'dfn', 'em', 'i', 'iframe', 'ins', 'kbd', 'label', 'map', 'mark', 'noscript', 'object', 'output', 'picture', 'q', 'ruby', 's', 'samp', 'small', 'span', 'strong', 'sub', 'sup', 'svg', 'time', 'u', 'var', 'video']
+
 export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] {
   const resolved = resolveOptions(options)
   const hasTs = resolved.features.typescript !== false
@@ -111,6 +114,11 @@ export default function vue(options: NuxtESLintConfigOptions): FlatConfigItem[] 
               'vue/require-default-prop': 'off',
               'vue/space-in-parens': ['error', 'never'],
               'vue/template-curly-spacing': 'error',
+              'vue/multiline-html-element-content-newline': ['error', {
+                ignoreWhenEmpty: true,
+                ignores: ['pre', 'textarea', 'router-link', 'RouterLink', 'nuxt-link', 'NuxtLink', 'u-link', 'ULink', ...INLINE_ELEMENTS],
+                allowEmptyLines: false,
+              }],
             }
           : {
               // Disable Vue's default stylistic rules when stylistic is not enabled
