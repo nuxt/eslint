@@ -63,6 +63,9 @@ exports[`flat config composition > custom src dirs 1`] = `
     "name": "nuxt/import/rules",
   },
   {
+    "name": "nuxt/configs",
+  },
+  {
     "files": [
       "src1/layouts/**/*.{js,ts,jsx,tsx,vue}",
       "src2/layouts/**/*.{js,ts,jsx,tsx,vue}",
@@ -155,6 +158,9 @@ exports[`flat config composition > empty 1`] = `
     "name": "nuxt/import/rules",
   },
   {
+    "name": "nuxt/configs",
+  },
+  {
     "files": [
       "layouts/**/*.{js,ts,jsx,tsx,vue}",
       "pages/**/*.{js,ts,jsx,tsx,vue}",
@@ -179,6 +185,9 @@ exports[`flat config composition > empty 1`] = `
 
 exports[`flat config composition > non-standalone 1`] = `
 [
+  {
+    "name": "nuxt/configs",
+  },
   {
     "files": [
       "layouts/**/*.{js,ts,jsx,tsx,vue}",
