@@ -16,6 +16,16 @@ export default function nuxt(options: NuxtESLintConfigOptions): FlatConfigItem[]
 
   const configs: FlatConfigItem[] = []
 
+  configs.push({
+    name: 'nuxt/configs',
+    languageOptions: {
+      globals: {
+        // Nuxt's runtime globals
+        $fetch: 'readonly',
+      },
+    },
+  })
+
   if (fileSingleRoot.length)
     configs.push({
       name: 'nuxt/vue/single-root',
