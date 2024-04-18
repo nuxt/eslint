@@ -6,6 +6,12 @@ export default defineNuxtConfig({
     enabled: true,
   },
   eslint: {
-    checker: true,
+    config: {
+      stylistic: true,
+    },
+    checker: {
+      lintOnStart: true,
+      fix: true,
+    },
   },
 })

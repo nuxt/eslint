@@ -84,6 +84,12 @@ export interface CheckerOptions {
   emitError?: boolean
 
   /**
+   * Run ESLint fix
+   * @default false
+   */
+  fix?: boolean
+
+  /**
    * Vite specific options
    */
   vite?: ViteCheckerOptions
