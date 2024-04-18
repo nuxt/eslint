@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import type { FlatConfigItem } from 'eslint-flat-config-utils'
+import type { Linter } from 'eslint'
 import { createConfigForNuxt } from '../src/flat'
 
 const cwd = process.cwd()
 
-function getFlatConfigDigest(configs: FlatConfigItem[]) {
+function getFlatConfigDigest(configs: Linter.FlatConfig[]) {
   return configs.map((config) => {
     return JSON.parse(JSON.stringify({
       name: config.name,

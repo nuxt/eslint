@@ -1,6 +1,6 @@
-import type { FlatConfigItem } from 'eslint-flat-config-utils'
+import type { Linter } from 'eslint'
 
-export default function ignores(): FlatConfigItem[] {
+export default function ignores(): Linter.FlatConfig[] {
   return [
     {
       ignores: [

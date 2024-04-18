@@ -8,11 +8,11 @@ import { initRootESLintConfig } from './init'
 import { generateESLintConfig } from './generate'
 
 const ESLINT_CONFIG_DTS = [
-  'import type { FlatConfigComposer, FlatConfigItem } from "eslint-flat-config-utils"',
+  'import type { FlatConfigComposer } from "eslint-flat-config-utils"',
   'import { defineFlatConfigs } from "@nuxt/eslint-config/flat"',
   'import type { NuxtESLintConfigOptionsResolved } from "@nuxt/eslint-config/flat"',
   '',
-  'declare const configs: FlatConfigComposer<FlatConfigItem>',
+  'declare const configs: FlatConfigComposer',
   'declare const options: NuxtESLintConfigOptionsResolved',
   'declare const withNuxt: typeof defineFlatConfigs',
   'export default withNuxt',

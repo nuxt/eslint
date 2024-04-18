@@ -1,9 +1,9 @@
 // @ts-expect-error missing types
 import pluginESLint from '@eslint/js'
-import type { FlatConfigItem } from 'eslint-flat-config-utils'
+import type { Linter } from 'eslint'
 import globals from 'globals'
 
-export default function javascript(): FlatConfigItem[] {
+export default function javascript(): Linter.FlatConfig[] {
   return [
     {
       name: 'nuxt/javascript',
