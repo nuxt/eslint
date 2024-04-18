@@ -1,4 +1,4 @@
-import { fileURLToPath, pathToFileURL } from 'node:url'
+import { fileURLToPath } from 'node:url'
 import { builtinModules } from 'node:module'
 import fs from 'node:fs/promises'
 import { addTemplate, createResolver, logger } from '@nuxt/kit'
@@ -112,6 +112,8 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
   const importLines: Import[] = []
   const configItems: string[] = []
 
+  const configDir = nuxt.options.buildDir
+
   const config: ConfigGenOptions = {
     standalone: true,
     ...typeof options.config !== 'boolean' ? options.config || {} : {},
@@ -156,12 +158,17 @@ async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, addons: 
       configItems.push(...resolved.configs)
   }
 
+  function relativeWithDot(path: string) {
+    const r = relative(configDir, path)
+    return r.startsWith('.') ? r : './' + r
+  }
+
   const imports = await Promise.all(importLines.map(async (line): Promise<Import> => {
     return {
       ...line,
       from: (line.from.match(/^\w+:/) || builtinModules.includes(line.from))
         ? line.from
-        : pathToFileURL(await r.resolvePath(line.from)).toString(),
+        : relativeWithDot(await r.resolvePath(line.from)),
     }
   }))
 
