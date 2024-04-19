@@ -9,11 +9,11 @@ export const rule = createRule<MessageIds, Options>({
   meta: {
     type: 'problem',
     docs: {
-      description: 'Require @since tag in JSDoc comment.',
+      description: 'Require `@since` tag in JSDoc comment.',
     },
     schema: [],
     messages: {
-      default: 'Missing @since tag in JSDoc comment.',
+      default: 'Missing `@since` tag in JSDoc comment.',
     },
   },
   defaultOptions: [],
