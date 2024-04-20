@@ -5,7 +5,7 @@ type MessageIds = 'noSince' | 'noJSDoc'
 type Options = []
 
 export const rule = createRule<MessageIds, Options>({
-  name: 'prefer-import-meta',
+  name: 'require-jsdoc-since',
   meta: {
     type: 'problem',
     docs: {
