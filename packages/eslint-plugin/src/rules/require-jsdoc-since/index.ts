@@ -28,7 +28,7 @@ export const rule = createRule<MessageIds, Options>({
         const declarationType = exportNode.declaration?.type
         if (declarationType === 'TSInterfaceDeclaration' || declarationType === 'TSTypeAliasDeclaration') return
 
-        // TODO: Check if it's an override, and the function above has a valid JSDoc
+        // TODO: Check if it's an overload, and the function above has a valid JSDoc
 
         // Check if the exported node has a leading comment
         const leadingComments = context.sourceCode.getCommentsBefore(exportNode)

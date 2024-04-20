@@ -166,6 +166,10 @@ importers:
       eslint:
         specifier: ^8.57.0 || ^9.0.0
         version: 9.0.0
+    devDependencies:
+      '@typescript-eslint/rule-tester':
+        specifier: ^7.7.0
+        version: 7.7.0(@eslint/eslintrc@3.0.2)(eslint@9.0.0)(typescript@5.4.5)
 
   packages/module:
     dependencies:
@@ -1368,6 +1372,13 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  '@typescript-eslint/rule-tester@7.7.0':
+    resolution: {integrity: sha512-DWsSFnjR9XBLjYkHNh7/NEKRz1v9qE2GfR4qQqimh3IiHHOspyE67NiUy8Ydyxe2dyKFl7akiqJb5iVcwfzX/g==}
+    engines: {node: ^18.18.0 || >=20.0.0}
+    peerDependencies:
+      '@eslint/eslintrc': '>=2'
+      eslint: ^8.56.0
 
   '@typescript-eslint/scope-manager@6.21.0':
     resolution: {integrity: sha512-OwLUIWZJry80O99zvqXVEioyniJMa+d2GrqpUTqi5/v5D5rOrppJVBPa0yKCblcigC0/aYAzxxqQ1B+DS2RYsg==}
@@ -6696,6 +6707,19 @@ snapshots:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
+
+  '@typescript-eslint/rule-tester@7.7.0(@eslint/eslintrc@3.0.2)(eslint@9.0.0)(typescript@5.4.5)':
+    dependencies:
+      '@eslint/eslintrc': 3.0.2
+      '@typescript-eslint/typescript-estree': 7.7.0(typescript@5.4.5)
+      '@typescript-eslint/utils': 7.7.0(eslint@9.0.0)(typescript@5.4.5)
+      ajv: 6.12.6
+      eslint: 9.0.0
+      lodash.merge: 4.6.2
+      semver: 7.6.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
 
   '@typescript-eslint/scope-manager@6.21.0':
     dependencies:
