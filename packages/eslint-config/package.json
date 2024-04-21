@@ -51,7 +51,7 @@
     "eslint": "^8.57.0 || ^9.0.0"
   },
   "dependencies": {
-    "@eslint/js": "^9.0.0",
+    "@eslint/js": "^9.1.1",
     "@nuxt/eslint-plugin": "workspace:*",
     "@rushstack/eslint-patch": "^1.10.2",
     "@stylistic/eslint-plugin": "^1.7.2",
@@ -69,8 +69,8 @@
     "vue-eslint-parser": "^9.4.2"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.9",
-    "eslint": "^9.0.0",
+    "@types/eslint": "^8.56.10",
+    "eslint": "^9.1.0",
     "typescript": "^5.4.5"
   }
 }
