@@ -170,8 +170,8 @@ importers:
   packages/module:
     dependencies:
       '@eslint/config-inspector':
-        specifier: ^0.4.6
-        version: 0.4.6(eslint@9.1.0)
+        specifier: ^0.4.7
+        version: 0.4.7(eslint@9.1.0)
       '@nuxt/devtools-kit':
         specifier: ^1.2.0
         version: 1.2.0(nuxt@3.11.2(@parcel/watcher@2.4.1)(@types/node@20.12.7)(@unocss/reset@0.58.9)(encoding@0.1.13)(eslint@9.1.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.14.0))(vue@3.4.23(typescript@5.4.5)))(ioredis@5.3.2)(optionator@0.9.3)(rollup@4.14.0)(terser@5.29.1)(typescript@5.4.5)(unocss@0.58.9(postcss@8.4.38)(rollup@4.14.0)(vite@5.2.8(@types/node@20.12.7)(terser@5.29.1)))(vite@5.2.8(@types/node@20.12.7)(terser@5.29.1)))(rollup@4.14.0)(vite@5.2.8(@types/node@20.12.7)(terser@5.29.1))
@@ -223,7 +223,7 @@ importers:
         version: 7.7.0
       eslint-webpack-plugin:
         specifier: ^4.1.0
-        version: 4.1.0(eslint@9.1.0)(webpack@5.90.3(esbuild@0.20.2))
+        version: 4.1.0(eslint@9.1.0)(webpack@5.90.3)
       nuxt:
         specifier: ^3.11.2
         version: 3.11.2(@parcel/watcher@2.4.1)(@types/node@20.12.7)(@unocss/reset@0.58.9)(encoding@0.1.13)(eslint@9.1.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.14.0))(vue@3.4.23(typescript@5.4.5)))(ioredis@5.3.2)(optionator@0.9.3)(rollup@4.14.0)(terser@5.29.1)(typescript@5.4.5)(unocss@0.58.9(postcss@8.4.38)(rollup@4.14.0)(vite@5.2.8(@types/node@20.12.7)(terser@5.29.1)))(vite@5.2.8(@types/node@20.12.7)(terser@5.29.1))
@@ -726,8 +726,8 @@ packages:
     resolution: {integrity: sha512-Cu96Sd2By9mCNTx2iyKOmq10v22jUVQv0lQnlGNy16oE9589yE+QADPbrMGCkA51cKZSg3Pu/aTJVTGfL/qjUA==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/config-inspector@0.4.6':
-    resolution: {integrity: sha512-Y7UcDBoaAN0bzj0FgVarG1kP81wZt6wTs9Z2UAzKP1Mf/c4GGc/bkNFqchLdqukGshwBNbE3I0N6IIP7o3FkQQ==}
+  '@eslint/config-inspector@0.4.7':
+    resolution: {integrity: sha512-F3zctj+MVBO6vaNHxEDH3+WKhHsMx5e+FGXsQG9apFE1yYUvxSwztgF0xxTfkPvQDdFfYWlaNKDXdh3kgOyXKw==}
     hasBin: true
     peerDependencies:
       eslint: ^8.50.0 || ^9.0.0
@@ -2021,12 +2021,6 @@ packages:
   bundle-name@4.1.0:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
     engines: {node: '>=18'}
-
-  bundle-require@4.0.2:
-    resolution: {integrity: sha512-jwzPOChofl67PSTW2SGubV9HBQAhhR2i6nskiOThauo9dzwDUgOWQScFVaJkjEfYX+UXiD+LEx8EblQMc2wIag==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    peerDependencies:
-      esbuild: '>=0.17'
 
   c12@1.10.0:
     resolution: {integrity: sha512-0SsG7UDhoRWcuSvKWHaXmu5uNjDCDN3nkQLRL4Q42IlFy+ze58FcCoI3uPwINXinkz7ZinbhEgyzYFw9u9ZV8g==}
@@ -5729,9 +5723,8 @@ snapshots:
 
   '@eslint-community/regexpp@4.10.0': {}
 
-  '@eslint/config-inspector@0.4.6(eslint@9.1.0)':
+  '@eslint/config-inspector@0.4.7(eslint@9.1.0)':
     dependencies:
-      bundle-require: 4.0.2(esbuild@0.20.2)
       cac: 6.7.14
       chokidar: 3.6.0
       esbuild: 0.20.2
@@ -5740,6 +5733,7 @@ snapshots:
       find-up: 7.0.0
       get-port-please: 3.1.2
       h3: 1.11.1
+      load-tsconfig: 0.2.5
       minimatch: 9.0.4
       mrmime: 2.0.0
       open: 10.1.0
@@ -7661,11 +7655,6 @@ snapshots:
     dependencies:
       run-applescript: 7.0.0
 
-  bundle-require@4.0.2(esbuild@0.20.2):
-    dependencies:
-      esbuild: 0.20.2
-      load-tsconfig: 0.2.5
-
   c12@1.10.0:
     dependencies:
       chokidar: 3.6.0
@@ -8511,7 +8500,7 @@ snapshots:
 
   eslint-visitor-keys@4.0.0: {}
 
-  eslint-webpack-plugin@4.1.0(eslint@9.1.0)(webpack@5.90.3(esbuild@0.20.2)):
+  eslint-webpack-plugin@4.1.0(eslint@9.1.0)(webpack@5.90.3):
     dependencies:
       '@types/eslint': 8.56.10
       eslint: 9.1.0
@@ -8519,7 +8508,7 @@ snapshots:
       micromatch: 4.0.5
       normalize-path: 3.0.0
       schema-utils: 4.2.0
-      webpack: 5.90.3(esbuild@0.20.2)
+      webpack: 5.90.3
 
   eslint@8.57.0:
     dependencies:
@@ -10871,16 +10860,14 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  terser-webpack-plugin@5.3.10(esbuild@0.20.2)(webpack@5.90.3(esbuild@0.20.2)):
+  terser-webpack-plugin@5.3.10(webpack@5.90.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
       terser: 5.29.1
-      webpack: 5.90.3(esbuild@0.20.2)
-    optionalDependencies:
-      esbuild: 0.20.2
+      webpack: 5.90.3
 
   terser@5.29.1:
     dependencies:
@@ -11467,7 +11454,7 @@ snapshots:
 
   webpack-virtual-modules@0.6.1: {}
 
-  webpack@5.90.3(esbuild@0.20.2):
+  webpack@5.90.3:
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.5
@@ -11490,7 +11477,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(esbuild@0.20.2)(webpack@5.90.3(esbuild@0.20.2))
+      terser-webpack-plugin: 5.3.10(webpack@5.90.3)
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:
