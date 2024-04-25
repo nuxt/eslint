@@ -37,8 +37,8 @@ export async function setupDevToolsIntegration(nuxt: Nuxt) {
                   )
 
                   viewerPort = await getPort({
-                    port: 8123,
                     portRange: [8123, 10000],
+                    random: true,
                   })
                   viewerProcess = startSubprocess(
                     {
