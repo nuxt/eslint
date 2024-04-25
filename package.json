@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9.0.5",
+  "packageManager": "pnpm@9.0.6",
   "version": "0.3.9",
   "scripts": {
     "build": "pnpm run -r build",
@@ -24,9 +24,9 @@
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.12.7",
     "bumpp": "^9.4.0",
-    "eslint": "^9.1.0",
+    "eslint": "^9.1.1",
     "typescript": "^5.4.5",
-    "vitest": "^1.5.0",
-    "vue": "^3.4.23"
+    "vitest": "^1.5.2",
+    "vue": "^3.4.25"
   }
 }

@@ -65,7 +65,7 @@
   "devDependencies": {
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.11.2",
-    "@typescript-eslint/scope-manager": "^7.7.0",
+    "@typescript-eslint/scope-manager": "^7.7.1",
     "eslint-webpack-plugin": "^4.1.0",
     "nuxt": "^3.11.2",
     "vite-plugin-eslint2": "^4.4.0"
