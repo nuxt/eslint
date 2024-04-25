@@ -6,6 +6,7 @@ import globals from 'globals'
 export default function javascript(): Linter.FlatConfig[] {
   return [
     {
+      ...pluginESLint.configs.recommended,
       name: 'nuxt/javascript',
       languageOptions: {
         ecmaVersion: 2022,
@@ -29,7 +30,6 @@ export default function javascript(): Linter.FlatConfig[] {
       linterOptions: {
         reportUnusedDisableDirectives: true,
       },
-      ...pluginESLint.configs.recommended,
     },
   ]
 }
