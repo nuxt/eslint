@@ -1,3 +1,4 @@
+import defu from 'defu'
 import { defineNuxtModule } from '@nuxt/kit'
 import type { ModuleOptions } from './types'
 
@@ -26,5 +27,15 @@ export default defineNuxtModule<ModuleOptions>({
           })
       }
     }
+
+    nuxt.hook('nitro:config', (nitro) => {
+      nitro.typescript = defu(nitro.typescript, {
+        tsConfig: {
+          compilerOptions: {
+            noEmit: true
+          }
+        }
+      })
+    })
   },
 })
