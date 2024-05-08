@@ -54,7 +54,7 @@
     "@eslint/js": "^9.1.1",
     "@nuxt/eslint-plugin": "workspace:*",
     "@rushstack/eslint-patch": "^1.10.2",
-    "@stylistic/eslint-plugin": "^1.7.2",
+    "@stylistic/eslint-plugin": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "eslint-config-flat-gitignore": "^0.1.5",
