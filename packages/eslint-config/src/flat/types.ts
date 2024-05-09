@@ -71,6 +71,12 @@ export interface NuxtESLintConfigOptions {
     components?: string[]
 
     /**
+     * Directory for components with prefix
+     * Ignore `vue/multi-word-component-names`
+     */
+    componentsPrefixed?: string[]
+
+    /**
      * Directory for composobles
      */
     composables?: string[]

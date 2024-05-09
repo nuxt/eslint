@@ -11,6 +11,9 @@ export default createConfigForNuxt({
       'playground',
       'docs',
     ],
+    componentsPrefixed: [
+      'playground/components-prefixed',
+    ],
   },
 })
   .append(

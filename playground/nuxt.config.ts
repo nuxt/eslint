@@ -5,6 +5,10 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+  components: [
+    '~/components',
+    { path: '~/components-prefixed', prefix: 'Prefix' },
+  ],
   eslint: {
     config: {
       stylistic: true,
