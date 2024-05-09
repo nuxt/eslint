@@ -51,26 +51,26 @@
     "eslint": "^8.57.0 || ^9.0.0"
   },
   "dependencies": {
-    "@eslint/js": "^9.1.1",
+    "@eslint/js": "^9.2.0",
     "@nuxt/eslint-plugin": "workspace:*",
     "@rushstack/eslint-patch": "^1.10.2",
-    "@stylistic/eslint-plugin": "^1.7.2",
-    "@typescript-eslint/eslint-plugin": "^7.7.1",
-    "@typescript-eslint/parser": "^7.7.1",
+    "@stylistic/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
     "eslint-config-flat-gitignore": "^0.1.5",
-    "eslint-flat-config-utils": "^0.2.3",
+    "eslint-flat-config-utils": "^0.2.4",
     "eslint-plugin-import-x": "^0.5.0",
     "eslint-plugin-jsdoc": "^48.2.3",
     "eslint-plugin-unicorn": "^52.0.0",
-    "eslint-plugin-vue": "^9.25.0",
-    "globals": "^15.0.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "globals": "^15.1.0",
     "pathe": "^1.1.2",
     "tslib": "^2.6.2",
     "vue-eslint-parser": "^9.4.2"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.10",
-    "eslint": "^9.1.1",
+    "eslint": "^9.2.0",
     "typescript": "^5.4.5"
   }
 }
