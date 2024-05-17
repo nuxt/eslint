@@ -57,9 +57,11 @@ export function createConfigForNuxt(
   )
 
   if (resolved.features.tooling) {
+    const toolingOptions = typeof resolved.features.tooling === 'boolean' ? {} : resolved.features.tooling
     c.append(
-      import('./configs-tooling/jsdoc').then(m => m.default(resolved)),
-      import('./configs-tooling/unicorn').then(m => m.default()),
+      toolingOptions.jsdoc !== false && import('./configs-tooling/jsdoc').then(m => m.default(resolved)),
+      toolingOptions.unicorn !== false && import('./configs-tooling/unicorn').then(m => m.default()),
+      toolingOptions.regexp !== false && import('./configs-tooling/regexp').then(m => m.default()),
     )
   }
 

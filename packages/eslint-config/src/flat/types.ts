@@ -1,5 +1,28 @@
 import type { StylisticCustomizeOptions } from '@stylistic/eslint-plugin'
 
+export interface ToolingOptions {
+  /**
+   * Enable RegExp rules
+   *
+   * @see https://github.com/ota-meshi/eslint-plugin-regexp
+   * @default true
+   */
+  regexp?: boolean
+  /**
+   * Enable Unicorn rules
+   *
+   * @see https://github.com/sindresorhus/eslint-plugin-unicorn
+   * @default true
+   */
+  unicorn?: boolean
+  /**
+   * Enable jsdoc rules
+   *
+   * @default true
+   */
+  jsdoc?: boolean
+}
+
 export interface NuxtESLintFeaturesOptions {
   /**
    * Setup basic JavaScript, TypeScript and Vue plugins and rules.
@@ -16,7 +39,7 @@ export interface NuxtESLintFeaturesOptions {
    * @experimental Changes might not follow semver
    * @default false
    */
-  tooling?: boolean
+  tooling?: boolean | ToolingOptions
 
   /**
    * Enable stylistic ESLint rules for formatting and code style check
