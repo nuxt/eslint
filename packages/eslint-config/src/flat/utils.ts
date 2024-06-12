@@ -25,6 +25,7 @@ export function resolveOptions(
   dirs.modules ||= dirs.src.map(src => `${src}/modules`)
   dirs.middleware ||= dirs.src.map(src => `${src}/middleware`)
   dirs.servers ||= dirs.src.map(src => `${src}/servers`)
+  dirs.componentsPrefixed ||= []
 
   const resolved: NuxtESLintConfigOptionsResolved = {
     features: {

@@ -27,3 +27,5 @@ jobs:
       - run: pnpm lint:play
       - run: pnpm vitest run
       - uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

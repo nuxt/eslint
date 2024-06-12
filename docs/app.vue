@@ -11,6 +11,7 @@ useHead({
     lang: 'en',
   },
 })
+
 const links = [
   {
     label: 'Documentation',

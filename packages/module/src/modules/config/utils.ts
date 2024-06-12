@@ -7,6 +7,7 @@ export function getDirs(nuxt: Nuxt): NuxtESLintConfigOptions['dirs'] {
     pages: [],
     composables: [],
     components: [],
+    componentsPrefixed: [],
     layouts: [],
     plugins: [],
     middleware: [],
@@ -17,7 +18,7 @@ export function getDirs(nuxt: Nuxt): NuxtESLintConfigOptions['dirs'] {
   }
 
   for (const layer of nuxt.options._layers) {
-    const r = (t: string) => relative(nuxt.options.rootDir, resolve(layer.config.srcDir, t))
+    const r = (t: string) => relative(nuxt.options.rootDir, resolve(layer.config.srcDir, t.replace(/^~[/\\]/, '')))
 
     dirs.src.push(r(''))
     dirs.pages.push(r(nuxt.options.dir.pages || 'pages'))
@@ -33,14 +34,17 @@ export function getDirs(nuxt: Nuxt): NuxtESLintConfigOptions['dirs'] {
         dirs.composables.push(r(dir))
     }
 
-    if (layer.config.components) {
-      const options = layer.config.components || {}
-      if (options !== true && 'dirs' in options) {
-        for (const dir of options.dirs || []) {
-          if (typeof dir === 'string')
-            dirs.components.push(r(dir))
-          else if (dir && 'path' in dir && typeof dir.path === 'string')
-            dirs.components.push(r(dir.path))
+    if (layer.config.components && layer.config.components !== true) {
+      const options = Array.isArray(layer.config.components)
+        ? { dirs: layer.config.components }
+        : layer.config.components
+      for (const dir of options.dirs || []) {
+        if (typeof dir === 'string')
+          dirs.components.push(r(dir))
+        else if (dir && 'path' in dir && typeof dir.path === 'string') {
+          dirs.components.push(r(dir.path))
+          if (dir.prefix)
+            dirs.componentsPrefixed.push(r(dir.path))
         }
       }
     }

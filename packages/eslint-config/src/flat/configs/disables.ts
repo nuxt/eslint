@@ -9,7 +9,7 @@ export default function disables(options: NuxtESLintConfigOptions): Linter.FlatC
   const dirs = resolved.dirs
   const nestedGlobPattern = `**/*.${GLOB_EXTS}`
 
-  const fileRoutes = [
+  const fileRoutes = [...new Set([
     // These files must have one-word names as they have a special meaning in Nuxt.
     ...dirs.src.flatMap(layersDir => [
       join(layersDir, `app.${GLOB_EXTS}`),
@@ -22,7 +22,9 @@ export default function disables(options: NuxtESLintConfigOptions): Linter.FlatC
 
     // These files should have multiple words in their names as they are within subdirectories.
     ...(dirs.components.map(componentsDir => join(componentsDir, '*', nestedGlobPattern)) || []),
-  ]
+    // Prefixed components can have one-word names in file
+    ...(dirs.componentsPrefixed.map(componentsDir => join(componentsDir, nestedGlobPattern)) || []),
+  ])]
 
   const configs: Linter.FlatConfig[] = []
 
