@@ -1,11 +1,9 @@
 import { RuleTester } from '@typescript-eslint/rule-tester'
 import { rule } from '../src/rules/require-jsdoc-since'
 
-const ruleTester = new RuleTester({
-  parser: '@typescript-eslint/parser',
-})
+const ruleTester = new RuleTester()
 
-ruleTester.run('require-since', rule, {
+ruleTester.run('require-jsdoc-since', rule, {
   valid: [
     {
       code: `
@@ -17,28 +15,28 @@ ruleTester.run('require-since', rule, {
       code: `
         /**
          * @since 1.0.0
-        */
+         */
         function foo() {}
     `,
-    // TODO: Check overloads
     },
     {
       code: `
         /**
          * This is a comment.
-         * @param {string} foo - This is a foo.
+         * @param {string} bar - This is a bar.
          * @since 1.0.0
          */
         function foo(bar) {}
-        `,
+      `,
     },
+    // TODO: Check overloads
   ],
   invalid: [
     {
       code: `
         /**
          * This is a comment.
-         * @param {string} foo - This is a foo.
+         * @param {string} bar - This is a bar.
          */
         function foo(bar) {}
         `,
