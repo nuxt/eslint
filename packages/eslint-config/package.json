@@ -62,7 +62,7 @@
     "eslint-plugin-import-x": "^0.5.0",
     "eslint-plugin-jsdoc": "^48.2.5",
     "eslint-plugin-regexp": "^2.5.0",
-    "eslint-plugin-unicorn": "^53.0.0",
+    "eslint-plugin-unicorn": "^54.0.0",
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.2.0",
     "pathe": "^1.1.2",
