@@ -23,7 +23,7 @@
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/test-utils": "^3.13.0",
-    "@types/eslint": "^8.56.10",
+    "@types/eslint": "^9.6.0",
     "@types/node": "^20.12.12",
     "bumpp": "^9.4.1",
     "eslint": "^9.2.0",

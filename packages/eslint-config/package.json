@@ -70,7 +70,7 @@
     "vue-eslint-parser": "^9.4.2"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.10",
+    "@types/eslint": "^9.6.0",
     "eslint": "^9.2.0",
     "typescript": "^5.4.5"
   }
