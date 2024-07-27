@@ -10,6 +10,7 @@ export default function ignores(): Linter.Config[] {
         '**/.output',
         '**/.vercel',
         '**/.netlify',
+        '**/public',
       ],
     },
   ]
