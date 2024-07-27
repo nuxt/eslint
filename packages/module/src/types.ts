@@ -123,7 +123,7 @@ export interface ESLintConfigGenAddonResult {
    */
   imports?: Import[]
   /**
-   * Flat config items, should be stringified
+   * Flat config items, should be stringified lines
    */
   configs?: string[]
 }
