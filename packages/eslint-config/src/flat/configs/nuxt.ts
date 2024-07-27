@@ -12,6 +12,7 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
   const fileSingleRoot = [
     ...(dirs.layouts?.map(layoutsDir => join(layoutsDir, `**/*.${GLOB_EXTS}`)) || []),
     ...(dirs.pages?.map(pagesDir => join(pagesDir, `**/*.${GLOB_EXTS}`)) || []),
+    ...(dirs.components?.map(componentsDir => join(componentsDir, `**/*.server.${GLOB_EXTS}`)) || []),
   ]
 
   const configs: Linter.Config[] = []
