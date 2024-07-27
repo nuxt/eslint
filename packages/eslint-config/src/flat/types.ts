@@ -50,9 +50,9 @@ export interface NuxtESLintFeaturesOptions {
   stylistic?: boolean | StylisticCustomizeOptions<true>
 
   /**
-   * Options for TypeScript setup
+   * Enable TypeScript support. Can also be an object to config the options.
    *
-   * @default true
+   * By default it enables automatic when `typescript` is installed in the project.
    */
   typescript?: boolean | {
     /**

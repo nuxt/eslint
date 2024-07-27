@@ -1,3 +1,4 @@
+import { isPackageExists } from 'local-pkg'
 import type { NuxtESLintConfigOptions, NuxtESLintConfigOptionsResolved } from '../flat'
 
 export function removeUndefined<T extends object>(obj: T): T {
@@ -31,7 +32,7 @@ export function resolveOptions(
     features: {
       standalone: true,
       stylistic: false,
-      typescript: true,
+      typescript: isPackageExists('typescript'),
       tooling: false,
       ...config.features,
     },

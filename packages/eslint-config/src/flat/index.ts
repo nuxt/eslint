@@ -46,7 +46,9 @@ export function createConfigForNuxt(
       ignores(),
       javascript(),
       // Make these imports async, as they are optional and imports plugins
-      import('./configs/typescript').then(m => m.default(resolved)),
+      resolved.features.typescript !== false
+        ? import('./configs/typescript').then(m => m.default(resolved))
+        : undefined,
       import('./configs/vue').then(m => m.default(resolved)),
       import('./configs/import').then(m => m.default(resolved)),
     )
