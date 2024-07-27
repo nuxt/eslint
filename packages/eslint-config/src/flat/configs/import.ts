@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 import type { NuxtESLintConfigOptions } from '../types'
 import { resolveOptions } from '../utils'
 
-export default function imports(options: NuxtESLintConfigOptions): Linter.FlatConfig[] {
+export default function imports(options: NuxtESLintConfigOptions): Linter.Config[] {
   const resolved = resolveOptions(options)
 
   return [

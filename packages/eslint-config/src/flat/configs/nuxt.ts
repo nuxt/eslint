@@ -5,7 +5,7 @@ import type { NuxtESLintConfigOptions } from '../types'
 import { GLOB_EXTS } from '../constants'
 import { resolveOptions } from '../utils'
 
-export default function nuxt(options: NuxtESLintConfigOptions): Linter.FlatConfig[] {
+export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] {
   const resolved = resolveOptions(options)
   const dirs = resolved.dirs
 
@@ -14,7 +14,7 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.FlatConfi
     ...(dirs.pages?.map(pagesDir => join(pagesDir, `**/*.${GLOB_EXTS}`)) || []),
   ]
 
-  const configs: Linter.FlatConfig[] = []
+  const configs: Linter.Config[] = []
 
   configs.push({
     name: 'nuxt/configs',

@@ -3,7 +3,7 @@ import jsdocPlugin from 'eslint-plugin-jsdoc'
 import { resolveOptions } from '../utils'
 import type { NuxtESLintConfigOptions } from '../types'
 
-export default function jsdoc(options: NuxtESLintConfigOptions = {}): Linter.FlatConfig[] {
+export default function jsdoc(options: NuxtESLintConfigOptions = {}): Linter.Config[] {
   const resolved = resolveOptions(options)
 
   return [

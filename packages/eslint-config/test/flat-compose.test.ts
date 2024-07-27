@@ -4,7 +4,7 @@ import { createConfigForNuxt } from '../src/flat'
 
 const cwd = process.cwd()
 
-function getFlatConfigDigest(configs: Linter.FlatConfig[]) {
+function getFlatConfigDigest(configs: Linter.Config[]) {
   return configs.map((config) => {
     return JSON.parse(JSON.stringify({
       name: config.name,

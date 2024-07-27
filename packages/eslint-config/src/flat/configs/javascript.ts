@@ -3,7 +3,7 @@ import pluginESLint from '@eslint/js'
 import type { Linter } from 'eslint'
 import globals from 'globals'
 
-export default function javascript(): Linter.FlatConfig[] {
+export default function javascript(): Linter.Config[] {
   return [
     {
       ...pluginESLint.configs.recommended,

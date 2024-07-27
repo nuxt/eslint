@@ -1,6 +1,5 @@
 import { fileURLToPath } from 'node:url'
 import { it, expect, describe } from 'vitest'
-// @ts-expect-error missing types
 import { loadESLint } from 'eslint'
 
 describe('eslint-config', () => {

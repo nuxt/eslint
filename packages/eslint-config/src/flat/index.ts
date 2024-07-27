@@ -21,7 +21,7 @@ export { resolveOptions }
  */
 export function defineFlatConfigs(
   ...configs: ResolvableFlatConfig[]
-): FlatConfigComposer<Linter.FlatConfig> {
+): FlatConfigComposer<Linter.Config> {
   return composer(...configs)
 }
 
@@ -35,7 +35,7 @@ export function defineFlatConfigs(
 export function createConfigForNuxt(
   options: NuxtESLintConfigOptions = {},
   ...userConfigs: ResolvableFlatConfig[]
-): FlatConfigComposer<Linter.FlatConfig> {
+): FlatConfigComposer<Linter.Config> {
   const c = composer()
 
   const resolved = resolveOptions(options)

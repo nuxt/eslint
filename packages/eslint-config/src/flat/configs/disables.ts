@@ -4,7 +4,7 @@ import { GLOB_EXTS } from '../constants'
 import type { NuxtESLintConfigOptions } from '../types'
 import { resolveOptions } from '../utils'
 
-export default function disables(options: NuxtESLintConfigOptions): Linter.FlatConfig[] {
+export default function disables(options: NuxtESLintConfigOptions): Linter.Config[] {
   const resolved = resolveOptions(options)
   const dirs = resolved.dirs
   const nestedGlobPattern = `**/*.${GLOB_EXTS}`
@@ -26,7 +26,7 @@ export default function disables(options: NuxtESLintConfigOptions): Linter.FlatC
     ...(dirs.componentsPrefixed.map(componentsDir => join(componentsDir, nestedGlobPattern)) || []),
   ])]
 
-  const configs: Linter.FlatConfig[] = []
+  const configs: Linter.Config[] = []
 
   if (fileRoutes.length) {
     configs.push({

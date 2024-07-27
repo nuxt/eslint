@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 
-export default function ignores(): Linter.FlatConfig[] {
+export default function ignores(): Linter.Config[] {
   return [
     {
       ignores: [

@@ -1,8 +1,7 @@
-// @ts-expect-error missing types
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import type { Linter } from 'eslint'
 
-export default function unicorn(): Linter.FlatConfig[] {
+export default function unicorn(): Linter.Config[] {
   return [
     {
       name: 'nuxt/tooling/unicorn',
