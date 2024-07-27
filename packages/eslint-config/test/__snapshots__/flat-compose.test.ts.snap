@@ -72,6 +72,8 @@ exports[`flat config composition > custom src dirs 1`] = `
       "src2/layouts/**/*.{js,ts,jsx,tsx,vue}",
       "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
       "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "src1/components/**/*.server.{js,ts,jsx,tsx,vue}",
+      "src2/components/**/*.server.{js,ts,jsx,tsx,vue}",
     ],
     "name": "nuxt/vue/single-root",
   },
@@ -166,6 +168,7 @@ exports[`flat config composition > empty 1`] = `
     "files": [
       "layouts/**/*.{js,ts,jsx,tsx,vue}",
       "pages/**/*.{js,ts,jsx,tsx,vue}",
+      "components/**/*.server.{js,ts,jsx,tsx,vue}",
     ],
     "name": "nuxt/vue/single-root",
   },
@@ -194,6 +197,7 @@ exports[`flat config composition > non-standalone 1`] = `
     "files": [
       "layouts/**/*.{js,ts,jsx,tsx,vue}",
       "pages/**/*.{js,ts,jsx,tsx,vue}",
+      "components/**/*.server.{js,ts,jsx,tsx,vue}",
     ],
     "name": "nuxt/vue/single-root",
   },
