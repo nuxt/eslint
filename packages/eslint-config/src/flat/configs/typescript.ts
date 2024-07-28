@@ -72,6 +72,7 @@ export default function typescript(options: NuxtESLintConfigOptions): Linter.Con
           vars: 'all',
           varsIgnorePattern: '^_',
         }],
+        '@typescript-eslint/no-import-type-side-effects': 'error',
       },
     },
   ]
