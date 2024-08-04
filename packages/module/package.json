@@ -60,12 +60,12 @@
     "get-port-please": "^3.1.2",
     "mlly": "^1.7.1",
     "pathe": "^1.1.2",
-    "unimport": "^3.9.1"
+    "unimport": "^3.10.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.8.1",
     "@nuxt/schema": "^3.12.4",
-    "@typescript-eslint/scope-manager": "^7.17.0",
+    "@typescript-eslint/scope-manager": "^8.0.0",
     "eslint-webpack-plugin": "^4.2.0",
     "nuxt": "^3.12.4",
     "vite-plugin-eslint2": "^4.4.0"

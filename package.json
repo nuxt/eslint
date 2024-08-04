@@ -19,16 +19,16 @@
   },
   "devDependencies": {
     "@iconify-json/ph": "^1.1.13",
-    "@iconify-json/simple-icons": "^1.1.110",
+    "@iconify-json/simple-icons": "^1.1.111",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/test-utils": "^3.14.0",
     "@types/eslint": "^9.6.0",
-    "@types/node": "^20.14.12",
-    "bumpp": "^9.4.1",
+    "@types/node": "^22.1.0",
+    "bumpp": "^9.4.2",
     "eslint": "^9.8.0",
     "typescript": "^5.5.4",
-    "vitest": "^2.0.4",
-    "vue": "^3.4.34"
+    "vitest": "^2.0.5",
+    "vue": "^3.4.35"
   }
 }
