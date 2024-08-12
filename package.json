@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
   "version": "0.5.0",
   "scripts": {
     "build": "pnpm run -r build",
@@ -18,17 +18,17 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@iconify-json/ph": "^1.1.13",
-    "@iconify-json/simple-icons": "^1.1.111",
+    "@iconify-json/ph": "^1.1.14",
+    "@iconify-json/simple-icons": "^1.1.113",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
     "@nuxt/test-utils": "^3.14.0",
     "@types/eslint": "^9.6.0",
-    "@types/node": "^22.1.0",
-    "bumpp": "^9.4.2",
-    "eslint": "^9.8.0",
+    "@types/node": "^22.2.0",
+    "bumpp": "^9.5.0",
+    "eslint": "^9.9.0",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5",
-    "vue": "^3.4.35"
+    "vue": "^3.4.37"
   }
 }
