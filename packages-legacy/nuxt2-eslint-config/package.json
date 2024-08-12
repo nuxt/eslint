@@ -17,6 +17,6 @@
     "local-pkg": "^0.5.0"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^9.9.0"
   }
 }
