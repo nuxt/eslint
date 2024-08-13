@@ -21,8 +21,8 @@ importers:
         specifier: workspace:*
         version: link:packages/eslint-plugin
       '@nuxt/test-utils':
-        specifier: ^3.14.0
-        version: 3.14.0(h3@1.12.0)(magicast@0.3.4)(nitropack@2.9.7(@opentelemetry/api@1.9.0)(encoding@0.1.13)(magicast@0.3.4))(rollup@4.19.0)(vite@5.3.5(@types/node@22.2.0)(terser@5.29.1))(vitest@2.0.5(@types/node@22.2.0)(terser@5.29.1))(vue-router@4.4.0(vue@3.4.37(typescript@5.5.4)))(vue@3.4.37(typescript@5.5.4))
+        specifier: ^3.14.1
+        version: 3.14.1(h3@1.12.0)(magicast@0.3.4)(nitropack@2.9.7(@opentelemetry/api@1.9.0)(encoding@0.1.13)(magicast@0.3.4))(rollup@4.19.0)(vite@5.3.5(@types/node@22.2.0)(terser@5.29.1))(vitest@2.0.5(@types/node@22.2.0)(terser@5.29.1))(vue-router@4.4.0(vue@3.4.37(typescript@5.5.4)))(vue@3.4.37(typescript@5.5.4))
       '@types/eslint':
         specifier: ^9.6.0
         version: 9.6.0
@@ -1187,7 +1187,7 @@ packages:
     resolution: {integrity: sha512-tFKlbUPgSXw4tyD8xpztQtJeVn3egdKbFCV0xc92FbfGbclAyaa3XhKA2tMWXEGZQpykAWMRNrGWN24FtXFA6Q==}
     hasBin: true
     peerDependencies:
-      vite: ^5.3.3
+      vite: '*'
 
   '@nuxt/kit@3.12.4':
     resolution: {integrity: sha512-aNRD1ylzijY0oYolldNcZJXVyxdGzNTl+Xd0UYyFQCu9f4wqUZqQ9l+b7arCEzchr96pMK0xdpvLcS3xo1wDcw==}
@@ -1208,8 +1208,8 @@ packages:
     resolution: {integrity: sha512-KH6wxzsNys69daSO0xUv0LEBAfhwwjK1M+0Cdi1/vxmifCslMIY7lN11B4eywSfscbyVPAYJvANyc7XiVPImBQ==}
     hasBin: true
 
-  '@nuxt/test-utils@3.14.0':
-    resolution: {integrity: sha512-8HJOvGChQ70s6RKduKlrNABJXizNCLodBRbgepa4RYA3QFv2KrTxLvlHlhEUwd9r2E55LcQacv9P7Er47Z2GaA==}
+  '@nuxt/test-utils@3.14.1':
+    resolution: {integrity: sha512-D8F18hnOHQSarKnzsLORRXzFPlI9Y5fcQFRKwJgGhnejlIRX6sFvVnyl2SDgCvoV+F2x2czQsdGkwg51iWAshA==}
     engines: {node: '>=18.20.4'}
     peerDependencies:
       '@cucumber/cucumber': ^10.3.1
@@ -5199,6 +5199,10 @@ packages:
     resolution: {integrity: sha512-KeczzHl2sATPQUx1gzo+EnUkmN4VmGBYRRVOZSGvGITE9rGHRDGqft6ONceP3vgXcyJ2XjX5axG5jMWUwNCYLw==}
     engines: {node: '>=14.0.0'}
 
+  unplugin@1.12.1:
+    resolution: {integrity: sha512-aXEH9c5qi3uYZHo0niUtxDlT9ylG/luMW/dZslSCkbtC31wCyFkmM0kyoBBh+Grhn7CL+/kvKLfN61/EdxPxMQ==}
+    engines: {node: '>=14.0.0'}
+
   unstorage@1.10.2:
     resolution: {integrity: sha512-cULBcwDqrS8UhlIysUJs2Dk0Mmt8h7B0E6mtR+relW9nZvsf/u4SkAYyNliPiPW7XtFNb5u3IUMkxGxFTTRTgQ==}
     peerDependencies:
@@ -6507,7 +6511,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@nuxt/test-utils@3.14.0(h3@1.12.0)(magicast@0.3.4)(nitropack@2.9.7(@opentelemetry/api@1.9.0)(encoding@0.1.13)(magicast@0.3.4))(rollup@4.19.0)(vite@5.3.5(@types/node@22.2.0)(terser@5.29.1))(vitest@2.0.5(@types/node@22.2.0)(terser@5.29.1))(vue-router@4.4.0(vue@3.4.37(typescript@5.5.4)))(vue@3.4.37(typescript@5.5.4))':
+  '@nuxt/test-utils@3.14.1(h3@1.12.0)(magicast@0.3.4)(nitropack@2.9.7(@opentelemetry/api@1.9.0)(encoding@0.1.13)(magicast@0.3.4))(rollup@4.19.0)(vite@5.3.5(@types/node@22.2.0)(terser@5.29.1))(vitest@2.0.5(@types/node@22.2.0)(terser@5.29.1))(vue-router@4.4.0(vue@3.4.37(typescript@5.5.4)))(vue@3.4.37(typescript@5.5.4))':
     dependencies:
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.19.0)
       '@nuxt/schema': 3.12.4(rollup@4.19.0)
@@ -6532,7 +6536,7 @@ snapshots:
       std-env: 3.7.0
       ufo: 1.5.4
       unenv: 1.10.0
-      unplugin: 1.12.0
+      unplugin: 1.12.1
       vite: 5.3.5(@types/node@22.2.0)(terser@5.29.1)
       vitest-environment-nuxt: 1.0.0(h3@1.12.0)(magicast@0.3.4)(nitropack@2.9.7(@opentelemetry/api@1.9.0)(encoding@0.1.13)(magicast@0.3.4))(rollup@4.19.0)(vite@5.3.5(@types/node@22.2.0)(terser@5.29.1))(vitest@2.0.5(@types/node@22.2.0)(terser@5.29.1))(vue-router@4.4.0(vue@3.4.37(typescript@5.5.4)))(vue@3.4.37(typescript@5.5.4))
       vue: 3.4.37(typescript@5.5.4)
@@ -11327,6 +11331,13 @@ snapshots:
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.2
 
+  unplugin@1.12.1:
+    dependencies:
+      acorn: 8.12.1
+      chokidar: 3.6.0
+      webpack-sources: 3.2.3
+      webpack-virtual-modules: 0.6.2
+
   unstorage@1.10.2(ioredis@5.4.1):
     dependencies:
       anymatch: 3.1.3
@@ -11493,7 +11504,7 @@ snapshots:
 
   vitest-environment-nuxt@1.0.0(h3@1.12.0)(magicast@0.3.4)(nitropack@2.9.7(@opentelemetry/api@1.9.0)(encoding@0.1.13)(magicast@0.3.4))(rollup@4.19.0)(vite@5.3.5(@types/node@22.2.0)(terser@5.29.1))(vitest@2.0.5(@types/node@22.2.0)(terser@5.29.1))(vue-router@4.4.0(vue@3.4.37(typescript@5.5.4)))(vue@3.4.37(typescript@5.5.4)):
     dependencies:
-      '@nuxt/test-utils': 3.14.0(h3@1.12.0)(magicast@0.3.4)(nitropack@2.9.7(@opentelemetry/api@1.9.0)(encoding@0.1.13)(magicast@0.3.4))(rollup@4.19.0)(vite@5.3.5(@types/node@22.2.0)(terser@5.29.1))(vitest@2.0.5(@types/node@22.2.0)(terser@5.29.1))(vue-router@4.4.0(vue@3.4.37(typescript@5.5.4)))(vue@3.4.37(typescript@5.5.4))
+      '@nuxt/test-utils': 3.14.1(h3@1.12.0)(magicast@0.3.4)(nitropack@2.9.7(@opentelemetry/api@1.9.0)(encoding@0.1.13)(magicast@0.3.4))(rollup@4.19.0)(vite@5.3.5(@types/node@22.2.0)(terser@5.29.1))(vitest@2.0.5(@types/node@22.2.0)(terser@5.29.1))(vue-router@4.4.0(vue@3.4.37(typescript@5.5.4)))(vue@3.4.37(typescript@5.5.4))
     transitivePeerDependencies:
       - '@cucumber/cucumber'
       - '@jest/globals'
