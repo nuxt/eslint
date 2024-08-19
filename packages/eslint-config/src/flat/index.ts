@@ -85,6 +85,16 @@ export function createConfigForNuxt(
     c.append(...userConfigs)
   }
 
+  c
+    .setPluginConflictsError()
+    .setPluginConflictsError('import', [
+      'Different instances of plugin "{{pluginName}}" found in multiple configs:',
+      '{{configNames}}.',
+      'You might forget to set `standalone: false`.',
+      'Please refer to https://eslint.nuxt.com/packages/module#custom-config-presets.',
+      '',
+    ].join('\n'))
+
   return c
 }
 

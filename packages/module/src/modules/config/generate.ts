@@ -24,10 +24,6 @@ export async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, a
 
   importLines.push(
     {
-      from: 'eslint-flat-config-utils',
-      name: 'composer',
-    },
-    {
       from: 'eslint-typegen',
       name: 'default',
       as: 'typegen',
@@ -50,8 +46,6 @@ export async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, a
     features: config,
     dirs: getDirs(nuxt),
   }
-
-  configItems.push(`// Nuxt Configs\ncreateConfigForNuxt(options)`)
 
   for (const addon of addons) {
     const resolved = await addon.getConfigs()
@@ -83,14 +77,20 @@ export async function generateESLintConfig(options: ModuleOptions, nuxt: Nuxt, a
     '',
     'export { defineFlatConfigs }',
     '',
-    `export const configs = composer()`,
-    '',
     `export const options = resolveOptions(${JSON.stringify(basicOptions, null, 2)})`,
-    ``,
-    `configs.append(`,
-    configItems.join(',\n\n'),
-    `)`,
     '',
+    `export const configs = createConfigForNuxt(options)`,
+
+    ...(configItems.length
+      ? [
+          '',
+          `configs.append(`,
+          configItems.join(',\n\n'),
+          `)`,
+          '',
+        ]
+      : []),
+
     'export function withNuxt(...customs) {',
     '  return configs',
     '    .clone()',
