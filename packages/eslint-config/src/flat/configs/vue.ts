@@ -1,6 +1,4 @@
 import * as parserVue from 'vue-eslint-parser'
-import parserTs from '@typescript-eslint/parser'
-
 // @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
 import type { Linter } from 'eslint'
@@ -10,9 +8,13 @@ import { removeUndefined, resolveOptions } from '../utils'
 // imported from 'eslint-plugin-vue/lib/utils/inline-non-void-elements.json'
 const INLINE_ELEMENTS = ['a', 'abbr', 'audio', 'b', 'bdi', 'bdo', 'canvas', 'cite', 'code', 'data', 'del', 'dfn', 'em', 'i', 'iframe', 'ins', 'kbd', 'label', 'map', 'mark', 'noscript', 'object', 'output', 'picture', 'q', 'ruby', 's', 'samp', 'small', 'span', 'strong', 'sub', 'sup', 'svg', 'time', 'u', 'var', 'video']
 
-export default function vue(options: NuxtESLintConfigOptions): Linter.Config[] {
+export default async function vue(options: NuxtESLintConfigOptions): Promise<Linter.Config[]> {
   const resolved = resolveOptions(options)
   const hasTs = resolved.features.typescript !== false
+
+  const parser = hasTs
+    ? await import('./typescript').then(mod => mod.parserTs)
+    : undefined
 
   const {
     indent = 2,
@@ -30,7 +32,7 @@ export default function vue(options: NuxtESLintConfigOptions): Linter.Config[] {
         parserOptions: {
           ecmaVersion: 'latest',
           extraFileExtensions: ['.vue'],
-          parser: hasTs ? parserTs : undefined,
+          parser,
           sourceType: 'module',
           ecmaFeatures: {
             jsx: true,

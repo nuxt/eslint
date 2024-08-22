@@ -4,6 +4,8 @@ import type { Linter } from 'eslint'
 import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
 import { resolveOptions } from '../utils'
 
+export { parserTs, pluginTs }
+
 export default function typescript(options: NuxtESLintConfigOptions): Linter.Config[] {
   const resolved = resolveOptions(options)
 
