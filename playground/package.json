@@ -8,6 +8,6 @@
     "lint": "nuxi prepare && eslint ."
   },
   "devDependencies": {
-    "nuxt": "^3.13.0"
+    "nuxt": "catalog:"
   }
 }

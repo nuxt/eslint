@@ -18,18 +18,18 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@iconify-json/ph": "^1.1.14",
-    "@iconify-json/simple-icons": "^1.1.114",
+    "@iconify-json/ph": "catalog:",
+    "@iconify-json/simple-icons": "catalog:",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
-    "@nuxt/test-utils": "^3.14.1",
-    "@types/eslint": "^9.6.1",
-    "@types/node": "^22.5.0",
-    "bumpp": "^9.5.2",
-    "eslint": "^9.9.1",
-    "taze": "^0.16.6",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5",
-    "vue": "^3.4.38"
+    "@nuxt/test-utils": "catalog:",
+    "@types/eslint": "catalog:",
+    "@types/node": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "taze": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "vue": "catalog:"
   }
 }
