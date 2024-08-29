@@ -49,8 +49,10 @@ export const ORDER_KEYS = [
   'ignorePrefix',
 
   // Build Pipeline Configs
-  'build',
   'builder',
+  'build',
+  'generate',
+  'routeRules',
   'sourcemap',
   'optimization',
 
@@ -64,12 +66,10 @@ export const ORDER_KEYS = [
   'future',
   'features',
   'experimental',
-  'generate',
   'compatibilityDate',
 
   // Nitro
   'nitro',
-  'routeRules',
   'serverHandlers',
   'devServerHandlers',
 
