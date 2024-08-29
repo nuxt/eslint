@@ -1,8 +1,10 @@
 export const OFFICIAL_MODULES = {
   client: [
-    'ui',
     'site', // SEO module
     'colorMode',
+    'content',
+    'mdc',
+    'ui',
   ],
 
   server: [

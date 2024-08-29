@@ -20,16 +20,16 @@ export default defineNuxtConfig({
     },
   },
 
-  ui: {
-    icons: ['heroicons', 'simple-icons', 'ph'],
-  },
-
   site: {
     url: 'https://eslint.nuxt.com',
   },
 
   colorMode: {
     preference: 'dark',
+  },
+
+  ui: {
+    icons: ['heroicons', 'simple-icons', 'ph'],
   },
 
   routeRules: {
