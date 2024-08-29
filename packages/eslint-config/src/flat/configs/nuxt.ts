@@ -13,7 +13,7 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
     ...(dirs.layouts?.map(layoutsDir => join(layoutsDir, `**/*.${GLOB_EXTS}`)) || []),
     ...(dirs.pages?.map(pagesDir => join(pagesDir, `**/*.${GLOB_EXTS}`)) || []),
     ...(dirs.components?.map(componentsDir => join(componentsDir, `**/*.server.${GLOB_EXTS}`)) || []),
-  ]
+  ].sort()
 
   const configs: Linter.Config[] = []
 

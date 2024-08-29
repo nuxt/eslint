@@ -16,7 +16,7 @@ export function resolveOptions(
     ...config.dirs,
   } as NuxtESLintConfigOptionsResolved['dirs']
 
-  dirs.root ||= ['.']
+  dirs.root ||= ['.', './app'] // Support both Nuxt 3 and 4 conventions by default
   dirs.src ||= dirs.root
   dirs.pages ||= dirs.src.map(src => `${src}/pages`)
   dirs.layouts ||= dirs.src.map(src => `${src}/layouts`)

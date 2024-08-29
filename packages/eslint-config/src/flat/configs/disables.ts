@@ -24,7 +24,7 @@ export default function disables(options: NuxtESLintConfigOptions): Linter.Confi
     ...(dirs.components.map(componentsDir => join(componentsDir, '*', nestedGlobPattern)) || []),
     // Prefixed components can have one-word names in file
     ...(dirs.componentsPrefixed.map(componentsDir => join(componentsDir, nestedGlobPattern)) || []),
-  ])]
+  ])].sort()
 
   const configs: Linter.Config[] = []
 
