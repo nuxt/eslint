@@ -1,3 +1,15 @@
+export const OFFICIAL_MODULES = {
+  client: [
+    'ui',
+    'site', // SEO module
+    'colorMode',
+  ],
+
+  server: [
+    'hub',
+  ],
+}
+
 export const ORDER_KEYS = [
   // Ids
   'appId',
@@ -11,11 +23,14 @@ export const ORDER_KEYS = [
   'modules',
   'plugins',
 
+  // Env ($production, $development, $test)
+  /^\$/,
+
   // Nuxt Core Features
   'ssr',
+  'pages',
   'components',
   'imports',
-  'pages',
   'devtools',
 
   // Client-side Integrations
@@ -24,6 +39,7 @@ export const ORDER_KEYS = [
   'vue',
   'router',
   'unhead',
+  ...OFFICIAL_MODULES.client,
   'spaLoadingTemplate',
 
   // Runtime Configs
@@ -70,6 +86,7 @@ export const ORDER_KEYS = [
 
   // Nitro
   'nitro',
+  ...OFFICIAL_MODULES.server,
   'serverHandlers',
   'devServerHandlers',
 
@@ -79,13 +96,13 @@ export const ORDER_KEYS = [
   'typescript',
   'postcss',
 
-  // Logging
-  'debug',
-  'logLevel',
-
   // Other Integrations
   'test',
   'telemetry',
+
+  // Logging
+  'debug',
+  'logLevel',
 
   // Hooks
   'hooks',

@@ -1,14 +1,6 @@
 export default defineNuxtConfig({
   extends: '@nuxt/ui-pro',
 
-  routeRules: {
-    '/guide': { redirect: '/guide/getting-started' },
-  },
-
-  site: {
-    url: 'https://eslint.nuxt.com',
-  },
-
   modules: [
     '@nuxt/image',
     '@nuxt/content',
@@ -20,12 +12,28 @@ export default defineNuxtConfig({
     'nuxt-og-image',
   ],
 
-  colorMode: {
-    preference: 'dark',
+  $production: {
+    nitro: {
+      experimental: {
+        wasm: true,
+      },
+    },
   },
 
   ui: {
     icons: ['heroicons', 'simple-icons', 'ph'],
+  },
+
+  site: {
+    url: 'https://eslint.nuxt.com',
+  },
+
+  colorMode: {
+    preference: 'dark',
+  },
+
+  routeRules: {
+    '/guide': { redirect: '/guide/getting-started' },
   },
 
   nitro: {
@@ -44,14 +52,6 @@ export default defineNuxtConfig({
         if (comp.global)
           comp.global = 'sync'
       }
-    },
-  },
-
-  $production: {
-    nitro: {
-      experimental: {
-        wasm: true,
-      },
     },
   },
 })
