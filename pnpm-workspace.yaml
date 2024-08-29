@@ -7,7 +7,7 @@ catalog:
   '@eslint/config-inspector': ^0.5.4
   '@eslint/js': ^9.9.1
   '@iconify-json/ph': ^1.1.14
-  '@iconify-json/simple-icons': ^1.1.114
+  '@iconify-json/simple-icons': ^1.1.115
   '@nuxt/devtools-kit': ^1.4.1
   '@nuxt/kit': ^3.13.0
   '@nuxt/module-builder': ^0.8.3
@@ -15,9 +15,9 @@ catalog:
   '@nuxt/test-utils': ^3.14.1
   '@nuxtjs/eslint-config': ^12.0.0
   '@rushstack/eslint-patch': ^1.10.4
-  '@stylistic/eslint-plugin': ^2.6.4
+  '@stylistic/eslint-plugin': ^2.7.1
   '@types/eslint': ^9.6.1
-  '@types/node': ^22.5.0
+  '@types/node': ^22.5.1
   '@typescript-eslint/eslint-plugin': ^8.3.0
   '@typescript-eslint/parser': ^8.3.0
   '@typescript-eslint/scope-manager': ^8.3.0
@@ -26,12 +26,12 @@ catalog:
   bumpp: ^9.5.2
   chokidar: ^3.6.0
   eslint: ^9.9.1
-  eslint-config-flat-gitignore: ^0.1.8
+  eslint-config-flat-gitignore: ^0.2.0
   eslint-config-standard: ^17.1.0
   eslint-flat-config-utils: ^0.3.1
   eslint-import-resolver-typescript: ^3.6.3
   eslint-plugin-import: ^2.29.1
-  eslint-plugin-import-x: ^4.0.0
+  eslint-plugin-import-x: ^4.1.1
   eslint-plugin-jsdoc: ^50.2.2
   eslint-plugin-n: ^17.10.2
   eslint-plugin-promise: ^7.1.0
@@ -47,7 +47,7 @@ catalog:
   mlly: ^1.7.1
   nuxt: ^3.13.0
   pathe: ^1.1.2
-  taze: ^0.16.6
+  taze: ^0.16.7
   tslib: ^2.7.0
   typescript: ^5.5.4
   unimport: ^3.11.1
