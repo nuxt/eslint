@@ -6,15 +6,15 @@ packages:
 catalog:
   '@eslint/config-inspector': ^0.5.4
   '@eslint/js': ^9.9.1
-  '@iconify-json/ph': ^1.1.14
-  '@iconify-json/simple-icons': ^1.1.115
+  '@iconify-json/ph': ^1.2.0
+  '@iconify-json/simple-icons': ^1.2.1
   '@nuxt/devtools-kit': ^1.4.1
   '@nuxt/kit': ^3.13.0
   '@nuxt/module-builder': ^0.8.3
   '@nuxt/schema': ^3.13.0
   '@nuxt/test-utils': ^3.14.1
   '@nuxtjs/eslint-config': ^12.0.0
-  '@stylistic/eslint-plugin': ^2.7.1
+  '@stylistic/eslint-plugin': ^2.7.2
   '@types/eslint': ^9.6.1
   '@types/node': ^22.5.1
   '@typescript-eslint/eslint-plugin': ^8.3.0
