@@ -33,9 +33,6 @@ catalogs:
     '@nuxt/test-utils':
       specifier: ^3.14.1
       version: 3.14.1
-    '@rushstack/eslint-patch':
-      specifier: ^1.10.4
-      version: 1.10.4
     '@stylistic/eslint-plugin':
       specifier: ^2.7.1
       version: 2.7.1
@@ -120,9 +117,6 @@ catalogs:
     taze:
       specifier: ^0.16.7
       version: 0.16.7
-    tslib:
-      specifier: ^2.7.0
-      version: 2.7.0
     typescript:
       specifier: ^5.5.4
       version: 5.5.4
@@ -249,9 +243,6 @@ importers:
       '@nuxt/eslint-plugin':
         specifier: workspace:*
         version: link:../eslint-plugin
-      '@rushstack/eslint-patch':
-        specifier: 'catalog:'
-        version: 1.10.4
       '@stylistic/eslint-plugin':
         specifier: 'catalog:'
         version: 2.7.1(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
@@ -291,9 +282,6 @@ importers:
       pathe:
         specifier: 'catalog:'
         version: 1.1.2
-      tslib:
-        specifier: 'catalog:'
-        version: 2.7.0
       vue-eslint-parser:
         specifier: 'catalog:'
         version: 9.4.3(eslint@9.9.1(jiti@1.21.6))
@@ -1823,9 +1811,6 @@ packages:
     resolution: {integrity: sha512-xGiIH95H1zU7naUyTKEyOA/I0aexNMUdO9qRv0bLKN3qu25bBdrxZHqA3PTJ24YNN/GdMzG4xkDcd/GvjuhfLg==}
     cpu: [x64]
     os: [win32]
-
-  '@rushstack/eslint-patch@1.10.4':
-    resolution: {integrity: sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==}
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -7373,8 +7358,6 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.21.1':
     optional: true
-
-  '@rushstack/eslint-patch@1.10.4': {}
 
   '@sinclair/typebox@0.27.8': {}
 
