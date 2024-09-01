@@ -74,6 +74,12 @@ exports[`flat config composition > custom src dirs 1`] = `
   },
   {
     "files": [
+      "**/nuxt.config.?([cm])[jt]s?(x)",
+    ],
+    "name": "nuxt/config",
+  },
+  {
+    "files": [
       "src1/app.{js,ts,jsx,tsx,vue}",
       "src1/components/*/**/*.{js,ts,jsx,tsx,vue}",
       "src1/error.{js,ts,jsx,tsx,vue}",
@@ -164,6 +170,12 @@ exports[`flat config composition > empty 1`] = `
   },
   {
     "files": [
+      "**/nuxt.config.?([cm])[jt]s?(x)",
+    ],
+    "name": "nuxt/config",
+  },
+  {
+    "files": [
       "app.{js,ts,jsx,tsx,vue}",
       "app/app.{js,ts,jsx,tsx,vue}",
       "app/components/*/**/*.{js,ts,jsx,tsx,vue}",
@@ -198,6 +210,12 @@ exports[`flat config composition > non-standalone 1`] = `
   },
   {
     "name": "nuxt/rules",
+  },
+  {
+    "files": [
+      "**/nuxt.config.?([cm])[jt]s?(x)",
+    ],
+    "name": "nuxt/config",
   },
   {
     "files": [

@@ -46,5 +46,18 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
     },
   })
 
+  configs.push({
+    name: 'nuxt/config',
+    plugins: {
+      nuxt: nuxtPlugin,
+    },
+    files: [
+      '**/nuxt.config.?([cm])[jt]s?(x)',
+    ],
+    rules: {
+      'nuxt/nuxt-config-keys-order': 'error',
+    },
+  })
+
   return configs
 }
