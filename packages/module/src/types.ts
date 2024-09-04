@@ -14,6 +14,13 @@ declare module '@nuxt/schema' {
 
 export interface ConfigGenOptions extends NuxtESLintFeaturesOptions {
   /**
+   * File path to the generated ESLint config
+   *
+   * @default '.nuxt/eslint.config.mjs'
+   */
+  configFile?: string
+
+  /**
    * Create `eslint.config.mjs` file automatically if not exists
    *
    * @default true

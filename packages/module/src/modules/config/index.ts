@@ -1,3 +1,5 @@
+import { dirname } from 'node:path'
+import fs from 'node:fs/promises'
 import { addTemplate } from '@nuxt/kit'
 import type { Nuxt } from '@nuxt/schema'
 import type { ESLintConfigGenAddon } from '../../types'
@@ -32,17 +34,18 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     declarations.push('/// <reference path="./eslint-typegen.d.ts" />')
   })
 
-  const template = addTemplate({
-    filename: 'eslint.config.mjs',
-    write: true,
-    async getContents() {
-      const addons: ESLintConfigGenAddon[] = [
-        ...defaultAddons,
-      ]
-      await nuxt.callHook('eslint:config:addons', addons)
-      return generateESLintConfig(options, nuxt, addons)
-    },
-  })
+  let _configFile: string = undefined!
+
+  async function writeConfigFile() {
+    const addons: ESLintConfigGenAddon[] = [
+      ...defaultAddons,
+    ]
+    await nuxt.callHook('eslint:config:addons', addons)
+    const { code, configFile } = await generateESLintConfig(options, nuxt, addons)
+    await fs.mkdir(dirname(configFile), { recursive: true })
+    await fs.writeFile(configFile, code, 'utf-8')
+    _configFile = configFile
+  }
 
   addTemplate({
     filename: 'eslint.config.d.mts',
@@ -52,9 +55,14 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     },
   })
 
-  if (autoInit) {
-    await initRootESLintConfig(nuxt, template.dst)
-  }
-
   setupDevToolsIntegration(nuxt)
+
+  await writeConfigFile()
+  nuxt.hook('builder:generateApp', () => {
+    writeConfigFile()
+  })
+
+  if (autoInit) {
+    await initRootESLintConfig(nuxt, _configFile)
+  }
 }

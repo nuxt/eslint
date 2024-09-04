@@ -1,6 +1,5 @@
 import type { Nuxt } from '@nuxt/schema'
 import type { Unimport } from 'unimport'
-import type { Linter } from 'eslint'
 import type { ESLintConfigGenAddon } from '../../../types'
 
 export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
@@ -21,17 +20,19 @@ export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
       const imports = [
         ...await unimport?.getImports() || [],
         ...await nitroUnimport?.getImports() || [],
-      ]
+      ].sort()
 
       return {
         configs: [
-          '// Set globals from imports registry',
-          JSON.stringify(<Linter.Config>{
-            name: 'nuxt/import-globals',
-            languageOptions: {
-              globals: Object.fromEntries(imports.map(i => [i.as || i.name, 'readonly'])),
-            },
-          }),
+          [
+            '// Set globals from imports registry',
+            '{',
+            `  name: 'nuxt/import-globals',`,
+            '  languageOptions: {',
+            `    globals: Object.fromEntries(${JSON.stringify(imports.map(i => i.as || i.name))}.map(i => [i, 'readonly'])),`,
+            `  },`,
+            '}',
+          ].join('\n'),
         ],
       }
     },
