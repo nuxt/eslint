@@ -14,22 +14,37 @@
     "lint:fix": "eslint . --fix",
     "lint:play": "pnpm -C playground run lint",
     "docs": "pnpm -C docs run dev",
-    "prepare": "pnpm -C docs install",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@iconify-json/catppuccin": "catalog:",
     "@iconify-json/ph": "catalog:",
     "@iconify-json/simple-icons": "catalog:",
+    "@nuxt/content": "catalog:",
+    "@nuxt/devtools": "catalog:",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
+    "@nuxt/fonts": "catalog:",
+    "@nuxt/image": "catalog:",
     "@nuxt/test-utils": "catalog:",
+    "@nuxt/ui-pro": "catalog:",
+    "@nuxthq/studio": "catalog:",
+    "@nuxtjs/plausible": "catalog:",
     "@types/eslint": "catalog:",
     "@types/node": "catalog:",
+    "@vueuse/core": "catalog:",
+    "@vueuse/nuxt": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",
+    "fast-glob": "catalog:",
+    "nuxt": "catalog:",
+    "nuxt-og-image": "catalog:",
     "taze": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:",
     "vue": "catalog:"
+  },
+  "resolutions": {
+    "@nuxt/ui": "2.15.2"
   }
 }

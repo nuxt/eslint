@@ -8,17 +8,17 @@
     "index.js"
   ],
   "dependencies": {
-    "@nuxtjs/eslint-config": "^12.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-vue": "^9.27.0"
+    "@nuxtjs/eslint-config": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "eslint-import-resolver-typescript": "catalog:",
+    "eslint-plugin-import": "catalog:",
+    "eslint-plugin-vue": "catalog:"
   },
   "peerDependencies": {
     "eslint": "^8.57.0"
   },
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "catalog:"
   }
 }
