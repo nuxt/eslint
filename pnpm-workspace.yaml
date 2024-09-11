@@ -5,39 +5,38 @@ packages:
   - docs
 catalog:
   '@eslint/config-inspector': ^0.5.4
-  '@eslint/js': ^9.9.1
-  '@iconify-json/catppuccin': ^1.2.0
+  '@eslint/js': ^9.10.0
+  '@iconify-json/catppuccin': ^1.2.1
   '@iconify-json/ph': ^1.2.0
-  '@iconify-json/simple-icons': ^1.2.1
+  '@iconify-json/simple-icons': ^1.2.2
   '@nuxt/content': ^2.13.2
   '@nuxt/devtools': 1.3.1
-  '@nuxt/devtools-kit': ^1.4.1
+  '@nuxt/devtools-kit': ^1.4.2
   '@nuxt/fonts': ^0.7.2
   '@nuxt/image': ^1.8.0
   '@nuxt/kit': ^3.13.1
-  '@nuxt/module-builder': ^0.8.3
+  '@nuxt/module-builder': ^0.8.4
   '@nuxt/schema': ^3.13.1
-  '@nuxt/test-utils': ^3.14.1
-  '@nuxt/ui-pro': ^1.4.1
+  '@nuxt/test-utils': ^3.14.2
+  '@nuxt/ui-pro': ^1.4.2
   '@nuxthq/studio': ^2.0.3
   '@nuxtjs/eslint-config': ^12.0.0
   '@nuxtjs/plausible': ^1.0.2
-  '@stylistic/eslint-plugin': ^2.7.2
-  '@types/eslint': ^9.6.1
+  '@stylistic/eslint-plugin': ^2.8.0
   '@types/node': ^22.5.4
-  '@typescript-eslint/eslint-plugin': ^8.4.0
-  '@typescript-eslint/parser': ^8.4.0
-  '@typescript-eslint/scope-manager': ^8.4.0
-  '@typescript-eslint/types': ^8.4.0
-  '@typescript-eslint/utils': ^8.4.0
+  '@typescript-eslint/eslint-plugin': ^8.5.0
+  '@typescript-eslint/parser': ^8.5.0
+  '@typescript-eslint/scope-manager': ^8.5.0
+  '@typescript-eslint/types': ^8.5.0
+  '@typescript-eslint/utils': ^8.5.0
   '@vueuse/core': ^11.0.3
   '@vueuse/nuxt': ^11.0.3
   bumpp: ^9.5.2
   chokidar: ^3.6.0
-  eslint: ^9.9.1
+  eslint: ^9.10.0
   eslint-config-flat-gitignore: ^0.3.0
   eslint-config-standard: ^17.1.0
-  eslint-flat-config-utils: ^0.3.1
+  eslint-flat-config-utils: ^0.4.0
   eslint-import-resolver-typescript: ^3.6.3
   eslint-plugin-import: ^2.30.0
   eslint-plugin-import-x: ^4.2.1
@@ -47,7 +46,7 @@ catalog:
   eslint-plugin-regexp: ^2.6.0
   eslint-plugin-unicorn: ^55.0.0
   eslint-plugin-vue: ^9.28.0
-  eslint-typegen: ^0.3.1
+  eslint-typegen: ^0.3.2
   eslint-webpack-plugin: ^4.2.0
   fast-glob: ^3.3.2
   find-up: ^7.0.0
@@ -56,12 +55,12 @@ catalog:
   local-pkg: ^0.5.0
   mlly: ^1.7.1
   nuxt: ^3.13.1
-  nuxt-og-image: ^3.0.0-rc.66
+  nuxt-og-image: ^3.0.0-rc.67
   pathe: ^1.1.2
   taze: ^0.16.7
-  typescript: ^5.5.4
+  typescript: ^5.6.2
   unimport: ^3.11.1
   vite-plugin-eslint2: ^4.4.0
   vitest: ^2.0.5
-  vue: ^3.5.2
+  vue: ^3.5.4
   vue-eslint-parser: ^9.4.3

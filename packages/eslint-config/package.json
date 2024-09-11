@@ -69,7 +69,6 @@
     "vue-eslint-parser": "catalog:"
   },
   "devDependencies": {
-    "@types/eslint": "catalog:",
     "eslint": "catalog:",
     "typescript": "catalog:"
   }

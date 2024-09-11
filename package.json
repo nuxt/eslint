@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "version": "0.5.6",
   "scripts": {
     "build": "pnpm run -r build",
@@ -30,7 +30,6 @@
     "@nuxt/ui-pro": "catalog:",
     "@nuxthq/studio": "catalog:",
     "@nuxtjs/plausible": "catalog:",
-    "@types/eslint": "catalog:",
     "@types/node": "catalog:",
     "@vueuse/core": "catalog:",
     "@vueuse/nuxt": "catalog:",
