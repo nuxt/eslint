@@ -15,12 +15,14 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
     ...(dirs.components?.map(componentsDir => join(componentsDir, `**/*.server.${GLOB_EXTS}`)) || []),
   ].sort()
 
-  const stylistic = options.features?.stylistic === true ? {} : options.features?.stylistic || undefined
+  const {
+    sortConfigKeys = !!(options.features?.stylistic),
+  } = options.features?.nuxt || {}
 
   const configs: Linter.Config[] = []
 
   configs.push({
-    name: 'nuxt/configs',
+    name: 'nuxt/setup',
     plugins: {
       nuxt: nuxtPlugin,
     },
@@ -48,7 +50,7 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
     },
   })
 
-  if (stylistic && stylistic.nuxtConfigSort !== false) {
+  if (sortConfigKeys) {
     configs.push({
       name: 'nuxt/sort-config',
       files: [

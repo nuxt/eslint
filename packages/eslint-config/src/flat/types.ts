@@ -23,6 +23,15 @@ export interface ToolingOptions {
   jsdoc?: boolean
 }
 
+export interface NuxtSpecificOptions {
+  /**
+   * Sort keys in nuxt.config to maintain a consistent order
+   *
+   * @default true when `features.stylistic` is enabled
+   */
+  sortConfigKeys?: boolean
+}
+
 export interface NuxtESLintFeaturesOptions {
   /**
    * Setup basic JavaScript, TypeScript and Vue plugins and rules.
@@ -47,7 +56,12 @@ export interface NuxtESLintFeaturesOptions {
    * @see https://eslint.style/guide/config-presets
    * @default false
    */
-  stylistic?: boolean | StylisticOptions
+  stylistic?: boolean | StylisticCustomizeOptions<true>
+
+  /**
+   * Options for Nuxt specific rules
+   */
+  nuxt?: NuxtSpecificOptions
 
   /**
    * Enable TypeScript support. Can also be an object to config the options.
@@ -125,17 +139,6 @@ export interface NuxtESLintConfigOptions {
     servers?: string[]
   }
 }
-
-export interface NuxtSpecificStylisticOptions {
-  /**
-   * Sort keys in nuxt.config to maintain a consistent order
-   *
-   * @default true
-   */
-  nuxtConfigSort?: boolean
-}
-
-export interface StylisticOptions extends StylisticCustomizeOptions<true>, NuxtSpecificStylisticOptions {}
 
 type NotNill<T> = T extends null | undefined ? never : T
 
