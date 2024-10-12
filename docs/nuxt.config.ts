@@ -36,6 +36,8 @@ export default defineNuxtConfig({
     '/guide': { redirect: '/guide/getting-started' },
   },
 
+  compatibilityDate: '2024-09-01',
+
   nitro: {
     prerender: {
       routes: ['/api/search.json'],
@@ -54,6 +56,4 @@ export default defineNuxtConfig({
       }
     },
   },
-
-  compatibilityDate: '2024-09-01',
 })
