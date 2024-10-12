@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/eslint-config",
-  "version": "0.5.3",
+  "version": "0.5.7",
   "description": "ESLint config for Nuxt projects",
   "repository": {
     "type": "git",
@@ -53,7 +53,6 @@
   "dependencies": {
     "@eslint/js": "catalog:",
     "@nuxt/eslint-plugin": "workspace:*",
-    "@rushstack/eslint-patch": "catalog:",
     "@stylistic/eslint-plugin": "catalog:",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
@@ -67,11 +66,9 @@
     "globals": "catalog:",
     "local-pkg": "catalog:",
     "pathe": "catalog:",
-    "tslib": "catalog:",
     "vue-eslint-parser": "catalog:"
   },
   "devDependencies": {
-    "@types/eslint": "catalog:",
     "eslint": "catalog:",
     "typescript": "catalog:"
   }

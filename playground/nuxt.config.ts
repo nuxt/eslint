@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 
   eslint: {
     config: {
+      // configFile: './eslint.nuxt.config.mjs',
       stylistic: true,
     },
     checker: {
