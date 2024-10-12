@@ -1,5 +1,4 @@
 import * as parserVue from 'vue-eslint-parser'
-// @ts-expect-error missing types
 import pluginVue from 'eslint-plugin-vue'
 import type { Linter } from 'eslint'
 import type { NuxtESLintConfigOptions } from '../types'
