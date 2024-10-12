@@ -43,4 +43,15 @@ describe('flat config composition', () => {
     expect(getFlatConfigDigest(configs))
       .toMatchSnapshot()
   })
+
+  it('with stylistic', async () => {
+    const configs = await createConfigForNuxt({
+      features: {
+        stylistic: true,
+      },
+    })
+
+    expect(getFlatConfigDigest(configs))
+      .toMatchSnapshot()
+  })
 })
