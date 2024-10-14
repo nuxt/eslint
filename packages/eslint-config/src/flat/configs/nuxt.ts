@@ -15,10 +15,17 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
     ...(dirs.components?.map(componentsDir => join(componentsDir, `**/*.server.${GLOB_EXTS}`)) || []),
   ].sort()
 
+  const {
+    sortConfigKeys = !!(options.features?.stylistic),
+  } = options.features?.nuxt || {}
+
   const configs: Linter.Config[] = []
 
   configs.push({
-    name: 'nuxt/configs',
+    name: 'nuxt/setup',
+    plugins: {
+      nuxt: nuxtPlugin,
+    },
     languageOptions: {
       globals: {
         // Nuxt's runtime globals
@@ -38,13 +45,22 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
 
   configs.push({
     name: 'nuxt/rules',
-    plugins: {
-      nuxt: nuxtPlugin,
-    },
     rules: {
       'nuxt/prefer-import-meta': 'error',
     },
   })
+
+  if (sortConfigKeys) {
+    configs.push({
+      name: 'nuxt/sort-config',
+      files: [
+        '**/nuxt.config.?([cm])[jt]s?(x)',
+      ],
+      rules: {
+        'nuxt/nuxt-config-keys-order': 'error',
+      },
+    })
+  }
 
   return configs
 }

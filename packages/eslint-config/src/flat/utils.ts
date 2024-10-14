@@ -34,6 +34,7 @@ export function resolveOptions(
       stylistic: false,
       typescript: isPackageExists('typescript'),
       tooling: false,
+      nuxt: {},
       ...config.features,
     },
     dirs,

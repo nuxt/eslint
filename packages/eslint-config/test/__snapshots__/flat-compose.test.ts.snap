@@ -57,7 +57,7 @@ exports[`flat config composition > custom src dirs 1`] = `
     "name": "nuxt/import/rules",
   },
   {
-    "name": "nuxt/configs",
+    "name": "nuxt/setup",
   },
   {
     "files": [
@@ -148,7 +148,7 @@ exports[`flat config composition > empty 1`] = `
     "name": "nuxt/import/rules",
   },
   {
-    "name": "nuxt/configs",
+    "name": "nuxt/setup",
   },
   {
     "files": [
@@ -185,7 +185,7 @@ exports[`flat config composition > empty 1`] = `
 exports[`flat config composition > non-standalone 1`] = `
 [
   {
-    "name": "nuxt/configs",
+    "name": "nuxt/setup",
   },
   {
     "files": [
@@ -200,6 +200,106 @@ exports[`flat config composition > non-standalone 1`] = `
   },
   {
     "name": "nuxt/rules",
+  },
+  {
+    "files": [
+      "app.{js,ts,jsx,tsx,vue}",
+      "app/app.{js,ts,jsx,tsx,vue}",
+      "app/components/*/**/*.{js,ts,jsx,tsx,vue}",
+      "app/error.{js,ts,jsx,tsx,vue}",
+      "app/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "app/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "components/*/**/*.{js,ts,jsx,tsx,vue}",
+      "error.{js,ts,jsx,tsx,vue}",
+      "layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt/disables/routes",
+  },
+]
+`;
+
+exports[`flat config composition > with stylistic 1`] = `
+[
+  {
+    "ignores": [
+      "**/node_modules",
+      "**/*.iml",
+      "**/.idea",
+      "**/*.log",
+      "**/.nuxt",
+      "**/.output",
+      "**/.yarn/cache",
+      "**/.yarn/*state*",
+      "**/dist",
+      "**/.eslintcache",
+    ],
+    "name": "gitignore",
+  },
+  {
+    "ignores": [
+      "**/dist",
+      "**/node_modules",
+      "**/.nuxt",
+      "**/.output",
+      "**/.vercel",
+      "**/.netlify",
+      "**/public",
+    ],
+  },
+  {
+    "name": "nuxt/javascript",
+  },
+  {
+    "name": "nuxt/typescript/setup",
+  },
+  {
+    "files": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.mts",
+      "**/*.cts",
+      "**/*.vue",
+    ],
+    "name": "nuxt/typescript/rules",
+  },
+  {
+    "name": "nuxt/vue/setup",
+  },
+  {
+    "files": [
+      "**/*.vue",
+    ],
+    "name": "nuxt/vue/rules",
+  },
+  {
+    "name": "nuxt/import/rules",
+  },
+  {
+    "name": "nuxt/setup",
+  },
+  {
+    "files": [
+      "app/components/**/*.server.{js,ts,jsx,tsx,vue}",
+      "app/layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "app/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "components/**/*.server.{js,ts,jsx,tsx,vue}",
+      "layouts/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt/vue/single-root",
+  },
+  {
+    "name": "nuxt/rules",
+  },
+  {
+    "files": [
+      "**/nuxt.config.?([cm])[jt]s?(x)",
+    ],
+    "name": "nuxt/sort-config",
+  },
+  {
+    "name": "nuxt/stylistic",
   },
   {
     "files": [

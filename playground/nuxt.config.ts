@@ -3,14 +3,16 @@ export default defineNuxtConfig({
     '../packages/module/src/module',
   ],
 
-  devtools: {
-    enabled: true,
-  },
-
   components: [
     '~/components',
     { path: '~/components-prefixed', prefix: 'Prefix' },
   ],
+
+  devtools: {
+    enabled: true,
+  },
+
+  compatibilityDate: '2024-07-27',
 
   eslint: {
     config: {
@@ -22,6 +24,4 @@ export default defineNuxtConfig({
       fix: true,
     },
   },
-
-  compatibilityDate: '2024-07-27',
 })
