@@ -37,7 +37,7 @@
   "peerDependencies": {
     "eslint": "^8.57.0 || ^9.0.0",
     "eslint-webpack-plugin": "^4.1.0",
-    "vite-plugin-eslint2": "^4.4.0"
+    "vite-plugin-eslint2": "^5.0.0"
   },
   "peerDependenciesMeta": {
     "eslint-webpack-plugin": {
