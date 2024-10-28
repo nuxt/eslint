@@ -1,7 +1,7 @@
 {
   "name": "@nuxt/eslint",
   "type": "module",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Generate ESLint config from current Nuxt settings",
   "license": "MIT",
   "repository": {
