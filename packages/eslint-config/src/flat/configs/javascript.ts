@@ -1,4 +1,3 @@
-// @ts-expect-error missing types
 import pluginESLint from '@eslint/js'
 import type { Linter } from 'eslint'
 import globals from 'globals'

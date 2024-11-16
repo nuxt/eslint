@@ -5,6 +5,7 @@ export default createConfigForNuxt({
   features: {
     stylistic: true,
     tooling: true,
+    formatters: true,
   },
   dirs: {
     src: [
