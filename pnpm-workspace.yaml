@@ -34,7 +34,7 @@ catalog:
   bumpp: ^9.8.1
   chokidar: ^4.0.1
   eslint: 9.14.0
-  eslint-config-flat-gitignore: ^0.3.0
+  eslint-config-flat-gitignore: 0.2.0
   eslint-config-standard: ^17.1.0
   eslint-flat-config-utils: ^0.4.0
   eslint-import-resolver-typescript: ^3.6.3
