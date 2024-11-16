@@ -67,13 +67,19 @@ export function createConfigForNuxt(
     )
   }
 
-  if (resolved.features.stylistic) {
-    const stylisticOptions = typeof resolved.features.stylistic === 'boolean'
-      ? {}
-      : resolved.features.stylistic
+  const stylisticOptions = typeof resolved.features.stylistic === 'boolean'
+    ? {}
+    : resolved.features.stylistic
 
+  if (resolved.features.stylistic) {
     c.append(
       import('./configs/stylistic').then(m => m.default(stylisticOptions)),
+    )
+  }
+
+  if (resolved.features.formatters) {
+    c.append(
+      import('./configs/formatters').then(m => m.formatters(resolved.features.formatters, stylisticOptions)),
     )
   }
 

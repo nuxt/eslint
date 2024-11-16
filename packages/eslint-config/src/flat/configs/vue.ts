@@ -1,6 +1,8 @@
 import * as parserVue from 'vue-eslint-parser'
 import pluginVue from 'eslint-plugin-vue'
+import processorVueBlocks from 'eslint-processor-vue-blocks'
 import type { Linter } from 'eslint'
+import { mergeProcessors } from 'eslint-merge-processors'
 import type { NuxtESLintConfigOptions } from '../types'
 import { removeUndefined, resolveOptions } from '../utils'
 
@@ -20,7 +22,7 @@ export default async function vue(options: NuxtESLintConfigOptions): Promise<Lin
     commaDangle = 'always-multiline',
   } = typeof resolved.features.stylistic === 'boolean' ? {} : resolved.features.stylistic
 
-  return [
+  const configs: Linter.Config[] = [
     {
       name: 'nuxt/vue/setup',
       plugins: {
@@ -65,9 +67,17 @@ export default async function vue(options: NuxtESLintConfigOptions): Promise<Lin
       languageOptions: {
         parser: parserVue,
       },
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      processor: pluginVue.processors['.vue'] as any,
-      rules: removeUndefined({
+      processor: options.features?.formatters
+        ? mergeProcessors([
+          pluginVue.processors['.vue'],
+          processorVueBlocks({
+            blocks: {
+              styles: true,
+            },
+          }),
+        ])
+        : pluginVue.processors['.vue'],
+      rules: {
         ...pluginVue.configs.base.rules,
         ...pluginVue.configs['vue3-essential'].rules,
         ...pluginVue.configs['vue3-strongly-recommended'].rules,
@@ -134,7 +144,14 @@ export default async function vue(options: NuxtESLintConfigOptions): Promise<Lin
               'vue/no-spaces-around-equal-signs-in-attribute': undefined,
               'vue/singleline-html-element-content-newline': undefined,
             }),
-      }),
+      },
     },
   ]
+
+  for (const config of configs) {
+    if (config.rules)
+      config.rules = removeUndefined(config.rules)
+  }
+
+  return configs
 }

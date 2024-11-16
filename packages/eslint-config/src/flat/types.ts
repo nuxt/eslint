@@ -59,6 +59,15 @@ export interface NuxtESLintFeaturesOptions {
   stylistic?: boolean | StylisticCustomizeOptions<true>
 
   /**
+   * Enable formatters to handling formatting for different file types
+   *
+   * Requires `eslint-plugin-format` to be installed
+   *
+   * @default false
+   */
+  formatters?: boolean | OptionsFormatters
+
+  /**
    * Options for Nuxt specific rules
    */
   nuxt?: NuxtSpecificOptions
@@ -138,6 +147,65 @@ export interface NuxtESLintConfigOptions {
      */
     servers?: string[]
   }
+}
+
+export interface OptionsFormatters {
+  /**
+   * Enable formatting support for CSS, Less, Sass, and SCSS.
+   *
+   * Currently only support Prettier.
+   */
+  css?: 'prettier' | boolean
+
+  /**
+   * Enable formatting support for HTML.
+   *
+   * Currently only support Prettier.
+   */
+  html?: 'prettier' | boolean
+
+  /**
+   * Enable formatting support for XML.
+   *
+   * Currently only support Prettier.
+   */
+  xml?: 'prettier' | boolean
+
+  /**
+   * Enable formatting support for SVG.
+   *
+   * Currently only support Prettier.
+   */
+  svg?: 'prettier' | boolean
+
+  /**
+   * Enable formatting support for Markdown.
+   *
+   * Support both Prettier and dprint.
+   *
+   * When set to `true`, it will use Prettier.
+   */
+  markdown?: 'prettier' | 'dprint' | boolean
+
+  /**
+   * Enable formatting support for GraphQL.
+   */
+  graphql?: 'prettier' | boolean
+
+  /**
+   * Custom options for Prettier.
+   *
+   * By default it's controlled by our own config.
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  prettierOptions?: any
+
+  /**
+   * Custom options for dprint.
+   *
+   * By default it's controlled by our own config.
+   */
+  dprintOptions?: boolean
 }
 
 type NotNill<T> = T extends null | undefined ? never : T

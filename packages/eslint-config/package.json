@@ -48,9 +48,17 @@
     "prepack": "pnpm run build"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0 || ^9.0.0"
+    "eslint": "^8.57.0 || ^9.0.0",
+    "eslint-plugin-format": "*"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-format": {
+      "optional": true
+    }
   },
   "dependencies": {
+    "@antfu/install-pkg": "^0.4.1",
+    "@clack/prompts": "^0.8.1",
     "@eslint/js": "catalog:",
     "@nuxt/eslint-plugin": "workspace:*",
     "@stylistic/eslint-plugin": "catalog:",
@@ -63,6 +71,8 @@
     "eslint-plugin-regexp": "catalog:",
     "eslint-plugin-unicorn": "catalog:",
     "eslint-plugin-vue": "catalog:",
+    "eslint-processor-vue-blocks": "^0.1.2",
+    "eslint-merge-processors": "^0.1.0",
     "globals": "catalog:",
     "local-pkg": "catalog:",
     "pathe": "catalog:",
