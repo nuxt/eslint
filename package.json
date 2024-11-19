@@ -35,7 +35,7 @@
     "@vueuse/nuxt": "catalog:",
     "bumpp": "catalog:",
     "eslint": "catalog:",
-    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-format": "catalog:",
     "fast-glob": "catalog:",
     "nuxt": "catalog:",
     "nuxt-og-image": "catalog:",
