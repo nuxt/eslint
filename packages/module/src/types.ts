@@ -26,6 +26,14 @@ export interface ConfigGenOptions extends NuxtESLintFeaturesOptions {
    * @default true
    */
   autoInit?: boolean
+
+  /**
+   * Override rootDir for the generated ESLint config
+   * If you generate ESLint config from a different directory, you can set this option
+   *
+   * @default nuxt.options.rootDir
+   */
+  rootDir?: string
 }
 
 export interface CheckerOptions {

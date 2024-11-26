@@ -1,8 +1,11 @@
 import type { Nuxt } from '@nuxt/schema'
 import { relative, resolve } from 'pathe'
 import type { NuxtESLintConfigOptions } from '@nuxt/eslint-config/flat'
+import type { ModuleOptions } from '../../types'
 
-export function getDirs(nuxt: Nuxt): NuxtESLintConfigOptions['dirs'] {
+export function getDirs(nuxt: Nuxt, options: ModuleOptions): NuxtESLintConfigOptions['dirs'] {
+  const rootDir = (typeof options.config === 'object' && options.config.rootDir) || nuxt.options.rootDir
+
   const dirs: Required<NuxtESLintConfigOptions['dirs']> = {
     pages: [],
     composables: [],
@@ -13,12 +16,12 @@ export function getDirs(nuxt: Nuxt): NuxtESLintConfigOptions['dirs'] {
     middleware: [],
     modules: [],
     servers: [],
-    root: [nuxt.options.rootDir],
+    root: [],
     src: [],
   }
 
   for (const layer of nuxt.options._layers) {
-    const r = (t: string) => relative(nuxt.options.rootDir, resolve(layer.config.srcDir, t.replace(/^~[/\\]/, '')))
+    const r = (t: string) => relative(rootDir, resolve(layer.config.srcDir, t.replace(/^~[/\\]/, '')))
 
     dirs.src.push(r(''))
     dirs.pages.push(r(nuxt.options.dir.pages || 'pages'))

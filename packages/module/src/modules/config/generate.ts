@@ -55,7 +55,7 @@ export async function generateESLintConfig(
     },
   )
 
-  const dirs = getDirs(nuxt) || {}
+  const dirs = getDirs(nuxt, options) || {}
 
   for (const addon of addons) {
     const resolved = await addon.getConfigs()
