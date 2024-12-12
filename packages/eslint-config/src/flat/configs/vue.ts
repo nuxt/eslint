@@ -130,6 +130,12 @@ export default async function vue(options: NuxtESLintConfigOptions): Promise<Lin
                 ignores: ['pre', 'textarea', 'router-link', 'RouterLink', 'nuxt-link', 'NuxtLink', 'u-link', 'ULink', ...INLINE_ELEMENTS],
                 allowEmptyLines: false,
               }],
+              'vue/singleline-html-element-content-newline': ['error', {
+                ignoreWhenNoAttributes: true,
+                ignoreWhenEmpty: true,
+                ignores: ['pre', 'textarea', 'router-link', 'RouterLink', 'nuxt-link', 'NuxtLink', 'u-link', 'ULink', ...INLINE_ELEMENTS],
+                externalIgnores: [],
+              }],
             }
           : {
               // Disable Vue's default stylistic rules when stylistic is not enabled
