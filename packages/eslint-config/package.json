@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/eslint-config",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "ESLint config for Nuxt projects",
   "repository": {
     "type": "git",
