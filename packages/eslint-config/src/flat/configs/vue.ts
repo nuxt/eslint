@@ -69,13 +69,13 @@ export default async function vue(options: NuxtESLintConfigOptions): Promise<Lin
       },
       processor: options.features?.formatters
         ? mergeProcessors([
-          pluginVue.processors['.vue'],
-          processorVueBlocks({
-            blocks: {
-              styles: true,
-            },
-          }),
-        ])
+            pluginVue.processors['.vue'],
+            processorVueBlocks({
+              blocks: {
+                styles: true,
+              },
+            }),
+          ])
         : pluginVue.processors['.vue'],
       rules: {
         ...pluginVue.configs.base.rules,
