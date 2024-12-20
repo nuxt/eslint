@@ -55,7 +55,7 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     },
   })
 
-  setupDevToolsIntegration(nuxt)
+  setupDevToolsIntegration(options, nuxt)
 
   await writeConfigFile()
   nuxt.hook('builder:generateApp', () => {

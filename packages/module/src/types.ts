@@ -34,6 +34,22 @@ export interface ConfigGenOptions extends NuxtESLintFeaturesOptions {
    * @default nuxt.options.rootDir
    */
   rootDir?: string
+
+  /**
+   * Options for DevTools integration
+   */
+  devtools?: {
+    /**
+     * Enable ESLint config inspector in DevTools
+     *
+     * @default 'lazy'
+     */
+    enabled?: boolean | 'lazy'
+    /**
+     * Port for the ESLint config inspector
+     */
+    port?: number
+  }
 }
 
 export interface CheckerOptions {
