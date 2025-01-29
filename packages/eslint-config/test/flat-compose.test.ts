@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { Linter } from 'eslint'
-import { createConfigForNuxt } from '../src/flat'
+import { createConfigForNuxt } from '../src'
 
 const cwd = process.cwd()
 

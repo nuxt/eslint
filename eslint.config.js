@@ -19,11 +19,6 @@ export default createConfigForNuxt({
 })
   .append(
     {
-      ignores: [
-        'packages-legacy/**',
-      ],
-    },
-    {
       files: ['docs/**/*.vue'],
       rules: {
         'vue/no-v-html': 'off',

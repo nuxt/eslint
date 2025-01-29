@@ -8,30 +8,17 @@
     "directory": "packages/eslint-config"
   },
   "license": "MIT",
-  "main": "./dist/legacy.cjs",
-  "module": "./dist/legacy.mjs",
-  "types": "./dist/legacy.d.ts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/legacy.mjs",
-      "require": "./dist/legacy.cjs"
-    },
-    "./flat": {
-      "import": "./dist/flat.mjs",
-      "require": "./dist/flat.cjs"
-    },
-    "./legacy": {
-      "import": "./dist/legacy.mjs",
-      "require": "./dist/legacy.cjs"
-    }
+    ".": "./dist/index.mjs",
+    "./flat": "./dist/flat.mjs"
   },
   "typesVersions": {
     "*": {
       "flat": [
         "./dist/flat.d.ts"
-      ],
-      "legacy": [
-        "./dist/legacy.d.ts"
       ],
       "*": [
         "./dist/*",
@@ -48,7 +35,7 @@
     "prepack": "pnpm run build"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0 || ^9.0.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-format": "*"
   },
   "peerDependenciesMeta": {

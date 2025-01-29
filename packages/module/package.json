@@ -10,15 +10,11 @@
     "directory": "packages/module"
   },
   "exports": {
-    ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
-    }
+    ".": "./dist/module.mjs"
   },
-  "main": "./dist/module.cjs",
+  "main": "./dist/module.mjs",
   "module": "./dist/module.mjs",
-  "types": "./dist/types.d.ts",
+  "types": "./dist/types.d.mts",
   "files": [
     "dist"
   ],
@@ -35,9 +31,9 @@
     "test:watch": "vitest watch"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0 || ^9.0.0",
+    "eslint": "^9.0.0",
     "eslint-webpack-plugin": "^4.1.0",
-    "vite-plugin-eslint2": "^4.4.0 || ^5.0.0"
+    "vite-plugin-eslint2": "^5.0.0"
   },
   "peerDependenciesMeta": {
     "eslint-webpack-plugin": {
