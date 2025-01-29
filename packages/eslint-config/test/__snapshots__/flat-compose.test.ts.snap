@@ -15,6 +15,7 @@ exports[`flat config composition > custom src dirs 1`] = `
       "**/dist",
       "**/.eslintcache",
     ],
+    "name": "gitignore",
   },
   {
     "ignores": [
@@ -105,6 +106,7 @@ exports[`flat config composition > empty 1`] = `
       "**/dist",
       "**/.eslintcache",
     ],
+    "name": "gitignore",
   },
   {
     "ignores": [
@@ -232,6 +234,7 @@ exports[`flat config composition > with stylistic 1`] = `
       "**/dist",
       "**/.eslintcache",
     ],
+    "name": "gitignore",
   },
   {
     "ignores": [
