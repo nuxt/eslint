@@ -5,7 +5,4 @@ export default defineBuildConfig({
     'src/index.ts',
   ],
   declaration: true,
-  rollup: {
-    emitCJS: true,
-  },
 })

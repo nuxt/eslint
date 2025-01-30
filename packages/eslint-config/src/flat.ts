@@ -1,1 +1,1 @@
-export * from './flat/index'
+export * from './index'

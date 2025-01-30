@@ -13,7 +13,7 @@
         "./packages/eslint-plugin/src/index.ts"
       ],
       "@nuxt/eslint-config": [
-        "./packages/eslint-config/src/legacy.ts"
+        "./packages/eslint-config/src/index.ts"
       ],
       "@nuxt/eslint-config/flat": [
         "./packages/eslint-config/src/flat.ts"

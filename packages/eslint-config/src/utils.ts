@@ -1,6 +1,6 @@
 import process from 'node:process'
 import { isPackageExists } from 'local-pkg'
-import type { NuxtESLintConfigOptions, NuxtESLintConfigOptionsResolved } from '../flat'
+import type { NuxtESLintConfigOptions, NuxtESLintConfigOptionsResolved } from './flat'
 import type { Awaitable } from './types'
 
 export const parserPlain = {
