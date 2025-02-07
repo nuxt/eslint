@@ -128,8 +128,29 @@ export async function generateESLintConfig(
     'export default withNuxt',
   ].join('\n')
 
+  const [
+    pathToFlatConfigUtils,
+    pathToESLintConfigFlat,
+  ] = await Promise.all([
+    r.resolvePath('eslint-flat-config-utils').then(r => relativeWithDot(r)),
+    r.resolvePath('@nuxt/eslint-config/flat').then(r => relativeWithDot(r)),
+  ])
+
+  const codeDts = [
+    'import type { FlatConfigComposer } from ' + JSON.stringify(pathToFlatConfigUtils),
+    'import { defineFlatConfigs } from ' + JSON.stringify(pathToESLintConfigFlat),
+    'import type { NuxtESLintConfigOptionsResolved } from ' + JSON.stringify(pathToESLintConfigFlat),
+    '',
+    'declare const configs: FlatConfigComposer',
+    'declare const options: NuxtESLintConfigOptionsResolved',
+    'declare const withNuxt: typeof defineFlatConfigs',
+    'export default withNuxt',
+    'export { withNuxt, defineFlatConfigs, configs, options }',
+  ].join('\n')
+
   return {
     code,
+    codeDts,
     configFile,
   }
 }
