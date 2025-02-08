@@ -106,8 +106,8 @@ catalogs:
       specifier: ^2.0.1
       version: 2.0.1
     eslint-merge-processors:
-      specifier: ^1.0.0
-      version: 1.0.0
+      specifier: ^2.0.0
+      version: 2.0.0
     eslint-plugin-format:
       specifier: ^1.0.1
       version: 1.0.1
@@ -303,7 +303,7 @@ importers:
         version: 2.0.1
       eslint-merge-processors:
         specifier: 'catalog:'
-        version: 1.0.0(eslint@9.19.0(jiti@2.4.2))
+        version: 2.0.0(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-format:
         specifier: '*'
         version: 1.0.1(eslint@9.19.0(jiti@2.4.2))
@@ -3200,8 +3200,8 @@ packages:
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
 
-  eslint-merge-processors@1.0.0:
-    resolution: {integrity: sha512-4GybyHmhXtT7/W8RAouQzNM0791sYasJCTYHIAYjuiJvbNFY0jMKkoESREhX+mjX37dxiN6v4EqhZ1nc0tJF7A==}
+  eslint-merge-processors@2.0.0:
+    resolution: {integrity: sha512-sUuhSf3IrJdGooquEUB5TNpGNpBoQccbnaLHsb1XkBLUPPqCNivCpY05ZcpCOiV9uHwO2yxXEWVczVclzMxYlA==}
     peerDependencies:
       eslint: '*'
 
@@ -4125,6 +4125,7 @@ packages:
 
   lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    deprecated: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
 
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
@@ -9725,7 +9726,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-merge-processors@1.0.0(eslint@9.19.0(jiti@2.4.2)):
+  eslint-merge-processors@2.0.0(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.19.0(jiti@2.4.2)
 
@@ -10681,7 +10682,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.12.0
+      '@types/node': 22.13.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
 

@@ -39,7 +39,7 @@ catalog:
   eslint-config-standard: ^17.1.0
   eslint-flat-config-utils: ^2.0.1
   eslint-import-resolver-typescript: ^3.7.0
-  eslint-merge-processors: ^1.0.0
+  eslint-merge-processors: ^2.0.0
   eslint-plugin-format: ^1.0.1
   eslint-plugin-import: ^2.31.0
   eslint-plugin-import-x: ^4.6.1
