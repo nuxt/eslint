@@ -49,7 +49,7 @@ catalog:
   eslint-plugin-regexp: ^2.7.0
   eslint-plugin-unicorn: ^56.0.1
   eslint-plugin-vue: ^9.32.0
-  eslint-processor-vue-blocks: ^1.0.0
+  eslint-processor-vue-blocks: ^2.0.0
   eslint-typegen: ^1.0.0
   eslint-webpack-plugin: ^4.2.0
   fast-glob: ^3.3.3
