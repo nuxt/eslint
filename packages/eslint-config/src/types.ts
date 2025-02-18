@@ -56,7 +56,7 @@ export interface NuxtESLintFeaturesOptions {
    * @see https://eslint.style/guide/config-presets
    * @default false
    */
-  stylistic?: boolean | StylisticCustomizeOptions<true>
+  stylistic?: boolean | StylisticCustomizeOptions
 
   /**
    * Enable formatters to handling formatting for different file types
