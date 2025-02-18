@@ -23,7 +23,7 @@ catalog:
   '@nuxthq/studio': ^2.2.1
   '@nuxtjs/eslint-config': ^12.0.0
   '@nuxtjs/plausible': ^1.2.0
-  '@stylistic/eslint-plugin': ^3.0.1
+  '@stylistic/eslint-plugin': ^4.0.0
   '@types/node': ^22.13.1
   '@typescript-eslint/eslint-plugin': ^8.23.0
   '@typescript-eslint/parser': ^8.23.0
