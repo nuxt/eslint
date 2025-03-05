@@ -54,7 +54,7 @@ catalog:
   eslint-webpack-plugin: ^4.2.0
   find-up: ^7.0.0
   get-port-please: ^3.1.2
-  globals: ^15.15.0
+  globals: ^16.0.0
   local-pkg: ^1.0.0
   mlly: ^1.7.4
   nuxt: ^3.15.4
