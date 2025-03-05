@@ -66,4 +66,4 @@ catalog:
   vite-plugin-eslint2: ^5.0.3
   vitest: ^3.0.5
   vue: ^3.5.13
-  vue-eslint-parser: ^9.4.3
+  vue-eslint-parser: ^10.1.1
