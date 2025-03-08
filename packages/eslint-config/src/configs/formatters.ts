@@ -24,7 +24,7 @@ function mergePrettierOptions(
 
 export async function formatters(
   options: OptionsFormatters | boolean = {},
-  stylistic: StylisticCustomizeOptions<true>,
+  stylistic: StylisticCustomizeOptions,
 ): Promise<Linter.Config[]> {
   if (!options)
     return []
