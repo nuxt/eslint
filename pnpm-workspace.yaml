@@ -30,8 +30,8 @@ catalog:
   '@typescript-eslint/scope-manager': ^8.26.0
   '@typescript-eslint/types': ^8.26.0
   '@typescript-eslint/utils': ^8.26.0
-  '@vueuse/core': ^12.8.2
-  '@vueuse/nuxt': ^12.8.2
+  '@vueuse/core': ^13.0.0
+  '@vueuse/nuxt': ^13.0.0
   bumpp: ^10.0.3
   chokidar: ^4.0.3
   eslint: ^9.22.0
