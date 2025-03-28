@@ -60,7 +60,7 @@ catalog:
   nuxt: ^3.16.0
   nuxt-og-image: ^5.0.0
   pathe: ^2.0.3
-  taze: ^18.7.1
+  taze: ^19.0.4
   typescript: ^5.8.2
   unimport: ^4.1.2
   vite-plugin-eslint2: ^5.0.3
