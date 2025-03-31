@@ -1,6 +1,6 @@
 {
   "name": "nuxt-eslint-docs",
-  "packageManager": "pnpm@10.6.1",
+  "packageManager": "pnpm@10.7.0",
   "private": true,
   "scripts": {
     "docs:dev": "nuxi dev",
