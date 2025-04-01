@@ -15,9 +15,9 @@ catalog:
   '@nuxt/devtools-kit': ^2.3.2
   '@nuxt/fonts': ^0.11.0
   '@nuxt/image': ^1.10.0
-  '@nuxt/kit': ^3.16.1
+  '@nuxt/kit': ^3.16.2
   '@nuxt/module-builder': ^0.8.4
-  '@nuxt/schema': ^3.16.1
+  '@nuxt/schema': ^3.16.2
   '@nuxt/test-utils': ^3.17.2
   '@nuxt/ui-pro': ^1.7.1
   '@nuxthq/studio': ^2.2.1
@@ -56,7 +56,7 @@ catalog:
   globals: ^16.0.0
   local-pkg: ^1.1.1
   mlly: ^1.7.4
-  nuxt: ^3.16.1
+  nuxt: ^3.16.2
   nuxt-og-image: ^5.1.1
   pathe: ^2.0.3
   taze: ^19.0.4
