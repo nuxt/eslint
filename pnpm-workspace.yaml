@@ -61,7 +61,7 @@ catalog:
   pathe: ^2.0.3
   taze: ^19.0.4
   typescript: ^5.8.2
-  unimport: ^4.1.3
+  unimport: ^5.0.1
   vite-plugin-eslint2: ^5.0.3
   vitest: ^3.0.9
   vue: ^3.5.13
