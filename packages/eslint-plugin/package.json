@@ -27,7 +27,7 @@
     "eslint": "^9.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/types": "catalog:",
-    "@typescript-eslint/utils": "catalog:"
+    "@typescript-eslint/types": "catalog:prod",
+    "@typescript-eslint/utils": "catalog:prod"
   }
 }

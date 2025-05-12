@@ -5,19 +5,36 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
-  default:
-    '@antfu/install-pkg':
-      specifier: ^1.1.0
-      version: 1.1.0
-    '@clack/prompts':
-      specifier: ^0.10.1
-      version: 0.10.1
-    '@eslint/config-inspector':
-      specifier: ^1.0.2
-      version: 1.0.2
-    '@eslint/js':
+  bundling:
+    '@nuxt/module-builder':
+      specifier: ^1.0.1
+      version: 1.0.1
+  dev:
+    bumpp:
+      specifier: ^10.1.0
+      version: 10.1.0
+    eslint:
       specifier: ^9.26.0
       version: 9.26.0
+    eslint-plugin-pnpm:
+      specifier: ^0.3.1
+      version: 0.3.1
+    jsonc-eslint-parser:
+      specifier: ^2.4.0
+      version: 2.4.0
+    nuxt:
+      specifier: ^3.17.2
+      version: 3.17.2
+    taze:
+      specifier: ^19.1.0
+      version: 19.1.0
+    typescript:
+      specifier: ^5.8.3
+      version: 5.8.3
+    vitest:
+      specifier: ^3.1.3
+      version: 3.1.3
+  docs:
     '@iconify-json/catppuccin':
       specifier: ^1.2.11
       version: 1.2.11
@@ -33,24 +50,12 @@ catalogs:
     '@nuxt/devtools':
       specifier: ^2.4.0
       version: 2.4.0
-    '@nuxt/devtools-kit':
-      specifier: ^2.4.0
-      version: 2.4.0
     '@nuxt/fonts':
       specifier: ^0.11.3
       version: 0.11.3
     '@nuxt/image':
       specifier: ^1.10.0
       version: 1.10.0
-    '@nuxt/kit':
-      specifier: ^3.17.2
-      version: 3.17.2
-    '@nuxt/module-builder':
-      specifier: ^1.0.1
-      version: 1.0.1
-    '@nuxt/schema':
-      specifier: ^3.17.2
-      version: 3.17.2
     '@nuxt/test-utils':
       specifier: ^3.18.0
       version: 3.18.0
@@ -63,12 +68,37 @@ catalogs:
     '@nuxtjs/plausible':
       specifier: ^1.2.0
       version: 1.2.0
+    '@vueuse/core':
+      specifier: ^13.1.0
+      version: 13.1.0
+    '@vueuse/nuxt':
+      specifier: ^13.1.0
+      version: 13.1.0
+    nuxt-og-image:
+      specifier: ^5.1.3
+      version: 5.1.3
+  prod:
+    '@antfu/install-pkg':
+      specifier: ^1.1.0
+      version: 1.1.0
+    '@clack/prompts':
+      specifier: ^0.10.1
+      version: 0.10.1
+    '@eslint/config-inspector':
+      specifier: ^1.0.2
+      version: 1.0.2
+    '@eslint/js':
+      specifier: ^9.26.0
+      version: 9.26.0
+    '@nuxt/devtools-kit':
+      specifier: ^2.4.0
+      version: 2.4.0
+    '@nuxt/kit':
+      specifier: ^3.17.2
+      version: 3.17.2
     '@stylistic/eslint-plugin':
       specifier: ^4.2.0
       version: 4.2.0
-    '@types/node':
-      specifier: ^22.15.17
-      version: 22.15.17
     '@typescript-eslint/eslint-plugin':
       specifier: ^8.32.0
       version: 8.32.0
@@ -84,21 +114,9 @@ catalogs:
     '@typescript-eslint/utils':
       specifier: ^8.32.0
       version: 8.32.0
-    '@vueuse/core':
-      specifier: ^13.1.0
-      version: 13.1.0
-    '@vueuse/nuxt':
-      specifier: ^13.1.0
-      version: 13.1.0
-    bumpp:
-      specifier: ^10.1.0
-      version: 10.1.0
     chokidar:
       specifier: ^4.0.3
       version: 4.0.3
-    eslint:
-      specifier: ^9.26.0
-      version: 9.26.0
     eslint-config-flat-gitignore:
       specifier: ^2.1.0
       version: 2.1.0
@@ -150,36 +168,28 @@ catalogs:
     mlly:
       specifier: ^1.7.4
       version: 1.7.4
-    nuxt:
-      specifier: ^3.17.2
-      version: 3.17.2
-    nuxt-og-image:
-      specifier: ^5.1.3
-      version: 5.1.3
     pathe:
       specifier: ^2.0.3
       version: 2.0.3
-    taze:
-      specifier: ^19.1.0
-      version: 19.1.0
-    typescript:
-      specifier: ^5.8.3
-      version: 5.8.3
     unimport:
       specifier: ^5.0.1
       version: 5.0.1
     vite-plugin-eslint2:
       specifier: ^5.0.3
       version: 5.0.3
-    vitest:
-      specifier: ^3.1.3
-      version: 3.1.3
     vue:
       specifier: ^3.5.13
       version: 3.5.13
     vue-eslint-parser:
       specifier: ^10.1.3
       version: 10.1.3
+  types:
+    '@nuxt/schema':
+      specifier: ^3.17.2
+      version: 3.17.2
+    '@types/node':
+      specifier: ^22.15.17
+      version: 22.15.17
 
 overrides:
   '@nuxt/ui': 2.15.2
@@ -189,19 +199,19 @@ importers:
   .:
     devDependencies:
       '@iconify-json/catppuccin':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 1.2.11
       '@iconify-json/ph':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 1.2.2
       '@iconify-json/simple-icons':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 1.2.34
       '@nuxt/content':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 2.13.4(db0@0.3.2)(ioredis@5.6.1)(magicast@0.3.5)(nuxt@3.17.2(@parcel/watcher@2.4.1)(@types/node@22.15.17)(db0@0.3.2)(encoding@0.1.13)(eslint@9.26.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.40.2)(terser@5.31.6)(tsx@4.19.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       '@nuxt/devtools':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 2.4.0(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       '@nuxt/eslint-config':
         specifier: workspace:*
@@ -210,58 +220,64 @@ importers:
         specifier: workspace:*
         version: link:packages/eslint-plugin
       '@nuxt/fonts':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 0.11.3(db0@0.3.2)(encoding@0.1.13)(ioredis@5.6.1)(magicast@0.3.5)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))
       '@nuxt/image':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 1.10.0(db0@0.3.2)(ioredis@5.6.1)(magicast@0.3.5)
       '@nuxt/test-utils':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 3.18.0(@types/node@22.15.17)(jiti@2.4.2)(magicast@0.3.5)(playwright-core@1.52.0)(terser@5.31.6)(tsx@4.19.2)(typescript@5.8.3)(vitest@3.1.3(@types/debug@4.1.12)(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(yaml@2.7.1)
       '@nuxt/ui-pro':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 1.8.0(focus-trap@7.5.4)(magicast@0.3.5)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       '@nuxthq/studio':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 2.2.1(magicast@0.3.5)
       '@nuxtjs/plausible':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 1.2.0(magicast@0.3.5)
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 22.15.17
       '@vueuse/core':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 13.1.0(vue@3.5.13(typescript@5.8.3))
       '@vueuse/nuxt':
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 13.1.0(magicast@0.3.5)(nuxt@3.17.2(@parcel/watcher@2.4.1)(@types/node@22.15.17)(db0@0.3.2)(encoding@0.1.13)(eslint@9.26.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.40.2)(terser@5.31.6)(tsx@4.19.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       bumpp:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 10.1.0(magicast@0.3.5)
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.26.0(jiti@2.4.2)
       eslint-plugin-format:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 1.0.1(eslint@9.26.0(jiti@2.4.2))
+      eslint-plugin-pnpm:
+        specifier: catalog:dev
+        version: 0.3.1(eslint@9.26.0(jiti@2.4.2))
+      jsonc-eslint-parser:
+        specifier: catalog:dev
+        version: 2.4.0
       nuxt:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 3.17.2(@parcel/watcher@2.4.1)(@types/node@22.15.17)(db0@0.3.2)(encoding@0.1.13)(eslint@9.26.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.40.2)(terser@5.31.6)(tsx@4.19.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(yaml@2.7.1)
       nuxt-og-image:
-        specifier: 'catalog:'
+        specifier: catalog:docs
         version: 5.1.3(@unhead/vue@2.0.8(vue@3.5.13(typescript@5.8.3)))(magicast@0.3.5)(unstorage@1.16.0(db0@0.3.2)(ioredis@5.6.1))(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       taze:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 19.1.0
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.8.3
       vitest:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 3.1.3(@types/debug@4.1.12)(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1)
       vue:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 3.5.13(typescript@5.8.3)
 
   docs: {}
@@ -269,83 +285,83 @@ importers:
   packages/eslint-config:
     dependencies:
       '@antfu/install-pkg':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 1.1.0
       '@clack/prompts':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 0.10.1
       '@eslint/js':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 9.26.0
       '@nuxt/eslint-plugin':
         specifier: workspace:*
         version: link:../eslint-plugin
       '@stylistic/eslint-plugin':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 4.2.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       '@typescript-eslint/eslint-plugin':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 8.32.0(@typescript-eslint/parser@8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       '@typescript-eslint/parser':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       eslint-config-flat-gitignore:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.1.0(eslint@9.26.0(jiti@2.4.2))
       eslint-flat-config-utils:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.0.1
       eslint-merge-processors:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.0.0(eslint@9.26.0(jiti@2.4.2))
       eslint-plugin-format:
         specifier: '*'
         version: 1.0.1(eslint@9.26.0(jiti@2.4.2))
       eslint-plugin-import-x:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 4.11.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       eslint-plugin-jsdoc:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 50.6.14(eslint@9.26.0(jiti@2.4.2))
       eslint-plugin-regexp:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.7.0(eslint@9.26.0(jiti@2.4.2))
       eslint-plugin-unicorn:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 59.0.1(eslint@9.26.0(jiti@2.4.2))
       eslint-plugin-vue:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 10.1.0(eslint@9.26.0(jiti@2.4.2))(vue-eslint-parser@10.1.3(eslint@9.26.0(jiti@2.4.2)))
       eslint-processor-vue-blocks:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.0.0(@vue/compiler-sfc@3.5.13)(eslint@9.26.0(jiti@2.4.2))
       globals:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 16.1.0
       local-pkg:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 1.1.1
       pathe:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.0.3
       vue-eslint-parser:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 10.1.3(eslint@9.26.0(jiti@2.4.2))
     devDependencies:
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.26.0(jiti@2.4.2)
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.8.3
 
   packages/eslint-plugin:
     dependencies:
       '@typescript-eslint/types':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 8.32.0
       '@typescript-eslint/utils':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 8.32.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       eslint:
         specifier: ^9.0.0
@@ -354,10 +370,10 @@ importers:
   packages/module:
     dependencies:
       '@eslint/config-inspector':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 1.0.2(eslint@9.26.0(jiti@2.4.2))
       '@nuxt/devtools-kit':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.4.0(magicast@0.3.5)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))
       '@nuxt/eslint-config':
         specifier: workspace:*
@@ -366,59 +382,59 @@ importers:
         specifier: workspace:*
         version: link:../eslint-plugin
       '@nuxt/kit':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 3.17.2(magicast@0.3.5)
       chokidar:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 4.0.3
       eslint:
         specifier: ^9.0.0
         version: 9.26.0(jiti@2.4.2)
       eslint-flat-config-utils:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.0.1
       eslint-typegen:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.1.0(eslint@9.26.0(jiti@2.4.2))
       find-up:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 7.0.0
       get-port-please:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 3.1.2
       mlly:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 1.7.4
       pathe:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 2.0.3
       unimport:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 5.0.1
     devDependencies:
       '@nuxt/module-builder':
-        specifier: 'catalog:'
+        specifier: catalog:bundling
         version: 1.0.1(@nuxt/cli@3.25.0(magicast@0.3.5))(@vue/compiler-core@3.5.13)(esbuild@0.25.4)(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3))
       '@nuxt/schema':
-        specifier: 'catalog:'
+        specifier: catalog:types
         version: 3.17.2
       '@typescript-eslint/scope-manager':
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 8.32.0
       eslint-webpack-plugin:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 5.0.1(eslint@9.26.0(jiti@2.4.2))(webpack@5.94.0(esbuild@0.25.4))
       nuxt:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 3.17.2(@parcel/watcher@2.4.1)(@types/node@22.15.17)(db0@0.3.2)(encoding@0.1.13)(eslint@9.26.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.40.2)(terser@5.31.6)(tsx@4.19.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(yaml@2.7.1)
       vite-plugin-eslint2:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 5.0.3(@types/eslint@9.6.1)(eslint@9.26.0(jiti@2.4.2))(rollup@4.40.2)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))
 
   playground:
     devDependencies:
       nuxt:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 3.17.2(@parcel/watcher@2.4.1)(@types/node@22.15.17)(db0@0.3.2)(encoding@0.1.13)(eslint@9.26.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.40.2)(terser@5.31.6)(tsx@4.19.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.17)(jiti@2.4.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.7.1))(yaml@2.7.1)
 
 packages:
@@ -3452,6 +3468,11 @@ packages:
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
 
+  eslint-plugin-pnpm@0.3.1:
+    resolution: {integrity: sha512-vi5iHoELIAlBbX4AW8ZGzU3tUnfxuXhC/NKo3qRcI5o9igbz6zJUqSlQ03bPeMqWIGTPatZnbWsNR1RnlNERNQ==}
+    peerDependencies:
+      eslint: ^9.0.0
+
   eslint-plugin-regexp@2.7.0:
     resolution: {integrity: sha512-U8oZI77SBtH8U3ulZ05iu0qEzIizyEDXd+BWHvyVxTOjGwcDcvy/kEpgFG4DYca2ByRLiVPFZ2GeH7j1pdvZTA==}
     engines: {node: ^18 || >=20}
@@ -3518,6 +3539,10 @@ packages:
   espree@10.3.0:
     resolution: {integrity: sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  espree@9.6.1:
+    resolution: {integrity: sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
   esprima@4.0.1:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
@@ -4336,6 +4361,10 @@ packages:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
+
+  jsonc-eslint-parser@2.4.0:
+    resolution: {integrity: sha512-WYDyuc/uFcGp6YtM2H0uKmUwieOuzeE/5YocFJLnLfclZ4inf3mRn8ZVy1s7Hxji7Jxm6Ss8gqpexD/GlKoGgg==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
   jsonc-parser@3.3.1:
     resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
@@ -6970,6 +6999,10 @@ packages:
   yallist@5.0.0:
     resolution: {integrity: sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw==}
     engines: {node: '>=18'}
+
+  yaml-eslint-parser@1.3.0:
+    resolution: {integrity: sha512-E/+VitOorXSLiAqtTd7Yqax0/pAS3xaYMP+AUUJGOK1OZG3rhcj9fcJOM5HJ2VrP1FrStVCWr1muTfQCdj4tAA==}
+    engines: {node: ^14.17.0 || >=16.0.0}
 
   yaml@2.7.1:
     resolution: {integrity: sha512-10ULxpnOCQXxJvBgxsn9ptjq6uviG/htZKk9veJGhlqn3w/DxQ631zFF+nlQXLwmImeS5amR2dl2U8sg6U9jsQ==}
@@ -10682,6 +10715,16 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  eslint-plugin-pnpm@0.3.1(eslint@9.26.0(jiti@2.4.2)):
+    dependencies:
+      eslint: 9.26.0(jiti@2.4.2)
+      find-up-simple: 1.0.1
+      jsonc-eslint-parser: 2.4.0
+      pathe: 2.0.3
+      pnpm-workspace-yaml: 0.3.1
+      tinyglobby: 0.2.13
+      yaml-eslint-parser: 1.3.0
+
   eslint-plugin-regexp@2.7.0(eslint@9.26.0(jiti@2.4.2)):
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.26.0(jiti@2.4.2))
@@ -10809,6 +10852,12 @@ snapshots:
       acorn: 8.14.1
       acorn-jsx: 5.3.2(acorn@8.14.1)
       eslint-visitor-keys: 4.2.0
+
+  espree@9.6.1:
+    dependencies:
+      acorn: 8.14.1
+      acorn-jsx: 5.3.2(acorn@8.14.1)
+      eslint-visitor-keys: 3.4.3
 
   esprima@4.0.1: {}
 
@@ -11739,6 +11788,13 @@ snapshots:
   json-stable-stringify-without-jsonify@1.0.1: {}
 
   json5@2.2.3: {}
+
+  jsonc-eslint-parser@2.4.0:
+    dependencies:
+      acorn: 8.14.1
+      eslint-visitor-keys: 3.4.3
+      espree: 9.6.1
+      semver: 7.7.1
 
   jsonc-parser@3.3.1: {}
 
@@ -15072,6 +15128,11 @@ snapshots:
   yallist@4.0.0: {}
 
   yallist@5.0.0: {}
+
+  yaml-eslint-parser@1.3.0:
+    dependencies:
+      eslint-visitor-keys: 3.4.3
+      yaml: 2.7.1
 
   yaml@2.7.1: {}
 

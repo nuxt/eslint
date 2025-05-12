@@ -1,5 +1,7 @@
 // @ts-check
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
+import pnpm from 'eslint-plugin-pnpm'
+import jsoncParser from 'jsonc-eslint-parser'
 
 export default createConfigForNuxt({
   features: {
@@ -25,3 +27,21 @@ export default createConfigForNuxt({
       },
     },
   )
+  .append({
+    name: 'pnpm/package.json',
+    files: [
+      'package.json',
+      '**/package.json',
+    ],
+    languageOptions: {
+      parser: jsoncParser,
+    },
+    plugins: {
+      pnpm: pnpm,
+    },
+    rules: {
+      'pnpm/json-enforce-catalog': 'error',
+      'pnpm/json-valid-catalog': 'error',
+      'pnpm/json-prefer-workspace-settings': 'error',
+    },
+  })

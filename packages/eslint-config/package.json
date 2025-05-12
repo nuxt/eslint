@@ -44,29 +44,29 @@
     }
   },
   "dependencies": {
-    "@antfu/install-pkg": "catalog:",
-    "@clack/prompts": "catalog:",
-    "@eslint/js": "catalog:",
+    "@antfu/install-pkg": "catalog:prod",
+    "@clack/prompts": "catalog:prod",
+    "@eslint/js": "catalog:prod",
     "@nuxt/eslint-plugin": "workspace:*",
-    "@stylistic/eslint-plugin": "catalog:",
-    "@typescript-eslint/eslint-plugin": "catalog:",
-    "@typescript-eslint/parser": "catalog:",
-    "eslint-config-flat-gitignore": "catalog:",
-    "eslint-flat-config-utils": "catalog:",
-    "eslint-merge-processors": "catalog:",
-    "eslint-plugin-import-x": "catalog:",
-    "eslint-plugin-jsdoc": "catalog:",
-    "eslint-plugin-regexp": "catalog:",
-    "eslint-plugin-unicorn": "catalog:",
-    "eslint-plugin-vue": "catalog:",
-    "eslint-processor-vue-blocks": "catalog:",
-    "globals": "catalog:",
-    "local-pkg": "catalog:",
-    "pathe": "catalog:",
-    "vue-eslint-parser": "catalog:"
+    "@stylistic/eslint-plugin": "catalog:prod",
+    "@typescript-eslint/eslint-plugin": "catalog:prod",
+    "@typescript-eslint/parser": "catalog:prod",
+    "eslint-config-flat-gitignore": "catalog:prod",
+    "eslint-flat-config-utils": "catalog:prod",
+    "eslint-merge-processors": "catalog:prod",
+    "eslint-plugin-import-x": "catalog:prod",
+    "eslint-plugin-jsdoc": "catalog:prod",
+    "eslint-plugin-regexp": "catalog:prod",
+    "eslint-plugin-unicorn": "catalog:prod",
+    "eslint-plugin-vue": "catalog:prod",
+    "eslint-processor-vue-blocks": "catalog:prod",
+    "globals": "catalog:prod",
+    "local-pkg": "catalog:prod",
+    "pathe": "catalog:prod",
+    "vue-eslint-parser": "catalog:prod"
   },
   "devDependencies": {
-    "eslint": "catalog:",
-    "typescript": "catalog:"
+    "eslint": "catalog:dev",
+    "typescript": "catalog:dev"
   }
 }
