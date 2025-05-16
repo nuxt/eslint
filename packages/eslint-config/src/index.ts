@@ -1,7 +1,6 @@
 import type { ResolvableFlatConfig, FlatConfigComposer } from 'eslint-flat-config-utils'
 import { composer } from 'eslint-flat-config-utils'
 import gitignore from 'eslint-config-flat-gitignore'
-import type { Linter } from 'eslint'
 import type { NuxtESLintConfigOptions } from './types'
 import disables from './configs/disables'
 import nuxt from './configs/nuxt'
@@ -21,7 +20,7 @@ export { resolveOptions }
  */
 export function defineFlatConfigs(
   ...configs: ResolvableFlatConfig[]
-): FlatConfigComposer<Linter.Config> {
+): FlatConfigComposer {
   return composer(...configs)
 }
 
@@ -35,7 +34,7 @@ export function defineFlatConfigs(
 export function createConfigForNuxt(
   options: NuxtESLintConfigOptions = {},
   ...userConfigs: ResolvableFlatConfig[]
-): FlatConfigComposer<Linter.Config> {
+): FlatConfigComposer {
   const c = composer()
 
   const resolved = resolveOptions(options)

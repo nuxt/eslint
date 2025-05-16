@@ -5,6 +5,6 @@ import type { Linter } from 'eslint'
 export default (options?: StylisticCustomizeOptions): Linter.Config => {
   return {
     name: 'nuxt/stylistic',
-    ...stylistic.configs.customize(options) as Linter.Config,
+    ...stylistic.configs.customize(options) as Linter,
   }
 }

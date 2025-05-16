@@ -8,6 +8,9 @@ export default createConfigForNuxt({
     stylistic: true,
     tooling: true,
     formatters: true,
+    // typescript: {
+    //   tsconfigPath: 'tsconfig.json',
+    // },
   },
   dirs: {
     src: [

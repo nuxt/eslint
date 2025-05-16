@@ -6,6 +6,15 @@ import { resolveOptions } from '../utils'
 
 export { parserTs, pluginTs }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getRulesFromConfigs = (config: any) => {
+  const array = Array.isArray(config) ? config : [config]
+  const object = array.reduce((acc, item) => {
+    return { ...acc, ...item.rules }
+  }, {})
+  return object
+}
+
 export default function typescript(options: NuxtESLintConfigOptions): Linter.Config[] {
   const resolved = resolveOptions(options)
 
@@ -14,6 +23,8 @@ export default function typescript(options: NuxtESLintConfigOptions): Linter.Con
   }
 
   const tsOptions = resolved.features.typescript === true ? {} : resolved.features.typescript
+  const strict = tsOptions.strict === false ? false : true
+  const tsconfigPath = tsOptions.tsconfigPath || undefined
 
   return [
     {
@@ -28,14 +39,34 @@ export default function typescript(options: NuxtESLintConfigOptions): Linter.Con
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
       languageOptions: {
         parser: parserTs,
+        parserOptions: {
+          extraFileExtensions: ['.vue'],
+          sourceType: 'module',
+          ...tsconfigPath
+            ? {
+                projectService: {
+                  allowDefaultProject: ['./*.js'],
+                  defaultProject: tsconfigPath,
+                },
+                tsconfigRootDir: process.cwd(),
+              }
+            : {},
+        },
       },
       rules: {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ...pluginTs.configs['eslint-recommended'].overrides![0].rules as any,
-        ...pluginTs.configs.recommended.rules,
-        ...(tsOptions.strict === false
-          ? {}
-          : pluginTs.configs.strict.rules),
+        ...getRulesFromConfigs(pluginTs.configs['flat/recommended']),
+
+        // Type-aware rules
+        ...(tsconfigPath
+          ? getRulesFromConfigs(pluginTs.configs['flat/recommended-type-checked-only'])
+          : {}),
+
+        // Strict rules
+        ...(strict
+          ? tsconfigPath
+            ? getRulesFromConfigs(pluginTs.configs['flat/strict-type-checked-only'])
+            : getRulesFromConfigs(pluginTs.configs['flat/strict'])
+          : {}),
 
         // Include typescript eslint rules in *.vue files
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts

@@ -25,7 +25,7 @@ export const parserPlain = {
 }
 
 export async function ensurePackages(packages: (string | undefined)[]): Promise<void> {
-  if (process.env.CI || process.stdout.isTTY === false)
+  if (process.env.CI || !process.stdout.isTTY)
     return
 
   const nonExistingPackages = packages.filter(i => i && !isPackageExists(i)) as string[]

@@ -84,6 +84,10 @@ export interface NuxtESLintFeaturesOptions {
      * @default true
      */
     strict?: boolean
+    /**
+     * Path to the tsconfig file, when this is provide, type-aware rules will be enabled.
+     */
+    tsconfigPath?: string
   }
 }
 
