@@ -73,9 +73,11 @@ export async function generateESLintConfig(
   const imports = await Promise.all(importLines.map(async (line): Promise<Import> => {
     return {
       ...line,
-      from: (line.from.match(/^\w+:/) || builtinModules.includes(line.from))
-        ? line.from
-        : relativeWithDot(await r.resolvePath(line.from)),
+      from: builtinModules.includes(line.from)
+        ? line.from.replace(/^(node:)?/, 'node:')
+        : line.from.match(/^\w+:/)
+          ? line.from
+          : relativeWithDot(await r.resolvePath(line.from)),
     }
   }))
 
