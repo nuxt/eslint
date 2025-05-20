@@ -20,7 +20,7 @@ export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
       const imports = [
         ...await unimport?.getImports() || [],
         ...await nitroUnimport?.getImports() || [],
-      ].sort()
+      ].sort((a, b) => 10 * a.from.localeCompare(b.from) + a.name.localeCompare(b.name))
 
       return {
         configs: [
