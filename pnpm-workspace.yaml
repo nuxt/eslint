@@ -11,7 +11,7 @@ catalogs:
     '@eslint/js': ^9.27.0
     '@nuxt/devtools-kit': ^2.4.1
     '@nuxt/kit': ^3.17.3
-    '@stylistic/eslint-plugin': ^4.2.0
+    '@stylistic/eslint-plugin': ^5.1.0
     '@typescript-eslint/eslint-plugin': ^8.32.1
     '@typescript-eslint/parser': ^8.32.1
     '@typescript-eslint/scope-manager': ^8.32.1
