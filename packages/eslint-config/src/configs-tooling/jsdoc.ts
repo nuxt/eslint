@@ -1,5 +1,6 @@
 import type { Linter } from 'eslint'
 import jsdocPlugin from 'eslint-plugin-jsdoc'
+import { GLOB_SRC, GLOB_VUE } from '../globs'
 import { resolveOptions } from '../utils'
 import type { NuxtESLintConfigOptions } from '../types'
 
@@ -9,6 +10,7 @@ export default function jsdoc(options: NuxtESLintConfigOptions = {}): Linter.Con
   return [
     {
       name: 'nuxt/tooling/jsdoc',
+      files: [GLOB_SRC, GLOB_VUE],
       plugins: {
         jsdoc: jsdocPlugin,
       },

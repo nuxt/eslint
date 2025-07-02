@@ -299,6 +299,10 @@ exports[`flat config composition > with stylistic 1`] = `
     "name": "nuxt/sort-config",
   },
   {
+    "files": [
+      "**/*.?([cm])[jt]s?(x)",
+      "**/*.vue",
+    ],
     "name": "nuxt/stylistic",
   },
   {

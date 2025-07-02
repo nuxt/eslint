@@ -1,10 +1,12 @@
 import pluginUnicorn from 'eslint-plugin-unicorn'
 import type { Linter } from 'eslint'
+import { GLOB_SRC, GLOB_VUE } from '../globs'
 
 export default function unicorn(): Linter.Config[] {
   return [
     {
       name: 'nuxt/tooling/unicorn',
+      files: [GLOB_SRC, GLOB_VUE],
       plugins: {
         unicorn: pluginUnicorn,
       },
