@@ -54,7 +54,7 @@
     "eslint-config-flat-gitignore": "catalog:prod",
     "eslint-flat-config-utils": "catalog:prod",
     "eslint-merge-processors": "catalog:prod",
-    "eslint-plugin-import-x": "catalog:prod",
+    "eslint-plugin-import-lite": "catalog:prod",
     "eslint-plugin-jsdoc": "catalog:prod",
     "eslint-plugin-regexp": "catalog:prod",
     "eslint-plugin-unicorn": "catalog:prod",
