@@ -117,7 +117,7 @@ export default async function vue(options: NuxtESLintConfigOptions): Promise<Lin
               'vue/object-curly-spacing': ['error', 'always'],
               'vue/object-property-newline': [
                 'error',
-                { allowMultiplePropertiesPerLine: true },
+                { allowAllPropertiesOnSameLine: true },
               ],
               'vue/one-component-per-file': 'off',
               'vue/operator-linebreak': ['error', 'before'],
