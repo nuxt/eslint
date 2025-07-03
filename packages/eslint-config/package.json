@@ -36,10 +36,14 @@
   },
   "peerDependencies": {
     "eslint": "^9.0.0",
-    "eslint-plugin-format": "*"
+    "eslint-plugin-format": "*",
+    "eslint-plugin-import-x": "*"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-format": {
+      "optional": true
+    },
+    "eslint-plugin-import-x": {
       "optional": true
     }
   },

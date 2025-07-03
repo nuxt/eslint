@@ -51,6 +51,13 @@ export interface NuxtESLintFeaturesOptions {
   tooling?: boolean | ToolingOptions
 
   /**
+   * Enable the import plugin
+   *
+   * @default true
+   */
+  import?: boolean | ImportPluginOptions
+
+  /**
    * Enable stylistic ESLint rules for formatting and code style check
    *
    * @see https://eslint.style/guide/config-presets
@@ -89,6 +96,18 @@ export interface NuxtESLintFeaturesOptions {
      */
     tsconfigPath?: string
   }
+}
+
+export interface ImportPluginOptions {
+  /**
+   * The import plugin to use
+   *
+   * We did not ship `eslint-plugin-import-x` as dependency,
+   * if you want to use it, you need to install it manually.
+   *
+   * @default 'eslint-plugin-import-lite'
+   */
+  package?: 'eslint-plugin-import-lite' | 'eslint-plugin-import-x'
 }
 
 export interface NuxtESLintConfigOptions {

@@ -3,15 +3,27 @@ import type { Linter } from 'eslint'
 import type { NuxtESLintConfigOptions } from '../types'
 import { resolveOptions } from '../utils'
 
-export default function imports(options: NuxtESLintConfigOptions): Linter.Config[] {
+export default async function imports(options: NuxtESLintConfigOptions): Promise<Linter.Config[]> {
   const resolved = resolveOptions(options)
+
+  if (resolved.features.import === false) {
+    return []
+  }
+
+  const importOptions = resolved.features.import === true
+    ? {}
+    : resolved.features.import || {}
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const plugin: any = importOptions.package === 'eslint-plugin-import-x'
+    ? (await import('eslint-plugin-import-x')).default
+    : pluginImportLite
 
   return [
     {
       name: 'nuxt/import/rules',
       plugins: {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        import: pluginImportLite as any,
+        import: plugin,
       },
       rules: {
         'import/consistent-type-specifier-style': ['error', 'top-level'],

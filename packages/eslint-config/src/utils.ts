@@ -81,6 +81,7 @@ export function resolveOptions(
       tooling: false,
       formatters: false,
       nuxt: {},
+      import: {},
       ...config.features,
     },
     dirs,
