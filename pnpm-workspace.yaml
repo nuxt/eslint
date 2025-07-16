@@ -10,7 +10,7 @@ catalogs:
     '@eslint/config-inspector': ^1.1.0
     '@eslint/js': ^9.30.1
     '@nuxt/devtools-kit': ^2.6.2
-    '@nuxt/kit': ^3.17.6
+    '@nuxt/kit': ^4.0.0
     '@stylistic/eslint-plugin': ^5.1.0
     '@typescript-eslint/eslint-plugin': ^8.35.1
     '@typescript-eslint/parser': ^8.35.1
@@ -64,14 +64,14 @@ catalogs:
 
   types:
     '@types/node': ^24.0.10
-    '@nuxt/schema': ^3.17.6
+    '@nuxt/schema': ^4.0.0
 
   dev:
     bumpp: ^10.2.0
     eslint-plugin-pnpm: ^1.0.0
     eslint: ^9.30.1
     jsonc-eslint-parser: ^2.4.0
-    nuxt: ^3.17.6
+    nuxt: ^4.0.0
     taze: ^19.1.0
     typescript: ^5.8.3
     vitest: ^3.2.4
