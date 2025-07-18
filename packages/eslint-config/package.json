@@ -36,14 +36,10 @@
   },
   "peerDependencies": {
     "eslint": "^9.0.0",
-    "eslint-plugin-format": "*",
-    "eslint-plugin-import-x": "*"
+    "eslint-plugin-format": "*"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-format": {
-      "optional": true
-    },
-    "eslint-plugin-import-x": {
       "optional": true
     }
   },
@@ -59,6 +55,7 @@
     "eslint-flat-config-utils": "catalog:prod",
     "eslint-merge-processors": "catalog:prod",
     "eslint-plugin-import-lite": "catalog:prod",
+    "eslint-plugin-import-x": "catalog:prod",
     "eslint-plugin-jsdoc": "catalog:prod",
     "eslint-plugin-regexp": "catalog:prod",
     "eslint-plugin-unicorn": "catalog:prod",

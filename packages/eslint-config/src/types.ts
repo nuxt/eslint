@@ -102,10 +102,7 @@ export interface ImportPluginOptions {
   /**
    * The import plugin to use
    *
-   * We did not ship `eslint-plugin-import-x` as dependency,
-   * if you want to use it, you need to install it manually.
-   *
-   * @default 'eslint-plugin-import-lite'
+   * @default 'eslint-plugin-import-x'
    */
   package?: 'eslint-plugin-import-lite' | 'eslint-plugin-import-x'
 }
