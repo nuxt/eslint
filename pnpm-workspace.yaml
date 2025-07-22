@@ -10,13 +10,13 @@ catalogs:
     '@eslint/config-inspector': ^1.1.0
     '@eslint/js': ^9.31.0
     '@nuxt/devtools-kit': ^2.6.2
-    '@nuxt/kit': ^4.0.0
-    '@stylistic/eslint-plugin': ^5.2.0
-    '@typescript-eslint/eslint-plugin': ^8.37.0
-    '@typescript-eslint/parser': ^8.37.0
-    '@typescript-eslint/scope-manager': ^8.37.0
-    '@typescript-eslint/types': ^8.37.0
-    '@typescript-eslint/utils': ^8.37.0
+    '@nuxt/kit': ^4.0.1
+    '@stylistic/eslint-plugin': ^5.2.1
+    '@typescript-eslint/eslint-plugin': ^8.38.0
+    '@typescript-eslint/parser': ^8.38.0
+    '@typescript-eslint/scope-manager': ^8.38.0
+    '@typescript-eslint/types': ^8.38.0
+    '@typescript-eslint/utils': ^8.38.0
     chokidar: ^4.0.3
     eslint-config-flat-gitignore: ^2.1.0
     eslint-flat-config-utils: ^2.1.0
@@ -28,7 +28,7 @@ catalogs:
     eslint-plugin-n: ^17.21.0
     eslint-plugin-promise: ^7.2.1
     eslint-plugin-regexp: ^2.9.0
-    eslint-plugin-unicorn: ^59.0.1
+    eslint-plugin-unicorn: ^60.0.0
     eslint-plugin-vue: ^10.3.0
     eslint-processor-vue-blocks: ^2.0.0
     eslint-typegen: ^2.2.1
@@ -39,7 +39,7 @@ catalogs:
     local-pkg: ^1.1.1
     mlly: ^1.7.4
     pathe: ^2.0.3
-    unimport: ^5.1.0
+    unimport: ^5.2.0
     vite-plugin-eslint2: ^5.0.4
     vue-eslint-parser: ^10.2.0
     vue: ^3.5.17
@@ -48,7 +48,7 @@ catalogs:
   docs:
     '@iconify-json/catppuccin': ^1.2.11
     '@iconify-json/ph': ^1.2.2
-    '@iconify-json/simple-icons': ^1.2.43
+    '@iconify-json/simple-icons': ^1.2.44
     '@nuxt/content': ^3.6.3
     '@nuxt/devtools': ^2.6.2
     '@nuxt/fonts': ^0.11.4
@@ -61,14 +61,14 @@ catalogs:
     '@vueuse/nuxt': ^13.5.0
     nuxt-og-image: ^5.1.9
   types:
-    '@types/node': ^24.0.14
-    '@nuxt/schema': ^4.0.0
+    '@types/node': ^24.0.15
+    '@nuxt/schema': ^4.0.1
   dev:
     bumpp: ^10.2.0
-    eslint-plugin-pnpm: ^1.0.0
+    eslint-plugin-pnpm: ^1.1.0
     eslint: ^9.31.0
     jsonc-eslint-parser: ^2.4.0
-    nuxt: ^4.0.0
+    nuxt: ^4.0.1
     taze: ^19.1.0
     typescript: ^5.8.3
     vitest: ^3.2.4
