@@ -1,4 +1,4 @@
-import { dirname } from 'node:path'
+import { dirname, join } from 'node:path'
 import fs from 'node:fs/promises'
 import type { Nuxt } from '@nuxt/schema'
 import type { ESLintConfigGenAddon } from '../../types'
@@ -17,8 +17,10 @@ export async function setupConfigGen(options: ModuleOptions, nuxt: Nuxt) {
     createAddonGlobals(nuxt),
   ]
 
-  nuxt.hook('prepare:types', ({ declarations }) => {
+  nuxt.hook('prepare:types', ({ declarations, nodeReferences }) => {
     declarations.push('/// <reference path="./eslint-typegen.d.ts" />')
+    if (nodeReferences)
+      nodeReferences.push({ path: join(nuxt.options.buildDir, 'eslint-typegen.d.ts') })
   })
 
   let _configFile: string = undefined!
