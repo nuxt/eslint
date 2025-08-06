@@ -136,8 +136,8 @@ catalogs:
       specifier: ^4.16.1
       version: 4.16.1
     eslint-plugin-jsdoc:
-      specifier: ^51.4.1
-      version: 51.4.1
+      specifier: ^52.0.3
+      version: 52.0.3
     eslint-plugin-regexp:
       specifier: ^2.9.0
       version: 2.9.0
@@ -328,7 +328,7 @@ importers:
         version: 4.16.1(@typescript-eslint/utils@8.38.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-jsdoc:
         specifier: catalog:prod
-        version: 51.4.1(eslint@9.31.0(jiti@2.4.2))
+        version: 52.0.3(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-regexp:
         specifier: catalog:prod
         version: 2.9.0(eslint@9.31.0(jiti@2.4.2))
@@ -4088,8 +4088,8 @@ packages:
       eslint-import-resolver-node:
         optional: true
 
-  eslint-plugin-jsdoc@51.4.1:
-    resolution: {integrity: sha512-y4CA9OkachG8v5nAtrwvcvjIbdcKgSyS6U//IfQr4FZFFyeBFwZFf/tfSsMr46mWDJgidZjBTqoCRlXywfFBMg==}
+  eslint-plugin-jsdoc@52.0.3:
+    resolution: {integrity: sha512-QTFvtVVWXwk0RxYF2GDHIQpkz/0fkonthp13YFMBI+Mco+tFrvU8I8E/WKo5ThcH6y3ya9Zx2VHRrZUrcLhs1A==}
     engines: {node: '>=20.11.0'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -8148,7 +8148,7 @@ snapshots:
   '@es-joy/jsdoccomment@0.52.0':
     dependencies:
       '@types/estree': 1.0.8
-      '@typescript-eslint/types': 8.37.0
+      '@typescript-eslint/types': 8.38.0
       comment-parser: 1.4.1
       esquery: 1.6.0
       jsdoc-type-pratt-parser: 4.1.0
@@ -10232,7 +10232,7 @@ snapshots:
   '@typescript-eslint/project-service@8.37.0(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.37.0(typescript@5.8.3)
-      '@typescript-eslint/types': 8.37.0
+      '@typescript-eslint/types': 8.38.0
       debug: 4.4.1
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -12001,7 +12001,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-jsdoc@51.4.1(eslint@9.31.0(jiti@2.4.2)):
+  eslint-plugin-jsdoc@52.0.3(eslint@9.31.0(jiti@2.4.2)):
     dependencies:
       '@es-joy/jsdoccomment': 0.52.0
       are-docs-informative: 0.0.2
