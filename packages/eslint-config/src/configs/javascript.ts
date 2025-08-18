@@ -24,6 +24,10 @@ export default function javascript(): Linter.Config[] {
           document: 'readonly',
           navigator: 'readonly',
           window: 'readonly',
+
+          // This is technically not a global function, but it's a common practice in nuxt.config.ts,
+          // we include it here to avoid false positives.
+          defineNuxtConfig: 'readonly',
         },
       },
       linterOptions: {
