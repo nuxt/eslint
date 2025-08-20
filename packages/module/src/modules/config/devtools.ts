@@ -71,7 +71,7 @@ export async function setupDevToolsIntegration(
     tabs.push({
       name: 'eslint-config',
       title: 'ESLint Config',
-      icon: 'https://raw.githubusercontent.com/eslint/config-inspector/main/app/public/favicon.svg',
+      icon: 'https://raw.githubusercontent.com/eslint/config-inspector/main/public/favicon.svg',
       view: viewerUrl
         ? {
             type: 'iframe',
