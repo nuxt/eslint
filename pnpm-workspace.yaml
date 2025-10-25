@@ -10,7 +10,7 @@ catalogs:
     '@eslint/config-inspector': ^1.2.0
     '@eslint/js': ^9.33.0
     '@nuxt/devtools-kit': ^2.6.2
-    '@nuxt/kit': ^4.0.3
+    '@nuxt/kit': ^4.2.0
     '@stylistic/eslint-plugin': ^5.2.3
     '@typescript-eslint/eslint-plugin': ^8.39.1
     '@typescript-eslint/parser': ^8.39.1
@@ -62,7 +62,7 @@ catalogs:
     nuxt-og-image: ^5.1.9
   types:
     '@types/node': ^24.3.0
-    '@nuxt/schema': ^4.0.3
+    '@nuxt/schema': ^4.2.0
   dev:
     bumpp: ^10.2.3
     eslint-plugin-pnpm: ^1.1.1
