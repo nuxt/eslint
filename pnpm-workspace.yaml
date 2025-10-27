@@ -71,7 +71,7 @@ catalogs:
     nuxt: ^4.0.3
     taze: ^19.1.0
     typescript: ^5.9.2
-    vitest: ^3.2.4
+    vitest: ^4.0.4
 
 onlyBuiltDependencies:
   - esbuild
