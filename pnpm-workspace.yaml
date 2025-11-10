@@ -52,7 +52,7 @@ catalogs:
     '@nuxt/content': ^3.7.1
     '@nuxt/devtools': ^3.0.0
     '@nuxt/fonts': ^0.11.4
-    '@nuxt/image': ^1.11.0
+    '@nuxt/image': ^2.0.0
     '@nuxt/test-utils': ^3.20.1
     '@nuxt/ui-pro': ^3.3.7
     '@nuxthq/studio': ^2.2.1
