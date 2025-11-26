@@ -56,7 +56,7 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
       files: [
         '**/.config/nuxt.?([cm])[jt]s?(x)',
         '**/nuxt.config.?([cm])[jt]s?(x)',
-        resolved.configFile
+        resolved.configFile,
       ],
       rules: {
         'nuxt/nuxt-config-keys-order': 'error',

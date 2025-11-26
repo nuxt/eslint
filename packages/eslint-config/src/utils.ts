@@ -85,7 +85,7 @@ export function resolveOptions(
       ...config.features,
     },
     dirs,
-    configFile: "**/.config/nuxt.?([cm])[jt]s?(x)"
+    configFile: '**/.config/nuxt.?([cm])[jt]s?(x)',
   }
 
   Object.defineProperty(resolved, '__resolved', { value: true, enumerable: false })
