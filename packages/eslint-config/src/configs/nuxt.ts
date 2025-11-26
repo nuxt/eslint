@@ -54,7 +54,6 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
     configs.push({
       name: 'nuxt/sort-config',
       files: [
-        '**/.config/nuxt.?([cm])[jt]s?(x)',
         '**/nuxt.config.?([cm])[jt]s?(x)',
         resolved.configFile,
       ],
