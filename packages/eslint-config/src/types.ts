@@ -110,6 +110,8 @@ export interface ImportPluginOptions {
 export interface NuxtESLintConfigOptions {
   features?: NuxtESLintFeaturesOptions
 
+  configFile?: string
+
   dirs?: {
     /**
      * Nuxt source directory
@@ -233,6 +235,7 @@ type NotNill<T> = T extends null | undefined ? never : T
 export interface NuxtESLintConfigOptionsResolved {
   features: Required<NotNill<NuxtESLintFeaturesOptions>>
   dirs: Required<NotNill<NuxtESLintConfigOptions['dirs']>>
+  configFile: Required<NotNill<NuxtESLintConfigOptions['configFile']>>
 }
 
 export type Awaitable<T> = T | Promise<T>
