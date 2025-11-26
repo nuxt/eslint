@@ -110,7 +110,6 @@ export interface ImportPluginOptions {
 export interface NuxtESLintConfigOptions {
   features?: NuxtESLintFeaturesOptions
 
-
   dirs?: {
     /**
      * Nuxt source directory
