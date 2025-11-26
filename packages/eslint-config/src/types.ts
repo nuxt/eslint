@@ -110,7 +110,6 @@ export interface ImportPluginOptions {
 export interface NuxtESLintConfigOptions {
   features?: NuxtESLintFeaturesOptions
 
-  configFile?: string
 
   dirs?: {
     /**
@@ -169,6 +168,11 @@ export interface NuxtESLintConfigOptions {
      */
     servers?: string[]
   }
+
+  /**
+   * Config file location
+   */
+  configFile?: string
 }
 
 export interface OptionsFormatters {
