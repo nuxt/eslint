@@ -294,7 +294,6 @@ exports[`flat config composition > with stylistic 1`] = `
   },
   {
     "files": [
-      "**/.config/nuxt.?([cm])[jt]s?(x)",
       "**/nuxt.config.?([cm])[jt]s?(x)",
       "**/.config/nuxt.?([cm])[jt]s?(x)",
     ],
