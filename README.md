@@ -33,5 +33,5 @@ Refer to the [documentation](https://eslint.nuxt.com) for more details.
 [license-src]: https://img.shields.io/npm/l/@nuxt/eslint.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://npmjs.com/package/@nuxt/eslint
 
-[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
+[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt
 [nuxt-href]: https://nuxt.com
