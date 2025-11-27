@@ -21,10 +21,6 @@ export const rule = createRule<MessageIds, Options>({
   },
   defaultOptions: [],
   create(context) {
-    if (!context.filename.match(/nuxt\.config\.[mc]?[jt]sx?$/)) {
-      return {}
-    }
-
     return {
       ExportDefaultDeclaration(node) {
         let object: Tree.ObjectExpression | undefined
