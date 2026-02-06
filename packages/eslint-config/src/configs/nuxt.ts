@@ -50,6 +50,20 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
     },
   })
 
+  const filePages = [
+    ...(dirs.pages?.map(pagesDir => join(pagesDir, `**/*.${GLOB_EXTS}`)) || []),
+  ].sort()
+
+  if (filePages.length) {
+    configs.push({
+      name: 'nuxt/pages',
+      files: filePages,
+      rules: {
+        'nuxt/no-page-meta-runtime-values': 'error',
+      },
+    })
+  }
+
   configs.push({
     name: 'nuxt/nuxt-config',
     files: [
