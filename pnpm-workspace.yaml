@@ -6,7 +6,7 @@ packages:
 catalogs:
   prod:
     '@antfu/install-pkg': ^1.1.0
-    '@clack/prompts': ^0.11.0
+    '@clack/prompts': ^1.0.0
     '@eslint/config-inspector': ^1.4.2
     '@eslint/js': ^9.39.2
     '@nuxt/devtools-kit': ^3.1.1
@@ -19,7 +19,7 @@ catalogs:
     '@typescript-eslint/utils': ^8.54.0
     chokidar: ^5.0.0
     eslint-config-flat-gitignore: ^2.1.0
-    eslint-flat-config-utils: ^3.0.0
+    eslint-flat-config-utils: ^3.0.1
     eslint-merge-processors: ^2.0.0
     eslint-plugin-format: ^1.4.0
     eslint-plugin-import-lite: ^0.5.0

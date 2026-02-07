@@ -75,6 +75,13 @@ exports[`flat config composition > custom src dirs 1`] = `
   },
   {
     "files": [
+      "src1/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "src2/pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt/pages",
+  },
+  {
+    "files": [
       "**/.config/nuxt.?([cm])[jt]s?(x)",
       "**/nuxt.config.?([cm])[jt]s?(x)",
     ],
@@ -173,6 +180,13 @@ exports[`flat config composition > empty 1`] = `
   },
   {
     "files": [
+      "app/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt/pages",
+  },
+  {
+    "files": [
       "**/.config/nuxt.?([cm])[jt]s?(x)",
       "**/nuxt.config.?([cm])[jt]s?(x)",
     ],
@@ -214,6 +228,13 @@ exports[`flat config composition > non-standalone 1`] = `
   },
   {
     "name": "nuxt/rules",
+  },
+  {
+    "files": [
+      "app/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt/pages",
   },
   {
     "files": [
@@ -312,6 +333,13 @@ exports[`flat config composition > with stylistic 1`] = `
   },
   {
     "name": "nuxt/rules",
+  },
+  {
+    "files": [
+      "app/pages/**/*.{js,ts,jsx,tsx,vue}",
+      "pages/**/*.{js,ts,jsx,tsx,vue}",
+    ],
+    "name": "nuxt/pages",
   },
   {
     "files": [
