@@ -10,7 +10,7 @@ catalogs:
     '@eslint/config-inspector': ^1.4.2
     '@eslint/js': ^9.39.2
     '@nuxt/devtools-kit': ^3.1.1
-    '@nuxt/kit': ^4.3.0
+    '@nuxt/kit': ^4.3.1
     '@stylistic/eslint-plugin': ^5.7.1
     '@typescript-eslint/eslint-plugin': ^8.54.0
     '@typescript-eslint/parser': ^8.54.0
@@ -62,14 +62,14 @@ catalogs:
     nuxt-og-image: ^5.1.13
   types:
     '@types/node': ^25.2.1
-    '@nuxt/schema': ^4.3.0
+    '@nuxt/schema': ^4.3.1
   dev:
     bumpp: ^10.4.1
     eslint-plugin-pnpm: ^1.5.0
     eslint: ^9.39.2
     eslint-vitest-rule-tester: ^3.1.0
     jsonc-eslint-parser: ^2.4.2
-    nuxt: ^4.3.0
+    nuxt: ^4.3.1
     taze: ^19.9.2
     typescript: ^5.9.3
     vitest: ^4.0.18
