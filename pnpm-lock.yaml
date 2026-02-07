@@ -19,6 +19,9 @@ catalogs:
     eslint-plugin-pnpm:
       specifier: ^1.5.0
       version: 1.5.0
+    eslint-vitest-rule-tester:
+      specifier: ^3.1.0
+      version: 3.1.0
     jsonc-eslint-parser:
       specifier: ^2.4.2
       version: 2.4.2
@@ -262,7 +265,7 @@ importers:
         specifier: catalog:dev
         version: 1.5.0(eslint@9.39.2(jiti@2.6.1))
       eslint-vitest-rule-tester:
-        specifier: ^3.1.0
+        specifier: catalog:dev
         version: 3.1.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.31.6)(tsx@4.19.2)(yaml@2.8.2))
       jsonc-eslint-parser:
         specifier: catalog:dev
