@@ -46,6 +46,6 @@
     "vue": "catalog:prod"
   },
   "resolutions": {
-    "@nuxt/ui": "2.15.2"
+    "@nuxt/ui": "4.4.0"
   }
 }
