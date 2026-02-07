@@ -128,11 +128,11 @@ export const rule = createRule<MessageIds, Options>({
 
       // ---- Track function scopes ----
 
-      ArrowFunctionExpression: enterFunction,
+      'ArrowFunctionExpression': enterFunction,
       'ArrowFunctionExpression:exit': exitFunction,
-      FunctionExpression: enterFunction,
+      'FunctionExpression': enterFunction,
       'FunctionExpression:exit': exitFunction,
-      FunctionDeclaration: enterFunction,
+      'FunctionDeclaration': enterFunction,
       'FunctionDeclaration:exit': exitFunction,
 
       // ---- Report eager-level problems ----
