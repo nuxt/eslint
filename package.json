@@ -36,6 +36,7 @@
     "eslint": "catalog:dev",
     "eslint-plugin-format": "catalog:prod",
     "eslint-plugin-pnpm": "catalog:dev",
+    "eslint-vitest-rule-tester": "catalog:dev",
     "jsonc-eslint-parser": "catalog:dev",
     "nuxt": "catalog:dev",
     "nuxt-og-image": "catalog:docs",
