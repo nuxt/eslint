@@ -67,6 +67,7 @@ catalogs:
     bumpp: ^10.4.0
     eslint-plugin-pnpm: ^1.5.0
     eslint: ^9.39.2
+    eslint-vitest-rule-tester: ^0.0.0
     jsonc-eslint-parser: ^2.4.2
     nuxt: ^4.3.0
     taze: ^19.9.2

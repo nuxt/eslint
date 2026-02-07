@@ -1,6 +1,6 @@
 import { RuleTester } from 'eslint'
 import { describe, it } from 'vitest'
-import { rule } from '../src/rules/no-page-meta-runtime-values'
+import { rule } from './no-page-meta-runtime-values'
 
 const tester = new RuleTester({
   languageOptions: {
