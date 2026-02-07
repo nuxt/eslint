@@ -6,7 +6,7 @@ packages:
 catalogs:
   prod:
     '@antfu/install-pkg': ^1.1.0
-    '@clack/prompts': ^0.11.0
+    '@clack/prompts': ^1.0.0
     '@eslint/config-inspector': ^1.4.2
     '@eslint/js': ^9.39.2
     '@nuxt/devtools-kit': ^3.1.1
