@@ -8,7 +8,7 @@ catalogs:
     '@antfu/install-pkg': ^1.1.0
     '@clack/prompts': ^1.0.0
     '@eslint/config-inspector': ^1.4.2
-    '@eslint/js': ^10.0.1
+    '@eslint/js': ^9.39.2
     '@nuxt/devtools-kit': ^3.1.1
     '@nuxt/kit': ^4.3.1
     '@stylistic/eslint-plugin': ^5.8.0
@@ -57,7 +57,7 @@ catalogs:
     '@nuxt/ui-pro': ^3.3.7
     '@nuxthq/studio': ^2.2.1
     '@nuxtjs/plausible': ^2.0.1
-    '@vueuse/core': ^14.2.0
+    '@vueuse/core': ^14.2.1
     '@vueuse/nuxt': ^14.2.0
     nuxt-og-image: ^5.1.13
   types:
