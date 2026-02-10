@@ -31,7 +31,7 @@
     "test:watch": "vitest watch"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0",
+    "eslint": "^9.0.0 || ^10.0.0",
     "eslint-webpack-plugin": "^4.1.0",
     "vite-plugin-eslint2": "^5.0.0"
   },
