@@ -84,6 +84,8 @@ export default async function vue(options: NuxtESLintConfigOptions): Promise<Lin
         ...pluginVue.configs['flat/strongly-recommended'].map(c => c.rules).reduce((acc, c) => ({ ...acc, ...c }), {}),
         ...pluginVue.configs['flat/recommended'].map(c => c.rules).reduce((acc, c) => ({ ...acc, ...c }), {}),
 
+        'no-useless-assignment': 'off',
+
         // Deprecated in favor of 'vue/block-order'
         'vue/component-tags-order': undefined,
         'vue/block-order': 'warn',
