@@ -56,7 +56,7 @@ catalogs:
     '@nuxt/test-utils': ^4.0.0
     '@nuxt/ui-pro': ^3.3.7
     '@nuxthq/studio': ^2.2.1
-    '@nuxtjs/plausible': ^2.0.1
+    '@nuxtjs/plausible': ^3.0.1
     '@vueuse/core': ^14.2.1
     '@vueuse/nuxt': ^14.2.0
     nuxt-og-image: ^5.1.13
