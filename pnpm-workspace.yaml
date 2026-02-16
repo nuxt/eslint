@@ -28,7 +28,7 @@ catalogs:
     eslint-plugin-n: ^17.23.2
     eslint-plugin-promise: ^7.2.1
     eslint-plugin-regexp: ^3.0.0
-    eslint-plugin-unicorn: ^62.0.0
+    eslint-plugin-unicorn: ^63.0.0
     eslint-plugin-vue: ^10.7.0
     eslint-processor-vue-blocks: ^2.0.0
     eslint-typegen: ^2.3.0
