@@ -68,7 +68,7 @@ catalogs:
     eslint-plugin-pnpm: ^1.5.0
     eslint: ^9.39.2
     eslint-vitest-rule-tester: ^3.1.0
-    jsonc-eslint-parser: ^2.4.2
+    jsonc-eslint-parser: ^3.1.0
     nuxt: ^4.3.1
     taze: ^19.9.2
     typescript: ^5.9.3
