@@ -1,7 +1,7 @@
 // @ts-check
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 import pnpm from 'eslint-plugin-pnpm'
-import jsoncParser from 'jsonc-eslint-parser'
+import * as jsoncParser from 'jsonc-eslint-parser'
 
 export default createConfigForNuxt({
   features: {

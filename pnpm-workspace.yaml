@@ -6,32 +6,32 @@ packages:
 catalogs:
   prod:
     '@antfu/install-pkg': ^1.1.0
-    '@clack/prompts': ^1.0.0
+    '@clack/prompts': ^1.0.1
     '@eslint/config-inspector': ^1.4.2
-    '@eslint/js': ^9.39.2
-    '@nuxt/devtools-kit': ^3.1.1
+    '@eslint/js': ^9.39.3
+    '@nuxt/devtools-kit': ^3.2.1
     '@nuxt/kit': ^4.3.1
-    '@stylistic/eslint-plugin': ^5.8.0
-    '@typescript-eslint/eslint-plugin': ^8.55.0
-    '@typescript-eslint/parser': ^8.55.0
-    '@typescript-eslint/scope-manager': ^8.55.0
-    '@typescript-eslint/types': ^8.55.0
-    '@typescript-eslint/utils': ^8.55.0
+    '@stylistic/eslint-plugin': ^5.9.0
+    '@typescript-eslint/eslint-plugin': ^8.56.1
+    '@typescript-eslint/parser': ^8.56.1
+    '@typescript-eslint/scope-manager': ^8.56.1
+    '@typescript-eslint/types': ^8.56.1
+    '@typescript-eslint/utils': ^8.56.1
     chokidar: ^5.0.0
-    eslint-config-flat-gitignore: ^2.1.0
+    eslint-config-flat-gitignore: ^2.2.1
     eslint-flat-config-utils: ^3.0.1
     eslint-merge-processors: ^2.0.0
-    eslint-plugin-format: ^1.4.0
-    eslint-plugin-import-lite: ^0.5.0
+    eslint-plugin-format: ^2.0.0
+    eslint-plugin-import-lite: ^0.5.2
     eslint-plugin-import-x: ^4.16.1
-    eslint-plugin-jsdoc: ^62.5.4
-    eslint-plugin-n: ^17.23.2
+    eslint-plugin-jsdoc: ^62.7.1
+    eslint-plugin-n: ^17.24.0
     eslint-plugin-promise: ^7.2.1
     eslint-plugin-regexp: ^3.0.0
-    eslint-plugin-unicorn: ^62.0.0
-    eslint-plugin-vue: ^10.7.0
+    eslint-plugin-unicorn: ^63.0.0
+    eslint-plugin-vue: ^10.8.0
     eslint-processor-vue-blocks: ^2.0.0
-    eslint-typegen: ^2.3.0
+    eslint-typegen: ^2.3.1
     eslint-webpack-plugin: ^5.0.2
     find-up: ^8.0.0
     get-port-please: ^3.2.0
@@ -41,34 +41,34 @@ catalogs:
     pathe: ^2.0.3
     unimport: ^5.6.0
     vite-plugin-eslint2: ^5.0.5
-    vue-eslint-parser: ^10.2.0
-    vue: ^3.5.28
+    vue-eslint-parser: ^10.4.0
+    vue: ^3.5.29
   bundling:
     '@nuxt/module-builder': ^1.0.2
   docs:
     '@iconify-json/catppuccin': ^1.2.17
     '@iconify-json/ph': ^1.2.2
-    '@iconify-json/simple-icons': ^1.2.70
+    '@iconify-json/simple-icons': ^1.2.71
     '@nuxt/content': ^3.11.2
-    '@nuxt/devtools': ^3.1.1
-    '@nuxt/fonts': ^0.13.0
+    '@nuxt/devtools': ^3.2.1
+    '@nuxt/fonts': ^0.14.0
     '@nuxt/image': ^2.0.0
     '@nuxt/test-utils': ^4.0.0
     '@nuxt/ui-pro': ^3.3.7
     '@nuxthq/studio': ^2.2.1
-    '@nuxtjs/plausible': ^2.0.1
+    '@nuxtjs/plausible': ^3.0.1
     '@vueuse/core': ^14.2.1
-    '@vueuse/nuxt': ^14.2.0
+    '@vueuse/nuxt': ^14.2.1
     nuxt-og-image: ^5.1.13
   types:
-    '@types/node': ^25.2.2
+    '@types/node': ^25.3.0
     '@nuxt/schema': ^4.3.1
   dev:
     bumpp: ^10.4.1
     eslint-plugin-pnpm: ^1.5.0
-    eslint: ^9.39.2
+    eslint: ^9.39.3
     eslint-vitest-rule-tester: ^3.1.0
-    jsonc-eslint-parser: ^2.4.2
+    jsonc-eslint-parser: ^3.1.0
     nuxt: ^4.3.1
     taze: ^19.9.2
     typescript: ^5.9.3
