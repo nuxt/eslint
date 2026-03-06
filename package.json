@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.30.2",
+  "packageManager": "pnpm@10.30.3",
   "version": "1.15.2",
   "scripts": {
     "build": "pnpm run -r build",
@@ -46,6 +46,6 @@
     "vue": "catalog:prod"
   },
   "resolutions": {
-    "@nuxt/ui": "2.15.2"
+    "@nuxt/ui": "2.22.3"
   }
 }
