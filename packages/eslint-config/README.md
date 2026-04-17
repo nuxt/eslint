@@ -3,7 +3,7 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 
-Shared ESLint config for Nuxt 3 projects. Unopinionated by default, but customizable.
+Shared ESLint config for Nuxt projects. Unopinionated by default, but customizable.
 
 Refer to the [documentation](https://eslint.nuxt.com/packages/config) for more details.
 
