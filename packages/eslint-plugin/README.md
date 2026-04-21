@@ -3,7 +3,7 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 
-ESLint plugin of additional rules for Nuxt 3.
+ESLint plugin of additional rules for Nuxt.
 
 Refer to the [documentation](https://eslint.nuxt.com/packages/plugin) for more details.
 

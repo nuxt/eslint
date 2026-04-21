@@ -28,8 +28,6 @@ body:
         - '@nuxt/eslint'
         - '@nuxt/eslint-module'
         - '@nuxt/eslint-plugin'
-        - '@nuxtjs/eslint-config (for Nuxt 2, deprecated)'
-        - '@nuxtjs/eslint-config-typescript (for Nuxt 2, deprecated)'
         - '@nuxtjs/eslint-module (merged to `@nuxt/eslint` now, deprecated)'
   - type: textarea
     id: reproduction

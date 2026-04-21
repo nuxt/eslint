@@ -25,7 +25,7 @@ export function defineFlatConfigs(
 }
 
 /**
- * Create an array of ESLint flat configs for Nuxt 3, based on the given options.
+ * Create an array of ESLint flat configs for Nuxt, based on the given options.
  * Accepts appending user configs as rest arguments from the second argument.
  *
  * For Nuxt apps, it's recommended to use `@nuxt/eslint` module instead, which will generate the necessary configuration based on your project.
