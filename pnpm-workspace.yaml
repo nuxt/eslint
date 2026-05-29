@@ -64,7 +64,7 @@ catalogs:
     '@types/node': ^25.3.0
     '@nuxt/schema': ^4.3.1
   dev:
-    bumpp: ^10.4.1
+    bumpp: ^11.1.0
     eslint-plugin-pnpm: ^1.5.0
     eslint: ^9.39.3
     eslint-vitest-rule-tester: ^3.1.0
