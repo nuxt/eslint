@@ -59,7 +59,7 @@ catalogs:
     '@nuxtjs/plausible': ^3.0.1
     '@vueuse/core': ^14.2.1
     '@vueuse/nuxt': ^14.2.1
-    nuxt-og-image: ^5.1.13
+    nuxt-og-image: ^6.0.0
   types:
     '@types/node': ^25.3.0
     '@nuxt/schema': ^4.3.1
