@@ -71,7 +71,7 @@ catalogs:
     jsonc-eslint-parser: ^3.1.0
     nuxt: ^4.3.1
     taze: ^19.9.2
-    typescript: ^5.9.3
+    typescript: ^6.0.3
     vitest: ^4.0.18
 
 onlyBuiltDependencies:
