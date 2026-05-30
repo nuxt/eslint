@@ -13,7 +13,7 @@ allowBuilds:
 catalogs:
   prod:
     '@antfu/install-pkg': ^1.1.0
-    '@clack/prompts': ^1.4.0
+    '@clack/prompts': ^1.5.0
     '@eslint/config-inspector': ^3.0.4
     '@eslint/js': ^10.0.1
     '@nuxt/devtools-kit': ^3.2.4
@@ -73,7 +73,7 @@ catalogs:
   dev:
     bumpp: ^11.1.0
     eslint-plugin-pnpm: ^1.6.1
-    eslint: ^10.4.0
+    eslint: ^10.4.1
     eslint-vitest-rule-tester: ^3.1.0
     jsonc-eslint-parser: ^3.1.0
     nuxt: ^4.4.6
