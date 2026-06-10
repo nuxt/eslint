@@ -45,9 +45,9 @@ export function createConfigForNuxt(
       ignores(),
       javascript(),
       // Make these imports async, as they are optional and imports plugins
-      resolved.features.typescript !== false
-        ? import('./configs/typescript').then(m => m.default(resolved))
-        : undefined,
+      import('./configs/typescript').then(m =>
+        resolved.features.typescript !== false ? m.default(resolved) : [],
+      ),
       import('./configs/vue').then(m => m.default(resolved)),
       import('./configs/import').then(m => m.default(resolved)),
     )
@@ -60,9 +60,15 @@ export function createConfigForNuxt(
   if (resolved.features.tooling) {
     const toolingOptions = typeof resolved.features.tooling === 'boolean' ? {} : resolved.features.tooling
     c.append(
-      toolingOptions.jsdoc !== false && import('./configs-tooling/jsdoc').then(m => m.default(resolved)),
-      toolingOptions.unicorn !== false && import('./configs-tooling/unicorn').then(m => m.default()),
-      toolingOptions.regexp !== false && import('./configs-tooling/regexp').then(m => m.default()),
+      import('./configs-tooling/jsdoc').then(m =>
+        toolingOptions.jsdoc !== false ? m.default(resolved) : [],
+      ),
+      import('./configs-tooling/unicorn').then(m =>
+        toolingOptions.unicorn !== false ? m.default() : [],
+      ),
+      import('./configs-tooling/regexp').then(m =>
+        toolingOptions.regexp !== false ? m.default() : [],
+      ),
     )
   }
 

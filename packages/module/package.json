@@ -60,8 +60,10 @@
   },
   "devDependencies": {
     "@nuxt/module-builder": "catalog:bundling",
+    "@nuxt/nitro-server": "catalog:types",
     "@nuxt/schema": "catalog:types",
     "@typescript-eslint/scope-manager": "catalog:prod",
+    "nitropack": "catalog:types",
     "eslint-webpack-plugin": "catalog:prod",
     "nuxt": "catalog:dev",
     "vite-plugin-eslint2": "catalog:prod"

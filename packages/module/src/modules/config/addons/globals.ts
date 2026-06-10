@@ -1,4 +1,6 @@
+import type {} from '@nuxt/nitro-server'
 import type { Nuxt } from '@nuxt/schema'
+import type { Nitro } from 'nitropack/types'
 import type { Unimport } from 'unimport'
 import type { ESLintConfigGenAddon } from '../../../types'
 
@@ -10,7 +12,7 @@ export function createAddonGlobals(nuxt: Nuxt): ESLintConfigGenAddon {
     unimport = context
   })
 
-  nuxt.hook('nitro:init', (nitro) => {
+  nuxt.hook('nitro:init', (nitro: Nitro) => {
     nitroUnimport = nitro.unimport
   })
 

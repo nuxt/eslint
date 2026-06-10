@@ -10,6 +10,9 @@ allowBuilds:
   unrs-resolver: true
   vue-demi: false
 
+overrides:
+  '@types/eslint': '-'
+
 catalogs:
   prod:
     '@antfu/install-pkg': ^1.1.0
@@ -69,7 +72,9 @@ catalogs:
     nuxt-og-image: ^6.5.3
   types:
     '@types/node': ^25.9.2
+    '@nuxt/nitro-server': ^4.4.8
     '@nuxt/schema': ^4.4.8
+    nitropack: ^2.13.4
   dev:
     bumpp: ^11.1.0
     eslint-plugin-pnpm: ^1.6.1
