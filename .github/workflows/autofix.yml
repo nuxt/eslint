@@ -33,6 +33,9 @@ jobs:
       - name: Test (unit)
         run: pnpm test -u
 
+      - name: Prepare playground
+        run: pnpm -C playground exec nuxi prepare
+
       - name: Lint (code)
         run: pnpm lint:fix
 

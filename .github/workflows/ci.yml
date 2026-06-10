@@ -11,6 +11,9 @@ permissions: {}
 jobs:
   unit-test:
     uses: sxzz/workflows/.github/workflows/unit-test.yml@main
+    with:
+      build-for-lint: true
+      lint: pnpm -C playground exec nuxi prepare && pnpm run lint
 
   # coverage:
   #   uses: sxzz/workflows/.github/workflows/coverage.yml@main
