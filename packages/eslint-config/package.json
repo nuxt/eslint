@@ -1,6 +1,10 @@
 {
   "name": "@nuxt/eslint-config",
   "version": "1.16.0",
+  "homepage": "https://github.com/nuxt/eslint",
+  "bugs": {
+    "url": "https://github.com/nuxt/eslint/issues"
+  },
   "description": "ESLint config for Nuxt projects",
   "repository": {
     "type": "git",
