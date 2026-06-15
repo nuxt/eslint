@@ -7,6 +7,10 @@
     "url": "git+https://github.com/nuxt/eslint.git",
     "directory": "packages/eslint-config"
   },
+  "bugs": {
+    "url": "https://github.com/nuxt/eslint/issues"
+  },
+  "homepage": "https://github.com/nuxt/eslint#readme",
   "license": "MIT",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
