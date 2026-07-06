@@ -46,7 +46,7 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
       name: 'nuxt/vue/single-root',
       files: fileSingleRoot,
       rules: {
-        'vue/no-multiple-template-root': 'error',
+        'vue/no-multiple-template-root': ['error', { disallowComments: true }],
       },
     })
 
