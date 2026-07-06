@@ -34,6 +34,13 @@ export default function nuxt(options: NuxtESLintConfigOptions): Linter.Config[] 
     },
   })
 
+  // Pages, layouts and server components must have a single root element
+  // (comments count as one) so Nuxt can wrap them in `<Transition>`/`<KeepAlive>`.
+  //
+  // See documentation:
+  // - https://nuxt.com/docs/4.x/directory-structure/app/pages
+  // - https://nuxt.com/docs/4.x/directory-structure/app/layouts#enable-layouts
+  // - https://nuxt.com/docs/4.x/directory-structure/app/components#standalone-server-components
   if (fileSingleRoot.length)
     configs.push({
       name: 'nuxt/vue/single-root',
