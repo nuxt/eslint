@@ -27,7 +27,7 @@ export const rule = createRule<MessageIds, Options>({
         if (node.declaration.type === 'ObjectExpression') {
           object = node.declaration
         }
-        else if (node.declaration.type === 'CallExpression' && node.declaration.arguments[0].type === 'ObjectExpression') {
+        else if (node.declaration.type === 'CallExpression' && node.declaration.arguments[0]?.type === 'ObjectExpression') {
           object = node.declaration.arguments[0]
         }
         if (!object) {
@@ -186,12 +186,28 @@ function sortAst<T extends Tree.Node>(
   //   oldContent: ctx.context.sourceCode.text.slice(rangeStart, rangeEnd),
   // })
 
+  // Name the first pair that actually moved, skipping entries without a name
+  // (e.g. spread elements), so the message always references real config keys.
+  let a: string | undefined
+  let b: string | undefined
+  for (let i = 0; i < reordered.length; i++) {
+    if (reordered[i] === list[i])
+      continue
+    const nameA = names.get(reordered[i])?.[0]
+    const nameB = names.get(list[i])?.[0]
+    if (nameA && nameB) {
+      a = nameA
+      b = nameB
+      break
+    }
+  }
+
   context.report({
     node,
     messageId: 'default',
     data: {
-      a: names.get(reordered[0])![0]!,
-      b: names.get(reordered[1])![0]!,
+      a: a ?? '',
+      b: b ?? '',
     },
     fix(fixer) {
       return fixer.replaceTextRange([rangeStart, rangeEnd], newContent)
