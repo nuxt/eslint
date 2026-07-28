@@ -27,6 +27,7 @@ run({
     ssr: true
   }
 }`,
+    'export default defineNuxtConfig()',
     // Unknown keys come after known keys (sorted alphabetically among themselves)
     `export default {
   modules: [],
@@ -103,6 +104,23 @@ run({
       output: 'export default { modules: [], build: {}, nitro: {}, }',
       errors: [{
         messageId: 'default',
+      }],
+    },
+    // Spread element as the first property
+    {
+      code: `export default defineNuxtConfig({
+  ...(condition ? {} : { buildDir: '.nuxt' }),
+  experimental: {},
+  routeRules: {},
+})`,
+      output: `export default defineNuxtConfig({
+  ...(condition ? {} : { buildDir: '.nuxt' }),
+  routeRules: {},
+  experimental: {},
+})`,
+      errors: [{
+        messageId: 'default',
+        data: { a: 'routeRules', b: 'experimental' },
       }],
     },
     // Dirs and runtime configs
