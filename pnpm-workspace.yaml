@@ -15,7 +15,7 @@ overrides:
 
 catalogs:
   prod:
-    '@antfu/install-pkg': ^1.1.0
+    '@antfu/install-pkg': ^2.0.1
     '@clack/prompts': ^1.5.1
     '@eslint/config-inspector': ^3.0.4
     '@eslint/js': ^10.0.1
