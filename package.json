@@ -9,8 +9,8 @@
     "release": "bumpp \"package.json\" \"packages/**/package.json\"",
     "test": "vitest run",
     "play": "pnpm -C playground run play:dev",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . -c eslint.config.js",
+    "lint:fix": "eslint . -c eslint.config.js --fix",
     "lint:play": "pnpm -C playground run lint",
     "docs": "pnpm -C docs run docs:dev",
     "typecheck": "tsc --noEmit"
