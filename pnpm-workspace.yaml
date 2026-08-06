@@ -71,12 +71,12 @@ catalogs:
     '@vueuse/nuxt': ^14.4.0
     nuxt-og-image: ^6.7.6
   types:
-    '@types/node': ^25.9.5
+    '@types/node': ^26.1.2
     '@nuxt/nitro-server': ^4.5.1
     '@nuxt/schema': ^4.5.1
     nitropack: ^2.13.4
   dev:
-    bumpp: ^11.1.0
+    bumpp: ^12.1.1
     eslint-plugin-pnpm: ^1.7.0
     eslint: ^10.8.0
     eslint-vitest-rule-tester: ^3.1.0
@@ -86,3 +86,7 @@ catalogs:
     typescript: ^6.0.3
     unbuild: ^3.6.1
     vitest: ^4.1.10
+
+update:
+  ignoreDeps:
+    - typescript@7
