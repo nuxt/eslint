@@ -17,16 +17,16 @@ catalogs:
   prod:
     '@antfu/install-pkg': ^2.0.1
     '@clack/prompts': ^1.7.0
-    '@eslint/config-inspector': ^3.1.0
+    '@eslint/config-inspector': ^3.2.0
     '@eslint/js': ^10.0.1
-    '@nuxt/devtools-kit': ^3.3.1
+    '@nuxt/devtools-kit': ^3.4.1
     '@nuxt/kit': ^4.5.0
     '@stylistic/eslint-plugin': ^5.10.0
-    '@typescript-eslint/eslint-plugin': ^8.65.0
-    '@typescript-eslint/parser': ^8.65.0
-    '@typescript-eslint/scope-manager': ^8.65.0
-    '@typescript-eslint/types': ^8.65.0
-    '@typescript-eslint/utils': ^8.65.0
+    '@typescript-eslint/eslint-plugin': ^8.66.0
+    '@typescript-eslint/parser': ^8.66.0
+    '@typescript-eslint/scope-manager': ^8.66.0
+    '@typescript-eslint/types': ^8.66.0
+    '@typescript-eslint/utils': ^8.66.0
     chokidar: ^5.0.0
     eslint-config-flat-gitignore: ^2.3.0
     eslint-flat-config-utils: ^3.2.0
@@ -34,7 +34,7 @@ catalogs:
     eslint-plugin-format: ^2.0.1
     eslint-plugin-import-lite: ^0.6.0
     eslint-plugin-import-x: ^4.17.1
-    eslint-plugin-jsdoc: ^63.3.0
+    eslint-plugin-jsdoc: ^63.3.3
     eslint-plugin-n: ^18.2.2
     eslint-plugin-promise: ^7.3.0
     eslint-plugin-regexp: ^3.1.1
@@ -45,11 +45,11 @@ catalogs:
     eslint-webpack-plugin: ^6.0.0
     find-up: ^8.0.0
     get-port-please: ^3.2.0
-    globals: ^17.8.0
+    globals: ^17.9.0
     local-pkg: ^1.2.1
     mlly: ^1.8.2
     pathe: ^2.0.3
-    unimport: ^6.3.1
+    unimport: ^6.4.0
     vite-plugin-eslint2: ^5.3.0
     vue-eslint-parser: ^10.4.1
     vue: ^3.5.40
@@ -58,21 +58,21 @@ catalogs:
   docs:
     '@iconify-json/catppuccin': ^1.2.17
     '@iconify-json/ph': ^1.2.2
-    '@iconify-json/simple-icons': ^1.2.92
+    '@iconify-json/simple-icons': ^1.2.93
     '@nuxt/content': ^3.15.2
-    '@nuxt/devtools': ^3.3.1
+    '@nuxt/devtools': ^3.4.1
     '@nuxt/fonts': ^0.14.0
-    '@nuxt/image': ^2.0.0
-    '@nuxt/test-utils': ^4.0.3
+    '@nuxt/image': ^2.1.0
+    '@nuxt/test-utils': ^4.1.0
     '@nuxt/ui-pro': ^3.3.7
     '@nuxthq/studio': ^2.2.1
     '@nuxtjs/plausible': ^3.0.2
-    '@vueuse/core': ^14.3.0
-    '@vueuse/nuxt': ^14.3.0
-    nuxt-og-image: ^6.7.4
+    '@vueuse/core': ^14.4.0
+    '@vueuse/nuxt': ^14.4.0
+    nuxt-og-image: ^6.7.6
   types:
     '@types/node': ^25.9.5
-    '@nuxt/nitro-server': ^4.5.0
+    '@nuxt/nitro-server': ^4.5.2
     '@nuxt/schema': ^4.5.0
     nitropack: ^2.13.4
   dev:
@@ -82,7 +82,7 @@ catalogs:
     eslint-vitest-rule-tester: ^3.1.0
     jsonc-eslint-parser: ^3.1.0
     nuxt: ^4.5.0
-    taze: ^19.16.0
+    taze: ^19.17.1
     typescript: ^6.0.3
     unbuild: ^3.6.1
     vitest: ^4.1.10
