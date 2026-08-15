@@ -82,7 +82,7 @@ catalogs:
     eslint-vitest-rule-tester: ^3.1.0
     jsonc-eslint-parser: ^3.1.0
     nuxt: ^4.5.1
-    taze: ^19.17.1
+    taze: ^20.0.2
     typescript: ^6.0.3
     unbuild: ^3.6.1
     vitest: ^4.1.10
