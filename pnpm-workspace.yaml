@@ -34,7 +34,7 @@ catalogs:
     eslint-plugin-format: ^2.0.1
     eslint-plugin-import-lite: ^0.6.0
     eslint-plugin-import-x: ^4.17.1
-    eslint-plugin-jsdoc: ^63.3.3
+    eslint-plugin-jsdoc: ^64.3.5
     eslint-plugin-n: ^18.2.2
     eslint-plugin-promise: ^7.3.0
     eslint-plugin-regexp: ^3.1.1
