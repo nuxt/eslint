@@ -85,7 +85,7 @@ catalogs:
     taze: ^19.17.1
     typescript: ^6.0.3
     unbuild: ^3.6.1
-    vitest: ^4.1.10
+    vitest: ^5.0.0
 
 update:
   ignoreDeps:
