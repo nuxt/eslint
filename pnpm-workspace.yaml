@@ -20,7 +20,7 @@ catalogs:
     '@eslint/config-inspector': ^3.2.0
     '@eslint/js': ^10.0.1
     '@nuxt/devtools-kit': ^3.4.1
-    '@nuxt/kit': ^4.5.1
+    '@nuxt/kit': ^4.6.0
     '@stylistic/eslint-plugin': ^5.10.0
     '@typescript-eslint/eslint-plugin': ^8.66.0
     '@typescript-eslint/parser': ^8.66.0
@@ -73,7 +73,7 @@ catalogs:
   types:
     '@types/node': ^26.1.2
     '@nuxt/nitro-server': ^4.5.1
-    '@nuxt/schema': ^4.5.1
+    '@nuxt/schema': ^4.6.0
     nitropack: ^2.13.4
   dev:
     bumpp: ^12.1.1
@@ -81,7 +81,7 @@ catalogs:
     eslint: ^10.8.0
     eslint-vitest-rule-tester: ^3.1.0
     jsonc-eslint-parser: ^3.1.0
-    nuxt: ^4.5.1
+    nuxt: ^4.6.0
     taze: ^19.17.1
     typescript: ^6.0.3
     unbuild: ^3.6.1
