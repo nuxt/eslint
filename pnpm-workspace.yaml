@@ -61,7 +61,7 @@ catalogs:
     '@iconify-json/simple-icons': ^1.2.93
     '@nuxt/content': ^3.15.2
     '@nuxt/devtools': ^3.4.1
-    '@nuxt/fonts': ^0.14.0
+    '@nuxt/fonts': ^1.1.0
     '@nuxt/image': ^2.1.0
     '@nuxt/test-utils': ^4.1.0
     '@nuxt/ui-pro': ^3.3.7
