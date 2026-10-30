@@ -7,7 +7,7 @@ navigation:
 
 ## Introduction
 
-All-in-one ESLint integration for Nuxt. It generates a project-aware [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files) and provides the ability to optionally run ESLint check along side the dev server.
+All-in-one ESLint integration for Nuxt. It generates a project-aware [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files) and provides the ability to optionally run ESLint check alongside the dev server.
 
 ::tip
 This module is designed for the [new ESLint flat config format](https://eslint.org/docs/latest/use/configure/configuration-files) which is the [default format since ESLint v9](https://eslint.org/blog/2024/04/eslint-v9.0.0-released/). It supports ESLint v9 and v10. We recommend you to use the latest version of ESLint to get the best experience.
