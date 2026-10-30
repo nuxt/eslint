@@ -56,7 +56,7 @@ catalogs:
     '@nuxt/module-builder': ^1.0.3
   types:
     '@types/node': ^26.1.2
-    '@nuxt/nitro-server': ^4.5.1
+    '@nuxt/nitro-server': ^4.6.2
     '@nuxt/schema': ^4.5.1
     nitropack: ^2.13.4
   dev:
