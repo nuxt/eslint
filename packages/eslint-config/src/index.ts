@@ -29,7 +29,7 @@ export function defineFlatConfigs(
  * Accepts appending user configs as rest arguments from the second argument.
  *
  * For Nuxt apps, it's recommended to use `@nuxt/eslint` module instead, which will generate the necessary configuration based on your project.
- * @see https://eslint.nuxt.com/packages/module
+ * @see https://nuxt.com/modules/eslint
  */
 export function createConfigForNuxt(
   options: NuxtESLintConfigOptions = {},
@@ -102,7 +102,7 @@ export function createConfigForNuxt(
       'Different instances of plugin "{{pluginName}}" found in multiple configs:',
       '{{configNames}}.',
       'You might forget to set `standalone: false`.',
-      'Please refer to https://eslint.nuxt.com/packages/module#custom-config-presets.',
+      'Please refer to https://nuxt.com/modules/eslint/recipes#custom-config-presets.',
       '',
     ].join('\n'))
 

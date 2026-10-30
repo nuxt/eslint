@@ -7,7 +7,7 @@
 
 All-in-one ESLint integration for Nuxt. It generates a project-aware [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) and provides the ability to optionally run ESLint check along side the dev server.
 
-Refer to the [documentation](https://eslint.nuxt.com/packages/module) for more details.
+Refer to the [documentation](https://nuxt.com/modules/eslint) for more details.
 
 ## License
 

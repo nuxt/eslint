@@ -24,6 +24,5 @@
     "**/dist/**",
     "**/node_modules/**",
     "playground",
-    "docs",
   ]
 }

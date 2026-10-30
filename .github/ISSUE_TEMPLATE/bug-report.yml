@@ -23,7 +23,7 @@ body:
         Please select the package that you are experiencing the issue with.
         Please make sure you are using the **latest versions** before reporting.
 
-        You can refer to [this page](https://eslint.nuxt.com/guide/faq#packages-disambiguation) to understand the difference between the packages.
+        You can refer to [this page](https://nuxt.com/modules/eslint/faq#package-disambiguation) to understand the difference between the packages.
       options:
         - '@nuxt/eslint'
         - '@nuxt/eslint-module'
