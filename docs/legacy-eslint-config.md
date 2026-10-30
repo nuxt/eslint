@@ -9,21 +9,16 @@ head:
 
 Opinionated [ESlint](https://eslint.org/) configuration used internally for Nuxt 2 projects.
 
-:::callout{icon="i-ph-lightbulb-duotone"}
-This package is for Nuxt 2. For Nuxt 3 projects, use [`@nuxt/eslint`](/packages/module) instead.<br>
-:::
+::tip
+This package is for Nuxt 2. For Nuxt 3 projects, use [`@nuxt/eslint`](/modules/eslint) instead.
+::
 
-:::callout{icon="i-ph-warning-circle-duotone" color="amber"}
+::warning
 This package is in maintainance mode and no longer have active developments.
-:::
+::
 
-::read-more
----
-to: https://github.com/nuxt/eslint/tree/main/packages-legacy/nuxt2-eslint-config
-color: gray
-icon: i-simple-icons-github
----
-Source code on GitHub
+::note
+The package is published on npm as [`@nuxtjs/eslint-config`](https://www.npmjs.com/package/@nuxtjs/eslint-config).
 ::
 
 ### Usage
@@ -67,4 +62,4 @@ And in your `.eslintrc` all you need is :
 ```
 
 You can then edit/override same rules as you could with `@nuxtjs/eslint-config` but also TypeScript rules.
-You can find the list of supported TypeScript rules [here](https://typescript-eslint.io/rules/#supported-rules) and you can read more about Nuxt's TypeScript support [in the docs](https://nuxt.com/docs/guide/concepts/typescript).
+You can find the list of supported TypeScript rules [here](https://typescript-eslint.io/rules/#supported-rules) and you can read more about Nuxt's TypeScript support [in the docs](/docs/guide/concepts/typescript).

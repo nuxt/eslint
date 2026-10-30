@@ -12,26 +12,13 @@
     "lint": "eslint . -c eslint.config.js",
     "lint:fix": "eslint . -c eslint.config.js --fix",
     "lint:play": "pnpm -C playground run lint",
-    "docs": "pnpm -C docs run docs:dev",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@iconify-json/catppuccin": "catalog:docs",
-    "@iconify-json/ph": "catalog:docs",
-    "@iconify-json/simple-icons": "catalog:docs",
-    "@nuxt/content": "catalog:docs",
-    "@nuxt/devtools": "catalog:docs",
     "@nuxt/eslint-config": "workspace:*",
     "@nuxt/eslint-plugin": "workspace:*",
-    "@nuxt/fonts": "catalog:docs",
-    "@nuxt/image": "catalog:docs",
-    "@nuxt/test-utils": "catalog:docs",
-    "@nuxt/ui-pro": "catalog:docs",
-    "@nuxthq/studio": "catalog:docs",
-    "@nuxtjs/plausible": "catalog:docs",
+    "@nuxt/test-utils": "catalog:dev",
     "@types/node": "catalog:types",
-    "@vueuse/core": "catalog:docs",
-    "@vueuse/nuxt": "catalog:docs",
     "bumpp": "catalog:dev",
     "eslint": "catalog:dev",
     "eslint-plugin-format": "catalog:prod",
@@ -39,14 +26,10 @@
     "eslint-vitest-rule-tester": "catalog:dev",
     "jsonc-eslint-parser": "catalog:dev",
     "nuxt": "catalog:dev",
-    "nuxt-og-image": "catalog:docs",
     "taze": "catalog:dev",
     "typescript": "catalog:dev",
     "unbuild": "catalog:dev",
     "vitest": "catalog:dev",
     "vue": "catalog:prod"
-  },
-  "resolutions": {
-    "@nuxt/ui": "2.15.2"
   }
 }

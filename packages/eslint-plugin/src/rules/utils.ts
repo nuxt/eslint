@@ -8,7 +8,7 @@ export function createRule<
   rule: Readonly<ESLintUtils.RuleWithMetaAndName<TOptions, TMessageIds>>,
 ) {
   const _createRule = ESLintUtils.RuleCreator(
-    name => `https://eslint.nuxt.com/packages/plugin#nuxt${name}`,
+    name => `https://nuxt.com/modules/eslint/plugin#nuxt${name}`,
   )
   return _createRule(rule) as unknown as Rule.RuleModule
 }

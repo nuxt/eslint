@@ -5,7 +5,7 @@
 
 ESLint plugin of additional rules for Nuxt.
 
-Refer to the [documentation](https://eslint.nuxt.com/packages/plugin) for more details.
+Refer to the [documentation](https://nuxt.com/modules/eslint/plugin) for more details.
 
 <!-- Badges -->
 

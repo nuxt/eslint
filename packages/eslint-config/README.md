@@ -5,7 +5,7 @@
 
 Shared ESLint config for Nuxt projects. Unopinionated by default, but customizable.
 
-Refer to the [documentation](https://eslint.nuxt.com/packages/config) for more details.
+Refer to the [documentation](https://nuxt.com/modules/eslint/config) for more details.
 
 <!-- Badges -->
 

@@ -15,21 +15,12 @@ export default createConfigForNuxt({
   dirs: {
     src: [
       'playground',
-      'docs',
     ],
     componentsPrefixed: [
       'playground/components-prefixed',
     ],
   },
 })
-  .append(
-    {
-      files: ['docs/**/*.vue'],
-      rules: {
-        'vue/no-v-html': 'off',
-      },
-    },
-  )
   .append({
     name: 'pnpm/package.json',
     files: [
