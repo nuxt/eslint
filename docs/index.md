@@ -7,10 +7,10 @@ navigation:
 
 ## Introduction
 
-All-in-one ESLint integration for Nuxt. It generates a project-aware [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) and provides the ability to optionally run ESLint check along side the dev server.
+All-in-one ESLint integration for Nuxt. It generates a project-aware [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files) and provides the ability to optionally run ESLint check along side the dev server.
 
 ::tip
-This module is designed for the [new ESLint flat config format](https://eslint.org/docs/latest/use/configure/configuration-files-new) which is the [default format since ESLint v9](https://eslint.org/blog/2024/04/eslint-v9.0.0-released/). Flat config is supported since ESLint v8.45.0 so you can use any version of ESLint later than that. We recommend you to use the latest version of ESLint to get the best experience.
+This module is designed for the [new ESLint flat config format](https://eslint.org/docs/latest/use/configure/configuration-files) which is the [default format since ESLint v9](https://eslint.org/blog/2024/04/eslint-v9.0.0-released/). It supports ESLint v9 and v10. We recommend you to use the latest version of ESLint to get the best experience.
 ::
 
 ::warning
@@ -23,10 +23,10 @@ The source code of the module is in [`packages/module`](https://github.com/nuxt/
 
 ## Features
 
-- [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), composable, customizable and future-proof.
+- [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files), composable, customizable and future-proof.
 - Project-aware Nuxt-specific settings, also supports [layers](/docs/getting-started/layers).
 - [Nuxt DevTools](/modules/devtools) integration powered by [`@eslint/config-inspector`](https://github.com/eslint/config-inspector).
-- Extensible with other modules.
+- [Extensible with other modules](/modules/eslint/recipes#integrate-with-other-modules).
 - Optional [dev server checker](/modules/eslint/recipes#dev-server-checker) integration.
 
 ## Quick Setup
@@ -34,7 +34,7 @@ The source code of the module is in [`packages/module`](https://github.com/nuxt/
 Run the following command to add the `@nuxt/eslint` module to your project:
 
 ```bash [Terminal]
-npx nuxi module add eslint
+npx nuxt add eslint
 ```
 
 Once you start your Nuxt app, a `eslint.config.mjs` file will be generated under your project root. You can customize it as needed.
@@ -89,6 +89,7 @@ export default defineNuxtConfig({
 And create an `eslint.config.mjs` file under your project root, with the following content:
 
 ```js [eslint.config.mjs]
+// @ts-check
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
