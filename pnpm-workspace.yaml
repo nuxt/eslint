@@ -19,7 +19,7 @@ catalogs:
     '@eslint/config-inspector': ^3.2.0
     '@eslint/js': ^10.0.1
     '@nuxt/devtools-kit': ^3.4.1
-    '@nuxt/kit': ^4.5.1
+    '@nuxt/kit': ^4.6.3
     '@stylistic/eslint-plugin': ^5.10.0
     '@typescript-eslint/eslint-plugin': ^8.66.0
     '@typescript-eslint/parser': ^8.66.0
@@ -57,7 +57,7 @@ catalogs:
   types:
     '@types/node': ^26.1.2
     '@nuxt/nitro-server': ^4.5.1
-    '@nuxt/schema': ^4.5.1
+    '@nuxt/schema': ^4.6.3
     nitropack: ^2.13.4
   dev:
     '@nuxt/test-utils': ^4.1.0
