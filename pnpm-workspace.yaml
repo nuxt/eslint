@@ -66,7 +66,7 @@ catalogs:
     eslint: ^10.8.0
     eslint-vitest-rule-tester: ^3.1.0
     jsonc-eslint-parser: ^3.1.0
-    nuxt: ^4.5.1
+    nuxt: ^4.6.2
     taze: ^19.17.1
     typescript: ^6.0.3
     unbuild: ^3.6.1
