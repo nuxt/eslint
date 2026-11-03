@@ -33,9 +33,9 @@ export async function setupESLintChecker(moduleOptions: ModuleOptions, nuxt: Nux
 
   // Vite: https://github.com/ModyQyW/vite-plugin-eslint2#eslintpath
   // Webpack: https://github.com/webpack-contrib/eslint-webpack-plugin#configtype
-  options.eslintPath ||= options.configType === 'flat'
-    ? 'eslint/use-at-your-own-risk'
-    : 'eslint'
+  // `eslint/use-at-your-own-risk` no longer exposes a class in ESLint 10, and the
+  // main entry has been flat-config aware since ESLint 9, which is our lowest peer.
+  options.eslintPath ||= 'eslint'
 
   const configPaths = [
     '.eslintignore',
