@@ -26,7 +26,7 @@ catalogs:
     '@typescript-eslint/scope-manager': ^8.66.0
     '@typescript-eslint/types': ^8.66.0
     '@typescript-eslint/utils': ^8.66.0
-    chokidar: ^5.0.0
+    chokidar: ^6.0.0
     eslint-config-flat-gitignore: ^2.3.0
     eslint-flat-config-utils: ^3.2.0
     eslint-merge-processors: ^2.0.0
