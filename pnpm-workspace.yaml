@@ -57,7 +57,7 @@ catalogs:
   types:
     '@types/node': ^26.1.2
     '@nuxt/nitro-server': ^4.5.1
-    '@nuxt/schema': ^4.5.1
+    '@nuxt/schema': ^4.6.4
     nitropack: ^2.13.4
   dev:
     '@nuxt/test-utils': ^4.1.0
